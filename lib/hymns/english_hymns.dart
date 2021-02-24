@@ -20,7 +20,7 @@ class HymnPage extends StatelessWidget {
                     children: [
                       new ListTile(
                         leading: new CircleAvatar(
-                            child: Text(englishHymnData[i].hymnNumber)),
+                            child: Text(englishHymnData[i].hymnNumber.toString())),
                         title: new Text(englishHymnData[i].hymnTitle),
                         onTap: () {},
                         onLongPress: () {

@@ -59,7 +59,7 @@ class YorubaHymns extends StatelessWidget {
                       backgroundColor: Colors.green.shade300,
                       foregroundColor: Colors.white,
                       child: Text(
-                        englishHymnData[i].hymnNumber,
+                        englishHymnData[i].hymnNumber.toString(),
                         style: TextStyle(
                             fontFamily: 'Alata', fontWeight: FontWeight.w600),
                       )),

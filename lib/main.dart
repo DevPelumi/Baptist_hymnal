@@ -1,27 +1,40 @@
+import 'package:baptist_hymnal/providers/hymn_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
 import 'screens/homescreen.dart';
 import 'screens/Settings.dart';
 import 'screens/favourites.dart';
 import 'screens/search.dart';
-import 'hymns/Hymn1.dart';
+import 'package:provider/provider.dart';
+import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
 
-void main() => runApp(MyApp());
+/// We have to create a **lazy** provider that loads the favs from
+/// sharedPreferences on startup
+HymnProvider provider;
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  provider = HymnProvider();
+  provider.fetchFavorites();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
+    return ChangeNotifierProvider<HymnProvider>(
+      create: (_) => provider,
+      lazy: true,
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+        ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+        ),
+        home: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -41,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage>
   TabController tabBarController;
   List<Tabs> tabs = new List();
 
-  int selectedIndex = 0;
   int _selectedPage = 0;
 
   final _pageOptions = [
@@ -71,13 +83,9 @@ class _MyHomePageState extends State<MyHomePage>
       body: TabBarView(
           controller: tabBarController,
           physics: NeverScrollableScrollPhysics(),
-          children: {2, 3, 1, 0}
-              .map(
-                (index) => _pageOptions[_selectedPage],
-              )
-              .toList()),
+          children: _pageOptions),
 
-      /**drawer: new Container(
+      /*drawer: new Container(
           width: 250.0,
           margin: EdgeInsets.only(bottom: 60.0),
           color: Colors.blue,
@@ -90,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage>
           color: Colors.blue,
           child: ListView(
             children: <Widget>[Text("Hello"), Text("World")],
-          )),**/
+          )),*/
 
       bottomNavigationBar: CubertoBottomBar(
         inactiveIconColor: inactiveColor,
@@ -108,7 +116,6 @@ class _MyHomePageState extends State<MyHomePage>
         onTabChangedListener: (index, title, color) {
           setState(() {
             tabBarController.animateTo(index);
-
             _selectedPage = index;
           });
         },
