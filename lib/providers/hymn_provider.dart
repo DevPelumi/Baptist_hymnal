@@ -8,12 +8,14 @@ class HymnProvider extends ChangeNotifier {
   HymnProvider() {
     repo = HymnRepository();
   }
+  // starts from 0
   List<bool> get isEnglishFavorites => [..._isEnglishFavorites];
 
+  // starts from 1 because it's the key
   List<int> get englishFavoritesKey {
     List<int> ans = [];
     for (var i = 0; i < _isEnglishFavorites.length; i++) {
-      if (_isEnglishFavorites[i]) ans.add(i);
+      if (_isEnglishFavorites[i]) ans.add(i + 1);
     }
     return ans;
   }

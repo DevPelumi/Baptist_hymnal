@@ -5,11 +5,11 @@ import 'package:baptist_hymnal/screens/english_hymn.dart';
 import 'package:flutter/material.dart';
 
 class HymnTile extends StatelessWidget {
-  /// hymnKey starts from 1 so to get the corresponding 
+  /// hymnKey starts from 1 so to get the corresponding
   /// hymnData we need to subtract 1.. when we use key, we use [hymnKey]
   final int hymnKey;
   final HymnProvider provider;
-  const HymnTile(this.hymnKey,this.provider);
+  const HymnTile(this.hymnKey, this.provider);
 
   @override
   Widget build(BuildContext context) {
@@ -31,19 +31,19 @@ class HymnTile extends StatelessWidget {
         ),
         trailing: IconButton(
             icon: Icon(
-              provider.isEnglishFavorites[hymnKey]
+              provider.isEnglishFavorites[hymnKey - 1]
                   ? Icons.favorite
                   : Icons.favorite_border,
               color: Colors.pink,
             ),
-            onPressed: () => provider.toggleFavoriteAtIndex(hymnKey)),
+            onPressed: () => provider.toggleFavoriteAtIndex(hymnKey - 1)),
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => DetailScreen(
-                englishHymnList: englishHymnData[hymnKey-1],
-                englishHymnBody: englishHymnBodyData[hymnKey-1],
+                englishHymnList: englishHymnData[hymnKey - 1],
+                englishHymnBody: englishHymnBodyData[hymnKey - 1],
               ),
             ),
           );
