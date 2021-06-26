@@ -67,7 +67,7 @@ class EnglishHymns extends StatelessWidget {
           Consumer<HymnProvider>(
             builder: (ctx, provider, _) => SliverList(
               delegate: SliverChildBuilderDelegate(
-                (context, int i) => HymnTile(i + 1,provider),
+                (context, int i) => HymnTile(i + 1, provider),
                 childCount: englishHymnData.length,
               ),
             ),
@@ -135,7 +135,7 @@ class DetailScreen extends StatelessWidget {
               width: 8,
             ),
             Container(
-              width: 180,
+              width: 160,
               child: Text(
                 englishHymnList.hymnTitle,
                 style: textStyle,
@@ -145,6 +145,16 @@ class DetailScreen extends StatelessWidget {
           ],
         ),
         actions: <Widget>[
+          Consumer<HymnProvider>(
+            builder: (ctx, provider, _) => IconButton(
+                onPressed: () => provider
+                    .toggleFavoriteAtIndex(englishHymnList.hymnNumber - 1),
+                icon: Icon(
+                    provider.isEnglishFavorites[englishHymnList.hymnNumber - 1]
+                        ? Icons.favorite
+                        : Icons.favorite_border,
+                    color: Colors.pink)),
+          ),
           IconButton(
               icon: Icon(
                 Icons.more_vert,
