@@ -1,5 +1,6 @@
 import 'package:baptist_hymnal/providers/hymn_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/homescreen.dart';
 import 'screens/Settings.dart';
 import 'screens/favourites.dart';
@@ -12,6 +13,7 @@ import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
 HymnProvider provider;
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   provider = HymnProvider();
   provider.fetchFavorites();
   runApp(MyApp());

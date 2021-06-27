@@ -9,7 +9,8 @@ class HymnTile extends StatelessWidget {
   /// hymnData we need to subtract 1.. when we use key, we use [hymnKey]
   final int hymnKey;
   final HymnProvider provider;
-  const HymnTile(this.hymnKey, this.provider);
+  final bool showFavorites;
+  const HymnTile(this.hymnKey, this.provider, {this.showFavorites = true});
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +30,16 @@ class HymnTile extends StatelessWidget {
             fontFamily: 'Alata',
           ),
         ),
-        trailing: IconButton(
-            icon: Icon(
-              provider.isEnglishFavorites[hymnKey - 1]
-                  ? Icons.favorite
-                  : Icons.favorite_border,
-              color: Colors.pink,
-            ),
-            onPressed: () => provider.toggleFavoriteAtIndex(hymnKey - 1)),
+        trailing: showFavorites
+            ? IconButton(
+                icon: Icon(
+                  provider.isEnglishFavorites[hymnKey - 1]
+                      ? Icons.favorite
+                      : Icons.favorite_border,
+                  color: Colors.pink,
+                ),
+                onPressed: () => provider.toggleFavoriteAtIndex(hymnKey - 1))
+            : null,
         onTap: () {
           Navigator.push(
             context,
