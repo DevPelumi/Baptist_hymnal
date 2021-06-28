@@ -6,12 +6,15 @@ import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class HomeSearch extends StatefulWidget {
+class SearchScreen extends StatefulWidget {
+  final List<HymnData> data;
+  SearchScreen({List<HymnData> list})
+      : this.data = list ?? [...englishHymnData];
   @override
-  _HomeSearchState createState() => _HomeSearchState();
+  _SearchScreenState createState() => _SearchScreenState();
 }
 
-class _HomeSearchState extends State<HomeSearch> {
+class _SearchScreenState extends State<SearchScreen> {
   SearchBarController<HymnData> _searchBarController;
   bool _ascending = true;
   bool _favorites = true;
@@ -25,9 +28,9 @@ class _HomeSearchState extends State<HomeSearch> {
   Future<List<HymnData>> _filterHymns(String searchString) async {
     searchString = searchString?.trim();
     if (searchString == null || searchString.isEmpty) {
-      return [...englishHymnData];
+      return widget.data;
     } else {
-      return englishHymnData
+      return widget.data
           .where((hymn) =>
               hymn.id.toString() == searchString ||
               hymn.title.toLowerCase().contains(searchString.toLowerCase()) ||
@@ -44,6 +47,7 @@ class _HomeSearchState extends State<HomeSearch> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: SearchBar<HymnData>(
+            hintText: 'Holy, Holy, Holy',
             emptyWidget: Center(child: Text('Enter search text!')),
             header: Row(
               children: [

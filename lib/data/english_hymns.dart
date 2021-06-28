@@ -1,6 +1,6 @@
 import 'package:baptist_hymnal/models/hymn_data.dart';
 
-List<HymnData> englishHymnData = [
+const List<HymnData> englishHymnData = [
   HymnData(1, 'Holy, Holy, Holy', [
     '''
 1. Holy, holy, holy!

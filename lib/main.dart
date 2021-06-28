@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage>
   final _pageOptions = [
     HomeScreen(),
     Favourites(),
-    HomeSearch(),
+    SearchScreen(),
     SettingsScreen(),
   ];
 

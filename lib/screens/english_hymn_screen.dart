@@ -1,5 +1,6 @@
 import 'package:baptist_hymnal/models/hymn_data.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
+import 'package:baptist_hymnal/screens/search_screen.dart';
 import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,10 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
                       Icons.search,
                       color: Colors.white,
                     ),
-                    onPressed: null)
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (ctx) =>
+                                SearchScreen(list: [...englishHymnData]))))
               ],
               expandedHeight: 250.0,
               flexibleSpace: FlexibleSpaceBar(
