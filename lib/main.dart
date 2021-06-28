@@ -1,14 +1,16 @@
 import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/providers/settings_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
+import 'package:splashscreen/splashscreen.dart';
 import 'screens/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -17,20 +19,56 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<EnglishHymnProvider>(
-      create: (_) => EnglishHymnProvider(),
-      lazy: true,
-      child: MaterialApp(
-        title: 'Flutter Demo',
+    return MultiProvider(child: FirstScreen(), providers: [
+      ChangeNotifierProvider<SettingsProvider>(
+          create: (_) => SettingsProvider(), lazy: true),
+      ChangeNotifierProvider<EnglishHymnProvider>(
+          create: (_) => EnglishHymnProvider(), lazy: true)
+    ]);
+  }
+}
+
+class FirstScreen extends StatelessWidget {
+  SettingsProvider _settingsProvider;
+  EnglishHymnProvider _englishHymn;
+  FirstScreen({Key key}) : super(key: key);
+  Future<Widget> _initProviders(BuildContext context) async {
+    _settingsProvider = context.read<SettingsProvider>();
+    await _settingsProvider.fetchSettings();
+
+    _englishHymn = context.read<EnglishHymnProvider>();
+    await _englishHymn.fetchFavorites();
+
+    return MyHomePage();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Baptist Hymn',
         theme: ThemeData(
           primarySwatch: Colors.green,
         ),
         darkTheme: ThemeData(
           brightness: Brightness.dark,
         ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
-      ),
-    );
+        themeMode: context.watch<SettingsProvider>().isDarkMode(
+                SchedulerBinding.instance.window.platformBrightness ==
+                    Brightness.dark)
+            ? ThemeMode.dark
+            : ThemeMode.light,
+        home: SplashScreen(
+          loadingText: Text('Fetching Hymns...'),
+          backgroundColor: Colors.green.shade300,
+          seconds: 2,
+          navigateAfterSeconds: MyHomePage(),
+          navigateAfterFuture: _initProviders(context),
+          title: Text('Baptist Hymnal',
+              style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Alata',
+                  fontSize: 20.0)),
+        ));
   }
 }
 
@@ -45,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   int currentPage;
   Color currentColor = Colors.deepPurple;
-  Color inactiveColor = Colors.black;
   TabController tabBarController;
   List<Tabs> tabs = [];
 
@@ -77,28 +114,10 @@ class _MyHomePageState extends State<MyHomePage>
           controller: tabBarController,
           physics: NeverScrollableScrollPhysics(),
           children: _pageOptions),
-
-      /*drawer: new Container(
-          width: 250.0,
-          margin: EdgeInsets.only(bottom: 60.0),
-          color: Colors.blue,
-          child: ListView(
-            children: <Widget>[Text("Hello"), Text("World")],
-          )),
-      endDrawer: new Container(
-          width: 250.0,
-          margin: EdgeInsets.only(bottom: 60.0),
-          color: Colors.blue,
-          child: ListView(
-            children: <Widget>[Text("Hello"), Text("World")],
-          )),*/
-
       bottomNavigationBar: CubertoBottomBar(
-        inactiveIconColor: inactiveColor,
+        inactiveIconColor: Theme.of(context).iconTheme.color,
         tabStyle: CubertoTabStyle.STYLE_FADED_BACKGROUND,
         selectedTab: _selectedPage,
-
-        /// initial Selection has been renames to selectedTab, setting the index value to this will change the tab
         tabs: tabs
             .map((value) => TabData(
                   iconData: value.icon,
@@ -112,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage>
             _selectedPage = index;
           });
         },
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 

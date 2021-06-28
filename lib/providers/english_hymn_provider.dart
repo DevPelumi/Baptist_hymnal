@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../repositories/hymn_repository.dart';
-import 'i_hymn_provider.dart';
+import 'hymn_provider.dart';
 
 class EnglishHymnProvider extends ChangeNotifier implements IHymnProvider {
   HymnRepository repo;

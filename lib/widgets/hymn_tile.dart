@@ -1,5 +1,5 @@
 import 'package:baptist_hymnal/models/hymn_data.dart';
-import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/providers/hymn_provider.dart';
 import 'package:baptist_hymnal/screens/english_hymn_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +7,7 @@ class HymnTile extends StatelessWidget {
   /// hymnKey starts from 1 so to get the corresponding
   /// hymnData we need to subtract 1.. when we use key, we use [hymnKey]
   final HymnData hymnData;
-  final EnglishHymnProvider provider;
+  final IHymnProvider provider;
   final bool showFavorites;
   const HymnTile(this.hymnData, this.provider, {this.showFavorites = true});
 

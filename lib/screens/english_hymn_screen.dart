@@ -1,4 +1,5 @@
 import 'package:baptist_hymnal/models/hymn_data.dart';
+import 'package:baptist_hymnal/providers/settings_provider.dart';
 import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -208,12 +209,14 @@ class DetailScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 55),
-              child: Text(
-                hymn.contents.join("\n"),
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'Alata',
+              child: Consumer<SettingsProvider>(
+                builder: (ctx, provider, _) => Text(
+                  hymn.contents.join("\n"),
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: provider.getFontSize().toDouble(),
+                    fontFamily: 'Alata',
+                  ),
                 ),
               ),
             ),
