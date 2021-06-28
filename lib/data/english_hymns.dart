@@ -1,7 +1,7 @@
-import '../models/hymn_data.dart';
+import 'package:baptist_hymnal/models/hymn_data.dart';
 
 List<HymnData> englishHymnData = [
-  HymnData(1, '1. Holy, Holy, Holy', [
+  HymnData(1, 'Holy, Holy, Holy', [
     '''
 1. Holy, holy, holy!
 Lord God Almighty!
@@ -34,7 +34,7 @@ God in three persons, blessed
 Trinity! Amen.
 '''
   ]),
-  HymnData(2, '2. Love Divine, All loves excelling', [
+  HymnData(2, 'Love Divine, All loves excelling', [
     '''
 1. Love divine, all loves excelling,
 Joy of heaven, to earth come down;
@@ -78,7 +78,7 @@ Thee,
 Lost in wonder, Love and praise
 '''
   ]),
-  HymnData(3, '3. All Creatures of Our God and King', [
+  HymnData(3, 'All Creatures of Our God and King', [
     '''
 1. All creature or our God and King,
 Lift up your voice and with us sing
@@ -115,7 +115,7 @@ O Praise Him, O praise Him!
 Alleluia! Alleluia! Alleluia!
 '''
   ]),
-  HymnData(4, '4. Mighty God, while angels bless Thee', [
+  HymnData(4, 'Mighty God, while angels bless Thee', [
     '''
 1. Mighty God, while angels bless Thee,
 May a mortal lisp Thy name?
@@ -153,7 +153,7 @@ Thence return and reign forever:
 Be the kingdom all thine own!
 '''
   ]),
-  HymnData(5, '5. God, Our Father, We Adore Thee', [
+  HymnData(5, 'God, Our Father, We Adore Thee', [
     '''
 1. God, our Father, we adore Thee!
 We Thy children, bless Thy name!
@@ -191,7 +191,7 @@ We adore Thee! We adore Thee!
 Thee we bless thro’ endless days!
 '''
   ]),
-  HymnData(6, '6. Praise to the Lord, the Almighty', [
+  HymnData(6, 'Praise to the Lord, the Almighty', [
     '''
 1. Praise to the Lord, the Almighty, the King of Creation!
 O my soul, praise Him, for He is thy health and salvation!
@@ -216,7 +216,7 @@ Let the Amen sound from His people again,
 Gladly for aye we adore Him. Amen
 '''
   ]),
-  HymnData(7, '7. Let all on Earth Their Voices Raise', [
+  HymnData(7, 'Let all on Earth Their Voices Raise', [
     '''
 1. Let all on earth their voices raise,
 To sing the great Jehovah’s praise,
@@ -244,7 +244,7 @@ His saving grace proclaim,
 His saving grace proclaim. Amen
 '''
   ]),
-  HymnData(8, '8. All Things Bright and Beautiful', [
+  HymnData(8, 'All Things Bright and Beautiful', [
     '''
 1. All things bright and beautiful
 All things great and small
@@ -266,7 +266,7 @@ How good is God our Father
 Who doeth all things well
 '''
   ]),
-  HymnData(9, '9. Praise the Lord! Ye Heavens, Adore Him', [
+  HymnData(9, 'Praise the Lord! Ye Heavens, Adore Him', [
     '''
 1. Praise the Lord! Ye heavens, adore Him;
 Praise Him, angels, in the height;
@@ -287,7 +287,7 @@ Heaven and earth and all creation
 Laud and magnify His name. Amen.
 '''
   ]),
-  HymnData(10, '10. The Spacious Firmament', [
+  HymnData(10, 'The Spacious Firmament', [
     '''
 1. The spacious firmament on high.
 With all the blue ethereal sky,
@@ -319,7 +319,7 @@ Forever singing, as they shine,
 ‘The hand that made us is divine” Amen
 '''
   ]),
-  HymnData(11, '11. We praise Thee, O God, Our Redeemer', [
+  HymnData(11, 'We praise Thee, O God, Our Redeemer', [
     '''
 1. We praise Thee, O God, our Redeemer, Creator
 In grateful devotion our tribute we bring.
@@ -340,7 +340,7 @@ Thy strong arm will guide us, our God is beside us,
 To Thee, our great Redeemer, forever be praise. Amen.
 '''
   ]),
-  HymnData(12, '12. Come, Thou Almighty King', [
+  HymnData(12, 'Come, Thou Almighty King', [
     '''
 1. Come, Thou Almighty King,
 Help us Thy name to sing,
@@ -370,7 +370,7 @@ May we in glory see,
 And to eternity Love and adore.
 '''
   ]),
-  HymnData(13, '13. All People That on Earth Do Dwell', [
+  HymnData(13, 'All People That on Earth Do Dwell', [
     '''
 1. All people that on earth do dwell,
 Sing to the Lord with cheerful voice;
@@ -397,7 +397,7 @@ His truth at all times firmly stood,
 And truth shall from age to age endure. Amen.
 '''
   ]),
-  HymnData(14, '14. Praise to God Immortal Praise', [
+  HymnData(14, 'Praise to God Immortal Praise', [
     '''
 1. Praise to God, immortal praise,
 For the love that crowns our days,
@@ -415,7 +415,7 @@ Lord for these our souls shall raise
 Grateful vows and solemn praise.
 '''
   ]),
-  HymnData(15, '15. Sun of My Soul, Thou Savior Dear', [
+  HymnData(15, 'Sun of My Soul, Thou Savior Dear', [
     '''
 1. Sun of my soul, Thou Saviour
 dear,
@@ -442,7 +442,7 @@ Till in the ocean of Thy love
 We lose ourselves in heav’n above
 '''
   ]),
-  HymnData(16, '16. Stand Up, and Bless the Lord', [
+  HymnData(16, 'Stand Up, and Bless the Lord', [
     '''
 1. Stand up, and bless the Lord,
 Ye people of His choice;
@@ -474,7 +474,7 @@ Stand up and bless His glorious name,
 Hence-forth forevermore. Amen
 '''
   ]),
-  HymnData(17, '17. Rejoice, Ye pure in Heart', [
+  HymnData(17, 'Rejoice, Ye pure in Heart', [
     '''
 1. Rejoice, ye pure in heart,
 Rejoice, give thanks and sing;
@@ -502,7 +502,7 @@ As warriors thro’ the darkness toil
 Till dawns the golden day. Amen.
 '''
   ]),
-  HymnData(18, '18. Praise, My Soul, the King of heaven', [
+  HymnData(18, 'Praise, My Soul, the King of heaven', [
     '''
 1. Praise, my soul, the King of heaven,
 To His feet Thy tribute bring;
@@ -533,7 +533,7 @@ Alleluia! Alleluia!
 Praise with us the God of Grace.
 '''
   ]),
-  HymnData(19, '19. Now to the Lord a Noble Song', [
+  HymnData(19, 'Now to the Lord a Noble Song', [
     '''
 1. Now to the Lord a noble song;
 Awake, my soul, awake my tongue,
@@ -556,7 +556,7 @@ Ye heav’ns reflect it to the ground
 His beauties there may I behold and His nme to harps of gold . Amen
 '''
   ]),
-  HymnData(20, '20. O Worship the King', [
+  HymnData(20, 'O Worship the King', [
     '''
 1. O worship the King, all glorious above,
 And gratefully sing His wonderful love;
@@ -584,7 +584,7 @@ Thy mercies how tender, how firm to the end,
 Our maker, Defender, Redeemer, and Friend. Amen.
 '''
   ]),
-  HymnData(21, '21. Welcome, Delightful Morn', [
+  HymnData(21, 'Welcome, Delightful Morn', [
     '''
 1. Welcome, delightful morn,
 Thou day of sacred rest!
@@ -612,7 +612,7 @@ Nor Sabbaths be enjoyed in vain,
 Nor Sabbath be enjoyed in vain. Amen.
 '''
   ]),
-  HymnData(22, '22. Christ, Whose Glory Fills the Skies', [
+  HymnData(22, 'Christ, Whose Glory Fills the Skies', [
     '''
 1. Christ, whose glory fills the skies,
 Christ, the true, the only light,
@@ -637,7 +637,7 @@ More and more Thy self display,
 Shining to the perfect day. Amen.
 '''
   ]),
-  HymnData(23, '23. When Morning Gilds the skies', [
+  HymnData(23, 'When Morning Gilds the skies', [
     '''
 1. When morning gilds the skies,
 My heart awaking cries,
@@ -670,7 +670,7 @@ From depth to height reply,
 May Jesus Christ be praised. Amen
 '''
   ]),
-  HymnData(24, '24. Awake, My Tongue, Thy Tribute Bring', [
+  HymnData(24, 'Awake, My Tongue, Thy Tribute Bring', [
     '''
 1. Awake, my tongue, Thy tribute bring
 To Him who gave these pow’rs to sing;
@@ -696,7 +696,7 @@ Here, wisdom shines for ever bright;
 Praise Him, my soul, with sweet delight. Amen
 '''
   ]),
-  HymnData(25, '25. Still, Still with Thee', [
+  HymnData(25, 'Still, Still with Thee', [
     '''
 1. Still, still with Thee, when purple morning breaketh,
 When the bird waketh, and the shadows flee;
@@ -722,7 +722,7 @@ O in that hour, fairer than day light dawning,
 Shall rise the glorious tho’t I am with Thee. Amen
 '''
   ]),
-  HymnData(26, '26. Awake, My Soul, in Joyful Lays', [
+  HymnData(26, 'Awake, My Soul, in Joyful Lays', [
     '''
 1. Awake, my soul, in joyful lays
 And sing Thy great Redeemer’s praise;
@@ -756,7 +756,7 @@ Loving kindness, Loving kindness,
 His loving kindness changes not
 '''
   ]),
-  HymnData(27, '27. Saviour, Again to Thy Dear Name', [
+  HymnData(27, 'Saviour, Again to Thy Dear Name', [
     '''
 1. Saviour, again to Thy dear name we raise,
 With one accord our parting hymn of praise;
@@ -783,7 +783,7 @@ Call us, O Lord, to thine
 Eternal peace. Amen
 '''
   ]),
-  HymnData(28, '28. Now, on Land and Sea Descending', [
+  HymnData(28, 'Now, on Land and Sea Descending', [
     '''
 1. Now, on land and sea descending,
 Brings the night its peace profound;
@@ -824,7 +824,7 @@ Hope and faith and love rise glorious,
 Shining in the spirit’s skies. Amen
 '''
   ]),
-  HymnData(29, '29. Day is Dying in the West', [
+  HymnData(29, 'Day is Dying in the West', [
     '''
 1. Day is dying in the west,
 Heav’n is touching earth with rest;
@@ -856,7 +856,7 @@ Let eternal morning rise,
 And shadows end.
 '''
   ]),
-  HymnData(30, '30. God, That Madest Earth and Heaven', [
+  HymnData(30, 'God, That Madest Earth and Heaven', [
     '''
 1. God that madest earth and heaven,
 Darkness and light;
@@ -888,7 +888,7 @@ But to reign in glory take us
 With Thee on high. Amen.
 '''
   ]),
-  HymnData(31, '31. Lord Dismiss Us with Thy Blessing', [
+  HymnData(31, 'Lord Dismiss Us with Thy Blessing', [
     '''
 1. Lord, dismiss us with Thy blessing;
 Fill our hearts with joy and peace;
@@ -914,7 +914,7 @@ May we ever, may we ever
 Reign with Thee in endless day. Amen
 '''
   ]),
-  HymnData(32, '32. The Radiant Morn Hath Passed Away', [
+  HymnData(32, 'The Radiant Morn Hath Passed Away', [
     '''
 1. The Radiant morn hath passed away,
 And spent too soon her golden store;
@@ -940,7 +940,7 @@ Where Thou, eternal Light of light,
 Art Lord of all. Amen
 '''
   ]),
-  HymnData(33, '33. Softly Now the Light of Day', [
+  HymnData(33, 'Softly Now the Light of Day', [
     '''
 1. Softly now the light of day
 Fades upon our sight away;
@@ -959,7 +959,7 @@ Then, from sin and sorrow free,
 Take us, Lord, to dwell with Thee! Amen.
 '''
   ]),
-  HymnData(34, '34. Saviour, Breathe an Evening Blessing', [
+  HymnData(34, 'Saviour, Breathe an Evening Blessing', [
     '''
 1. Saviour, breathe an evening blessing
 Ere repose our spirits seal;
@@ -985,7 +985,7 @@ May the morn in heav’n awake us,
 Clad in bright and deathless bloom. Amen
 '''
   ]),
-  HymnData(35, '35. Now the Day is Over', [
+  HymnData(35, 'Now the Day is Over', [
     '''
 1. Now the day is over,
 Night is drawing nigh,
@@ -1011,7 +1011,7 @@ Pure, and fresh, and sinless,
 In Thy holy eyes. Amen.
 '''
   ]),
-  HymnData(36, '36. O Day of Rest and Gladness', [
+  HymnData(36, 'O Day of Rest and Gladness', [
     '''
 1. O day of rest and gladness,
 O day of joy and light,
@@ -1053,7 +1053,7 @@ The church her voice upraises
 To Thee, blest Three in One. Amen.
 '''
   ]),
-  HymnData(37, '37. Safety Through Another Week', [
+  HymnData(37, 'Safety Through Another Week', [
     '''
 1. Safely through another week
 God has brought us on our way;
@@ -1095,7 +1095,7 @@ Thus may all our Sabbaths prove,
 Till we join the church above. Amen
 '''
   ]),
-  HymnData(38, '38. With Joy We Hail the Sacred Day', [
+  HymnData(38, 'With Joy We Hail the Sacred Day', [
     '''
 1. With joy we hail the sacred day
 Which God has called His own;
@@ -1120,7 +1120,7 @@ With joy the summons we obey
 To worship at Thy throne. Amen
 '''
   ]),
-  HymnData(39, '39. his is the Day the Lord Hath made', [
+  HymnData(39, 'his is the Day the Lord Hath made', [
     '''
 1. This is the day the Lord hath made;
 He calls the hours His low;
@@ -1146,7 +1146,7 @@ Who comes, in God His father’s name,
 To save our sinful race. Amen.
 '''
   ]),
-  HymnData(40, '40. A Mighty Fortress is Our God', [
+  HymnData(40, 'A Mighty Fortress is Our God', [
     '''
 1. A Mighty Fortress is Our God,
 A bulwark never failing;
@@ -1192,7 +1192,7 @@ God’s truth abideth still,
 His kingdom is forever. Amen.
 '''
   ]),
-  HymnData(41, '41. To God be the Glory', [
+  HymnData(41, 'To God be the Glory', [
     '''
 1. To God be the glory, great things he hath done;
 So loved He the world that He gave us His Son,
@@ -1218,7 +1218,7 @@ But purer, and higher, and greater will be
 Our wonder, our transport, when Jesus we see. Amen
 '''
   ]),
-  HymnData(42, '42. God the Almighty One', [
+  HymnData(42, 'God the Almighty One', [
     '''
 1. God the Almighty One! Wisely ordaining
 Judgements unsearchable, famine and sword;
@@ -1238,7 +1238,7 @@ Falsehood and wrong shall not tarry beside Thee;
 Give us peace in our time, O Lord! Amen.
 '''
   ]),
-  HymnData(43, '43. Immortal, Invisible', [
+  HymnData(43, 'Immortal, Invisible', [
     '''
 1. Immortal, invisible God only wise,
 In light inaccessible hid from our eyes,
@@ -1264,7 +1264,7 @@ All praise we would render; O help us to see
 ‘Tis only the splendor of light hideth Thee! Amen.
 '''
   ]),
-  HymnData(44, '44. Joyful, Joyful, We Adore Thee', [
+  HymnData(44, 'Joyful, Joyful, We Adore Thee', [
     '''
 1. Joyful, joyful, we adore Thee,
 God of glory, Lord of love;
@@ -1305,7 +1305,7 @@ Joyful music leads us sunward
 In the triumph song of life. Amen.
 '''
   ]),
-  HymnData(45, '45. God Who Touchest Earth with Beauty', [
+  HymnData(45, 'God Who Touchest Earth with Beauty', [
     '''
 1. God, who touchest earth with beauty,
 Make me lovely too;
@@ -1336,7 +1336,7 @@ Keep me ever by Thy Spirit,
 Pure and strong and true. Amen
 '''
   ]),
-  HymnData(46, '46. Father, I Stretch My Hands to Thee', [
+  HymnData(46, 'Father, I Stretch My Hands to Thee', [
     '''
 1. Father, I stretch my hands to Thee;
 No other help I know;
@@ -1356,7 +1356,7 @@ O may I now receive that gift!
 My soul, without it, dies. Amen.
 '''
   ]),
-  HymnData(47, '47. Great is Thy Faithfulness', [
+  HymnData(47, 'Great is Thy Faithfulness', [
     '''
 1. Great is Thy faithfulness, O God my father,
 There is no shadow of turning with Thee;
@@ -1380,7 +1380,7 @@ Strength for today and bright hope for tomorrow,
 Blessingfs all mine, with ten thousand beside! Amen.
 '''
   ]),
-  HymnData(48, '48. Theres a Wideness in God’s Mercy', [
+  HymnData(48, 'Theres a Wideness in God’s Mercy', [
     '''
 1. There’s a wideness in God’s mercy,
 Like the wideness of the sea;
@@ -1405,7 +1405,7 @@ And our lives would be all sunshine
 In the sweetness of our Lord. Amen
 '''
   ]),
-  HymnData(49, '49. Begin, My Tongue, Some Heavenly Theme', [
+  HymnData(49, 'Begin, My Tongue, Some Heavenly Theme', [
     '''
 1. Begin, my tongue, some heav’nly theme,
 And speak some boundless thing;
@@ -1431,7 +1431,7 @@ Those gentle words should raise my song
 To notes almost divine. Amen
 '''
   ]),
-  HymnData(50, '50. God is Love, His Mercy brightens', [
+  HymnData(50, 'God is Love, His Mercy brightens', [
     '''
 1. God is love; His mercy brightens
 All the path in which we rove;
@@ -1458,7 +1458,7 @@ Everywhere His glory shineth;
 God is wisdom, God is Love
 '''
   ]),
-  HymnData(51, '51. O My Soul, Bless God the Father', [
+  HymnData(51, 'O My Soul, Bless God the Father', [
     '''
 1. O my soul, bless God the Father;
 All within me bless His name;
@@ -1484,7 +1484,7 @@ All throughout his vast dominion,
 Bless the Father, Oh My soul.
 '''
   ]),
-  HymnData(52, '52. O Love of God Most Full', [
+  HymnData(52, 'O Love of God Most Full', [
     '''
 1. O love of God most full,
 O love of God most Free,
@@ -1514,7 +1514,7 @@ With might Thou strength’nest
 Me. Amen
 '''
   ]),
-  HymnData(53, '53. God Moves in a Mysterious Way', [
+  HymnData(53, 'God Moves in a Mysterious Way', [
     '''
 1. I God Moves in a mysterious way
 His wonders to perform;
@@ -1543,7 +1543,7 @@ God is His own interpreter,
 And He will make it plain.
 '''
   ]),
-  HymnData(54, '54. God of our Fathers, Whose Almighty Hand', [
+  HymnData(54, 'God of our Fathers, Whose Almighty Hand', [
     '''
 1. God of our fathers, whose
 Mighty hand
@@ -1583,7 +1583,7 @@ And glory, laud, and praise be
 Even Thine.
 '''
   ]),
-  HymnData(55, '55. Guide Me, O Thou Great Jehovah', [
+  HymnData(55, 'Guide Me, O Thou Great Jehovah', [
     '''
 1. Guide me, O thou great Jehovah,
 Pilgrim through this barren land;
@@ -1615,7 +1615,7 @@ I will ever give to Thee,
 I will ever give to Thee.
 '''
   ]),
-  HymnData(56, '56. Guide Me, O Thou Great Jehovah', [
+  HymnData(56, 'Guide Me, O Thou Great Jehovah', [
     '''
 1. Guide Me, O Thou great Jehovah,
 Pilgrim through this barren land;
@@ -1645,7 +1645,7 @@ Songs of praise I will ever give to Thee;
 Songs of praise I will ever give to Thee.
 '''
   ]),
-  HymnData(57, '57. The Lord is my Shepherd', [
+  HymnData(57, 'The Lord is my Shepherd', [
     '''
 1. The Lord is my shepherd. No
 Want shall I know,
@@ -1692,7 +1692,7 @@ Thro’ the land of their sojoum,
 Thy kingdom of love. Amen
 '''
   ]),
-  HymnData(58, '58. e Leadeth Me! O Blessed Tho’t!', [
+  HymnData(58, 'e Leadeth Me! O Blessed Tho’t!', [
     '''
 1. He leadeth me! O blessed tho’t!
 O words with heav’nly comfort fraught!
@@ -1722,7 +1722,7 @@ E’en death’s cold wave I will not flee,
 Since God thro’ Jordan Leadeth me! Amen
 '''
   ]),
-  HymnData(59, '59. This is My Father’s World', [
+  HymnData(59, 'This is My Father’s World', [
     '''
 1. This is my Father’s world,
 And to my list’ning ears,
@@ -1754,7 +1754,7 @@ Jesus who died shall be satisfied,
 And earth and heaven be one. Amen
 '''
   ]),
-  HymnData(60, '60. Lead, Kindly Light', [
+  HymnData(60, 'Lead, Kindly Light', [
     '''
 1. Lead, kindly Light! A mid th’encircling gloom,
 Lead Thou me on;
@@ -1779,7 +1779,7 @@ And with the morn those angel faces smile
 Which I have loved long since, and lost a while
 '''
   ]),
-  HymnData(61, '61. Eternal Father Strong to Save', [
+  HymnData(61, 'Eternal Father Strong to Save', [
     '''
 1. Eternal Father, strong to save,
 Whose arm doth bind the restless wave,
@@ -1813,7 +1813,7 @@ Thus, evermore shall rise to Thee
 Glad hymns of praise from land and sea. Amen
 '''
   ]),
-  HymnData(62, '62. Be Thou My Vision', [
+  HymnData(62, 'Be Thou My Vision', [
     '''
 1. Be Thou my vision, O Lord of my heart;
 Naught be all else to me, save that Thou art;
@@ -1840,7 +1840,7 @@ Heart of my own heart, whatever befall,
 Still be my vision, O Ruler of all. Amen.
 '''
   ]),
-  HymnData(63, '63. The First Noel the Angel Did Say', [
+  HymnData(63, 'The First Noel the Angel Did Say', [
     '''
 1. The first Noel the angel did say,
 Was to certain poor shepherds in field as they lay;
@@ -1868,7 +1868,7 @@ And with His blood mankind
 Hath bought. Amen.
 '''
   ]),
-  HymnData(64, '64. Angels We Have Heard on High', [
+  HymnData(64, 'Angels We Have Heard on High', [
     '''
 1. Angels we have heard on high,
 Sweetly singing o’er the plains;
@@ -1896,7 +1896,7 @@ Mary, Joseph, lend your aid,
 While our hearts in love we raise.
 '''
   ]),
-  HymnData(65, '65. Joy to the World! The Lord is Come', [
+  HymnData(65, 'Joy to the World! The Lord is Come', [
     '''
 1. Joy to the World! The Lord is come;
 Let earth receive her King;
@@ -1931,7 +1931,7 @@ Richer by far is the heart’s adoration,
 Dearer to God are the prayers of the poor. Amen.
 '''
   ]),
-  HymnData(66, '66. O Come, All Ye Faithful', [
+  HymnData(66, 'O Come, All Ye Faithful', [
     '''
 1. O come, all ye faithful, joyful and triumphant,
 O come ye, O come ye to Bethlehem!
@@ -1960,7 +1960,7 @@ O come, let us adore Him,
 Christ the Lord!. Amen
 '''
   ]),
-  HymnData(67, '67. Brightest and Best', [
+  HymnData(67, 'Brightest and Best', [
     '''
 1. Brightest and best of the sons of the morning,
 Dawn on our darkness and lend us thine aid;
@@ -1985,7 +1985,7 @@ Richer by far is the heart’s adoration,
 Dearer to God are the prayers of the poor. Amen.
 '''
   ]),
-  HymnData(68, '68. As with Gladness men of Old', [
+  HymnData(68, 'As with Gladness men of Old', [
     '''
 1. As with gladness men of old,
 Did the guiding star behold;
@@ -2018,7 +2018,7 @@ Where they need no star to guide,
 Where no clouds Thy glory hide
 '''
   ]),
-  HymnData(69, '69. Theres a Song in the Air', [
+  HymnData(69, 'Theres a Song in the Air', [
     '''
 1. There’s a song in the air!
 There’s a star in the sky!
@@ -2057,7 +2057,7 @@ And we greet in His cradle our
 Saviour and King! Amen.
 '''
   ]),
-  HymnData(70, '70. ail, Thou Long-expected Jesus', [
+  HymnData(70, 'ail, Thou Long-expected Jesus', [
     '''
 1. Hail, Thou long-expected Jesus,
 Born to set Thy people free;
@@ -2079,7 +2079,7 @@ By Thine all sufficient merit
 Raise us to Thy glorious throne. Amen.
 '''
   ]),
-  HymnData(71, '71. It Came Upon The Midnight Clear', [
+  HymnData(71, 'It Came Upon The Midnight Clear', [
     '''
 1. It came upon the midnight clear,
 That glorious song of old,
@@ -2121,7 +2121,7 @@ And the whole world give back the song
 Which now the angels sing. Amen
 '''
   ]),
-  HymnData(72, '72. Silent Night, Holy Night', [
+  HymnData(72, 'Silent Night, Holy Night', [
     '''
 1. Silent night, hoy night,
 All is calm, all is bright
@@ -2156,7 +2156,7 @@ Christ the Saviour is born,
 Amen.
 '''
   ]),
-  HymnData(73, '73. Gentle Mary Laid Her Child', [
+  HymnData(73, 'Gentle Mary Laid Her Child', [
     '''
 1. Gentle Mary laid her child,
 Lowly in a manger;
@@ -2188,7 +2188,7 @@ Praise His name in all the earth,
 Hail the King of glory! Amen.
 '''
   ]),
-  HymnData(74, '74. Good Christian Men, Rejoice', [
+  HymnData(74, 'Good Christian Men, Rejoice', [
     '''
 1. Good Christian men, rejoice
 With heart and soul and voice!
@@ -2217,7 +2217,7 @@ To gain His everlasting hall,
 Christ was born to save, Christ was born to save! Amen.
 '''
   ]),
-  HymnData(75, '75. O Little Town of Bethlehem', [
+  HymnData(75, 'O Little Town of Bethlehem', [
     '''
 1. O little town of Bethlehem,
 How still we see thee lie!
@@ -2257,7 +2257,7 @@ O come to us abide with us,
 Our Lord Immanuel! Amen
 '''
   ]),
-  HymnData(76, '76. Angels, from the Realms of Glory', [
+  HymnData(76, 'Angels, from the Realms of Glory', [
     '''
 1. Angels, from the realms of glory,
 Wing your flight o’er all the earth,
@@ -2291,7 +2291,7 @@ Come and worship, come and worship,
 Worship Christ, the new born King!
 '''
   ]),
-  HymnData(77, '77. Away in Manger', [
+  HymnData(77, 'Away in Manger', [
     '''
 1. Away in a manger, no crib for a bed,
 The little Lord Jesus laid down His sweet head;
@@ -2311,7 +2311,7 @@ Bless all the dear children in Thy tender care,
 And fit us for heaven to live with Thee there. Amen
 '''
   ]),
-  HymnData(78, '78. I Heard the Bells on Christmas Day', [
+  HymnData(78, 'I Heard the Bells on Christmas Day', [
     '''
 1. I heard the bells on Christmas day,
 Their old familiar carols play,
@@ -2344,7 +2344,7 @@ A voice, chime, a chant sublime,
 Of peace on earth, good will to men. Amen
 '''
   ]),
-  HymnData(79, '79. While Shepherd Watched Their Flocks', [
+  HymnData(79, 'While Shepherd Watched Their Flocks', [
     '''
 1. While shepherd watched their flocks by night,
 All seated on the ground,
@@ -2381,7 +2381,7 @@ Begin and never cease;
 Begin and never cease;
 '''
   ]),
-  HymnData(80, '80. Let All Mortal Flesh Keep Silence', [
+  HymnData(80, 'Let All Mortal Flesh Keep Silence', [
     '''
 1. Let all mortal flesh keep silence,
 And with fear and trembling stand;
@@ -2406,7 +2406,7 @@ Alleluia! Alleluia!
 Alleluia! Lord Most High. Amen.
 '''
   ]),
-  HymnData(81, '81. Hark! The Herald Angels Sing', [
+  HymnData(81, 'Hark! The Herald Angels Sing', [
     '''
 1. Hark! The herald angels sing,
 “Glory to the new born King;
@@ -2438,7 +2438,7 @@ Born to raise the sons of earth,
 Born to give them second birth. Amen
 '''
   ]),
-  HymnData(82, '82. Thou Didst Leave Thy Throne', [
+  HymnData(82, 'Thou Didst Leave Thy Throne', [
     '''
 1. Thou didst leave Thy Throne
 And Thy kingly crown,
@@ -2485,7 +2485,7 @@ There is room at My side for Thee”
 Amen
 '''
   ]),
-  HymnData(83, '83. My Dear Redeemer and My Lord', [
+  HymnData(83, 'My Dear Redeemer and My Lord', [
     '''
 1. My dear redeemer and my Lord,
 I read my duty in Thy word;
@@ -2512,7 +2512,7 @@ To all who journey here below
 Amen.
 '''
   ]),
-  HymnData(84, '84. How Beauteous Were the Marks', [
+  HymnData(84, 'How Beauteous Were the Marks', [
     '''
 1. How beauteous were the marks divine,
 That in Thy meekness used to shine,
@@ -2538,7 +2538,7 @@ And learn to Thee, the Holy one,
 And like Thee, all my journey run. Amen
 '''
   ]),
-  HymnData(85, '85. One Day', [
+  HymnData(85, 'One Day', [
     '''
 1. One day when heaven was filled with His praises,
 One day when sin was as black as could be,
@@ -2579,7 +2579,7 @@ Glorious Saviour, this Jesus is mine!
 Amen
 '''
   ]),
-  HymnData(86, '86. The Great Physician', [
+  HymnData(86, 'The Great Physician', [
     '''
 1. The great Physician now is near,
 The sympathizing Jesus;
@@ -2609,7 +2609,7 @@ Oh! How my soul delights to hear
 The charming name of Jesus. Amen
 '''
   ]),
-  HymnData(87, '87. The Lily of the Valley', [
+  HymnData(87, 'The Lily of the Valley', [
     '''
 1. I have found a friend in Jesus,
 He’s everything to me,
@@ -2642,7 +2642,7 @@ His blessed face
 Where rivers of delight shall ever roll; He’s the
 '''
   ]),
-  HymnData(88, '88. The Light of the World is Jesus', [
+  HymnData(88, 'The Light of the World is Jesus', [
     '''
 1. The whole world was lost in the darkness of sin,
 The Light of the world is Jesus;
@@ -2671,7 +2671,7 @@ The lamb is the light in the city of gold,
 The light of the world is Jesus
 '''
   ]),
-  HymnData(89, '89 We Would See Jesus', [
+  HymnData(89, 'We Would See Jesus', [
     '''
 1. We would see Jesus; lo! His star is shining
 Above the stable while the angles sing;
@@ -2697,7 +2697,7 @@ Let us arise, all meaner service scoring;
 Lord, we are Thine, we give ourselves ti Thee. Amen
 '''
   ]),
-  HymnData(90, '90 Into the Woods My Master Went', [
+  HymnData(90, 'Into the Woods My Master Went', [
     '''
 1. Into the wilds my Master went, clean for spent, for spent;
 Into the woods my master came,
@@ -2717,7 +2717,7 @@ When out of the woods He came.
 Amen
 '''
   ]),
-  HymnData(91, '91 O Scared Head, Now Wounded', [
+  HymnData(91, 'O Scared Head, Now Wounded', [
     '''
 1. O sacred Head, now wounded,
 With grief and shame weighed down.
@@ -2747,7 +2747,7 @@ Lord, let me never, never
 Out live my love to Thee. Amen
 '''
   ]),
-  HymnData(92, '92 There Is a Fountain', [
+  HymnData(92, 'There Is a Fountain', [
     '''
 1. There is a fountain filled with blood
 Drawn from Immanuel’s veins;
@@ -2800,7 +2800,7 @@ Then in a nobler, sweeter song
 I’ll sing Thy power to save:
 '''
   ]),
-  HymnData(93, '93 The Old Rugged Cross', [
+  HymnData(93, 'The Old Rugged Cross', [
     '''
 1. On a hill far away stood an old rugged cross
 The emblem of suffering and shame.
@@ -2831,7 +2831,7 @@ Then He’ll call me some day to my home far away
 Where His glory forever I’ll share
 '''
   ]),
-  HymnData(94, '94 At The Cross', [
+  HymnData(94, 'At The Cross', [
     '''
 1. Alas. And did my saviour bleed and did my sovereign die?
 Would He devote that sacred head?
@@ -2858,7 +2858,7 @@ Here, lord, I give myself away,
 ‘Tis all that I can do.
 '''
   ]),
-  HymnData(95, '95 Down at the Cross', [
+  HymnData(95, 'Down at the Cross', [
     '''
 1. Down at the cross where my saviour died,
 Down where for cleasning from sin I cried,
@@ -2887,7 +2887,7 @@ Cast Thy poor soul at the savior’s feet
 Plunged in today, and be made complete Glory to His name.
 '''
   ]),
-  HymnData(96, '96 At Calvary', [
+  HymnData(96, 'At Calvary', [
     '''
 1. Year I spent in vanity and pride.
 Caring not my Lord was crucified,
@@ -2917,7 +2917,7 @@ Oh, the mighty gulf that God did span
 At Calvary.
 '''
   ]),
-  HymnData(97, '97 Jesus, Keep Me Near the Cross', [
+  HymnData(97, 'Jesus, Keep Me Near the Cross', [
     '''
 1. Jesus keep me near the cross,
 There a precious fountain,
@@ -2947,7 +2947,7 @@ Till I reach the golden strand,
 Just beyond the river, Amen
 '''
   ]),
-  HymnData(98, '98 There Is a Green Hill Away', [
+  HymnData(98, 'There Is a Green Hill Away', [
     '''
 1. There is a green hill far away,
 Without a city wall,
@@ -3005,7 +3005,7 @@ Love so amazing, so divine,
 Demands my soul, my life, my all. Amen
 '''
   ]),
-  HymnData(100, '100 In the Cross of Christ I Glory', [
+  HymnData(100, 'In the Cross of Christ I Glory', [
     '''
 1. In the cross of Christ I glory,
 Tow ‘ring over the weeks’ time
@@ -3032,7 +3032,7 @@ Measure,
 Joys that thro’ all time abide.
 '''
   ]),
-  HymnData(101, '101 Alas, and Did My Saviour Bleed', [
+  HymnData(101, 'Alas, and Did My Saviour Bleed', [
     '''
 1. Alas, and did my Saviour bleed
 And did my Sov’reign die?
@@ -3060,7 +3060,7 @@ Here, lord, I give myself away,
 ‘Tis all that I can do Amen
 '''
   ]),
-  HymnData(102, '102 Ride On! Ride On in Majesty', [
+  HymnData(102, 'Ride On! Ride On in Majesty', [
     '''
 1. Ride on! Ride on in majesty!
 Hark! All the tribes Hosanna cry:
@@ -3087,7 +3087,7 @@ Bow Thy meek Head to mortal pain,
 Then take, O God, Thy power and reign. Amen
 '''
   ]),
-  HymnData(103, '103 Rocks of Ages, Cleft for Me', [
+  HymnData(103, 'Rocks of Ages, Cleft for Me', [
     '''
 1. Rock of ages, cleft for me,
 Let me hide myself in thee;
@@ -3113,7 +3113,7 @@ Rock of ages, cleft for me.
 Let me hide myself in Thee. Amen
 '''
   ]),
-  HymnData(104, '104 Tis Midnight and on Olive’s Brow', [
+  HymnData(104, 'Tis Midnight and on Olive’s Brow', [
     '''
 1. Tis midnight, and on Olive’s brow
 The star is dimmed that lately shone;
@@ -3139,7 +3139,7 @@ That sweetly soothes the Savior’s woe.
 Amen
 '''
   ]),
-  HymnData(105, '105 Go to Dark Gethsemane', [
+  HymnData(105, 'Go to Dark Gethsemane', [
     '''
 1. Go to dark Gethsemane,
 Ye that feel the tempter’s power
@@ -3172,7 +3172,7 @@ Christ is rising! He meets our eyes;
 Saviour, teach us so to rise. Amen
 '''
   ]),
-  HymnData(106, '106 Blessed Redeemer', [
+  HymnData(106, 'Blessed Redeemer', [
     '''
 1. Up Calvary’s mountain one dreadful morn,
 Walked Christ my saviour weary and worn
@@ -3196,7 +3196,7 @@ Thro’ years unnumbered on heaven’s shore.
 My tongue shall praise Him forever more.
 '''
   ]),
-  HymnData(107, '107 The Strife Is Over', [
+  HymnData(107, 'The Strife Is Over', [
     '''
 1. Alleluia! Alleluia! Alleluia!
 The strife is over, the battle done;
@@ -3226,7 +3226,7 @@ That we may live and sing to
 Thee; Alleluia! Amen
 '''
   ]),
-  HymnData(108, '108 Rejoice, the Lord Is King', [
+  HymnData(108, 'Rejoice, the Lord Is King', [
     '''
 1. Rejoice, the Lord Is King;
 Your Lord and king adore !
@@ -3252,7 +3252,7 @@ Lift up your heart; lift up your voice!
 Rejoice, again I say, rejoice! Amen
 '''
   ]),
-  HymnData(109, '109 Come, Ye Faithful, Raise the strain', [
+  HymnData(109, 'Come, Ye Faithful, Raise the strain', [
     '''
 1. Come, ye faithful, raise the strain
 Of triumphant gladness;
@@ -3284,7 +3284,7 @@ God the Father praising;
 To the Spirit rising. Amen
 '''
   ]),
-  HymnData(110, '110 Welcome, Happy Mornings', [
+  HymnData(110, 'Welcome, Happy Mornings', [
     '''
 1. “Welcome, happy morning.
 Age to age shall say;
@@ -3313,7 +3313,7 @@ Bid the nations see.
 Bring again our daylight; Day returns with Thee! Amen
 '''
   ]),
-  HymnData(111, '111 The Day Of Resurrection', [
+  HymnData(111, 'The Day Of Resurrection', [
     '''
 1. The day of resurrection!
 Earth, tell it out abroad;
@@ -3344,7 +3344,7 @@ Our joy that hath no end.
 Amen.
 '''
   ]),
-  HymnData(112, '112 Our Lord Christ Hath Risen', [
+  HymnData(112, 'Our Lord Christ Hath Risen', [
     '''
 1. Our Lord Christ hath risen! The tempter is foiled
 His legions are scattered, his strong holds are spoiled.
@@ -3376,7 +3376,7 @@ Our foes are all conquered.
 Christ Jesus is King! Amen
 '''
   ]),
-  HymnData(113, '113 Low in the Grave He Lay', [
+  HymnData(113, 'Low in the Grave He Lay', [
     '''
 1. Low in the grave He lay,
 Jesus my saviour!
@@ -3403,7 +3403,7 @@ He tore the bars away
 Jesus my lord!
 '''
   ]),
-  HymnData(114, '114 Hallelujah! Christ Is Risen', [
+  HymnData(114, 'Hallelujah! Christ Is Risen', [
     '''
 1. Hallelujah! Hallelujah!
 Heart and voice to heaven rise
@@ -3434,7 +3434,7 @@ Hallelujah, now and ever,
 To the blessed Trinity
 '''
   ]),
-  HymnData(115, '115 Christ the Lord Is Risen Today', [
+  HymnData(115, 'Christ the Lord Is Risen Today', [
     '''
 1. Christ the Lord is risen today,
 Alleluia!
@@ -3469,7 +3469,7 @@ Made like Him, like Him we rise. Alleluia!
 Ours the cross, the grave, the skies, Alleluia! Amen
 '''
   ]),
-  HymnData(116, '116 Jesus Shall Reign Wherever the sun', [
+  HymnData(116, 'Jesus Shall Reign Wherever the sun', [
     '''
 1. Jesus shall reign wherever the stin
 Dose his successive journeys run;
@@ -3496,7 +3496,7 @@ And infant voice shall proclaim
 Their early blessing on his name Amen
 '''
   ]),
-  HymnData(117, '117 The Head That Once Was Crowned', [
+  HymnData(117, 'The Head That Once Was Crowned', [
     '''
 1. The head that once was crowned with thons
 Is crowned with glory now;
@@ -3522,7 +3522,7 @@ His people’s hope, His people’s wealth’
 Their everlasting theme. Amen
 '''
   ]),
-  HymnData(118, '118 Majestic Sweetness Sits Enthroned', [
+  HymnData(118, 'Majestic Sweetness Sits Enthroned', [
     '''
 1. Majestic sweetness sits enthroned
 Upon the savior’s brow;
@@ -3552,7 +3552,7 @@ And saves me from the grave,
 And saves me from the grave,
 '''
   ]),
-  HymnData(119, '119 Will Jesus Find Us Watching?', [
+  HymnData(119, 'Will Jesus Find Us Watching?', [
     '''
 1. When Jesus comes to reward His servants.
 Whether it be noon or night,
@@ -3582,7 +3582,7 @@ If He shall come at the dawn or mid-night,
 Will He find us watching there?
 '''
   ]),
-  HymnData(120, '120 It May Be at Morn', [
+  HymnData(120, 'It May Be at Morn', [
     '''
 1. It may be at morn, when the day is awaking,
 When sunlight throws darkness and shadow is breaking,
@@ -3611,7 +3611,7 @@ Caught up thro the clouds with our lord into glory,
 When Jesus receive His own
 '''
   ]),
-  HymnData(121, '121 He Is Coming', [
+  HymnData(121, 'He Is Coming', [
     '''
 1. He is coming, the “Man of Sorrows,”
 Now exalted on high;
@@ -3640,7 +3640,7 @@ Who are called by is name;
 And the ransomed of every nation for His own He shall claim.
 '''
   ]),
-  HymnData(122, '122 Rises, My Soul, and Stretch Thy Wings', [
+  HymnData(122, 'Rises, My Soul, and Stretch Thy Wings', [
     '''
 1. Rise, my soul, and stretch thy wings,,
 Thy better portion trace;
@@ -3670,7 +3670,7 @@ All our sorrows left below,
 And earth exchanged for heaven, Amen
 '''
   ]),
-  HymnData(123, '123 Lo, He Comes With Clouds Descending', [
+  HymnData(123, 'Lo, He Comes With Clouds Descending', [
     '''
 1. Lo, He comes with clouds descending,
 Once for favored sinners slain;
@@ -3704,7 +3704,7 @@ Oh, come quickly, oh, come quickly!
 Everlasting God, come down Amen
 '''
   ]),
-  HymnData(124, '124 There’s a Light upon the Mountains', [
+  HymnData(124, 'There’s a Light upon the Mountains', [
     '''
 1. There’s a light upon the mountains,
 And the day is at the spring,
@@ -3747,7 +3747,7 @@ All thy sweetest and thy dearest
 For the triumph of our King! Amen
 '''
   ]),
-  HymnData(125, '125 What If It Were Today?', [
+  HymnData(125, 'What If It Were Today?', [
     '''
 1. Jesus is coming to earth again,
 What if it were today?
@@ -3783,7 +3783,7 @@ Watch, for the time is drawing nigh
 What if it were today?
 '''
   ]),
-  HymnData(126, '126 The Lord Will Come', [
+  HymnData(126, 'The Lord Will Come', [
     '''
 1. The Lord will come and be slow,
 His footsteps cannot err;
@@ -3809,7 +3809,7 @@ Thou in Thy everlasting seat
 Remainest God alone, Amen
 '''
   ]),
-  HymnData(127, '127 I Know that My Redeemer Liveth', [
+  HymnData(127, 'I Know that My Redeemer Liveth', [
     '''
 1. I know that My Redeemer liveth,
 And on the earth again shall stand;
@@ -3833,7 +3833,7 @@ o wondrous thou for me He careth
 And He at last will come for me.
 '''
   ]),
-  HymnData(128, '128 Come, Let Us Tune Our loftiest song', [
+  HymnData(128, 'Come, Let Us Tune Our loftiest song', [
     '''
 1. Come, let us tune our lofiest song
 And raise to Christ our joyful strain;
@@ -3859,7 +3859,7 @@ Prolong for Him your cheerful strain;
 Worship and thanks to Him belong who reigns and shall forever reign. Amen
 '''
   ]),
-  HymnData(129, '129 O for a Thousand Tongues to Sing', [
+  HymnData(129, 'O for a Thousand Tongues to Sing', [
     '''
 1. O for a thousand tongues to sing
 My great Redeemer’s praise,
@@ -3885,7 +3885,7 @@ His blood can make the foulest clean;
 His blood availed for me. Amen
 '''
   ]),
-  HymnData(130, '130 What a Wonderful Saviour!', [
+  HymnData(130, 'What a Wonderful Saviour!', [
     '''
 1. Christ has for sin atonement made;
 What a wonderful Saviour!
@@ -3913,7 +3913,7 @@ And triumph in each trying hour;
 What a wonderful Saviour! Amen
 '''
   ]),
-  HymnData(131, '131 There Is a Name I Love to Hear', [
+  HymnData(131, 'There Is a Name I Love to Hear', [
     '''
 1. There is a name I love to hear;
 I love to sing its worth;
@@ -3942,7 +3942,7 @@ Who in each sorrow bears a part?
 That none can bear below
 '''
   ]),
-  HymnData(132, '132 All Hail the Power of Jesus’ Name', [
+  HymnData(132, 'All Hail the Power of Jesus’ Name', [
     '''
 1. All hail the power of Jesus ‘name!
 Let angels prostrate fall
@@ -3976,7 +3976,7 @@ And crown Him Lord of all
 Amen
 '''
   ]),
-  HymnData(133, '133 Jesus, the Very Thought of Thee', [
+  HymnData(133, 'Jesus, the Very Thought of Thee', [
     '''
 1. Jesus, the very thought of Thee
 With sweetness fills my breast;
@@ -4002,7 +4002,7 @@ The love of Jesus, what it is
 None but His loved ones Know. Amen
 '''
   ]),
-  HymnData(136, '136 Jesus, Thou joy of Loving Hearts', [
+  HymnData(136, 'Jesus, Thou joy of Loving Hearts', [
     '''
 1. Jesus, thou joy of loving hearts;
 Thou fount of life, thou light of men.
@@ -4029,7 +4029,7 @@ Chase the dark night of sin away
 Shed over the world Thy holy light Amen
 '''
   ]),
-  HymnData(137, '137 Praise Him! Praise', [
+  HymnData(137, 'Praise Him! Praise', [
     '''
 1. Praise Him! Praise Him!
 Jesus, our blessed redeemer!
@@ -4061,7 +4061,7 @@ Christ is coming, over the world victorious,
 Power and glory unto the Lord belong;
 '''
   ]),
-  HymnData(138, '138 Glorious Is Thy Name', [
+  HymnData(138, 'Glorious Is Thy Name', [
     '''
 1. blessed Saviour we adore Thee,
 We Thy love and grace proclaim;
@@ -4096,7 +4096,7 @@ Come, and reign, and reign forever,
 Be the kingdom all Thine own! Amen
 '''
   ]),
-  HymnData(139, '139 I Stand Amazed in the Presence', [
+  HymnData(139, 'I Stand Amazed in the Presence', [
     '''
 1. I stand amazed in the presence
 Of Jesus the Nazarene,
@@ -4133,7 +4133,7 @@ His face I at last shall see,
 To sing of His love for me.
 '''
   ]),
-  HymnData(140, '140 Blessed Be the Name', [
+  HymnData(140, 'Blessed Be the Name', [
     '''
 1. 1. O for a thousand toungue to sing;
 Blessed be the name of the Lord!
@@ -4157,7 +4157,7 @@ His blood can make the foulest clean,
 Blessed be the name of the Lord!
 '''
   ]),
-  HymnData(141, '141 I Love to Tell the Story', [
+  HymnData(141, 'I Love to Tell the Story', [
     '''
 1. I love to tell the story
 Of unseen things above,
@@ -4193,7 +4193,7 @@ I sing the new, new song
 That I have loved so long.
 '''
   ]),
-  HymnData(142, '142 Wonderful, Wonderful Jesus', [
+  HymnData(142, 'Wonderful, Wonderful Jesus', [
     '''
 1. There is never a day so dreary,
 There is never a night so long,
@@ -4223,7 +4223,7 @@ But that God can in mercy pardon
 Through Jesus Christ, His Son.
 '''
   ]),
-  HymnData(143, '143 I Will Sing of My Redeemer', [
+  HymnData(143, 'I Will Sing of My Redeemer', [
     '''
 1. I will sing of my Redeemer
 And His wondrous Love to me,
@@ -4253,7 +4253,7 @@ He from death to life hath brought me,
 Son of God, with to be
 '''
   ]),
-  HymnData(144, '144 I Will Sing Wondrous Story', [
+  HymnData(144, 'I Will Sing Wondrous Story', [
     '''
 1. I will sing wondrous story
 Of the Christ who died for me,
@@ -4289,7 +4289,7 @@ Then He’ll bear me safely over,
 Where the loved ones I shall meet,
 '''
   ]),
-  HymnData(145, '145 Hark; Ten Thousand Harps', [
+  HymnData(145, 'Hark; Ten Thousand Harps', [
     '''
 1. Hark, ten thousand harps and voices
 Sound the note of praise above;
@@ -4329,7 +4329,7 @@ Then with golden harps we’ll sing,
 Alleluia! Alleluia! Alleluia! Amen
 '''
   ]),
-  HymnData(146, '146 O Could I Speak the Matchless worth', [
+  HymnData(146, 'O Could I Speak the Matchless worth', [
     '''
 1. O could I speak the matchless worth,
 O could I sound the glories forth
@@ -4367,7 +4367,7 @@ Triumphant in His grace,
 Triumphant in His grace, Amen
 '''
   ]),
-  HymnData(147, '147 Ye Servant of God', [
+  HymnData(147, 'Ye Servant of God', [
     '''
 1. Ye servant of God, your Master proclaim,
 And publish abroad His wonderful name;
@@ -4394,7 +4394,7 @@ All honor and blessing, with angels above,
 And thanks never ceasing, and infinite love. Amen
 '''
   ]),
-  HymnData(148, '148 Look, Ye Saints', [
+  HymnData(148, 'Look, Ye Saints', [
     '''
 1. Look, ye saints! The sight is glorious;
 See the man of sorrows now;
@@ -4428,7 +4428,7 @@ Crown Him! Crown Him! Crown Him! Crown Him!
 King of kings, and Lord of Lords.
 '''
   ]),
-  HymnData(149, '149 Hails, Thou Once Despised Jesus', [
+  HymnData(149, 'Hails, Thou Once Despised Jesus', [
     '''
 1. Hail, thou once despised Jesus!
 Hail, thou Galilean King!
@@ -4469,7 +4469,7 @@ Help to sing our Savior’s merits,
 Help to chant Immanuel’s praise!
 '''
   ]),
-  HymnData(150, '150 I Love Thee', [
+  HymnData(150, 'I Love Thee', [
     '''
 1. I love Thee, I love Thee, I love Thee my lord;
 I love Thee, my Saviour, I love
@@ -4500,7 +4500,7 @@ I’ll praise Him; I’ll praise Him with notes loud and clear,
 While rivers of pleasure my spirit shall cheer. Amen
 '''
   ]),
-  HymnData(151, '151 All Glory, Land and Honor', [
+  HymnData(151, 'All Glory, Land and Honor', [
     '''
 1. All glory, laud, and honor,
 To The, Redeemer, King,
@@ -4532,7 +4532,7 @@ Who in all good delighest,
 Thou good and gracious King. Amen.
 '''
   ]),
-  HymnData(152, '152 Crown Him with Many Crowns', [
+  HymnData(152, 'Crown Him with Many Crowns', [
     '''
 1. Crown Him with many crowns,
 The lamb upon His throne;
@@ -4573,7 +4573,7 @@ Thy praise and glory shall not
 Throughout eternity, Amen.
 '''
   ]),
-  HymnData(153, '153 For the Beauty of the Earth', [
+  HymnData(153, 'For the Beauty of the Earth', [
     '''
 1. For the beauty of the earth,
 For the glory of skies,
@@ -4607,7 +4607,7 @@ Christ our God, to Thee we
 This our hymn of grateful praise
 '''
   ]),
-  HymnData(154, '154 Great Redeemer, We Adore Thee', [
+  HymnData(154, 'Great Redeemer, We Adore Thee', [
     '''
 1. Great Redeemer, we adore Thee,
 God of mercy, love, and grace;
@@ -4648,7 +4648,7 @@ We adore Thee, Great redeemer,
 God of life eternally. Amen
 '''
   ]),
-  HymnData(155, '155 Jesus is All the World to Me', [
+  HymnData(155, 'Jesus is All the World to Me', [
     '''
 1. Jesus is all the world to me,
 My life, my joy, my all;
@@ -4689,7 +4689,7 @@ Eternal life, eternal joy,
 He’s my friend. Amen
 '''
   ]),
-  HymnData(156, '156 Jesus, Lover Of My Soul', [
+  HymnData(156, 'Jesus, Lover Of My Soul', [
     '''
 1. Jesus, lover of my soul,
 Let me to thy bossom fly,
@@ -4731,7 +4731,7 @@ Spring Thou up within my heart
 Rise to all eternity. Amen
 '''
   ]),
-  HymnData(159, '159 Fairest Lord Jesus', [
+  HymnData(159, 'Fairest Lord Jesus', [
     '''
 1. Fairest Lord Jesus,
 Ruler of all nature
@@ -4757,7 +4757,7 @@ Jesus shines purer
 Than all the angels heavens can boast
 '''
   ]),
-  HymnData(160, '160 How Sweet the Name Of Jesus', [
+  HymnData(160, 'How Sweet the Name Of Jesus', [
     '''
 1. How sweet the name of Jesus sounds
 In a believer’s ear!
@@ -4787,7 +4787,7 @@ Accept the praise I bring,
 Accept the praise I bring.
 '''
   ]),
-  HymnData(161, '161 Ask ye What Great Thing I Know', [
+  HymnData(161, 'Ask ye What Great Thing I Know', [
     '''
 1. Ask ye what great thing I know
 That delights and stirs me so?
@@ -4816,7 +4816,7 @@ Him who triumphed over grave
 Jesus Christ, the crucified. Amen
 '''
   ]),
-  HymnData(162, '162 Shepherd of Tender Youth', [
+  HymnData(162, 'Shepherd of Tender Youth', [
     '''
 1. Shepherd of tender youth,
 Guiding in love and truth,
@@ -4854,7 +4854,7 @@ Leads us where thou hast trod
 Make our faith strong. Amen
 '''
   ]),
-  HymnData(163, '163 “Man of Sorrows,” What a Name', [
+  HymnData(163, '“Man of Sorrows,” What a Name', [
     '''
 1. “Man of sorrows,” what a name
 For the son of God who came
@@ -4874,7 +4874,7 @@ Now in heaven exalted high,
 Hallelujah! What a saviour! Amen
 '''
   ]),
-  HymnData(164, '164 O Thou God of My Salvation', [
+  HymnData(164, 'O Thou God of My Salvation', [
     '''
 1. O thou God of my salvation,
 My Redeemer from all sin;
@@ -4910,7 +4910,7 @@ Love and praise to Christ Belong!
 Amen
 '''
   ]),
-  HymnData(165, '165 Holy Spirit, Faithful guide', [
+  HymnData(165, 'Holy Spirit, Faithful guide', [
     '''
 1. Holy spirit faithful guide,
 Ever near the Christian’s side;
@@ -4941,7 +4941,7 @@ Whispering softly, “wanderer, Come!
 Follow Me. I’ll guide thee home,” Amen
 '''
   ]),
-  HymnData(166, '166 Spirit of God, Descend', [
+  HymnData(166, 'Spirit of God, Descend', [
     '''
 1. Spirit of God, descend upon my heart:
 Wear it from earth, through all
@@ -4969,7 +4969,7 @@ To check the rising doubt, the rebel sigh;
 Teach me the patience of unanswered prayer, Amen.
 '''
   ]),
-  HymnData(167, '167 Breathe on Me, Breath of God', [
+  HymnData(167, 'Breathe on Me, Breath of God', [
     '''
 1. Breath on me, Breath of God,
 Fill me with life anew
@@ -4994,7 +4994,7 @@ But live with Thee the perfect life
 Or Thine eternity. Amen
 '''
   ]),
-  HymnData(168, '168 The Holy Ghost Is Here', [
+  HymnData(168, 'The Holy Ghost Is Here', [
     '''
 1. The Holy ghost is Here,
 Where saints in prayer agree
@@ -5020,7 +5020,7 @@ O Lord of life, our hopes fufill,
 And bless this hallowed hour.
 '''
   ]),
-  HymnData(169, '169 Come, Holy Spirit, Heavenly Dove', [
+  HymnData(169, 'Come, Holy Spirit, Heavenly Dove', [
     '''
 1. Come, Holy spirit, heavenly Dove,
 With all thy quickening powers
@@ -5046,7 +5046,7 @@ Come, shed abroad the Savior’s love,
 And that shall kindle ours. Amen
 '''
   ]),
-  HymnData(170, '170 Holy Ghost, with Light Divine', [
+  HymnData(170, 'Holy Ghost, with Light Divine', [
     '''
 1. Holy Ghost, with light divine,
 Shine upon this heart of mine;
@@ -5072,7 +5072,7 @@ Cast down every idol throne,
 Reign supreme, and reign alone.
 '''
   ]),
-  HymnData(171, '171 Holy Spirit, from on High', [
+  HymnData(171, 'Holy Spirit, from on High', [
     '''
 1. Holy Spirit, from on high,
 Bend o’er us with pitying eye;
@@ -5098,7 +5098,7 @@ Trained in wisdom, led by love,
 Till we reach our home above.
 '''
   ]),
-  HymnData(172, '172 Spirit Divine, Attend our Prayer', [
+  HymnData(172, 'Spirit Divine, Attend our Prayer', [
     '''
 1. Spirit divine, attend our prayer,
 And make our heart Thy home;
@@ -5124,7 +5124,7 @@ Come, make Thy great salvation known,
 Wide as the human race.
 '''
   ]),
-  HymnData(173, '173 Pentecostal Power', [
+  HymnData(173, 'Pentecostal Power', [
     '''
 1. Lord, as of old at Pentecost
 Thou didst Thy power display,
@@ -5154,7 +5154,7 @@ And will not let Thee go until
 The blessing we receive. [Chorus]
 '''
   ]),
-  HymnData(174, '174 Breathe on Me', [
+  HymnData(174, 'Breathe on Me', [
     '''
 1. Holy Spirit, breathe on me,
 Until my heart is clean;
@@ -5184,7 +5184,7 @@ Until my will is lost in Thine,
 To live for Thee alone.
 '''
   ]),
-  HymnData(175, '175 Come, Holy Spirit, Heavenly Dove', [
+  HymnData(175, 'Come, Holy Spirit, Heavenly Dove', [
     '''
 1. Seal Us. O holy Spirit,
 Grant Us Thine Impress, we pray;
@@ -5205,7 +5205,7 @@ Make us be useful, dear Master,
 Let us be with witnessing power
 '''
   ]),
-  HymnData(176, '176. Word of God, across the ages', [
+  HymnData(176, 'Word of God, across the ages', [
     '''
 1. Word of God, across the age
 Comes thy massage to our life;
@@ -5236,7 +5236,7 @@ Till all lands receive the witness
 And Thy knowledge fills the earth. Amen
 '''
   ]),
-  HymnData(177, '177. Revealing Word, Thy Light Portrays', [
+  HymnData(177, 'Revealing Word, Thy Light Portrays', [
     '''
 1. Revealing Word thy light portrays
 The work of God through endless days,
@@ -5261,7 +5261,7 @@ What lasting splendor crowns the page
 Wherein god writes our heritage! Amen.
 '''
   ]),
-  HymnData(178, '178. 178 Break thou the Bread of life', [
+  HymnData(178, '178 Break thou the Bread of life', [
     '''
 1. Break Thou the bread of life,
 Dear Lord, to me,
@@ -5292,7 +5292,7 @@ Show me the truth concealed Within Thy Word,
 And in thy Book revealed I see the Lord. Amen
 '''
   ]),
-  HymnData(179, '179. Holy Bible, Book Divine', [
+  HymnData(179, 'Holy Bible, Book Divine', [
     '''
 1. Holy Bible, Book divine,
 Precious treasure, thou art mine;
@@ -5318,7 +5318,7 @@ O thou holy book divine,
 Precious treasure, thou art mine. Amen.
 '''
   ]),
-  HymnData(180, '180 Word is a Lamp to my Feet', [
+  HymnData(180, 'Word is a Lamp to my Feet', [
     '''
 1. Sing them over again to me,
 Wonderful words of life;
@@ -5348,7 +5348,7 @@ Jesus only savior,
 Sanctify forever,
 '''
   ]),
-  HymnData(182, '182 Thy Word Is Like a Garden lord', [
+  HymnData(182, 'Thy Word Is Like a Garden lord', [
     '''
 1. Thy Word is like a garden, Lord.
 With flowers bright and fail;
@@ -5370,7 +5370,7 @@ May I the fragrant flowers glean,
 May light upon me shine. Amen
 '''
   ]),
-  HymnData(183, '183 Word of Good Incarnate', [
+  HymnData(183, 'Word of Good Incarnate', [
     '''
 1. O Word of God Incarnate,
 O Wisdom from on high,
@@ -5410,7 +5410,7 @@ Till clouds and darkness ended,
 They see Thee face to face. Amen
 '''
   ]),
-  HymnData(184, '184 I Know this Bible Is True', [
+  HymnData(184, 'I Know this Bible Is True', [
     '''
 1. I Know the Bible was sent from God,
 The Old, as well as the New;
@@ -5439,7 +5439,7 @@ Its truth is sweeter each time ‘its told,
 I know the bible is true.
 '''
   ]),
-  HymnData(185, '185 THE DIVINE GIFT', [
+  HymnData(185, 'THE DIVINE GIFT', [
     '''
 1. O God of light, Thy Word, a lamp unfailing,
 Shines Through the darkness of our earthly way,
@@ -5465,7 +5465,7 @@ And myriad tongues, in one great anthem blending,
 Acclaim with job Thy wondrous gift to man. Amen
 '''
   ]),
-  HymnData(186, '186 A Glory Gilds The Sacred page', [
+  HymnData(186, 'A Glory Gilds The Sacred page', [
     '''
 1. A Glory gilds The sacred page,
 Majestic like the sun;
@@ -5491,7 +5491,7 @@ Till glory breaks upon my view
 In brighter worlds above. Amen
 '''
   ]),
-  HymnData(187, '187 The Heavens Declare Thy Glory', [
+  HymnData(187, 'The Heavens Declare Thy Glory', [
     '''
 1. The heavens declare Thy glory, Lord,
 In every star Thy wisdom shines;
@@ -5516,7 +5516,7 @@ Lord, cleanse my sins, my soul renew,
 And make Thy word my guide to heaven. Amen
 '''
   ]),
-  HymnData(188, '188. Amazing Grace', [
+  HymnData(188, 'Amazing Grace', [
     '''
 1. Amazing grace! How sweet the sound,
 That saved a wretch like me!
@@ -5542,7 +5542,7 @@ We’ve no less days to sing Gods praise
 Than when we first begun. Amen
 '''
   ]),
-  HymnData(189, '189 Thou O Christ Of Calvary', [
+  HymnData(189, 'Thou O Christ Of Calvary', [
     '''
 1. Thou, O Christ of Calvary,
 Let me ever walk with Thee;
@@ -5568,7 +5568,7 @@ Then I’ll see thy blessed face
 Thought thy soul-redeeming grace. Amen
 '''
   ]),
-  HymnData(190, '190 I saw the Cross of Jesus', [
+  HymnData(190, 'I saw the Cross of Jesus', [
     '''
 1. I saw the cross of Jesus
 When burden with my sin
@@ -5610,7 +5610,7 @@ Where sin can never enter,
 And death is known no more.
 '''
   ]),
-  HymnData(191, '191. We have the Joyful Sound', [
+  HymnData(191, 'We have the Joyful Sound', [
     '''
 1. We have heard the joyful sound:
 Jesus saves! Jesus saves!
@@ -5652,7 +5652,7 @@ This our song of victory:
 Jesus saves! Jesus saves!
 '''
   ]),
-  HymnData(192, '192 Are you Washed in the Blood', [
+  HymnData(192, 'Are you Washed in the Blood', [
     '''
 1. Have you been to Jesus for the
 cleansing power?
@@ -5687,7 +5687,7 @@ There’s a fountain flowing for the soul unclean,
 O be washed in the blood of the Lamb?
 '''
   ]),
-  HymnData(193, '193 There is Power in the Blood', [
+  HymnData(193, 'There is Power in the Blood', [
     '''
 1. Would you be free from the burden of sin?
 There’s pow’r in the blood, pow’r in the blood;
@@ -5718,7 +5718,7 @@ Would you live daily His praises to sing?
 There’s wonderful pow’r in the blood’
 '''
   ]),
-  HymnData(194, '194 He Include Me', [
+  HymnData(194, 'He Include Me', [
     '''
 1. I am so happy in Christ today,
 That 1 go singing along my way;
@@ -5749,7 +5749,7 @@ For when He said, “Whosoever will” .
 Jesus included me too.
 '''
   ]),
-  HymnData(195, '195 Christ Receiveth Sinful Men', [
+  HymnData(195, 'Christ Receiveth Sinful Men', [
     '''
 1. Sinners Jesus will receive:
 Sound this word of grace to all
@@ -5779,7 +5779,7 @@ Purged from ev’ry spot and stain,
 Heav’n with Him I enter in,
 '''
   ]),
-  HymnData(196, '196 The Way of the Cross Leads Home', [
+  HymnData(196, 'The Way of the Cross Leads Home', [
     '''
 1. I must needs go home by the Way of the cross,
 There’s no other way but this;
@@ -5803,7 +5803,7 @@ For my Lord says “Come,” and I seek my home,
 Where He waits at the open door.
 '''
   ]),
-  HymnData(197, '197 Saved, Saved', [
+  HymnData(197, 'Saved, Saved', [
     '''
 1. I’ve found a friend who Home,
 His love is ever true;
@@ -5828,7 +5828,7 @@ In love He said to me,
 To live with Me eternally.”
 '''
   ]),
-  HymnData(198, '198 He Is Able to Deliver Thee', [
+  HymnData(198, 'He Is Able to Deliver Thee', [
     '''
 1. ‘Tis the grandest theme thro’ the ages rung;
 ‘Tis the grandest theme for a mortal tongue;
@@ -5854,7 +5854,7 @@ Look to God in faith, He will make thee whole:
 Our God is able to deliver thee.
 '''
   ]),
-  HymnData(199, '199 Free from the law, O Happy', [
+  HymnData(199, 'Free from the law, O Happy', [
     '''
 1. Free from the Law, O happy condition,
 Jesus hath bled, and there is remission;
@@ -5879,7 +5879,7 @@ Passing from death lo life at His call,
 Blessed salvation once for all.
 '''
   ]),
-  HymnData(200, '200 Grace Grater than Our Sin', [
+  HymnData(200, 'Grace Grater than Our Sin', [
     '''
 1. Marvelous grace of our Loving Lord,
 Grace that exceeds our sin and our guilt.
@@ -5903,7 +5903,7 @@ You that are longing to His face
 Will, you this moment His grace receive?
 '''
   ]),
-  HymnData(201, '201 Whiter Than Snow', [
+  HymnData(201, 'Whiter Than Snow', [
     '''
 1. Lord Jesus, I long to be perfectly whole;
 I want Thee forever to live in my soul;
@@ -5931,7 +5931,7 @@ To those who have sought Thee, Thou never saidst No:
 Now wash me, and I shall be whiter than snow.
 '''
   ]),
-  HymnData(202, '202 In Loving-Kindness Jesus Come', [
+  HymnData(202, 'In Loving-Kindness Jesus Come', [
     '''
 1. In loving kindness Jesus came
 My soul in mercy to reclaim,
@@ -5961,7 +5961,7 @@ Yet how or why I cannot tell
 He should have lifted me.
 '''
   ]),
-  HymnData(203, '203 Redeemed, How I Love to Proclaim It', [
+  HymnData(203, 'Redeemed, How I Love to Proclaim It', [
     '''
 1. Redeemed, how I love to proclaim it!
 Redeemed by the blood of then Lamb;
@@ -5991,7 +5991,7 @@ Who lovingly guardeth my footsteps
 And giveth me songs in the night.
 '''
   ]),
-  HymnData(204, '204 Nothing but the Blood', [
+  HymnData(204, 'Nothing but the Blood', [
     '''
 1. What can wash away my sin?
 Nothing but the blood of Jesus.
@@ -6021,7 +6021,7 @@ This is all my righteousness:
 nothing but the blood of Jesus.
 '''
   ]),
-  HymnData(205, '205 We Praise Thee, O God', [
+  HymnData(205, 'We Praise Thee, O God', [
     '''
 1. We praise thee, O God, for the Son of thy love,
 For Jesus who died and is now gone above.
@@ -6043,7 +6043,7 @@ Who has borne all our sins and has cleansed ev'ry stain.
 May each soul be rekindled with fire from above.
 '''
   ]),
-  HymnData(206, '206 No, Not Despairingly', [
+  HymnData(206, 'No, Not Despairingly', [
     '''
 1. No, not despairingly
 Come I to Thee;
@@ -6090,7 +6090,7 @@ Guided along the road,
 Nothing between. Amen.
 '''
   ]),
-  HymnData(207, '207 Rescue the Pershing', [
+  HymnData(207, 'Rescue the Pershing', [
     '''
 1. Rescue the perishing, care for the dying,
 snatch them in pity from sin and the grave;
@@ -6120,7 +6120,7 @@ back to the narrow way patiently win them,
 tell the poor wanderer a Savior has died.
 '''
   ]),
-  HymnData(208, '208 Since I Have Been Redeemed', [
+  HymnData(208, 'Since I Have Been Redeemed', [
     '''
 1. I have a song I love to sing,
 Since I have been redeemed,
@@ -6151,7 +6151,7 @@ Where I shall dwell eternally,
 Since I have been redeemed.
 '''
   ]),
-  HymnData(209, '209 “Whoever” Meanth Me', [
+  HymnData(209, '“Whoever” Meanth Me', [
     '''
 1. I am happy today and the sun shines bright,
 The clouds have been rolled away;
@@ -6174,7 +6174,7 @@ I was lost in sin, for the world I pined,
 But now I am set free.
 '''
   ]),
-  HymnData(210, '210 I Lay My Sins on Jesus', [
+  HymnData(210, 'I Lay My Sins on Jesus', [
     '''
 1. I lay my sins on Jesus,
 the spotless Lamb of God;
@@ -6206,7 +6206,7 @@ to sing with saints his praises,
 to learn the angels' song.
 '''
   ]),
-  HymnData(211, '211. Tell Me the Story of Jesus', [
+  HymnData(211, 'Tell Me the Story of Jesus', [
     '''
 1. Tell me the story of Jesus,
 write on my heart every word;
@@ -6242,7 +6242,7 @@ stay, let me weep while you whisper,
 love paid the ransom for me.
 '''
   ]),
-  HymnData(212, '212. Love lifted Me', [
+  HymnData(212, 'Love lifted Me', [
     '''
 1. I was sinking deep in sin,
 Far from the peaceful shore,
@@ -6279,7 +6279,7 @@ He your Savior wants to be,
 Be saved today.
 '''
   ]),
-  HymnData(213, '213. Though Your Sins Be As Scarlet', [
+  HymnData(213, 'Though Your Sins Be As Scarlet', [
     '''
 1. "Tho' your sins be as scarlet,
 They shall be as white as snow;
@@ -6317,7 +6317,7 @@ And remember them no more,
 And remember them no more.
 '''
   ]),
-  HymnData(214, '214 Jesus is the Friend You Need', [
+  HymnData(214, 'Jesus is the Friend You Need', [
     '''
 1. When the sun shines bright and your heart is light,
 Jesus is the Friend you need;
@@ -6348,7 +6348,7 @@ Glory to His Name, always He’s the same,
 Jesus is the Friend you need.
 '''
   ]),
-  HymnData(215, '215. You must be Born Again', [
+  HymnData(215, 'You must be Born Again', [
     '''
 1. A ruler once came to Jesus by night
 To ask Him the way of salvation and light;
@@ -6378,7 +6378,7 @@ Then list to the note of this solemn refrain,
 "Ye must be born again.
 '''
   ]),
-  HymnData(216, '216. I Am Resolved', [
+  HymnData(216, 'I Am Resolved', [
     '''
 1. I am resolved no longer to linger,
 charmed by the world's delight;
@@ -6414,7 +6414,7 @@ Taught by the Bible, led by the Spirit,
 We'll walk the heavenly way.
 '''
   ]),
-  HymnData(217, '217. Throw Out the Lifeline', [
+  HymnData(217, 'Throw Out the Lifeline', [
     '''
 1. Throw out the Life-Line across the dark wave!
 There is a brother whom someone should save--
@@ -6444,7 +6444,7 @@ Haste then, my brother - no time for delay,
 But throw out the Life-Line and save them today.
 '''
   ]),
-  HymnData(218, '218 While We Pray and While We Plead', [
+  HymnData(218, 'While We Pray and While We Plead', [
     '''
 1. While we pray and while we plead,
 While you see your soul’s deep need,
@@ -6474,7 +6474,7 @@ Trust in Him from day to day--
 He will keep you all the way.
 '''
   ]),
-  HymnData(219, '219 Pass Me Not, O Gentle Saviour', [
+  HymnData(219, 'Pass Me Not, O Gentle Saviour', [
     '''
 1. Pass me not, O gentle Savior;
 hear my humble cry;
@@ -6504,7 +6504,7 @@ whom have I on earth beside thee?
 Whom in heaven but thee?
 '''
   ]),
-  HymnData(220, '220 Why Do you Wait', [
+  HymnData(220, 'Why Do you Wait', [
     '''
 1. Why do you wait, dear brother,
 O why do you tarry so long?
@@ -6534,7 +6534,7 @@ Your Savior is longing to bless you,
 There's danger and death in delay.
 '''
   ]),
-  HymnData(221, '221 I Need Thee, Precious Jesus', [
+  HymnData(221, 'I Need Thee, Precious Jesus', [
     '''
 1. I need Thee, precious Jesus!
 For I am full of sin;
@@ -6566,7 +6566,7 @@ To bear my every burden,
 And all my sorrow share. (Amen)
 '''
   ]),
-  HymnData(222, '222 Tell Me The Old, Old Story', [
+  HymnData(222, 'Tell Me The Old, Old Story', [
     '''
 1. Tell me the old, old story
 Of unseen things above,
@@ -6612,7 +6612,7 @@ Tell me the old, old story:
 Christ Jesus makes thee whole.
 '''
   ]),
-  HymnData(223, '223 God Calling Yet! Shall I Not Hear', [
+  HymnData(223, 'God Calling Yet! Shall I Not Hear', [
     '''
 1. God calling yet; shall I not hear?
 Earth’s pleasures shall I still hold dear?
@@ -6638,7 +6638,7 @@ Vain world, farewell! from thee I part;
 The voice of God hath reached my heart.
 '''
   ]),
-  HymnData(224, '224 I Hear They Welcome Voice', [
+  HymnData(224, 'I Hear They Welcome Voice', [
     '''
 1. hear Thy welcome voice
 That calls me, Lord, to Thee,
@@ -6668,7 +6668,7 @@ All hail! the gift of Christ our Lord,
 Our strength and righteousness.
 '''
   ]),
-  HymnData(225, '225 Jesus Paid It All', [
+  HymnData(225, 'Jesus Paid It All', [
     '''
 1. I hear the Savior say,
 "Thy strength indeed is small,
@@ -6698,7 +6698,7 @@ I stand in Him complete,
 My lips shall still repeat.
 '''
   ]),
-  HymnData(226, '226 Come to the Saviour Now', [
+  HymnData(226, 'Come to the Saviour Now', [
     '''
 1. Come to the Savior now,
 he gently calls to you;
@@ -6730,7 +6730,7 @@ a sure and safe relief,
 a loving friend and kind.
 '''
   ]),
-  HymnData(227, '227 “Come unto Me, Ye Weary', [
+  HymnData(227, '“Come unto Me, Ye Weary', [
     '''
 1. "Come unto me, ye weary,
 and I will give you rest."
@@ -6761,7 +6761,7 @@ of love so free and boundless,
 to come, dear Lord, to thee!
 '''
   ]),
-  HymnData(228, '228. My Soul in Sad Exile', [
+  HymnData(228, 'My Soul in Sad Exile', [
     '''
 1. My soul in sad exile was out on life's sea,
 So burdened with sin and distressed,
@@ -6790,7 +6790,7 @@ Come, anchor your soul in the "Haven of Rest,"
 And say, "My Beloved is mine."
 '''
   ]),
-  HymnData(229, '229 Jesus is Tenderly Calling', [
+  HymnData(229, 'Jesus is Tenderly Calling', [
     '''
 1. Jesus is tenderly calling thee home,
 Calling today, calling today;
@@ -6820,7 +6820,7 @@ They who believe on His name shall rejoice;
 Quickly arise and away.
 '''
   ]),
-  HymnData(230, '230 Let Jesus Come into Your Heart', [
+  HymnData(230, 'Let Jesus Come into Your Heart', [
     '''
 1. If you are tired of the load of your sin,
 Let Jesus come into your heart;
@@ -6850,7 +6850,7 @@ If you would enter the mansions of rest,
 Let Jesus come into your heart.
 '''
   ]),
-  HymnData(231, '231 The Nail-scarred Hand', [
+  HymnData(231, 'The Nail-scarred Hand', [
     '''
 1. Have you failed in your plan of your storm-tossed life?
 Place you hand in the nail-scarred hand;
@@ -6880,7 +6880,7 @@ Throw your heart open wide, let the Savior in,
 Place your hand in the nail-scarred hand.
 '''
   ]),
-  HymnData(232, '232 I Am praying for you', [
+  HymnData(232, 'I Am praying for you', [
     '''
 1. I have a Savior, He’s pleading in glory,
 A dear, loving Savior, though earth friends be few;
@@ -6910,7 +6910,7 @@ Then pray that your Savior may bring them to glory,
 And prayer will be answered-- ’twas answered for you!
 '''
   ]),
-  HymnData(233, '233 Out of My Bondage, Sorrow, and Night', [
+  HymnData(233, 'Out of My Bondage, Sorrow, and Night', [
     '''
 1. Out of my bondage, sorrow and night,
 Jesus, I come, Jesus, I come;
@@ -6952,7 +6952,7 @@ Ever Thy glorious face to behold,
 Jesus, I come to Thee.
 '''
   ]),
-  HymnData(234, '234 O Why Not Tonight?', [
+  HymnData(234, 'O Why Not Tonight?', [
     '''
 1. Oh, do not let the word depart,
 And close thine eyes against the light;
@@ -6982,7 +6982,7 @@ Believe, obey, the work is done,
 Be saved oh, tonight.
 '''
   ]),
-  HymnData(235, '235 Only trust Him', [
+  HymnData(235, 'Only trust Him', [
     '''
 1. Come, every soul by sin oppressed,
 there's mercy with the Lord,
@@ -7012,7 +7012,7 @@ to dwell in that celestial land
 where joys immortal flow.
 '''
   ]),
-  HymnData(236, '236 Softly and Tenderly', [
+  HymnData(236, 'Softly and Tenderly', [
     '''
 1. Softly and tenderly Jesus is calling,
 calling for you and for me;
@@ -7042,7 +7042,7 @@ Though we have sinned, he has mercy and pardon,
 pardon for you and for me.
 '''
   ]),
-  HymnData(237, '237 Lord I’m Coming Home', [
+  HymnData(237, 'Lord I’m Coming Home', [
     '''
 1. I've wandered far away from God,
 Now I'm coming home;
@@ -7072,7 +7072,7 @@ My strength renew, my hope restore,
 Lord, I'm coming home.
 '''
   ]),
-  HymnData(238, '238 “Whosoever Will”', [
+  HymnData(238, '“Whosoever Will”', [
     '''
 1. "Whosoever heareth," shout, shout the sound!
 Spread the blessed tidings all the world around:
@@ -7096,7 +7096,7 @@ Jesus is the true, the only Living Way:
 "Whosoever will may come."
 '''
   ]),
-  HymnData(239, '239 His Way with Thee', [
+  HymnData(239, 'His Way with Thee', [
     '''
 1. Would you live for Jesus, and be always pure and good?
 Would you walk with Him within the narrow road?
@@ -7120,7 +7120,7 @@ Would you in His service labor always at your best?
 Let Him have His way with thee.
 '''
   ]),
-  HymnData(240, '240 Just As I Am', [
+  HymnData(240, 'Just As I Am', [
     '''
 1. Just as I am, without one plea,
 but that thy blood was shed for me,
@@ -7146,7 +7146,7 @@ because thy promise I believe,
 O Lamb of God, I come, I come.
 '''
   ]),
-  HymnData(241, '241 I Will Arise and Go to Jesus', [
+  HymnData(241, 'I Will Arise and Go to Jesus', [
     '''
 1. Come, ye sinners, poor and needy,
 Weak and wounded, sick and sore
@@ -7170,7 +7170,7 @@ If you tarry till you're better,
 You will never come at all.
 '''
   ]),
-  HymnData(242, '242 Depth of Mercy! Can There AFBe', [
+  HymnData(242, 'Depth of Mercy! Can There AFBe', [
     '''
 1. Depth of mercy! Can there be
 mercy still reserved for me?
@@ -7196,7 +7196,7 @@ Now my foul revolt deplore!
 Weep, believe, and sin no more.
 '''
   ]),
-  HymnData(243, '243 I Am Coming to the Cross', [
+  HymnData(243, 'I Am Coming to the Cross', [
     '''
 1. I am coming to the cross;
 I am poor and weak and blind;
@@ -7226,7 +7226,7 @@ I am prostrate in the dust;
 I with Christ am crucified.
 '''
   ]),
-  HymnData(244, '244 Come, Says Jesus’ Scared Voice', [
+  HymnData(244, 'Come, Says Jesus’ Scared Voice', [
     '''
 1. 1 Come, said Jesus' sacred voice,
 Come, and make My paths your choice;
@@ -7252,7 +7252,7 @@ Peace that ever shall endure,
 Rest eternal, sacred, sure.
 '''
   ]),
-  HymnData(245, '245 Art Thou Wear', [
+  HymnData(245, 'Art Thou Wear', [
     '''
 1. Art thou weary, art thou languid,
 Art thou sore distressed?
@@ -7278,7 +7278,7 @@ Not till earth and not till Heaven
 Pass away.
 '''
   ]),
-  HymnData(246, '246 Come to Jesus, Ye Who Labour', [
+  HymnData(246, 'Come to Jesus, Ye Who Labour', [
     '''
 1. Come to Jesus, ye who labor,
 From vain strivings cease;
@@ -7304,7 +7304,7 @@ lay your sins and cares and burdens,
 At His feet.
 '''
   ]),
-  HymnData(247, '247 Lift Up Your heads, ye Mighty Gates', [
+  HymnData(247, 'Lift Up Your heads, ye Mighty Gates', [
     '''
 1. Lift up your heads, ye mighty gates;
 behold, the King of glory waits;
@@ -7324,7 +7324,7 @@ let us thy inner presence feel;
 thy grace and love in us reveal.
 '''
   ]),
-  HymnData(248, '248 Almost persuaded Now to Believe', [
+  HymnData(248, 'Almost persuaded Now to Believe', [
     '''
 1. “Almost persuaded” now to believe;
 “Almost persuaded” Christ to receive.
@@ -7350,7 +7350,7 @@ Sad, sad that bitter wail,
 “Almost,” but lost!
 '''
   ]),
-  HymnData(249, '249 Just As I Am, Thine Own to Be', [
+  HymnData(249, 'Just As I Am, Thine Own to Be', [
     '''
 1. Just as I am, Thine own to be,
 Friend of the young, who lovest me,
@@ -7376,7 +7376,7 @@ For truth, and righteousness, and Thee,
 Lord of my life, I come.
 '''
   ]),
-  HymnData(250, '250 Blow Ye the Trumpet, Blow', [
+  HymnData(250, 'Blow Ye the Trumpet, Blow', [
     '''
 1. Blow ye the trumpet, blow!
 The gladly solemn sound,
@@ -7399,7 +7399,7 @@ And saved from earth, appear
 Before your Savior’s face:
 '''
   ]),
-  HymnData(251, '251 My Jesus, As Thou Will', [
+  HymnData(251, 'My Jesus, As Thou Will', [
     '''
 1. My Jesus, as thou wilt!
 O may thy will be mine;
@@ -7431,7 +7431,7 @@ and sing, in life or death,
 "My Lord, thy will be done."
 '''
   ]),
-  HymnData(252, '252 Faith of Our Father', [
+  HymnData(252, 'Faith of Our Father', [
     '''
 1. Faith of our fathers, living still
 In spite of dungeon, fire and sword,
@@ -7457,7 +7457,7 @@ Faith of our fathers! holy faith!
 We will be true to thee till death!
 '''
   ]),
-  HymnData(253, '253 Have Faith in God', [
+  HymnData(253, 'Have Faith in God', [
     '''
 1. Have faith in God when you pathway is lonely
 He sees and knows all the way you have trod
@@ -7487,7 +7487,7 @@ He cannot fail tho' all kingdoms shall perish
 He rules He reigns upon His throne
 '''
   ]),
-  HymnData(254, '254 Cast Thy Burden on the Lord', [
+  HymnData(254, 'Cast Thy Burden on the Lord', [
     '''
 1. Cast thy burden on the Lord,
 Lean thou only on His Word;
@@ -7513,7 +7513,7 @@ Lean thou strong upon His Word,
 Cast thy burden on the Lord.
 '''
   ]),
-  HymnData(255, '255 O for a Faith That will Not Shrink', [
+  HymnData(255, 'O for a Faith That will Not Shrink', [
     '''
 1. O for a faith that will not shrink
 Tho' pressed by many a foe,
@@ -7539,7 +7539,7 @@ I’ll taste e’en now the hallowed bliss
 Of an eternal home.
 '''
   ]),
-  HymnData(256, '256 Faith is the Victory', [
+  HymnData(256, 'Faith is the Victory', [
     '''
 1. Encamped along the hills of light,
 Ye Christian soldiers, rise,
@@ -7575,7 +7575,7 @@ The earth shall tremble 'neath our tread,
 And echo with our shout.
 '''
   ]),
-  HymnData(256, '256 My Faith Looks Up to Thee', [
+  HymnData(256, 'My Faith Looks Up to Thee', [
     '''
 1. My faith looks up to thee,
 thou Lamb of Calvary,
@@ -7613,7 +7613,7 @@ O bear me safe above,
 a ransomed soul.
 '''
   ]),
-  HymnData(258, '258 ‘Tis So sweet to Trust in Jesus', [
+  HymnData(258, '‘Tis So sweet to Trust in Jesus', [
     '''
 1. 'Tis so sweet to trust in Jesus,
 and to take him at his word;
@@ -7643,7 +7643,7 @@ And I know that Thou art with me,
 Wilt be with me to the end.
 '''
   ]),
-  HymnData(259, '259 Trusting Jesus', [
+  HymnData(259, 'Trusting Jesus', [
     '''
 1. Simply trusting every day,
 Trusting through a stormy way;
@@ -7673,7 +7673,7 @@ Till within the jasper wall,
 Trusting Jesus, that is all.
 '''
   ]),
-  HymnData(260, '260 When Walk with the Lord', [
+  HymnData(260, 'When Walk with the Lord', [
     '''
 1. When we walk with the Lord
 in the light of his word,
@@ -7709,7 +7709,7 @@ where he sends we will go;
 never fear, only trust and obey.
 '''
   ]),
-  HymnData(261, '261. I’ve Found a Friend, oh, Such a Friend', [
+  HymnData(261, 'I’ve Found a Friend, oh, Such a Friend', [
     '''
 1. I’ve found a friend, oh, Such a friend!
 He loved me ere I knew Him’
@@ -7751,7 +7751,7 @@ Shall life of death or earth or hell?
 No: I am His forever.
 '''
   ]),
-  HymnData(262, '262. How Firm a foundation', [
+  HymnData(262, 'How Firm a foundation', [
     '''
 1. How firm a foundation, ye saints of
 Is laid for your faith in His excellent Word!
@@ -7781,7 +7781,7 @@ I’ll never, no never no, never forsake!
 I’ll never, no never, never forsake!” Amen.
 '''
   ]),
-  HymnData(263, '263. How Firm a Foundation', [
+  HymnData(263, 'How Firm a Foundation', [
     '''
 1. How firm a foundation, ye saints Of the Lord,
 Is laid for your faith in His excellent Word!
@@ -7808,7 +7808,7 @@ I will never, no , never , no never
 Forsake!” Amen
 '''
   ]),
-  HymnData(264, '264. There shall be Shower of blessing', [
+  HymnData(264, 'There shall be Shower of blessing', [
     '''
 1. There shall be shower of Blessing;
 This is the promise of love;
@@ -7838,7 +7838,7 @@ Now as to God we re confessing
 Now as on Jesus call
 '''
   ]),
-  HymnData(264, '264. It is well with my soul', [
+  HymnData(264, 'It is well with my soul', [
     '''
 1. when peace, like a river attendeth my way,
 When sorrow like sea billow roll;
@@ -7867,7 +7867,7 @@ Lord shall descend
 Even so it is well with my soul
 '''
   ]),
-  HymnData(266, '266. Standing on the promises', [
+  HymnData(266, 'Standing on the promises', [
     '''
 1. Standing on the promises of Christ my king
 Thro external ages let His praises ring
@@ -7897,7 +7897,7 @@ Resting in my Saviour as my all in all,
 Standing on the promises of God.
 '''
   ]),
-  HymnData(267, '267. Just When I Need Him Most', [
+  HymnData(267, 'Just When I Need Him Most', [
     '''
 1. Just when I need Him, Jesus is near,
 Just when I falter, just when I fear;
@@ -7926,7 +7926,7 @@ Tenderly watching lest I should fall,
 Just when I need Him most.
 '''
   ]),
-  HymnData(268, '268. All the Way My Saviour Leads Me', [
+  HymnData(268, 'All the Way My Saviour Leads Me', [
     '''
 1. All the way my Saviour leads me,
 What have I to ask beside?
@@ -7962,7 +7962,7 @@ This my song thro’ endless ages;
 Jesus led me all the way.
 '''
   ]),
-  HymnData(269, '269. Blessed Assurance, Jesus Is Mine', [
+  HymnData(269, 'Blessed Assurance, Jesus Is Mine', [
     '''
 1. Blessed assurance, Jesus is mine!
 Oh, what a foretaste of glory divine!
@@ -7986,7 +7986,7 @@ Watching and waiting, looking above,
 Fill’d with His Fill’d with His goodness, lost in His love.
 '''
   ]),
-  HymnData(270, '270. A Child of the King', [
+  HymnData(270, 'A Child of the King', [
     '''
 1. My Father is rich in houses and lands,
 He holdeth the wealth of the world in His hands!
@@ -8010,7 +8010,7 @@ But I’ve been adopted, my name’s written down,
 An heir to a mansion, a robe, and a crown.
 '''
   ]),
-  HymnData(271, '271. O Safe to the Rock', [
+  HymnData(271, 'O Safe to the Rock', [
     '''
 1. O safe to the Rock that is higher than I,
 My soul in its conflicts and sorrows would fly;
@@ -8034,7 +8034,7 @@ How often when trials like sea billows roll,
 Have I hidden in thee, o thou Rock of my soul.
 '''
   ]),
-  HymnData(272, '272. He Hideth My Soul', [
+  HymnData(272, 'He Hideth My Soul', [
     '''
 1. A wonderful Saviour is Jesus my Lord,
 A wonderful Saviour to me;
@@ -8064,7 +8064,7 @@ To meet Him in clouds of the sky,
 His perfect salvation, His wonderful love I’ll shout with the millions on high.
 '''
   ]),
-  HymnData(273, '273. Sunshine in My Soul', [
+  HymnData(273, 'Sunshine in My Soul', [
     '''
 1. There is sunshine in my soul today,
 More glorious and bright
@@ -8093,7 +8093,7 @@ For blessings which He gives me now
 For joys “laid up” above
 '''
   ]),
-  HymnData(274, '274. God Will Take Care of You', [
+  HymnData(274, 'God Will Take Care of You', [
     '''
 1. Be not dismay’d whate’er betide
 God will take care of you
@@ -8119,7 +8119,7 @@ Lean, weary one, upon His breast,
 God will take care of you.
 '''
   ]),
-  HymnData(275, '275. I Know Whom I have Believed', [
+  HymnData(275, 'I Know Whom I have Believed', [
     '''
 1. I know not why God’s wondrous grace
 To me He hath made known,
@@ -8150,7 +8150,7 @@ Nor if I’ll walk the vale with Him,
 Or meet Him in the air.
 '''
   ]),
-  HymnData(276, '276. I Know Not How that Bethelehem’s Babe', [
+  HymnData(276, 'I Know Not How that Bethelehem’s Babe', [
     '''
 1. I know not how that Bethelehem’s Babe
 Could in the God-head be;
@@ -8170,7 +8170,7 @@ I only know a living Christ,
 Our immortality. Amen
 '''
   ]),
-  HymnData(277, '277. Immortal Love, Forever Full', [
+  HymnData(277, 'Immortal Love, Forever Full', [
     '''
 1. Immortal Love, forever full,
 Forever flowing free,
@@ -8196,7 +8196,7 @@ We own Thy sway, we hear Thy call,
 We test our lives by Thine. Amen
 '''
   ]),
-  HymnData(278, '278. I Will Not Forget Thee', [
+  HymnData(278, 'I Will Not Forget Thee', [
     '''
 1. Sweet is the promise, “I will not forget thee,”
 Nothing can molest or turn my soul away;
@@ -8220,7 +8220,7 @@ How sweet to hear the blessed proclamation,
 “Enter, faithful servant, welcome home at last!”
 '''
   ]),
-  HymnData(279, '279. He Lives', [
+  HymnData(279, 'He Lives', [
     '''
 1. I serve a risen Saviour, He’s in the world today;
 I know that He is living, whatever men may say;
@@ -8248,7 +8248,7 @@ The hope of all who seek Him, the help of all who find,
 None other is so good and kind.
 '''
   ]),
-  HymnData(280, '280. The King of Love My Shepherd Is', [
+  HymnData(280, 'The King of Love My Shepherd Is', [
     '''
 1. The King of love my Shepherd is, Whose goodness faileth never;
 I nothing lack if I am His
@@ -8279,7 +8279,7 @@ Good Shepherd, may I sing Thy praise
 Within Thy house forever. Amen.
 '''
   ]),
-  HymnData(281, '281. Nearer, Still Nearer', [
+  HymnData(281, 'Nearer, Still Nearer', [
     '''
 1. Nearer, still nearer, close to Thy heart,
 Draw me, my Saviour, so precious Thou art;
@@ -8309,7 +8309,7 @@ Nearer, my Saviour, still nearer to Thee,
 Nearer, my Saviour, still nearer to Thee. Amen.
 '''
   ]),
-  HymnData(282, '282. Hope of The World', [
+  HymnData(282, 'Hope of The World', [
     '''
 1. Hope of the world, Thou Christ of great compassion,
 Speak to our fearful hearts by conflict rent;
@@ -8333,7 +8333,7 @@ Take Thou our lives and use them as Thou wilt.
 Thou art our Lord! Thou dost forever reign. Amen.
 '''
   ]),
-  HymnData(283, '283. The Solid Rock', [
+  HymnData(283, 'The Solid Rock', [
     '''
 1. My hope is built on nothing less
 Than Jesus’s blood and righteousness
@@ -8360,7 +8360,7 @@ Oh, may I then in Him be found; Dressed in His righteousness alone,
 Faultless to stand before the throne.
 '''
   ]),
-  HymnData(284, '284. We’ll Work Till Jesus Comes', [
+  HymnData(284, 'We’ll Work Till Jesus Comes', [
     '''
 1. O land of rest for thee I sigh!
 When will the moment come
@@ -8384,7 +8384,7 @@ With Him I’ll brave death’s chilling tide,
 And reach my heav‘nly home.
 '''
   ]),
-  HymnData(262, '262. Wonderful Peace of My Saviour', [
+  HymnData(262, 'Wonderful Peace of My Saviour', [
     '''
 1. Like radiant sunshine that comes after rain.
 Like beautiful rest after sorrow and pain.
@@ -8414,7 +8414,7 @@ A beautiful guide to that heavenly life,
 Is the wonderful peace of my Saviour
 '''
   ]),
-  HymnData(286, '286. O God, Our Help in Ages Past', [
+  HymnData(286, 'O God, Our Help in Ages Past', [
     '''
 1. O God, our help in ages past,
 Our hope for years to come,
@@ -8446,7 +8446,7 @@ Be thou our guard while life shall last,
 And our eternal home. Amen
 '''
   ]),
-  HymnData(287, '287. O Holy Saviour, Friend Unseen', [
+  HymnData(287, 'O Holy Saviour, Friend Unseen', [
     '''
 1. O Holy Saviour, friend unseen,
 Since on Thine arm Thou bidd’st me lean,
@@ -8469,7 +8469,7 @@ I ask not, need not aught beside; How safe, how calm, how satisfied,
 The soul that clings to Thee! Amen.
 '''
   ]),
-  HymnData(288, '288. Jesus, Thy Boundless Love to Me', [
+  HymnData(288, 'Jesus, Thy Boundless Love to Me', [
     '''
 1. Jesus, Thy boundless love to me No tho’t can reach, no tongue declare;
 Oh, knit my thankful heart to Thee
@@ -8492,7 +8492,7 @@ O Jesus, nothing may I see,
 Nothing desire, or seek, but Thee. Amen
 '''
   ]),
-  HymnData(289, '289. My Jesus, I Love Thee', [
+  HymnData(289, 'My Jesus, I Love Thee', [
     '''
 1. My Jesus, I love Thee, I know Thou art mine,
 For Thee all the follies of sin I resign;
@@ -8510,7 +8510,7 @@ If ever I loved Thee, my Jesus, ‘tis now.
 And praise Thee as long as, Thou lendest me breath; And say when the death dew lies cold on my brow, If ever I loved Thee, my Jesus, ’tis now. Amen
 '''
   ]),
-  HymnData(290, '290. O Love That Wilt Not Let Me Go', [
+  HymnData(290, 'O Love That Wilt Not Let Me Go', [
     '''
 1. O Love That wilt not let me go,
 I rest my weary soul in thee;
@@ -8541,7 +8541,7 @@ And from the ground there blossoms red
 Lift that shall endless be. Amen.
 '''
   ]),
-  HymnData(291, '291. Saviour, Teach Me Day By Day', [
+  HymnData(291, 'Saviour, Teach Me Day By Day', [
     '''
 1. Saviour, teach me day by day
 Love’s sweet lesson to obey;
@@ -8567,7 +8567,7 @@ Singing, till Thy face I see,
 Of His love first loved me. Amen
 '''
   ]),
-  HymnData(292, '292. More Love to Thee, O Christ', [
+  HymnData(292, 'More Love to Thee, O Christ', [
     '''
 1. More love to Thee, O Christ,
 More love to Thee!
@@ -8599,7 +8599,7 @@ More love to thee!
 More love to Thee!. Amen
 '''
   ]),
-  HymnData(293, '293. Love Is The Theme', [
+  HymnData(293, 'Love Is The Theme', [
     '''
 1. Of the themes that men have known,
 One supremely stands alone;
@@ -8629,7 +8629,7 @@ Sinners, call ye on His name,
 Trust His wonderful, wonderful love
 '''
   ]),
-  HymnData(294, '294. Like a River Glorious', [
+  HymnData(294, 'Like a River Glorious', [
     '''
 1. Like a river glorious Is God’s perfect peace,
 Over all victorious in its bright increase;
@@ -8652,7 +8652,7 @@ We may truct Him wholly
 Find Him wholly true.
 '''
   ]),
-  HymnData(295, '295. Abide with Me', [
+  HymnData(295, 'Abide with Me', [
     '''
 1. Abide with me, fast falls the eventide;
 The darkness deepens; Lord with me abide;
@@ -8678,7 +8678,7 @@ Heav’n morning breaks and earth’s vain shadows flee;
 In life, in death, O Lord, abide with! Amen.
 '''
   ]),
-  HymnData(296, '296. From Every Stormy Wind That Blows', [
+  HymnData(296, 'From Every Stormy Wind That Blows', [
     '''
 1. From ev’ry stormy wind that blows,
 From ev’ry swelling tide of woes,
@@ -8704,7 +8704,7 @@ And heav’n comes down our souls to greet,
 While glory crowns the mercy seat.
 '''
   ]),
-  HymnData(297, '297. Come, Ye Disconsolate', [
+  HymnData(297, 'Come, Ye Disconsolate', [
     '''
 1. Come, ye disconsolate, where’er ye languish,
 Come to the mercy seat, fervently kneel;
@@ -8724,7 +8724,7 @@ Come to the feast of love; come, ever, knowing
 Earth has no sorrow but heav’n can remove.
 '''
   ]),
-  HymnData(298, '298. I Must Tell Jesus', [
+  HymnData(298, 'I Must Tell Jesus', [
     '''
 1. I must tell Jesus all of my trials;
 I cannot bear these burdens alone;
@@ -8755,7 +8755,7 @@ I must tell Jesus, and He will help me
 Over the world the vict’ry to win.
 '''
   ]),
-  HymnData(299, '299. Sweet Peace, the Gift of God’s Love', [
+  HymnData(299, 'Sweet Peace, the Gift of God’s Love', [
     '''
 1. There comes to my heart one sweet strain, (sweet strain),
 A glad and a joyous refrain; (refrain)
@@ -8779,7 +8779,7 @@ There’s nothing but peace doth betide,
 Sweet peace, the gift of God’s love.
 '''
   ]),
-  HymnData(300, '300. Let the Lower Lights Be Burning', [
+  HymnData(300, 'Let the Lower Lights Be Burning', [
     '''
 1. Brightly beams our Father’s mercy
 From His light house ever more,
@@ -8803,7 +8803,7 @@ Trying now to make the harbor,
 In the darkness may be lost.
 '''
   ]),
-  HymnData(301, '301. Near to the Heart of God', [
+  HymnData(301, 'Near to the Heart of God', [
     '''
 1. There is a place of quite rest,
 Near to the heart of God,
@@ -8827,7 +8827,7 @@ A place where all is joy and peace,
 Near to the heart of God.
 '''
   ]),
-  HymnData(302, '302. I Heard The Voice of Jesus Say', [
+  HymnData(302, 'I Heard The Voice of Jesus Say', [
     '''
 1. I heard the voice of Jesus say,
 “Come unto Me and rest;
@@ -8857,7 +8857,7 @@ And in that light of life I’ll walk
 Till trav’lling days are done. Amen.
 '''
   ]),
-  HymnData(303, '303. In Heavenly Love Abiding', [
+  HymnData(303, 'In Heavenly Love Abiding', [
     '''
 1. In heavenly love abiding,
 No change my heart shall fear;
@@ -8887,7 +8887,7 @@ My Saviour has my treasure,
 And He will walk with me. Amen.
 '''
   ]),
-  HymnData(304, '304. He Is So Precious to Me', [
+  HymnData(304, 'He Is So Precious to Me', [
     '''
 1. So precious is Jesus, my Saviour, my King,
 His praise all the day long with rapture I sing;
@@ -8916,7 +8916,7 @@ Where, someday, thro’ faith in His wonderful grace,
 For He is so precious to me.
 '''
   ]),
-  HymnData(305, '305. Take The Name Of Jesus With You', [
+  HymnData(305, 'Take The Name Of Jesus With You', [
     '''
 1. Take the name of Jesus with you,
 Child of sorrow and of woe; it will
@@ -8946,7 +8946,7 @@ Kings of kings in heaven we will crown him,
 When our journey is completed
 '''
   ]),
-  HymnData(306, '306. How tedious and tasteless the hours', [
+  HymnData(306, 'How tedious and tasteless the hours', [
     '''
 1. How tedious and tasteless the hour
 When jesus no linger I see !
@@ -8991,7 +8991,7 @@ Or take me unto Thee on high,
 Where winter and clouds are no more.
 '''
   ]),
-  HymnData(307, '307. He Keeps Me Singing', [
+  HymnData(307, 'He Keeps Me Singing', [
     '''
 1. There’s within my heart a melody;
 Jesus whispers sweet and low,
@@ -9027,7 +9027,7 @@ I shall wing my flight to worlds unknown,
 I shall reign with Him on high
 '''
   ]),
-  HymnData(308, '308. We’re Marching to Zion', [
+  HymnData(308, 'We’re Marching to Zion', [
     '''
 1. Come, we that love the Lord,
 And let our joys be known;
@@ -9064,7 +9064,7 @@ To fairer worlds on high,
 To fairer worlds on high,
 '''
   ]),
-  HymnData(309, '309. Awake, My Soul, Stretch Every Nerve', [
+  HymnData(309, 'Awake, My Soul, Stretch Every Nerve', [
     '''
 1. Awake, my soul, stretch ev’ry nerve,
 And press with vigor on;
@@ -9094,7 +9094,7 @@ I’ll lay honors down,
 I’ll lay honors down,
 '''
   ]),
-  HymnData(310, '310. Since Jesus Came Into My Heart', [
+  HymnData(310, 'Since Jesus Came Into My Heart', [
     '''
 1. What a wonderful change in my life has been wrought
 Since Jesus came into my heart!
@@ -9123,7 +9123,7 @@ And I’m happy, as onward I go,
 Since Jesus came into my heart!
 '''
   ]),
-  HymnData(311, '311. There’s a Glad New Song', [
+  HymnData(311, 'There’s a Glad New Song', [
     '''
 1. There’s a glad new song ringing in my heart,
 Such as angels would sing above, and the whole day long it doth joy impart;
@@ -9134,7 +9134,7 @@ Through eternity my glad song shall be
 Of the Saviour’s redeeming love.
 '''
   ]),
-  HymnData(312, '312. Open My Eyes that I May see', [
+  HymnData(312, 'Open My Eyes that I May see', [
     '''
 1. Open my eyes that I may see
 Glimpses of truth Thou hast for me:
@@ -9166,7 +9166,7 @@ Open my heart, illumine me,
 Spirit divine! Amen.
 '''
   ]),
-  HymnData(313, '313. Come, Thou Fount of Every Blessing', [
+  HymnData(313, 'Come, Thou Fount of Every Blessing', [
     '''
 1. Come, Thou Fount of ev’ry blessing,
 Tune my heart to sing Thy grace;
@@ -9197,7 +9197,7 @@ Here’s my heart, O take and seal it,
 Seal it for Thy courts above.
 '''
   ]),
-  HymnData(314, '314. Draw Thou My Soul, O Christ', [
+  HymnData(314, 'Draw Thou My Soul, O Christ', [
     '''
 1. Draw Thou my soul, O Christ,
 Closer to Thine:
@@ -9229,7 +9229,7 @@ Till earth, as heaven, fulfill
 God’s holy will. Amen.
 '''
   ]),
-  HymnData(320, '320 The Rock That is Higher than I', [
+  HymnData(320, 'The Rock That is Higher than I', [
     '''
 1. O sometimes the shadows are deep,
 And rough seems the path to the goal,
@@ -9253,7 +9253,7 @@ Or climbing the mountain way steep,
 Or walking the shadowy vale
 '''
   ]),
-  HymnData(321, '321. More About Jesus', [
+  HymnData(321, 'More About Jesus', [
     '''
 1. More about Jesus would I know,
 More of His grace to others show;
@@ -9283,7 +9283,7 @@ More of His Kingdom’s sure increase;
 More of His coming, Prince of peace. Amen.
 '''
   ]),
-  HymnData(322, '322. Nearer, My God, To The', [
+  HymnData(322, 'Nearer, My God, To The', [
     '''
 1. Nearer, my God, to Thee
 Nearer to Thee!
@@ -9325,7 +9325,7 @@ Nearer, my God, to Thee,
 Nearer to Thee! Amen.
 '''
   ]),
-  HymnData(323, '323. So Let Our Lips and Lives Express', [
+  HymnData(323, 'So Let Our Lips and Lives Express', [
     '''
 1. So let our lips and lives express
 The Holy gospel we profess;
@@ -9351,7 +9351,7 @@ The bright appearance of the Lord;
 And faith stands leaning on His word.
 '''
   ]),
-  HymnData(324, '324. We Would See Jesus', [
+  HymnData(324, 'We Would See Jesus', [
     '''
 1. We would see Jesus, for the shadows
 Across this little landscape of our life;
@@ -9377,7 +9377,7 @@ We would see Jesus, dying, risen, pleading;
 Then welcome, day! And farewell, mortal night!
 '''
   ]),
-  HymnData(325, '325. More Like the Master', [
+  HymnData(325, 'More Like the Master', [
     '''
 1. More like the Master I would ever be,
 More of His meekness, more humility;
@@ -9401,7 +9401,7 @@ More self denial, like His in Galilee,
 More like the Master I long to ever be.
 '''
   ]),
-  HymnData(326, '326. Saviour, More than Life to Me', [
+  HymnData(326, 'Saviour, More than Life to Me', [
     '''
 1. Saviour, more than life to me,
 I am clinging, clinging close to Thee’
@@ -9425,7 +9425,7 @@ Till my soul is lost in love,
 In a brighter, brighter world above. Amen.
 '''
   ]),
-  HymnData(327, '327. Sweet Hour of Prayer', [
+  HymnData(327, 'Sweet Hour of Prayer', [
     '''
 1. Sweet hour of prayer, sweet hour of prayer,
 That calls me from a world of care,
@@ -9456,7 +9456,7 @@ I’ll cast on Him my ev’ry care,
 And wait for Thee, sweet hour of prayer,
 '''
   ]),
-  HymnData(328, '328. What a Friend We Have in Jesus', [
+  HymnData(328, 'What a Friend We Have in Jesus', [
     '''
 1. What a friend we have in Jesus,
 All our sins and griefs to bear!
@@ -9490,7 +9490,7 @@ In His arms He’ll take and shield thee;
 Thou wilt find a solace there.
 '''
   ]),
-  HymnData(329, '329. “Tis the Blessed Hour of Prayer', [
+  HymnData(329, '“Tis the Blessed Hour of Prayer', [
     '''
 1. “Tis the blessed hour of prayer,
 When our hearts lowly bend
@@ -9524,7 +9524,7 @@ In the fullness of this trust we shall lose every care;
 What a balm for the weary! Oh, how sweet to be there!
 '''
   ]),
-  HymnData(330, '330. Teach Me to Pray', [
+  HymnData(330, 'Teach Me to Pray', [
     '''
 1. Teach me to pray, Lord, teach me to pray;
 This is my heart-cry day unto day;
@@ -9554,7 +9554,7 @@ Thou art my surety, now and for aye;
 Teach me to pray, Lord, teach me to pray
 '''
   ]),
-  HymnData(331, '331. Speak to My Heart', [
+  HymnData(331, 'Speak to My Heart', [
     '''
 1. Speak to my heart, Lord Jesus,
 Speak that my soul may hear;
@@ -9578,7 +9578,7 @@ Speak to my heart, Lord Jesus,
 I would be wholly Thine.
 '''
   ]),
-  HymnData(332, '332. Lord, Lay Some Soul Upon My Heart', [
+  HymnData(332, 'Lord, Lay Some Soul Upon My Heart', [
     '''
 1. Lord, lay some soul upon my heart,
 And love that soul through me;
@@ -9602,7 +9602,7 @@ That when I’ve reached the great white throne
 I’ll meet that dear one there.
 '''
   ]),
-  HymnData(333, '333. Lord, Send a Revival', [
+  HymnData(333, 'Lord, Send a Revival', [
     '''
 1. Send a revival, O Christ, My Lord,
 Let it go over the land and sea,
@@ -9632,7 +9632,7 @@ Let Thy salvation true joy impart,
 And let it begin in me.
 '''
   ]),
-  HymnData(334, '334. I Need Thee Every Hour', [
+  HymnData(334, 'I Need Thee Every Hour', [
     '''
 1. I need Thee ev’ry hour,
 Most gracious Lord;
@@ -9660,7 +9660,7 @@ O make me Thine indeed,
 Thou blessed Son. Amen
 '''
   ]),
-  HymnData(335, '335. Dear Lord and Father of Mankind', [
+  HymnData(335, 'Dear Lord and Father of Mankind', [
     '''
 1. Dear Lord and Father of mankind,
 Forgive our foolish ways;
@@ -9690,7 +9690,7 @@ Let us, like them, without a word
 Rise up and follow Thee. Amen
 '''
   ]),
-  HymnData(336, '336. Prayer Is the Soul’s Sincere Desire', [
+  HymnData(336, 'Prayer Is the Soul’s Sincere Desire', [
     '''
 1. Prayer is the soul’s sincere desire,
 Unuttered or expressed;
@@ -9716,7 +9716,7 @@ The path of prayer Thy self hast trod:
 Lord, teach us how to pray! Amen
 '''
   ]),
-  HymnData(337, '337. Jesus, Saviour, Pilot Me', [
+  HymnData(337, 'Jesus, Saviour, Pilot Me', [
     '''
 1. Jesus, Saviour, pilot me
 Over life’s tempestuous sea;
@@ -9742,7 +9742,7 @@ May I hear Thee say to me,
 “Fear not, I will pilot thee.”
 '''
   ]),
-  HymnData(338, '338. More Holiness Give Me', [
+  HymnData(338, 'More Holiness Give Me', [
     '''
 1. More holiness give me,
 More striving within;
@@ -9774,7 +9774,7 @@ More blessed and holy,
 More, Saviour, like Thee. Amen
 '''
   ]),
-  HymnData(339, '339 Lord, for Tomorrow and Its Needs', [
+  HymnData(339, 'Lord, for Tomorrow and Its Needs', [
     '''
 1. Lord, for tomorrow and its needs
 I do not pray;
@@ -9806,7 +9806,7 @@ But keep me, guide me, love me, Lord,
 Just for today, Amen.
 '''
   ]),
-  HymnData(340, '340 Lord, Speak to Me, that I may Speak', [
+  HymnData(340, 'Lord, Speak to Me, that I may Speak', [
     '''
 1. Lord, speak to me, that I may speak
 In living echoes of Thy tone;
@@ -9832,7 +9832,7 @@ Just as Thou wilt, and when, and where;
 Until Thy joy, Thy glory share. Amen
 '''
   ]),
-  HymnData(341, '341 Child’s Morning Hymn', [
+  HymnData(341, 'Child’s Morning Hymn', [
     '''
 1. Father, we thank Thee for the night,
 And for the pleasant morning light;
@@ -9846,7 +9846,7 @@ In all we do, in work or play,
 To love Thee better day by day Amen
 '''
   ]),
-  HymnData(342, '342 Send a Great Revival', [
+  HymnData(342, 'Send a Great Revival', [
     '''
 1. Coming now to Thee, O Christ my Lord,
 Trusting only in Thy precious word;
@@ -9876,7 +9876,7 @@ Help me lead them in homeward way,
 Oh, send a great revival in my soul.
 '''
   ]),
-  HymnData(343, '343 Our Father in Heaven', [
+  HymnData(343, 'Our Father in Heaven', [
     '''
 1. Our father in heaven, we hallow
 Thy name;
@@ -9892,7 +9892,7 @@ And Thine be the glory forever!
 Amen .
 '''
   ]),
-  HymnData(344, '344 Saviour, Like a Shepherd Lead us', [
+  HymnData(344, 'Saviour, Like a Shepherd Lead us', [
     '''
 1. Savior, like a shepherd lead us,
 Much we need Thy tender care;
@@ -9935,7 +9935,7 @@ Blessed Jesus, blessed Jesus,
 Thou hast loved us, love us still.
 '''
   ]),
-  HymnData(345, '345 Beneath the cross of Jesus', [
+  HymnData(345, 'Beneath the cross of Jesus', [
     '''
 1. beneath the cross of Jesus
 I fain would take my stand,
@@ -9968,7 +9968,7 @@ My sinful self my only shame;
 My glory all the cross.
 '''
   ]),
-  HymnData(346, '346 O Jesus, Thou Art Standing', [
+  HymnData(346, 'O Jesus, Thou Art Standing', [
     '''
 1. O Jesus, Thou art standing
 Outside the fast closed door,
@@ -9999,7 +9999,7 @@ Dear Saviour, enter, enter,
 Abide forever more! Amen.
 '''
   ]),
-  HymnData(347, '347 Wherever He Leads I’ll Go', [
+  HymnData(347, 'Wherever He Leads I’ll Go', [
     '''
 1. “take up thy cross and follow Me,”
 I heard my master say;
@@ -10029,7 +10029,7 @@ He is my Master, Lord, and king.
 Wherever He leads I’ll go
 '''
   ]),
-  HymnData(348, '348 Let Others See Jesus in You', [
+  HymnData(348, 'Let Others See Jesus in You', [
     '''
 1. While passing through this world of sin,
 And others your life shall view,
@@ -10059,7 +10059,7 @@ And lead the lost to life and light;
 Let others see Jesus in you.
 '''
   ]),
-  HymnData(349, '349 I Am Thine O Lord', [
+  HymnData(349, 'I Am Thine O Lord', [
     '''
 1. I am thine, O Lord, I have heard
 Thy voice,
@@ -10093,7 +10093,7 @@ There are heights joy that I may not reach
 Till I rest in peace with Thee.
 '''
   ]),
-  HymnData(350, '350 Is your All on the Altar?', [
+  HymnData(350, 'Is your All on the Altar?', [
     '''
 1. Your have longed for sweet peace, and for faith to increase,
 And have earnestly, fervently prayed;
@@ -10123,7 +10123,7 @@ And how happy our hearts will be share at His feet,
 When our all on the altar is laid.
 '''
   ]),
-  HymnData(351, '351 “ Are Ye Able,” Said the master', [
+  HymnData(351, '“ Are Ye Able,” Said the master', [
     '''
 1. “Are ye able,” said the master,
 “to be crucified with Me?”
@@ -10139,7 +10139,7 @@ And heroic spirit answer,
 Now, as then in Galilee,
 '''
   ]),
-  HymnData(352, '352 Living for Jesus', [
+  HymnData(352, 'Living for Jesus', [
     '''
 1. Living for Jesus a life that is true,
 Striving to please Him all that
@@ -10167,7 +10167,7 @@ Seeking the lost ones He died to redeem,
 Bringing the weary to find rest in Him
 '''
   ]),
-  HymnData(353, '353 Give of Your best to the Master', [
+  HymnData(353, 'Give of Your best to the Master', [
     '''
 1. Give of your best to the master,
 Give of the strength of your youth;
@@ -10203,7 +10203,7 @@ Give Him your heart’s adortion,
 Give Him the best that you have.
 '''
   ]),
-  HymnData(154, '154 Thou, My Everlasting portion.', [
+  HymnData(154, 'Thou, My Everlasting portion.', [
     '''
 1. Thou, my everlasting portion,
 More than friend or life to me;
@@ -10235,7 +10235,7 @@ Then the gate of life eternal
 May I enter, Lord with Thee
 '''
   ]),
-  HymnData(355, '355 Have Thine Own Way, Lord', [
+  HymnData(355, 'Have Thine Own Way, Lord', [
     '''
 1. Have Thine own way, Lord!
 Have Thine own way! Thou art the potter,
@@ -10264,7 +10264,7 @@ Absolute sway!Fill with Thy spirit till all shall see Christ only,always,
 Living in me. Amen
 '''
   ]),
-  HymnData(356, '356 Take My Life, and Let It Be', [
+  HymnData(356, 'Take My Life, and Let It Be', [
     '''
 1. Take my life, and let it be
 Consecrated, Lord, to Thee;
@@ -10294,7 +10294,7 @@ Take my heart, it is thine own,
 It shall be Thy royal throne
 '''
   ]),
-  HymnData(357, '357 Take My Life, and Let It be', [
+  HymnData(357, 'Take My Life, and Let It be', [
     '''
 1. Take my life and let it be
 Consecrated, Lord to Thee;
@@ -10324,7 +10324,7 @@ It shall be thy royal throne,
 It shall be thy royal throne, Amen
 '''
   ]),
-  HymnData(358, '358 A Charge to Keep I Have', [
+  HymnData(358, 'A Charge to Keep I Have', [
     '''
 1. A charge to keep I have,
 A God to glorify,
@@ -10344,7 +10344,7 @@ And O Thy Sevant, Lord, prepare
 A strict account to give. Amen
 '''
   ]),
-  HymnData(359, '359 I’ll Live for Him', [
+  HymnData(359, 'I’ll Live for Him', [
     '''
 1. My life, my lve I give to Thee,,
 Thou Lamb of God who died for me;
@@ -10368,7 +10368,7 @@ I’ll consecrate my life to thee,
 My Savior and my God!
 '''
   ]),
-  HymnData(360, '360 Jesus Calls Us Over the Tumult', [
+  HymnData(360, 'Jesus Calls Us Over the Tumult', [
     '''
 1. Jesus calls us over the tumult
 Of our life’s wild, restless sea;
@@ -10394,7 +10394,7 @@ Give our heart to thine obedience,
 Serve and love Thee best of all.
 '''
   ]),
-  HymnData(361, '361 Where He Leads Me', [
+  HymnData(361, 'Where He Leads Me', [
     '''
 1. I can hear my Savior calling,
 I can hera my savior calling
@@ -10427,7 +10427,7 @@ And go with me, with me all the
 way.
 '''
   ]),
-  HymnData(362, '362. Footsteps of Jesus', [
+  HymnData(362, 'Footsteps of Jesus', [
     '''
 1. Sweetly, Lord have we heard
 Thee calling, “Come follow me!”
@@ -10458,7 +10458,7 @@ We will rest where the steps of Jesus
 End at His throne.
 '''
   ]),
-  HymnData(363, '363. I Surrender All', [
+  HymnData(363, 'I Surrender All', [
     '''
 1. All to Jesus I Surrender,
 All to Him I freely give;
@@ -10483,7 +10483,7 @@ Fill me with thy love and power,
 Let Thy blessing fall on me
 '''
   ]),
-  HymnData(364, '364. Yield Not to Temptation', [
+  HymnData(364, 'Yield Not to Temptation', [
     '''
 1. Yield not to temptation,
 For yielding is sin;
@@ -10518,7 +10518,7 @@ Our strength will renew,
 He’ll carry you through.
 '''
   ]),
-  HymnData(365, '365. Oh, far a Closer Walk', [
+  HymnData(365, 'Oh, far a Closer Walk', [
     '''
 1. Oh, far closer walk with God,
 A calm and heav’nly frame,
@@ -10545,7 +10545,7 @@ And drove thee from my breast.
 Amen.
 '''
   ]),
-  HymnData(366, '366. Best Be the Tie', [
+  HymnData(366, 'Best Be the Tie', [
     '''
 1. Blest be the tie that binds
 Our heart in Christian love;
@@ -10572,7 +10572,7 @@ But we shall still joined in heart,
 And hope to meet again. Amen.
 '''
   ]),
-  HymnData(367, '367. Take Time to Be Holy', [
+  HymnData(367, 'Take Time to Be Holy', [
     '''
 1. Take time to be holy,
 Speak oft with the Lord;
@@ -10613,7 +10613,7 @@ Thou soon be lifted
 For service above.
 '''
   ]),
-  HymnData(368, '368. Brethren, We Have Met To Worship', [
+  HymnData(368, 'Brethren, We Have Met To Worship', [
     '''
 1. Brethren, we have met to worship
 And adore the Lord our God;
@@ -10654,7 +10654,7 @@ Christ will gird Himself, and serve us
 With sweet manna all around.
 '''
   ]),
-  HymnData(369, '369. Purer in Heart, O God', [
+  HymnData(369, 'Purer in Heart, O God', [
     '''
 1. Purer in heart, O God, Help me to be;
 May I devote my life wholly to Thee;
@@ -10678,7 +10678,7 @@ Reign thou my soul within;
 Purer in heart Help me to be. Amen.
 '''
   ]),
-  HymnData(370, '370. Walk in the Light', [
+  HymnData(370, 'Walk in the Light', [
     '''
 1. Walk in the light! So shalt thou know
 That fellowship of love
@@ -10705,7 +10705,7 @@ For God, by grace shall dwell in thee,
 And God himself is light. Amen.
 '''
   ]),
-  HymnData(371, '371. Leaning on the Everlasting Arms', [
+  HymnData(371, 'Leaning on the Everlasting Arms', [
     '''
 1. What a fellowship, what a joy divine,
 Leaning on the everlasting arms;
@@ -10730,7 +10730,7 @@ I have blessed peace with my lord so near,
 Leaning on the everlasting arms.
 '''
   ]),
-  HymnData(372, '372. God Be with You', [
+  HymnData(372, 'God Be with You', [
     '''
 1. God be with you till we meet again by his counsels guide!
 With His sheep securely fold you;
@@ -10753,7 +10753,7 @@ Smite death’s threat’ning wave before you;
 God be with you we meet again!
 '''
   ]),
-  HymnData(373, '373. O Happy Home Where Thou Art Loved', [
+  HymnData(373, 'O Happy Home Where Thou Art Loved', [
     '''
 1. O happy home where Thou art loved the dearest,
 Thou loving friend, Saviour of our race,
@@ -10782,7 +10782,7 @@ Where Thou hast ascended,
 Thy everlasting home of peace and love. Amen.
 '''
   ]),
-  HymnData(374, '374. Happy the Home When Gos is There', [
+  HymnData(374, 'Happy the Home When Gos is There', [
     '''
 1. Happy the home when God is There,
 and love fills every breast;
@@ -10807,7 +10807,7 @@ Until our heart in love to thee,
 And love to all reign. Amen.
 '''
   ]),
-  HymnData(375, '375. O Thou Whose Gracious Presence Blest', [
+  HymnData(375, 'O Thou Whose Gracious Presence Blest', [
     '''
 1. O Thou whose gracious presence blest
 This shelter from the world’s unrest.
@@ -10829,7 +10829,7 @@ This home we consecrate today
 Will be a holy place. Amen.
 '''
   ]),
-  HymnData(376, '376. Friend of the Home', [
+  HymnData(376, 'Friend of the Home', [
     '''
 1. Friend of the home, as when in Galilee,
 The mothers brought their little ones to Thee,
@@ -10849,7 +10849,7 @@ And gather all, by earthly homes m ade one,
 In heaven, O Christ, when earthly days are done. Amen.
 '''
   ]),
-  HymnData(377, '377. God, Give Christian Homes', [
+  HymnData(377, 'God, Give Christian Homes', [
     '''
 1. God, give us Christian home!
 Home where the Bible is loved and tought,
@@ -10884,7 +10884,7 @@ God, give us Christian Homes;
 God, give us Christian homes! Amen.
 '''
   ]),
-  HymnData(378, '378. Zion Stands with Hills Surrounded', [
+  HymnData(378, 'Zion Stands with Hills Surrounded', [
     '''
 1. Zion stands with hills surrounded,
 Zion, kept by pow’r divine;
@@ -10908,7 +10908,7 @@ Thou art precious in His sight;
 God is with thee, God thine everlasting light. Amen.
 '''
   ]),
-  HymnData(379, '379. O Thou Whose Hand Hath Brought Us', [
+  HymnData(379, 'O Thou Whose Hand Hath Brought Us', [
     '''
 1. O thou whose hand hath brought us
 Unto this joyful day,
@@ -10938,7 +10938,7 @@ Thy young, the old be strengthened,
 And all men learn Thy love. Amen.
 '''
   ]),
-  HymnData(380, '380. The Church’s One Foundation', [
+  HymnData(380, 'The Church’s One Foundation', [
     '''
 1. The church’s one foundation
 Is Jesus Christ her Lord;
@@ -10980,7 +10980,7 @@ Like them, the meek and lowly,
 On high may dwell with Thee.
 '''
   ]),
-  HymnData(381, '381. Glorious Things of Thee Are Spoken', [
+  HymnData(381, 'Glorious Things of Thee Are Spoken', [
     '''
 1. Glorious things of thee are spoken,
 Zion, city of our God;
@@ -11010,7 +11010,7 @@ He whose word cannot be broken,
 Formed thee for His owned abode. Amen.
 '''
   ]),
-  HymnData(382, '382. I Love Thy Kingdom, Lord', [
+  HymnData(382, 'I Love Thy Kingdom, Lord', [
     '''
 1. I love thy Kingdom, Lord,
 The house of Thine abode,
@@ -11042,7 +11042,7 @@ The brightest glories earth can yield,
 And brighter bliss of heav’n. Amen
 '''
   ]),
-  HymnData(383, '383. O Where Are Kings and Empire Now', [
+  HymnData(383, 'O Where Are Kings and Empire Now', [
     '''
 1. O where are Kings and empire s now,
 Of old that wet and come?
@@ -11068,7 +11068,7 @@ A mountain that shall fill the earth
 A house not made by hands.
 '''
   ]),
-  HymnData(384, '384 This Rite Our Blest Redeemer Gave', [
+  HymnData(384, 'This Rite Our Blest Redeemer Gave', [
     '''
 1. This rite lest redeemer gave
 To all in Him Believing;
@@ -11117,7 +11117,7 @@ The sealing unction from above,
 The joy of life, the fire of love.
 '''
   ]),
-  HymnData(386, '386 O Jesus, I Have Promised', [
+  HymnData(386, 'O Jesus, I Have Promised', [
     '''
 1. O Jesus, I Have Promised
 To serve Thee to the end;
@@ -11159,7 +11159,7 @@ O speak, and make me listen,
 Thou guardian of my soul! Amen
 '''
   ]),
-  HymnData(387, '387 Jesus I My Cross Have Taken', [
+  HymnData(387, 'Jesus I My Cross Have Taken', [
     '''
 1. Jesus, I my cross have taken.
 All to leave, and follow Thee.
@@ -11198,7 +11198,7 @@ Hope shall change to glad fruition,
 Faith to sight and prayer to praise. Amen
 '''
   ]),
-  HymnData(388, '388 O Thou Who In Jordan', [
+  HymnData(388, 'O Thou Who In Jordan', [
     '''
 1. O Thou who in Jordan didst bow Thy meek head,
 And, whelmed in our sorrow, didst sink to the dead,
@@ -11224,7 +11224,7 @@ We join the bright millions of saints gone before,
 And bless Thee, and wonder, and praise evermore. Amen
 '''
   ]),
-  HymnData(389, '389 O Happy Day That Fixed My', [
+  HymnData(389, 'O Happy Day That Fixed My', [
     '''
 1. O Happy day that fixed my choice
 On thee, My savior and my God!
@@ -11256,7 +11256,7 @@ Till in life’s latest hour I bow
 And bless, in death, a bond so dear. Amen
 '''
   ]),
-  HymnData(390, '390 Thou Hast Said Exalted Jesus', [
+  HymnData(390, 'Thou Hast Said Exalted Jesus', [
     '''
 1. Thou hast said, exalted Jesus,
 ‘’Take thy cross and follow me’’
@@ -11289,7 +11289,7 @@ May I ever, May I ever
 Fellow where my Lord has been.
 '''
   ]),
-  HymnData(391, '391 Here, O My Lord', [
+  HymnData(391, 'Here, O My Lord', [
     '''
 1. Here O my Lord, I see Thee face to face;
 Here would I touch and handle things unseen
@@ -11313,7 +11313,7 @@ Giving sweet foretaste of the festal joy,
 The Lamb’s great bridal feast of bliss and love. Amen
 '''
   ]),
-  HymnData(392, '392 Here at Thy Table Lord', [
+  HymnData(392, 'Here at Thy Table Lord', [
     '''
 1. Here at Thy table. Lord,
 This sacred hour.
@@ -11335,7 +11335,7 @@ Till in the home of heav’n
 We find out place. Amen
 '''
   ]),
-  HymnData(393, '393 in Memory Of the Savior’s Love', [
+  HymnData(393, 'in Memory Of the Savior’s Love', [
     '''
 1. In memory of the saviou’s love
 We Keep the sacred fest
@@ -11355,7 +11355,7 @@ And so anticipate by faith
 The heav’nly feast above. Amen.
 '''
   ]),
-  HymnData(394, '394 Bread of World In Mercy Broken', [
+  HymnData(394, 'Bread of World In Mercy Broken', [
     '''
 1. Bread of the would, in mercy broken,
 Wine of the soul, in mercy shed,
@@ -11369,7 +11369,7 @@ And be thy feast to us the token
 That by Thy grace our souls are fed. Amen
 '''
   ]),
-  HymnData(395, '395 Bread of Heav’n on Thee We Feed', [
+  HymnData(395, 'Bread of Heav’n on Thee We Feed', [
     '''
 1. Bread of heaven, on the Thee we feed,
 For Thy flesh is meat indeed;
@@ -11389,7 +11389,7 @@ Lord of life. O let us be
 Rooted grafted, built in Thee! Amen
 '''
   ]),
-  HymnData(396, '396 Be Present at Our Table, Lord', [
+  HymnData(396, 'Be Present at Our Table, Lord', [
     '''
 1. Be present at our table, Lord;
 Be here and every where adored;
@@ -11397,7 +11397,7 @@ Thy creatures bless; and grant that we
 May feast in paradise with Thee. Amen
 '''
   ]),
-  HymnData(397, '397 A Parting Hymn We sing', [
+  HymnData(397, 'A Parting Hymn We sing', [
     '''
 1. A parting hymn we sing,
 Around Thy table, lord,
@@ -11422,7 +11422,7 @@ Until we join the church above,
 And known as we are known.
 '''
   ]),
-  HymnData(398, '398 Be Known to Us in Breaking bread', [
+  HymnData(398, 'Be Known to Us in Breaking bread', [
     '''
 1. Be known to us in breaking bread
 But do not then depart;
@@ -11434,7 +11434,7 @@ That living bread, that heavenly wine
 Be our immortal food. Amen
 '''
   ]),
-  HymnData(399, '399 I Gave My Life Thee', [
+  HymnData(399, 'I Gave My Life Thee', [
     '''
 1. I gave my life for the,
 My precious blood I shed,
@@ -11474,7 +11474,7 @@ I bring, I bring rich gift to Thee.
 What hast thou brought to Me?
 '''
   ]),
-  HymnData(400, '400 Something for Thee', [
+  HymnData(400, 'Something for Thee', [
     '''
 1. Savior, Thy dying Love
 Thou gavest me,
@@ -11516,7 +11516,7 @@ Thro’all eternity
 Something for The. Amen
 '''
   ]),
-  HymnData(401, '401 Master no Offering Costly and sweet', [
+  HymnData(401, 'Master no Offering Costly and sweet', [
     '''
 1. Master, no offering, Costly and sweet,
 May we, like Magdalene,
@@ -11548,7 +11548,7 @@ Big us depart in peace
 Dear Lord, to Thee, Dear Lord, to Thee. Amen
 '''
   ]),
-  HymnData(402, '402 We Give Thee But Thine Own', [
+  HymnData(402, 'We Give Thee But Thine Own', [
     '''
 1. We give Thee but Thine own ,
 Whatever the gift may be;
@@ -11574,7 +11574,7 @@ What ever for Thine we do
 O lord, we do it unto Thee. Amen
 '''
   ]),
-  HymnData(403, '403 All Things are Thine', [
+  HymnData(403, 'All Things are Thine', [
     '''
 1. Lord of all gifts, to offer thee
 And hence, with grateful hearts today
@@ -11599,7 +11599,7 @@ And let their door a gateway be
 To lead us from ourselves to Thee. Amen
 '''
   ]),
-  HymnData(404, '404 Trust Try, and Prove Me', [
+  HymnData(404, 'Trust Try, and Prove Me', [
     '''
 1. I bring ye all the tithes into the storehouse,
 All your money, talents, time, and love
@@ -11621,7 +11621,7 @@ Naught on earth my hold on Him can sever
 While I hear him say to me, my child, just
 '''
   ]),
-  HymnData(405, '405 Am I a Soldier of the Cross', [
+  HymnData(405, 'Am I a Soldier of the Cross', [
     '''
 1. Am I a soldier of the cross,
 A follower of the Lamb,
@@ -11646,7 +11646,7 @@ I’ll bear the toil endure the pain
 Supported by Thy word. Amen
 '''
   ]),
-  HymnData(406, '406 Fight the Good Fight', [
+  HymnData(406, 'Fight the Good Fight', [
     '''
 1. Fight the good fight with all thy might!
 Christ is thy strength, and Christ thy right,
@@ -11670,7 +11670,7 @@ Christ in thy life, thy hope, thy love
 He changeth not and thou art dea
 '''
   ]),
-  HymnData(407, '407 LOYALTY TO CHRIST', [
+  HymnData(407, 'LOYALTY TO CHRIST', [
     '''
 1. From over hill and plain
 There comes the signal strain,
@@ -11701,7 +11701,7 @@ Thro’out the world’s domain
 Of loyalty, loyalty, yes loyalty to Christ.
 '''
   ]),
-  HymnData(408, '408 THE BANNER OF CROSS', [
+  HymnData(408, 'THE BANNER OF CROSS', [
     '''
 1. There’s a royal banner given for display
 To the solders of the King;
@@ -11733,7 +11733,7 @@ Then before our king the foe shall disappear
 And the cross the world shall sway!
 '''
   ]),
-  HymnData(409, '409 THE KINGDOM IS COMING', [
+  HymnData(409, 'THE KINGDOM IS COMING', [
     '''
 1. From all the dark places
 Of earth’s heathen races
@@ -11764,7 +11764,7 @@ At last every of salvation
 Their King and Redeemer shall crown.
 '''
   ]),
-  HymnData(410, '410 TRUEHEARTED, WHOLEHEARTED', [
+  HymnData(410, 'TRUEHEARTED, WHOLEHEARTED', [
     '''
 1. True heated, whole-heated, faithful, and loyal,
 King of our lives, by Thy grace, we will be;
@@ -11789,7 +11789,7 @@ Over our wills and affections victorious,
 Freely surrendered and wholly Thine own.
 '''
   ]),
-  HymnData(411, '411 DARE TO BE BRAVE, DARE TO BE TRUE', [
+  HymnData(411, 'DARE TO BE BRAVE, DARE TO BE TRUE', [
     '''
 1. Dare to be brave, dare to be true
 Strive for the righ, for the Lord is with you;
@@ -11811,7 +11811,7 @@ Try to help others, ever be kind,
 Let the oppressed a strong friend in you find.
 '''
   ]),
-  HymnData(412, '412 ONWARD, CHRISTAIN SOLDIERS', [
+  HymnData(412, 'ONWARD, CHRISTAIN SOLDIERS', [
     '''
 1. Onward, Christian soldiers,
 Marching as to war,
@@ -11857,7 +11857,7 @@ This thro’ countless ages
 Men and angels sing. Amen
 '''
   ]),
-  HymnData(413, '413 WHO IS ON THE LORD SIDE?', [
+  HymnData(413, 'WHO IS ON THE LORD SIDE?', [
     '''
 1. Who is on the Lord’s side?
 Who will serve the King?
@@ -11900,7 +11900,7 @@ Always on the Lord’s side
 Saviour, we are Thine.
 '''
   ]),
-  HymnData(414, '414 THE SON OF GOD GOE FORTH TO WAR', [
+  HymnData(414, 'THE SON OF GOD GOE FORTH TO WAR', [
     '''
 1. The son of God goes forth to war,
 A kingly crown to gain;
@@ -11932,7 +11932,7 @@ O God, to us may grace be given
 To follow in their train!
 '''
   ]),
-  HymnData(415, '415 STAND UP, STAND UP FOR JESUS', [
+  HymnData(415, 'STAND UP, STAND UP FOR JESUS', [
     '''
 1. Stand up, stand up for Jesus
 Ye soldiers of the cross;
@@ -11964,7 +11964,7 @@ He, with the King of glory,
 Shall reign eternally. Amen
 '''
   ]),
-  HymnData(416, '416 SOLDIERS OF CHRIST, ARISE', [
+  HymnData(416, 'SOLDIERS OF CHRIST, ARISE', [
     '''
 1. Soldier of Christ arise,
 And put your armor on,
@@ -11998,7 +11998,7 @@ Shall take the conquerors home.
 Amen
 '''
   ]),
-  HymnData(417, '417 LEAD ON, O KING ETERNAL', [
+  HymnData(417, 'LEAD ON, O KING ETERNAL', [
     '''
 1. Lead on, O King Eternal,
 The day of march has come
@@ -12030,7 +12030,7 @@ The crown awaits the conquest;
 Lead on, O God of might.
 '''
   ]),
-  HymnData(418, '418 ONCE TO EVERY MAN AND NATION', [
+  HymnData(418, 'ONCE TO EVERY MAN AND NATION', [
     '''
 1. Once to every man and nation
 Comes the moment to decide,
@@ -12063,7 +12063,7 @@ Keeping watch above His own.
 Amen
 '''
   ]),
-  HymnData(419, '419 STAND UP, STAND UP FOR JESUS', [
+  HymnData(419, 'STAND UP, STAND UP FOR JESUS', [
     '''
 1. Stand up, stand up for Jesus
 Ye soldiers of the cross;
@@ -12109,7 +12109,7 @@ He, with the King of glory,
 Shall reign eternally. Amen
 '''
   ]),
-  HymnData(420, '420 MY SOUL, BE ON THY GUARD', [
+  HymnData(420, 'MY SOUL, BE ON THY GUARD', [
     '''
 1. My soul, be on Thy guard
 Ten thousand foes arise;
@@ -12136,7 +12136,7 @@ To His dievine abode
 Amen
 '''
   ]),
-  HymnData(421, '421 WE ARE LIVING, WE ARE DWELLING', [
+  HymnData(421, 'WE ARE LIVING, WE ARE DWELLING', [
     '''
 1. We are living, we are dwelling
 In a grand and awful time,
@@ -12168,7 +12168,7 @@ Strike! Let every nerve and sinew
 Tell on ages, tell for God. Amen.
 '''
   ]),
-  HymnData(422, '422 MARCH ON, O SOUL, WITH STRENGTH', [
+  HymnData(422, 'MARCH ON, O SOUL, WITH STRENGTH', [
     '''
 1. March on, O soul, with strength!\
 Like those strong men of old,
@@ -12203,7 +12203,7 @@ March on, O soul, march on with strength!.
 Amen
 '''
   ]),
-  HymnData(423, '423 ARISE, O YOUTH OF GOD', [
+  HymnData(423, 'ARISE, O YOUTH OF GOD', [
     '''
 1. Arise, O youth of God!
 Have done with jesser things;
@@ -12235,7 +12235,7 @@ Be loyal to the King of Kings
 March on, O youth of God!
 '''
   ]),
-  HymnData(424, '424 WORK, FOR THE NIGHT IS COMING', [
+  HymnData(424, 'WORK, FOR THE NIGHT IS COMING', [
     '''
 1. Work, for the night is coming,
 Work thro’ the morning hours; work while the dew is sparkling,
@@ -12266,7 +12266,7 @@ Work while the night is dark’ning
 When man’s work is o’er.
 '''
   ]),
-  HymnData(425, '425 I’LL GO WHERE YOU WANT ME TO GO', [
+  HymnData(425, 'I’LL GO WHERE YOU WANT ME TO GO', [
     '''
 1. It may not be on the mountain’s height,
 Or over the stormy sea;
@@ -12302,7 +12302,7 @@ I’ll do Thy will with a heart sincere,
 I’ll be what You want me to be.
 '''
   ]),
-  HymnData(426, '426 O Master, Let Me Walk with Thee', [
+  HymnData(426, 'O Master, Let Me Walk with Thee', [
     '''
 1. O Mater let me walk with thee
 In lowly paths of service free;
@@ -12326,7 +12326,7 @@ In peace that only thou canst give,
 With Thee, O Master, let me live. Amen.
 '''
   ]),
-  HymnData(427, '427 The Master Hath Come', [
+  HymnData(427, 'The Master Hath Come', [
     '''
 1. The Master hath come, and He calls to follow,
 The track of foot prints
@@ -12356,7 +12356,7 @@ And through the green pasture, beside the still waters,
 He’ll lead us at last to His kingdom above.
 '''
   ]),
-  HymnData(428, '428. Must Jesus Bear the Cross Alone', [
+  HymnData(428, 'Must Jesus Bear the Cross Alone', [
     '''
 1. Must Jesus bear the cross alone.
 And the entire world goes free?
@@ -12376,7 +12376,7 @@ And then go home my crown no wear,
 For there’s a crown for me. Amen.
 '''
   ]),
-  HymnData(429, '429 Bring Then In', [
+  HymnData(429, 'Bring Then In', [
     '''
 1. Hark! tis the Shepherd’s voice I hear,
 Out in the desert dark and drear,
@@ -12400,7 +12400,7 @@ Hark! tis the Master speaks to thee,
 “Go, find My sheep where’er they be,”
 '''
   ]),
-  HymnData(430, '430 Must I Go, and Empty-Handed', [
+  HymnData(430, 'Must I Go, and Empty-Handed', [
     '''
 1. Must I go, and empty handed.
 Thus my dear Redeemer meet.
@@ -12430,7 +12430,7 @@ Ere the night of death o’er take thee,
 Strive for souls while still you may.
 '''
   ]),
-  HymnData(431, '431 Make Me a Blessing', [
+  HymnData(431, 'Make Me a Blessing', [
     '''
 1. Out in the highways and byways of life,
 Many are weary and sad;
@@ -12458,7 +12458,7 @@ Be to the helpless a helper indeed,
 Unto your mission be true.
 '''
   ]),
-  HymnData(432, '432 Bringing In the Sheaves', [
+  HymnData(432, 'Bringing In the Sheaves', [
     '''
 1. Sowing in the morning, sowing seeds of kindness,
 Sowing in the noontide and the dewy eve;
@@ -12480,7 +12480,7 @@ When our weeping’s over, He will bid us welcome,
 We shall come rejoicing, bringing in the sheaves.
 '''
   ]),
-  HymnData(433, '433 The King’s Business', [
+  HymnData(433, 'The King’s Business', [
     '''
 1. I am stranger here, within a foreign land;
 My home is far away, upon a golden strand;
@@ -12504,7 +12504,7 @@ My sov’s reign me tell how mortals there may dwell,
 And that’s my business for the king.
 '''
   ]),
-  HymnData(434, '434 Serve The Lord With Gladness', [
+  HymnData(434, 'Serve The Lord With Gladness', [
     '''
 1. “ Serve The Lord with gladness”
 In our worker and ways,
@@ -12542,7 +12542,7 @@ His sweet will so precious
 Will be our choice
 '''
   ]),
-  HymnData(435, '435 To the Work', [
+  HymnData(435, 'To the Work', [
     '''
 1. To the work! To the work! We are servants of God.
 Let us follow the path our Master had trod;
@@ -12573,7 +12573,7 @@ When the home of the faithful our dwelling shall be,
 And we shout with the ransomed, “Salvation is free!”
 '''
   ]),
-  HymnData(436, '436 Satisfied with Jesus', [
+  HymnData(436, 'Satisfied with Jesus', [
     '''
 1. I am satisfied with Jesus,
 He has done so much for me;
@@ -12605,7 +12605,7 @@ Oh. That I could hear Him saying,
 “I am satisfied with thee.”
 '''
   ]),
-  HymnData(437, '437 Our Best', [
+  HymnData(437, 'Our Best', [
     '''
 1. Hear ye the Master’s call,
 “Give Me best”
@@ -12631,7 +12631,7 @@ All that we think or do,
 Be it the best.
 '''
   ]),
-  HymnData(438, '438 Make Me a Channel Of Blessing', [
+  HymnData(438, 'Make Me a Channel Of Blessing', [
     '''
 1. Is your life a channel of blessing?
 Is the love of God flowing thro’ you?
@@ -12661,7 +12661,7 @@ We will barrier be and a hindrance
 To those we are trying to win.
 '''
   ]),
-  HymnData(439, '439 Ready', [
+  HymnData(439, 'Ready', [
     '''
 1. Ready to suffer grief or pain,
 Ready to stand the test;
@@ -12691,7 +12691,7 @@ Ready in life, ready in death,
 Ready for His return.
 '''
   ]),
-  HymnData(440, '440 Hark, the Voice of Jesus Calling', [
+  HymnData(440, 'Hark, the Voice of Jesus Calling', [
     '''
 1. Hark, the voice of Jesus Calling.
 Who will go and work today?
@@ -12723,7 +12723,7 @@ Answer quickly when He calleth,
 “Here am I, send me, send me.” Amen.
 '''
   ]),
-  HymnData(441, '441 O Master Workman Of the Race', [
+  HymnData(441, 'O Master Workman Of the Race', [
     '''
 1. O Master Workman of the race,
 Thou man of Galilee,
@@ -12755,7 +12755,7 @@ That it mahy be our highest joy
 Our father’s work to do Amen.
 '''
   ]),
-  HymnData(442, '442 The light if God Is Falling', [
+  HymnData(442, 'The light if God Is Falling', [
     '''
 1. The light of God is falling
 Upon life’s common way;
@@ -12793,7 +12793,7 @@ And while thy church is pleading for all who would do good,
 We hear Thy true voice leading our song of brotherhood. Amen.
 '''
   ]),
-  HymnData(443, '443 In Christ There Is No East Or West', [
+  HymnData(443, 'In Christ There Is No East Or West', [
     '''
 1. In Christ there is no East or West,
 In Him South or North;
@@ -12819,7 +12819,7 @@ All Christ souls are one in Him,
 Throughout the whole wild earth. Amen.
 '''
   ]),
-  HymnData(444, '444 Let There Be Light', [
+  HymnData(444, 'Let There Be Light', [
     '''
 1. Let be light, Lord God of hosts,
 Let there be wisdom on the earth!
@@ -12844,7 +12844,7 @@ That useful labor t=yet may build its home with love and laughter filled;
 Good, give thy wayward children peace!
 '''
   ]),
-  HymnData(445, '445 Rise Up, O Men f God', [
+  HymnData(445, 'Rise Up, O Men f God', [
     '''
 1. Rise up, O men of God!
 Have done with lesser things;
@@ -12865,12 +12865,12 @@ Rise up, and make her great!
 ''',
     '''
 4. Lift high the cross of Christ!
-Tread wher5e His feet have trod;
+Tread where His feet have trod;
 As brother of son of man,
 Rise up, O men of God! Amen
 '''
   ]),
-  HymnData(446, '446 Fling out the Banner', [
+  HymnData(446, 'Fling out the Banner', [
     '''
 1. Fling out the banner! Let it float
 Sky ward and seaward, high and wide;
@@ -12896,7 +12896,7 @@ Our glory only in the cross,
 Our only hope the crucified. Amen.
 '''
   ]),
-  HymnData(447, '447 O Brother Man, Fold to Thy Heart', [
+  HymnData(447, 'O Brother Man, Fold to Thy Heart', [
     '''
 1. O brother man, fold thy heart the brother!
 Where pity dwells, the peace of God is there;
@@ -12916,7 +12916,7 @@ Each loving life a psalm of gratitude.
 Amen.
 '''
   ]),
-  HymnData(448, '448 The Morning Light Is Breaking', [
+  HymnData(448, 'The Morning Light Is Breaking', [
     '''
 1. The morning light is breaking;
 The darkness disappears;
@@ -12948,7 +12948,7 @@ And seek the savior’s blessing,
 A nation in a day. Amen.
 '''
   ]),
-  HymnData(449, '449 From Greenland’s ley Mountains', [
+  HymnData(449, 'From Greenland’s ley Mountains', [
     '''
 1. From Greenland’s icy mountains,
 From india’s coral stand,
@@ -12987,7 +12987,7 @@ Redeemer, king Creator,
 In bliss returns to reign. Amen.
 '''
   ]),
-  HymnData(450, '450 From Ocean unto Ocean', [
+  HymnData(450, 'From Ocean unto Ocean', [
     '''
 1. From Ocean unto Ocean
 Our land shall own Thee Lord,
@@ -13029,7 +13029,7 @@ From ocean unto ocean
 Our land shall own Thee Lord
 '''
   ]),
-  HymnData(451, '451 O Zion, Hate', [
+  HymnData(451, 'O Zion, Hate', [
     '''
 1. O Zion hast, thy mission , high fulfilling,
 To tell to the entire world that God is light;
@@ -13056,7 +13056,7 @@ Pour out thy soul for them in pray’r victorious;
 And all thou spendest Jesus will repay. Amen.
 '''
   ]),
-  HymnData(452, '452 Heralds of Christ', [
+  HymnData(452, 'Heralds of Christ', [
     '''
 1. Heralds of Christ, who bear the king’s commands
 Immortal tidings in your mortal hands
@@ -13082,7 +13082,7 @@ When war shall be no more and strife shall cease
 Upon the highway od the prince of peace. Amen.
 '''
   ]),
-  HymnData(453, '453 Hail to the Brightness', [
+  HymnData(453, 'Hail to the Brightness', [
     '''
 1. Hail to the brightness of Zion’s glad morning!
 Joy to the lands that in darkness have lain!
@@ -13108,7 +13108,7 @@ Fall’n are the engines of war and commotion,
 Shouts of salvation are rending the sky. Amen.
 '''
   ]),
-  HymnData(454, '454 Light of the World Hail Thee', [
+  HymnData(454, 'Light of the World Hail Thee', [
     '''
 1. Light of the world, we hail Thee.
 Flushing the eastern skies;
@@ -13140,7 +13140,7 @@ Rise in the new creation
 Which spring from love and Thee. Amen.
 '''
   ]),
-  HymnData(455, '455 We’ve a Story to Tell', [
+  HymnData(455, 'We’ve a Story to Tell', [
     '''
 1. We’ve a story to tell to the nations,
 That shall term their hearts to the right,
@@ -13174,7 +13174,7 @@ May come to the truth of God,
 May truth of God! Amen.
 '''
   ]),
-  HymnData(456, '456 O God, We Pray for Al Mankind', [
+  HymnData(456, 'O God, We Pray for Al Mankind', [
     '''
 1. O God, we pray for all mankind,
 The nations far astray;
@@ -13206,7 +13206,7 @@ The Christ of Calvary,
 The Christ of Calvary! Amen.
 '''
   ]),
-  HymnData(457, '457 Send the Light', [
+  HymnData(457, 'Send the Light', [
     '''
 1. There is a call comes ringing o’er the restless wave,
 “Send the light! Send the light!
@@ -13236,7 +13236,7 @@ Let us gather jewels for a crown above,
 Send then light! Send the light!
 '''
   ]),
-  HymnData(458, '458 Christ for the World We Sing', [
+  HymnData(458, 'Christ for the World We Sing', [
     '''
 1. Christ for the world we sing;
 The world to Christ we bring,
@@ -13273,7 +13273,7 @@ Inspired with hope and praise,
 To Christ belong.
 '''
   ]),
-  HymnData(459, '459 Christian Heralds', [
+  HymnData(459, 'Christian Heralds', [
     '''
 1. Ye Christian heralds! Go, proclaim
 Salvation thr’ Immanuel’s name;
@@ -13293,7 +13293,7 @@ Meet with the blood-b’t throng to fall,
 And crown our Jesus Lord of all. Amen.
 '''
   ]),
-  HymnData(460, '460 Father in Heaven, Who Lovest all', [
+  HymnData(460, 'Father in Heaven, Who Lovest all', [
     '''
 1. Father in hea’n who lovest all,
 O help thy children when they call,
@@ -13319,7 +13319,7 @@ Forgiveness free of evil done,
 And love to all men neath the sun. Amen.
 '''
   ]),
-  HymnData(461, '461 Thou, whose Almighty Word', [
+  HymnData(461, 'Thou, whose Almighty Word', [
     '''
 1. Thou, whose Almighty word
 Chaos and darkness hears,
@@ -13347,7 +13347,7 @@ Thro’ the world, far and wide,
 Let there be light! Amen.
 '''
   ]),
-  HymnData(462, '462 Watchman! Tell us of the Night', [
+  HymnData(462, 'Watchman! Tell us of the Night', [
     '''
 1. Watchman! tell us of the night,
 What its sign of promise are;
@@ -13379,7 +13379,7 @@ Trav’ler, lo! The prince of peace,
 Lo, the son of God is come! Amen.
 '''
   ]),
-  HymnData(463, '463 Forward through the Ages', [
+  HymnData(463, 'Forward through the Ages', [
     '''
 1. Forward through the ages,
 In unbroken line.
@@ -13415,7 +13415,7 @@ Move together to the shinning goal.
 Amen.
 '''
   ]),
-  HymnData(464, '464 Where Cross the Crowded Way of Life', [
+  HymnData(464, 'Where Cross the Crowded Way of Life', [
     '''
 1. Where cross the crowded ways of life,
 Where sound the cries of race and clan,
@@ -13447,7 +13447,7 @@ Shall come the city of our God.
 Amen
 '''
   ]),
-  HymnData(465, '465 God of Grace and Glory', [
+  HymnData(465, 'God of Grace and Glory', [
     '''
 1. God of grace and God of glory,
 On thy people pour thy power,
@@ -13475,7 +13475,7 @@ That we fail not man or Thee!
 That we fail not man or Thee!
 '''
   ]),
-  HymnData(466, '466 O Jesus, Master, When Today', [
+  HymnData(466, 'O Jesus, Master, When Today', [
     '''
 1. O Jesus, Master, when today,
 I meet, long the crowded way,
@@ -13502,7 +13502,7 @@ As side by side we onward go,
 Nor need each other name to known. Amen.
 '''
   ]),
-  HymnData(467, '467 Hear, Hear, O Ye Nations', [
+  HymnData(467, 'Hear, Hear, O Ye Nations', [
     '''
 1. Hear, hear, O ye Nations and hear
 Obey the cry from the past and
@@ -13523,7 +13523,7 @@ Arise to the place thou art give n to fill,
 And lead the world- triumph of peace and good will. Amen.
 '''
   ]),
-  HymnData(468, '468 When I Can Read My Title clear', [
+  HymnData(468, 'When I Can Read My Title clear', [
     '''
 1. When I can my little clear
 To mansions in the skies
@@ -13592,7 +13592,7 @@ Till morning’s joy shall end the night of weeping,
 And life’s long shadow breaks in cloudless love.
 '''
   ]),
-  HymnData(470, '470 Will There Be Any Stars', [
+  HymnData(470, 'Will There Be Any Stars', [
     '''
 1. I am thinking today of that beautiful land
 I shall reach when the goeth down;
@@ -13616,7 +13616,7 @@ It would sweeten my bliss in the city of gold,
 Should there be any stars in my crown?
 '''
   ]),
-  HymnData(471, '471 There’s a Land That Is Fairer than Day', [
+  HymnData(471, 'There’s a Land That Is Fairer than Day', [
     '''
 1. Theirs a land that is fairer than day,
 And by faith we can see it afar;
@@ -13640,7 +13640,7 @@ For the glorious gift of his love
 And the blessings that hallow our days.
 '''
   ]),
-  HymnData(472, '472 My Saviour First of All', [
+  HymnData(472, 'My Saviour First of All', [
     '''
 1. When my life work is ended and
 I cross the swelling tide,
@@ -13673,7 +13673,7 @@ In the glad song of ages I shall mingle with delight,
 But I long to meet my savior first of all.
 '''
   ]),
-  HymnData(473, '473 When the Morning comes', [
+  HymnData(473, 'When the Morning comes', [
     '''
 1. Trails dark on every hand,
 And we cannot understand
@@ -13707,7 +13707,7 @@ When we try to do our best,
 But we’ll understand it better by and by.
 '''
   ]),
-  HymnData(474, '474 We shall See the King Someday', [
+  HymnData(474, 'We shall See the King Someday', [
     '''
 1. Tho’ the way we journey may be often drear,
 We shall see the King someday (someday);
@@ -13737,7 +13737,7 @@ Sorrow past forever on that peaceful shore,
 We shall see the king someday
 '''
   ]),
-  HymnData(475, '475 Face to Face with Christ', [
+  HymnData(475, 'Face to Face with Christ', [
     '''
 1. Face to face with Christ, my savior,
 Face to face what will it be,
@@ -13767,7 +13767,7 @@ Face to face with my Redeemer,
 Jesus Christ who loves me so
 '''
   ]),
-  HymnData(476, '476 Ten Thousand Time Ten Thousand', [
+  HymnData(476, 'Ten Thousand Time Ten Thousand', [
     '''
 1. Ten thousand time ten thousand,
 In sparkling raiment bright,
@@ -13799,7 +13799,7 @@ Orphans no longer fatherless,
 Nor widows desolate
 '''
   ]),
-  HymnData(577, '577 Jerusalem, the Golden', [
+  HymnData(577, 'Jerusalem, the Golden', [
     '''
 1. Jerusalem, the golden
 With milk and honey blest!
@@ -13831,7 +13831,7 @@ His only, His forever,
 Thou shalt be, and thou art! Amen.
 '''
   ]),
-  HymnData(478, '478 On Jordan’s Stormy banks', [
+  HymnData(478, 'On Jordan’s Stormy banks', [
     '''
 1. On Jordan’s stormy banks I stand,
 And Canaan’s fair and happy land,
@@ -13861,7 +13861,7 @@ When shall I see my father’s face?
 And in His bosom rest?
 '''
   ]),
-  HymnData(479, '479 On Jordan’s Stormy Banks', [
+  HymnData(479, 'On Jordan’s Stormy Banks', [
     '''
 1. On Jordan’s stormy bank I stand,
 And cast a wishful eyes
@@ -13891,7 +13891,7 @@ When shall I see my father’s face,
 And in His bosom rest?
 '''
   ]),
-  HymnData(480, '480 O Think of the Home Over There', [
+  HymnData(480, 'O Think of the Home Over There', [
     '''
 1. O think of the river of light,
 By the side of the river of light,
@@ -13931,7 +13931,7 @@ Over there, over there,
 I’ll soon be at home over there.
 '''
   ]),
-  HymnData(481, '481 Shall We Gather at the River', [
+  HymnData(481, 'Shall We Gather at the River', [
     '''
 1. Shall we gather at the river,
 Where angel feet have trod;
@@ -13961,7 +13961,7 @@ Soon our happy hearts will quiver
 With the melody of peace.
 '''
   ]),
-  HymnData(482, '482 When the Roll Called Up Yonder', [
+  HymnData(482, 'When the Roll Called Up Yonder', [
     '''
 1. When the trumpet of the Lord shall sound,
 And time ‘shall be no more,
@@ -13990,7 +13990,7 @@ And our work on earth is done.,
 And all roll is called up yonder, I’ll be there.
 '''
   ]),
-  HymnData(483, '483 When we All Get to Heaven', [
+  HymnData(483, 'When we All Get to Heaven', [
     '''
 1. Sing the wondrous love of Jesus,
 Sing His mercy His grace;
@@ -14020,7 +14020,7 @@ Soon the pearly gate will pen;
 We shall tread the streets of gold.
 '''
   ]),
-  HymnData(484, '484 O They Tell Me of a Home', [
+  HymnData(484, 'O They Tell Me of a Home', [
     '''
 1. O they tell me of a home
 Far beyond the skies,
@@ -14049,7 +14049,7 @@ And they tell me that no tears ever come again
 In that lovely land of unclouded day,
 '''
   ]),
-  HymnData(485, '485 Gory o that Will Be Glory', [
+  HymnData(485, 'Gory o that Will Be Glory', [
     '''
 1. When all my labors and trails are o’er, and I am safe on that beautiful shore,
 Just to be near the dear Lord I adore,
@@ -14072,7 +14072,7 @@ Yet just a smile from my savior, I know
 Will thro’ the ages the glory for me.
 '''
   ]),
-  HymnData(486, '486 Oh Lord Mt God', [
+  HymnData(486, 'Oh Lord Mt God', [
     '''
 1. Oh Lord my God! When I in awesome wander
 Consider all, the work Thy hands have made
@@ -14102,7 +14102,7 @@ Then I shall bow, in humble adoration
 And then proclaim, my God how great Thou art.
 '''
   ]),
-  HymnData(487, '487 Faith of Our Mothers', [
+  HymnData(487, 'Faith of Our Mothers', [
     '''
 1. Faith of our mothers, living still
 In cradle song and bed-time prayer;
@@ -14135,7 +14135,7 @@ Faith of our mothers, Christian faith,
 We will be true to thee till death. Amen.
 '''
   ]),
-  HymnData(488, '488 Mine eyes Have Seen the Glory', [
+  HymnData(488, 'Mine eyes Have Seen the Glory', [
     '''
 1. Mine eyes have seen the glory of the coming of the lord;
 He is trampling out the vintage where the grapes of wrath are stored;
@@ -14166,7 +14166,7 @@ As he died to make men holy, He us die to make me free,
 While God is marching on.
 '''
   ]),
-  HymnData(489, '489. Arise O Compatriots', [
+  HymnData(489, 'Arise O Compatriots', [
     '''
 1. Arise, o compatriots,
 Nigeria’s call obey
@@ -14190,7 +14190,7 @@ To build a nation where peace
 And justice shall reign. AMEN.
 '''
   ]),
-  HymnData(490, '490. Come, Ye Thankful People, Come', [
+  HymnData(490, 'Come, Ye Thankful People, Come', [
     '''
 1. Come, ye thankful people, come,
 Raise the song of harvest home!
@@ -14221,7 +14221,7 @@ But the fruitful ears to store
 In His garner every more. Amen.
 '''
   ]),
-  HymnData(491, '491. Now Thank We All Our God', [
+  HymnData(491, 'Now Thank We All Our God', [
     '''
 1. Now thank we all our God
 With heart and hands and voices
@@ -14253,7 +14253,7 @@ For thus it was now
 And shall be ever more. Amen
 '''
   ]),
-  HymnData(492, '492. We Gather Together', [
+  HymnData(492, 'We Gather Together', [
     '''
 1. We gather together to ask the Lord's blessing;
 he chastens and hastens his will to make known;
@@ -14273,7 +14273,7 @@ Let thy congregation endure through tribulation:
 thy name be ever praised! O Lord, make us free!
 '''
   ]),
-  HymnData(493, '493. We Plow the Field', [
+  HymnData(493, 'We Plow the Field', [
     '''
 1. We plow the fields and scatter
 the good seed on the land,
@@ -14305,7 +14305,7 @@ but that which you desire now:
 our humble, thankful hearts!
 '''
   ]),
-  HymnData(494, '494 Thanksgiving Hymn', [
+  HymnData(494, 'Thanksgiving Hymn', [
     '''
 1. Jehovah the Lord, our Saviour and King,
 Glad praises to Thee we ever shall sing;
@@ -14332,7 +14332,7 @@ And help us live daily in true thankfulness.
 Amen.
 '''
   ]),
-  HymnData(495, '495 For All the Blessing of the Year', [
+  HymnData(495, 'For All the Blessing of the Year', [
     '''
 1. For all the blessings of the year,
 For all the friends we hold so dear,
@@ -14352,7 +14352,7 @@ And warms our lives with heav'nly fires,
 We give you thanks, O Lord.
 '''
   ]),
-  HymnData(496, '496 Ring Out Old, Ring in the New', [
+  HymnData(496, 'Ring Out Old, Ring in the New', [
     '''
 1. Ring out the old, ring in the new,
 Ring, happy bells across the snow:
@@ -14378,7 +14378,7 @@ Ring out the darkness of the land,
 Ring in the Christ that is to be. Amen.
 '''
   ]),
-  HymnData(497, '497 Another Year is Dawning', [
+  HymnData(497, 'Another Year is Dawning', [
     '''
 1. Another year is dawning!
 Dear Father, let it be,
@@ -14410,7 +14410,7 @@ on earth, or else in heaven,
 another year for thee.
 '''
   ]),
-  HymnData(498, '498 Father, Let Me Dedicate', [
+  HymnData(498, 'Father, Let Me Dedicate', [
     '''
 1. Father, let me dedicate
 All this year to you,
@@ -14442,7 +14442,7 @@ And, whate'er the future brings,
 Glorify your name.
 '''
   ]),
-  HymnData(499, '499 Dedicatory Hymn', [
+  HymnData(499, 'Dedicatory Hymn', [
     '''
 1. To Him who hallows all our days
 Our souls in worship bend;
@@ -14474,7 +14474,7 @@ Till tribes and tongues the world around
 Shall praise Immanuel’s name.
 '''
   ]),
-  HymnData(500, '500 Anniversary Hymn', [
+  HymnData(500, 'Anniversary Hymn', [
     '''
 1. God of our fathers,
 we praise and adore thee
@@ -14516,7 +14516,7 @@ And may we run with faithfulness
 life’s fateful race.
 '''
   ]),
-  HymnData(501, '501 O Perfect Love', [
+  HymnData(501, 'O Perfect Love', [
     '''
 1. O perfect Love, all human thought transcending,
 Lowly we kneel in prayer before Thy throne,
@@ -14536,7 +14536,7 @@ And to life’s day the glorious unknown morrow
 That dawns upon eternal love and life.
 '''
   ]),
-  HymnData(502, '502 The Voice That Breathed O’er Eden', [
+  HymnData(502, 'The Voice That Breathed O’er Eden', [
     '''
 1. The voice that breathed o’er Eden,
 That earliest wedding day,
@@ -14568,7 +14568,7 @@ When onward to Thine altar
 Their hallowed path they trace.
 '''
   ]),
-  HymnData(503, '503 Gracious Saviour, Who Didst Honour', [
+  HymnData(503, 'Gracious Saviour, Who Didst Honour', [
     '''
 1. 1 Gracious Savior, who didst honor
 Womankind as woman’s son;
@@ -14602,7 +14602,7 @@ Humble though our influence be,
 Use it in the world for Thee. Amen.
 '''
   ]),
-  HymnData(504, '504 O Blessing Day of Motherhood', [
+  HymnData(504, 'O Blessing Day of Motherhood', [
     '''
 1. blessèd day of motherhood!
 We lift our hearts in praise,
@@ -14644,7 +14644,7 @@ Of wondrous mother love, and may
 Thy children Thee adore.
 '''
   ]),
-  HymnData(505, '505 Tell Me the Stories of Jesus', [
+  HymnData(505, 'Tell Me the Stories of Jesus', [
     '''
 1. Tell me the stories of Jesus
 I love to hear;
@@ -14675,7 +14675,7 @@ Loudest hosannas,
 "Jesus is King!"
 '''
   ]),
-  HymnData(506, '506 I Think When I Read That Sweet Story', [
+  HymnData(506, 'I Think When I Read That Sweet Story', [
     '''
 1. I think when I read that sweet story of old,
 when Jesus was here among men,
@@ -14695,7 +14695,7 @@ and if I now earnestly seek him below,
 I shall see him and hear him above;
 '''
   ]),
-  HymnData(507, '507 With happy Voices Ringing', [
+  HymnData(507, 'With happy Voices Ringing', [
     '''
 1. With happy voices ringing,
 Thy children, Lord, appear,
@@ -14727,7 +14727,7 @@ And through all life, forever,
 To live our praise to Thee. Amen.
 '''
   ]),
-  HymnData(508, '508 What Can I Give to Jesus', [
+  HymnData(508, 'What Can I Give to Jesus', [
     '''
 1. What can I give to Jesus,
 Who gave Himself for me?
@@ -14759,7 +14759,7 @@ I’ll give my all to Jesus,
 Who died on calvary.
 '''
   ]),
-  HymnData(509, '509. I Am So Glad that Our Father', [
+  HymnData(509, 'I Am So Glad that Our Father', [
     '''
 1. I am so glad that our Father in heav'n
 Tells of His love in the Book He has giv'n;
@@ -14783,7 +14783,7 @@ This shall my song in eternity be:
 "O what a wonder, that Jesus loves me!"
 '''
   ]),
-  HymnData(510, '510 Gentle Jesus, Meek and Mild', [
+  HymnData(510, 'Gentle Jesus, Meek and Mild', [
     '''
 1. Gentle Jesus, meek and mild,
 Look upon a little child;
@@ -14809,7 +14809,7 @@ Make me, Savior, what Thou art,
 Live Thyself within my heart.
 '''
   ]),
-  HymnData(511, '511 Praise Him, All Ye Little Children', [
+  HymnData(511, 'Praise Him, All Ye Little Children', [
     '''
 1. Praise him, praise him, all ye little children,
 God is love, God is love;
@@ -14829,7 +14829,7 @@ Thank him, thank him, all ye little children.
 God is love, God is love.
 '''
   ]),
-  HymnData(512, '512 Jesus Loves Me', [
+  HymnData(512, 'Jesus Loves Me', [
     '''
 1. Jesus loves me—this I know,
 For the Bible tells me so;
@@ -14859,7 +14859,7 @@ If I love Him, when I die
 He will take me home on high.
 '''
   ]),
-  HymnData(513, '513 The Wise May Bring Their Learning', [
+  HymnData(513, 'The Wise May Bring Their Learning', [
     '''
 1. The wise may bring their learning,
 The rich may bring their wealth,
@@ -14891,7 +14891,7 @@ Than richest gifts without them:
 Yet these a child may bring.
 '''
   ]),
-  HymnData(514, '514 Doxology', [
+  HymnData(514, 'Doxology', [
     '''
 1. Praise God, from whom all blessings flow;
 Praise Him, all creatures here below;
@@ -14899,7 +14899,7 @@ Praise Him above, ye heavenly host;
 Praise Father, Son, and Holy Ghost.
 '''
   ]),
-  HymnData(515, '515 The Lord is in His Holy Temple', [
+  HymnData(515, 'The Lord is in His Holy Temple', [
     '''
 1. The Lord is in his holy temple,
 The Lord is in his holy temple:
@@ -14908,13 +14908,13 @@ Let all the earth keep silence before him --
 Keep silence, keep silence before him.
 '''
   ]),
-  HymnData(517, '517 Create in Me a Clean Heart', [
+  HymnData(517, 'Create in Me a Clean Heart', [
     '''
 1. Create in Me a Clean Heart, O God
 And renew a right spirit within me. Amen
 '''
   ]),
-  HymnData(518, '518 We Would Worship Thee', [
+  HymnData(518, 'We Would Worship Thee', [
     '''
 1. We would worship Thee
 We would worship Thee
@@ -14922,7 +14922,7 @@ Worship Thee in spirit
 And in truth. Amen
 '''
   ]),
-  HymnData(520, '520 O LORD OF LOVE, THOU LIGHT DIVINE', [
+  HymnData(520, 'O LORD OF LOVE, THOU LIGHT DIVINE', [
     '''
 1. Lord of love.
 Thou light divine
@@ -14932,19 +14932,19 @@ Thee we adore
 For we are Thine. Amen
 '''
   ]),
-  HymnData(521, '521. O WORSHIP THE LORD', [
+  HymnData(521, 'O WORSHIP THE LORD', [
     '''
 1. worship the lord in the beauty of holiness;
 Service Him with gladness, all the earth. Amen.
 '''
   ]),
-  HymnData(522, '522. LEAD ME, LORD', [
+  HymnData(522, 'LEAD ME, LORD', [
     '''
 1. Lead me, Lord, Lead me in Thy righteousness
 Make Thy way plain before my face. Amen
 '''
   ]),
-  HymnData(523, '523. SPIRIT OF THE LIVING GOD', [
+  HymnData(523, 'SPIRIT OF THE LIVING GOD', [
     '''
 1. Spirit of the living God, Fall fresh on me;
 Spirit of the living God, Fall fresh on me,
@@ -14952,7 +14952,7 @@ Break me, melt me, mold me, fill me
 Spirit of the living God, fall fresh on me.
 '''
   ]),
-  HymnData(524, '524. GLORY BE TO THE FATHER', [
+  HymnData(524, 'GLORY BE TO THE FATHER', [
     '''
 1. Glory be to the Father,
 And to the Son, and to the Holy Ghost
@@ -14960,7 +14960,7 @@ As it was in the beginning, is now,
 And ever shall be world without end. Amen.
 '''
   ]),
-  HymnData(525, '525. GLORY BE TO THE FATHER', [
+  HymnData(525, 'GLORY BE TO THE FATHER', [
     '''
 1. Glory be to the Father,
 And to the Son, and to the Holy Ghost;
@@ -14968,7 +14968,7 @@ As it was in the beginning is now,
 And ever shall be, world without end
 '''
   ]),
-  HymnData(526, '526. GLORY BE TO THE FATHER', [
+  HymnData(526, 'GLORY BE TO THE FATHER', [
     '''
 1. Glory be to the father,
 And to the Son, and to the Holy Ghost;
@@ -14976,14 +14976,14 @@ As it was in the beginning is now,
 And ever shall be, world without end. Amen
 '''
   ]),
-  HymnData(527, '527 NOW FOR EACH YEARNING HEART', [
+  HymnData(527, 'NOW FOR EACH YEARNING HEART', [
     '''
 1. Now for each yearning heart
 Thy gracious love impact;
 Hear us, O lord. Amen
 '''
   ]),
-  HymnData(529, '529 ALMIGHTY FATHER, HEAR OUR PRAYER', [
+  HymnData(529, 'ALMIGHTY FATHER, HEAR OUR PRAYER', [
     '''
 1. Almighty Father, hear our prayer
 And bless all souls that wait before Thee. Amen
@@ -14995,13 +14995,13 @@ Incline Thine eat to us
 And grant us Thy peace. Amen
 '''
   ]),
-  HymnData(531, '531 HEAR OUR PRAYER, O HEAVENLY FATHER', [
+  HymnData(531, 'HEAR OUR PRAYER, O HEAVENLY FATHER', [
     '''
 1. Hear our prayer, O heav’nly Father,
 For the dear Redeemer’s sake
 '''
   ]),
-  HymnData(532, '532 BLESS THOU THE GIFTS', [
+  HymnData(532, 'BLESS THOU THE GIFTS', [
     '''
 1. Bless thou the gift our hands have brought
 Bless thou the work our hearts have planned;
@@ -15009,13 +15009,13 @@ Ours is the faith, the will, the thought;
 The rest, O God, is in thy hand. Amen.
 '''
   ]),
-  HymnData(534, '534 ALL THINGS COME OF THEE', [
+  HymnData(534, 'ALL THINGS COME OF THEE', [
     '''
 1. All Things come of Thee, O Lord,
 And of Thine own have we given Thee. Amen.
 '''
   ]),
-  HymnData(535, '535 WE GIVE THEE BUT THINE OWN', [
+  HymnData(535, 'WE GIVE THEE BUT THINE OWN', [
     '''
 1. We give Thee But Thine own,
 What e’er the gift may be;
@@ -15023,7 +15023,7 @@ All that we have is Thine alone,
 A trust, O lord, from Thee. Amen
 '''
   ]),
-  HymnData(536, '536 ALL THINGS ARE THINE', [
+  HymnData(536, 'ALL THINGS ARE THINE', [
     '''
 1. All things are Thine: no gift have we
 Lord of all gifts. To offer Thee:
@@ -15038,7 +15038,7 @@ That ourselves and all our living
 We may offer unto Thee. Amen
 '''
   ]),
-  HymnData(538, '538 MAY THE GRACE OF /CHRIST OUR SAVIOUR', [
+  HymnData(538, 'MAY THE GRACE OF /CHRIST OUR SAVIOUR', [
     '''
 1. May the grace of Christ our Saviour
 And the Father’s boundless love,
@@ -15052,13 +15052,13 @@ And possess, in sweet communion
 Joys which earth cannot afford. Amen
 '''
   ]),
-  HymnData(539, '539 GRACE, LOVE AND PEACE ABIDE', [
+  HymnData(539, 'GRACE, LOVE AND PEACE ABIDE', [
     '''
 1. Grace, love and peace abide, now with you:
 Through Jesus Christ, our dear Redeemer. Amen
 '''
   ]),
-  HymnData(540, '540 BENEDICTION', [
+  HymnData(540, 'BENEDICTION', [
     '''
 1. May the grace of /Christ our Saviour
 And the Father’s boundless love
@@ -15066,7 +15066,7 @@ With the Holy Spirit’s favor,
 Rest upon us from above. Amen
 '''
   ]),
-  HymnData(541, '541 THE LORD BLESS THEE AND KEEP THEE', [
+  HymnData(541, 'THE LORD BLESS THEE AND KEEP THEE', [
     '''
 1. The lord bless thee and keep thee:
 The Lord makes His to Shine upon thee,
@@ -15075,7 +15075,7 @@ The Lord lifts up His countenance upon thee,
 And give thee peace, and give thee peace. Amen
 '''
   ]),
-  HymnData(542, '542 THE LORD BLESS YOU AND KEEP YOU', [
+  HymnData(542, 'THE LORD BLESS YOU AND KEEP YOU', [
     '''
 1. The Lord bless you and keep you
 The Lord lifts His countenance upon you,
@@ -15085,7 +15085,7 @@ And be gracious unto you, be gracious,
 The Lord be gracious unto you. Amen
 '''
   ]),
-  HymnData(555, '555 For All the Saint', [
+  HymnData(555, 'For All the Saint', [
     '''
 1. For all the saints who from their labors rest,
 who thee by faith before the world confessed,
@@ -15123,7 +15123,7 @@ singing to Father, Son, and Holy Ghost,
 Alleluia! Alleluia!
 '''
   ]),
-  HymnData(556, '556 Jesus Lives', [
+  HymnData(556, 'Jesus Lives', [
     '''
 1. Jesus lives! no longer now
 Can thy terrors, death, appall us;
@@ -15160,7 +15160,7 @@ Rest and reign with Him in heaven.
 Alleluia!
 '''
   ]),
-  HymnData(557, '557 Thine For Ever!', [
+  HymnData(557, 'Thine For Ever!', [
     '''
 1. Thine for ever! God of love,
 hear us from thy throne above;
@@ -15186,7 +15186,7 @@ all our sins by thee forgiven,
 lead us, Lord, from earth to heaven.
 '''
   ]),
-  HymnData(558, '558 For Ever with the Lord', [
+  HymnData(558, 'For Ever with the Lord', [
     '''
 1. Forever with the Lord!
 Amen, so let it be!
@@ -15228,7 +15228,7 @@ The Lord, is never far from me,
 Though I perceive Him not.
 '''
   ]),
-  HymnData(559, '559 Wait, and Murmur Not', [
+  HymnData(559, 'Wait, and Murmur Not', [
     '''
 1. O troubled heart, there is a home,
 Beyond the reach of toil and care;
@@ -15258,7 +15258,7 @@ The day of rest will dawn for thee;
 Wait, meekly wait, and murmur not.
 '''
   ]),
-  HymnData(560, '560 Asleep in Jesus', [
+  HymnData(560, 'Asleep in Jesus', [
     '''
 1. Asleep in Jesus! Blessèd sleep,
 From which none ever wakes to weep;
@@ -15290,7 +15290,7 @@ But there is still a blessed sleep,
 From which none ever wakes to weep.
 '''
   ]),
-  HymnData(561, '561 The Christian’s “Good-Night”', [
+  HymnData(561, 'The Christian’s “Good-Night”', [
     '''
 1. Sleep on beloved, sleep and take thy rest
 Lay down thy head upon thy Savior’s breast, We love thee well but Jesus loves thee best Good night, good night, good night.
@@ -15321,7 +15321,7 @@ In hallowed union, indivisible
 Good night, good night, good night.
 '''
   ]),
-  HymnData(562, '562 O Father, All Creating', [
+  HymnData(562, 'O Father, All Creating', [
     '''
 1. 1 O Father, all-creating,
 Whose wisdom, love, and pow'r
@@ -15363,7 +15363,7 @@ The love your Spirit blesses
 Is endless love begun.
 '''
   ]),
-  HymnData(563, '563. O God of Love, to Thee we Bow', [
+  HymnData(563, 'O God of Love, to Thee we Bow', [
     '''
 1. O God of love, to Thee we bow,
 And pray for these before Thee now,
@@ -15395,7 +15395,7 @@ For even death cannot divide
 Those whom thou makest one Amen
 '''
   ]),
-  HymnData(564, '564 We All Have Gathered Here in Joy', [
+  HymnData(564, 'We All Have Gathered Here in Joy', [
     '''
 1. We all have gathered here in joy
 To pray with our two friends
@@ -15416,5 +15416,3 @@ Will never fade away
 '''
   ]),
 ];
-
-

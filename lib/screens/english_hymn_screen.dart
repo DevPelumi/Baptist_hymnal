@@ -29,10 +29,11 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.green.shade300,
       body: DraggableScrollbar.semicircle(
         controller: _scrollController,
-        labelTextBuilder: (pos) => Text('${pos ~/ 61}'),
+        backgroundColor: Colors.green.shade300,
+        labelTextBuilder: (pos) => Text(
+            '${(pos * englishHymnData.length) ~/ _scrollController.position.maxScrollExtent}'),
         child: CustomScrollView(
           controller: _scrollController,
           slivers: <Widget>[
