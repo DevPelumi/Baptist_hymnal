@@ -1,21 +1,14 @@
-import 'package:baptist_hymnal/providers/hymn_provider.dart';
+import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'screens/homescreen.dart';
-import 'screens/Settings.dart';
-import 'screens/favourites.dart';
-import 'screens/search.dart';
+import 'screens/home_screen.dart';
+import 'screens/settings_screen.dart';
+import 'screens/favourites_screen.dart';
+import 'screens/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
 
-/// We have to create a **lazy** provider that loads the favs from
-/// sharedPreferences on startup
-HymnProvider provider;
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
-  provider = HymnProvider();
-  provider.fetchFavorites();
   runApp(MyApp());
 }
 
@@ -24,8 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<HymnProvider>(
-      create: (_) => provider,
+    return ChangeNotifierProvider<EnglishHymnProvider>(
+      create: (_) => EnglishHymnProvider(),
       lazy: true,
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -54,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage>
   Color currentColor = Colors.deepPurple;
   Color inactiveColor = Colors.black;
   TabController tabBarController;
-  List<Tabs> tabs = new List();
+  List<Tabs> tabs = [];
 
   int _selectedPage = 0;
 
@@ -62,12 +55,11 @@ class _MyHomePageState extends State<MyHomePage>
     HomeScreen(),
     Favourites(),
     HomeSearch(),
-    Settings(),
+    SettingsScreen(),
   ];
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     currentPage = 0;
     tabs.add(Tabs(Icons.home, "Home", Colors.green.shade300));
@@ -80,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: TabBarView(
           controller: tabBarController,

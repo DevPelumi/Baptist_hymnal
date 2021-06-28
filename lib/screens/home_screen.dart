@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:baptist_hymnal/screens/english_hymn.dart';
-import 'package:baptist_hymnal/screens/yoruba_hymn.dart';
-import 'package:baptist_hymnal/screens/responsive_reading.dart';
+import 'package:baptist_hymnal/screens/english_hymn_screen.dart';
+import 'package:baptist_hymnal/screens/yoruba_hymn_screen.dart';
+import 'package:baptist_hymnal/screens/responsive_reading_screen.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => EnglishHymns()),
+                        MaterialPageRoute(builder: (context) => EnglishHymnScreen()),
                       );
                     },
                     child: Container(
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => YorubaHymns()),
+                      MaterialPageRoute(builder: (context) => YorubaHymnScreen()),
                     );
                   },
                   child: Stack(children: <Widget>[

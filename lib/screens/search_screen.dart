@@ -1,10 +1,10 @@
-import 'package:baptist_hymnal/List/english_hymn_list.dart';
-import 'package:baptist_hymnal/providers/hymn_provider.dart';
+import 'package:baptist_hymnal/data/english_hymns.dart';
+import 'package:baptist_hymnal/models/hymn_data.dart';
+import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/widgets/hymn_tile.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'dart:math';
 
 class HomeSearch extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class HomeSearch extends StatefulWidget {
 }
 
 class _HomeSearchState extends State<HomeSearch> {
-  SearchBarController<EnglishHymnList> _searchBarController;
+  SearchBarController<HymnData> _searchBarController;
   bool _ascending = true;
   bool _favorites = true;
 
@@ -22,30 +22,28 @@ class _HomeSearchState extends State<HomeSearch> {
     super.initState();
   }
 
-  Future<List<EnglishHymnList>> _filterHymns(String searchString) async {
+  Future<List<HymnData>> _filterHymns(String searchString) async {
     searchString = searchString?.trim();
     if (searchString == null || searchString.isEmpty) {
       return [...englishHymnData];
     } else {
       return englishHymnData
           .where((hymn) =>
-              hymn.hymnNumber.toString() == searchString ||
-              hymn.hymnTitle
-                  .toLowerCase()
-                  .contains(searchString.toLowerCase()) ||
-              searchString.toLowerCase().contains(hymn.hymnTitle.toLowerCase()))
+              hymn.id.toString() == searchString ||
+              hymn.title.toLowerCase().contains(searchString.toLowerCase()) ||
+              searchString.toLowerCase().contains(hymn.title.toLowerCase()))
           .toList();
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.read<HymnProvider>();
+    final provider = context.read<EnglishHymnProvider>();
     return Scaffold(
         body: SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: SearchBar<EnglishHymnList>(
+        child: SearchBar<HymnData>(
             emptyWidget: Center(child: Text('Enter search text!')),
             header: Row(
               children: [
@@ -55,9 +53,8 @@ class _HomeSearchState extends State<HomeSearch> {
                         _ascending = !_ascending;
                         _favorites = false;
                       });
-                      _searchBarController.sortList((a, b) =>
-                          (a.hymnNumber - b.hymnNumber) *
-                          (_ascending ? 1 : -1));
+                      _searchBarController.sortList(
+                          (a, b) => (a.id - b.id) * (_ascending ? 1 : -1));
                     },
                     child: Flex(direction: Axis.horizontal, children: [
                       Text('Hymn Number'),
@@ -75,9 +72,9 @@ class _HomeSearchState extends State<HomeSearch> {
                         _ascending = true;
                       });
                       _searchBarController.sortList((a, b) =>
-                          (provider.isEnglishFavorites[a.hymnNumber - 1]
+                          (provider.isFavorite(a.id)
                               ? -1
-                              : provider.isEnglishFavorites[b.hymnNumber - 1]
+                              : provider.isFavorite(b.id)
                                   ? 1
                                   : 0) *
                           (_favorites ? 1 : -1));
@@ -98,10 +95,9 @@ class _HomeSearchState extends State<HomeSearch> {
             loader: const CircularProgressIndicator(),
             minimumChars: 0,
             onSearch: _filterHymns,
-            onItemFound: (EnglishHymnList list, int index) {
-              final x =
-                  HymnTile(list.hymnNumber, provider, showFavorites: false);
-              if (provider.isEnglishFavorites[list.hymnNumber - 1]) {
+            onItemFound: (HymnData list, int index) {
+              final x = HymnTile(list, provider, showFavorites: false);
+              if (provider.isFavorite(list.id)) {
                 return Stack(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   children: [

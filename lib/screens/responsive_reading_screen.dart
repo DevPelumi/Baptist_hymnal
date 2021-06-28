@@ -1,5 +1,5 @@
+import 'package:baptist_hymnal/data/english_hymns.dart';
 import 'package:flutter/material.dart';
-import 'package:baptist_hymnal/List/english_hymn_list.dart';
 
 class ResponsiveReading extends StatelessWidget {
   @override
@@ -60,12 +60,12 @@ class ResponsiveReading extends StatelessWidget {
                       backgroundColor: Colors.green.shade300,
                       foregroundColor: Colors.white,
                       child: Text(
-                        englishHymnData[i].hymnNumber.toString(),
+                        englishHymnData[i].id.toString(),
                         style: TextStyle(
                             fontFamily: 'Alata', fontWeight: FontWeight.w600),
                       )),
                   title: new Text(
-                    englishHymnData[i].hymnTitle,
+                    englishHymnData[i].title,
                     style: TextStyle(
                       fontFamily: 'Alata',
                     ),

@@ -1,78 +1,94 @@
-import 'package:baptist_hymnal/providers/hymn_provider.dart';
-import 'package:baptist_hymnal/widgets/hymn_tile.dart';
+import 'package:baptist_hymnal/models/hymn_data.dart';
+import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
-import 'package:baptist_hymnal/List/english_hymn_list.dart';
-import 'package:baptist_hymnal/List/english_hymn_body.dart';
 import 'package:provider/provider.dart';
 import 'package:share/share.dart';
 
+import '../data/english_hymns.dart';
+import '../providers/english_hymn_provider.dart';
+import '../widgets/hymn_tile.dart';
+
 const textStyle = TextStyle(fontFamily: 'Alata', fontWeight: FontWeight.w600);
 
-class EnglishHymns extends StatelessWidget {
-  final List<Todo> todos;
+class EnglishHymnScreen extends StatefulWidget {
+  EnglishHymnScreen({Key key}) : super(key: key);
 
-  EnglishHymns({Key key, @required this.todos}) : super(key: key);
+  @override
+  _EnglishHymnScreenState createState() => _EnglishHymnScreenState();
+}
+
+class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
+  ScrollController _scrollController;
+  @override
+  void initState() {
+    _scrollController = ScrollController();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.green.shade300,
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            actions: <Widget>[
-              IconButton(
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
-                  onPressed: null)
-            ],
-            expandedHeight: 250.0,
-            flexibleSpace: FlexibleSpaceBar(
-              centerTitle: true,
-              title: const Text(
-                'English Hymns',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 23,
-                    fontFamily: 'Alata',
-                    fontWeight: FontWeight.w600),
-              ),
-              background: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Image.asset(
-                    'assets/images/hymnal2.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                  const DecoratedBox(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment(0.0, 0.5),
-                        end: Alignment(0.0, 0.0),
-                        colors: <Color>[
-                          Color(0x60000000),
-                          Color(0x00000000),
-                        ],
+      body: DraggableScrollbar.semicircle(
+        controller: _scrollController,
+        labelTextBuilder: (pos) => Text('${pos ~/ 61}'),
+        child: CustomScrollView(
+          controller: _scrollController,
+          slivers: <Widget>[
+            SliverAppBar(
+              actions: <Widget>[
+                IconButton(
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                    onPressed: null)
+              ],
+              expandedHeight: 250.0,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                title: const Text(
+                  'English Hymns',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 23,
+                      fontFamily: 'Alata',
+                      fontWeight: FontWeight.w600),
+                ),
+                background: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Image.asset(
+                      'assets/images/hymnal2.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    const DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment(0.0, 0.5),
+                          end: Alignment(0.0, 0.0),
+                          colors: <Color>[
+                            Color(0x60000000),
+                            Color(0x00000000),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Consumer<HymnProvider>(
-            builder: (ctx, provider, _) => SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, int i) => HymnTile(i + 1, provider),
-                childCount: englishHymnData.length,
+            Consumer<EnglishHymnProvider>(
+              builder: (ctx, provider, _) => SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, int i) => HymnTile(englishHymnData[i], provider),
+                  childCount: englishHymnData.length,
+                ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -87,12 +103,10 @@ class Todo {
 
 class DetailScreen extends StatelessWidget {
   // Declare a field that holds the Todo.
-  final EnglishHymnList englishHymnList;
-  final EnglishHymnBody englishHymnBody;
+  final HymnData hymn;
 
   // In the constructor, require a Todo.
-  DetailScreen({Key key, this.englishHymnList, this.englishHymnBody})
-      : super(key: key);
+  DetailScreen({Key key, @required this.hymn}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -109,9 +123,9 @@ class DetailScreen extends StatelessWidget {
           // has its position and size after it's built.
           final RenderBox box = context.findRenderObject();
           Share.share(
-              englishHymnList.hymnTitle +
+              hymn.title +
                   '\n' +
-                  englishHymnBody.hymnContent +
+                  hymn.contents.join("\n") +
                   '\n' +
                   "DOWNLOAD FROM PLAYSTORE",
               subject: 'Share Hymn',
@@ -127,7 +141,7 @@ class DetailScreen extends StatelessWidget {
               radius: 18,
               backgroundColor: Colors.white,
               child: Text(
-                englishHymnList.hymnNumber.toString(),
+                hymn.id.toString(),
                 style: textStyle,
               ),
             ),
@@ -137,7 +151,7 @@ class DetailScreen extends StatelessWidget {
             Container(
               width: 160,
               child: Text(
-                englishHymnList.hymnTitle,
+                hymn.title,
                 style: textStyle,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -145,12 +159,11 @@ class DetailScreen extends StatelessWidget {
           ],
         ),
         actions: <Widget>[
-          Consumer<HymnProvider>(
+          Consumer<EnglishHymnProvider>(
             builder: (ctx, provider, _) => IconButton(
-                onPressed: () => provider
-                    .toggleFavoriteAtIndex(englishHymnList.hymnNumber - 1),
+                onPressed: () => provider.toggleFavoriteForHymn(hymn.id),
                 icon: Icon(
-                    provider.isEnglishFavorites[englishHymnList.hymnNumber - 1]
+                    provider.isFavorite(hymn.id)
                         ? Icons.favorite
                         : Icons.favorite_border,
                     color: Colors.pink)),
@@ -175,7 +188,7 @@ class DetailScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
                       child: Text(
-                    englishHymnList.hymnTitle,
+                    hymn.title,
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.w600,
@@ -195,7 +208,7 @@ class DetailScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 55),
               child: Text(
-                englishHymnBody.hymnContent,
+                hymn.contents.join("\n"),
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 20,

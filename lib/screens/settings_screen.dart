@@ -9,7 +9,7 @@ const style = TextStyle(
   letterSpacing: 1.2,
 );
 
-class Settings extends StatelessWidget {
+class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

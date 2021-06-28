@@ -1,4 +1,4 @@
-import 'package:baptist_hymnal/screens/favorite_english.dart';
+import 'package:baptist_hymnal/widgets/favorite_english_tab.dart';
 import 'package:flutter/material.dart';
 
 const style = TextStyle(
@@ -33,7 +33,7 @@ class Favourites extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            FavoriteEnglish(),
+            FavoriteEnglishTab(),
             Icon(Icons.directions_transit),
             Icon(Icons.directions_bike),
           ],

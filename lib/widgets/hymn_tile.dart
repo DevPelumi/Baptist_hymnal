@@ -1,16 +1,15 @@
-import 'package:baptist_hymnal/List/english_hymn_body.dart';
-import 'package:baptist_hymnal/List/english_hymn_list.dart';
-import 'package:baptist_hymnal/providers/hymn_provider.dart';
-import 'package:baptist_hymnal/screens/english_hymn.dart';
+import 'package:baptist_hymnal/models/hymn_data.dart';
+import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/screens/english_hymn_screen.dart';
 import 'package:flutter/material.dart';
 
 class HymnTile extends StatelessWidget {
   /// hymnKey starts from 1 so to get the corresponding
   /// hymnData we need to subtract 1.. when we use key, we use [hymnKey]
-  final int hymnKey;
-  final HymnProvider provider;
+  final HymnData hymnData;
+  final EnglishHymnProvider provider;
   final bool showFavorites;
-  const HymnTile(this.hymnKey, this.provider, {this.showFavorites = true});
+  const HymnTile(this.hymnData, this.provider, {this.showFavorites = true});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +19,12 @@ class HymnTile extends StatelessWidget {
           backgroundColor: Colors.green.shade300,
           foregroundColor: Colors.white,
           child: Text(
-            englishHymnData[hymnKey - 1].hymnNumber.toString(),
+            hymnData.id.toString(),
             style: TextStyle(fontFamily: 'Alata', fontWeight: FontWeight.w600),
           ),
         ),
         title: new Text(
-          englishHymnData[hymnKey - 1].hymnTitle,
+          hymnData.title,
           style: TextStyle(
             fontFamily: 'Alata',
           ),
@@ -33,20 +32,19 @@ class HymnTile extends StatelessWidget {
         trailing: showFavorites
             ? IconButton(
                 icon: Icon(
-                  provider.isEnglishFavorites[hymnKey - 1]
+                  provider.isFavorite(hymnData.id)
                       ? Icons.favorite
                       : Icons.favorite_border,
                   color: Colors.pink,
                 ),
-                onPressed: () => provider.toggleFavoriteAtIndex(hymnKey - 1))
+                onPressed: () => provider.toggleFavoriteForHymn(hymnData.id))
             : null,
         onTap: () {
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => DetailScreen(
-                englishHymnList: englishHymnData[hymnKey - 1],
-                englishHymnBody: englishHymnBodyData[hymnKey - 1],
+                hymn: hymnData,
               ),
             ),
           );

@@ -1,17 +1,22 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-const FAVORITES = 'favorites';
-
 class HymnRepository {
+  final String _key;
   SharedPreferences _preferences;
-  Future<List<bool>> fetchFavoriteHymns() async {
-    _preferences = await SharedPreferences.getInstance();
+
+  /// This class must be instantiated with a KEY indicating
+  /// the local storage location of the class data to be used
+  HymnRepository(String key) : this._key = key;
+
+  Future<List<int>> fetchFavoriteHymns() async {
+    if (_preferences == null)
+      _preferences = await SharedPreferences.getInstance();
     // check if we have a data
     // if yes -> return this data
-    if (_preferences.containsKey(FAVORITES)) {
+    if (_preferences.containsKey(_key)) {
       return _preferences
-          .getStringList(FAVORITES)
-          .map<bool>((s) => s == "1" ? true : false)
+          .getStringList(_key)
+          .map<int>((s) => int.parse(s))
           .toList();
     } else {
       // if no -> return null
@@ -19,11 +24,11 @@ class HymnRepository {
     }
   }
 
-  /// "1" is true and "0" is false
-  Future<void> updateFavorites(List<bool> favorites) async {
+  /// stores this list of keys in the "key" position in storage
+  Future<void> updateFavorites(List<int> favorites) async {
     if (_preferences == null)
       _preferences = await SharedPreferences.getInstance();
-    _preferences.setStringList(
-        FAVORITES, favorites.map((b) => b ? "1" : "0").toList());
+    print(await _preferences.setStringList(
+        _key, favorites.map((b) => b.toString()).toList()));
   }
 }
