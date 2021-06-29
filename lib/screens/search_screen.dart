@@ -62,12 +62,13 @@ class _SearchScreenState extends State<SearchScreen> {
                     },
                     child: Flex(direction: Axis.horizontal, children: [
                       Text('Hymn Number'),
+                      SizedBox(width: 5),
                       AnimatedContainer(
                           curve: Curves.bounceInOut,
                           duration: Duration(milliseconds: 300),
                           child: _ascending
-                              ? Icon(Icons.arrow_upward)
-                              : Icon(Icons.arrow_downward))
+                              ? Icon(Icons.arrow_upward, size: 16)
+                              : Icon(Icons.arrow_downward, size: 16))
                     ])),
                 TextButton(
                     onPressed: () {
@@ -85,12 +86,13 @@ class _SearchScreenState extends State<SearchScreen> {
                     },
                     child: Flex(direction: Axis.horizontal, children: [
                       Text('Favorites'),
+                      SizedBox(width: 5),
                       AnimatedContainer(
                           curve: Curves.bounceInOut,
                           duration: Duration(milliseconds: 300),
                           child: _favorites
-                              ? Icon(Icons.arrow_upward)
-                              : Icon(Icons.arrow_downward))
+                              ? Icon(Icons.arrow_upward, size: 16)
+                              : Icon(Icons.arrow_downward, size: 16))
                     ]))
               ],
             ),
@@ -107,14 +109,9 @@ class _SearchScreenState extends State<SearchScreen> {
                   children: [
                     x,
                     Positioned(
-                        right: 0,
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 10),
-                          width: 30,
-                          height: 50,
-                          color: Colors.green.shade300,
-                          child: Icon(Icons.star, color: Colors.white),
-                        ))
+                        right: 5,
+                        top: 3,
+                        child: Icon(Icons.bookmark, color: Colors.red, size: 15,))
                   ],
                 );
               } else {
