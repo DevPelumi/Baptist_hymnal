@@ -1,5 +1,8 @@
-import 'package:baptist_hymnal/widgets/favorite_english_tab.dart';
 import 'package:flutter/material.dart';
+
+import '../providers/english_hymn_provider.dart';
+import '../providers/responsive_reading_provider.dart';
+import '../widgets/favorite_english_tab.dart';
 
 const style = TextStyle(
   fontFamily: 'Alata',
@@ -33,9 +36,9 @@ class Favourites extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            FavoriteEnglishTab(),
-            Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            FavoriteTab<EnglishHymnProvider>(),
+            Center(child: Text('Coming soon...')),
+            FavoriteTab<ResponsiveReadingProvider>(),
           ],
         ),
       ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:baptist_hymnal/screens/english_hymn_screen.dart';
-import 'package:baptist_hymnal/screens/yoruba_hymn_screen.dart';
-import 'package:baptist_hymnal/screens/responsive_reading_screen.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+
+import 'english_hymn_screen.dart';
+import 'responsive_reading_screen.dart';
+import 'yoruba_hymn_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {

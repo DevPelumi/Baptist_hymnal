@@ -1,5 +1,6 @@
-import 'package:baptist_hymnal/models/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../models/settings.dart';
 
 class SettingsRepository {
   SharedPreferences _sharedPreferences;

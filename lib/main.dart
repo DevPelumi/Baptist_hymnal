@@ -1,5 +1,7 @@
 import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
+import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'screens/home_screen.dart';
@@ -23,7 +25,13 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider<SettingsProvider>(
           create: (_) => SettingsProvider(), lazy: true),
       ChangeNotifierProvider<EnglishHymnProvider>(
-          create: (_) => EnglishHymnProvider(), lazy: true)
+          create: (_) => EnglishHymnProvider(), lazy: true),
+      ChangeNotifierProvider(
+        create: (_) => YorubaHymnProvider(),
+        lazy: true,
+      ),
+      ChangeNotifierProvider(
+          create: (_) => ResponsiveReadingProvider(), lazy: true)
     ]);
   }
 }
@@ -31,6 +39,8 @@ class MyApp extends StatelessWidget {
 class FirstScreen extends StatelessWidget {
   SettingsProvider _settingsProvider;
   EnglishHymnProvider _englishHymn;
+  ResponsiveReadingProvider _responsive;
+  YorubaHymnProvider _yorubaHymn;
   FirstScreen({Key key}) : super(key: key);
   Future<Widget> _initProviders(BuildContext context) async {
     _settingsProvider = context.read<SettingsProvider>();
@@ -38,6 +48,12 @@ class FirstScreen extends StatelessWidget {
 
     _englishHymn = context.read<EnglishHymnProvider>();
     await _englishHymn.fetchFavorites();
+
+    _responsive = context.read<ResponsiveReadingProvider>();
+    await _responsive.fetchFavorites();
+
+    _yorubaHymn = context.read<YorubaHymnProvider>();
+    await _yorubaHymn.fetchFavorites();
 
     return MyHomePage();
   }

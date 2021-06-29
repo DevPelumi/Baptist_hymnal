@@ -28,7 +28,7 @@ class HymnRepository {
   Future<void> updateFavorites(List<int> favorites) async {
     if (_preferences == null)
       _preferences = await SharedPreferences.getInstance();
-    print(await _preferences.setStringList(
-        _key, favorites.map((b) => b.toString()).toList()));
+    await _preferences.setStringList(
+        _key, favorites.map((b) => b.toString()).toList());
   }
 }

@@ -1,5 +1,6 @@
-import 'package:baptist_hymnal/data/english_hymns.dart';
 import 'package:flutter/material.dart';
+
+import '../data/yoruba_hymns.dart';
 
 class YorubaHymnScreen extends StatelessWidget {
   @override
@@ -59,12 +60,12 @@ class YorubaHymnScreen extends StatelessWidget {
                       backgroundColor: Colors.green.shade300,
                       foregroundColor: Colors.white,
                       child: Text(
-                        englishHymnData[i].id.toString(),
+                        yorubaHymnData[i].id.toString(),
                         style: TextStyle(
                             fontFamily: 'Alata', fontWeight: FontWeight.w600),
                       )),
                   title: new Text(
-                    englishHymnData[i].title,
+                    yorubaHymnData[i].title,
                     style: TextStyle(
                       fontFamily: 'Alata',
                     ),
@@ -83,7 +84,7 @@ class YorubaHymnScreen extends StatelessWidget {
                   },
                 ),
               ),
-              childCount: englishHymnData.length,
+              childCount: yorubaHymnData.length,
             ),
           )
         ],
