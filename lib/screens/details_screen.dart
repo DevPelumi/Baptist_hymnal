@@ -1,3 +1,5 @@
+import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share/share.dart';
@@ -15,6 +17,34 @@ class DetailScreen extends StatelessWidget {
   // In the constructor, require a Todo.
   DetailScreen({Key key, @required this.hymn, @required this.provider})
       : super(key: key);
+  Widget _getContentWidget(double fontSize) {
+    if (provider is ResponsiveReadingProvider) {
+      int counter = 0;
+      return Column(
+          children: hymn.contents
+              .map(
+                (t) => Text(t + '\n',
+                    style: TextStyle(
+                        fontSize: fontSize,
+                        fontFamily: 'Alata',
+                        fontStyle: counter % 2 == 0
+                            ? FontStyle.normal
+                            : FontStyle.italic,
+                        fontWeight: (counter++) % 2 == 0
+                            ? FontWeight.bold
+                            : FontWeight.normal)),
+              )
+              .toList());
+    } else
+      return Text(
+        hymn.contents.join("\n"),
+        textAlign: TextAlign.start,
+        style: TextStyle(
+          fontSize: fontSize,
+          fontFamily: 'Alata',
+        ),
+      );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -107,15 +137,8 @@ class DetailScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(14, 0, 14, 55),
               child: Consumer<SettingsProvider>(
-                builder: (ctx, provider, _) => Text(
-                  hymn.contents.join("\n"),
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: provider.getFontSize().toDouble(),
-                    fontFamily: 'Alata',
-                  ),
-                ),
-              ),
+                  builder: (ctx, provider, _) =>
+                      _getContentWidget(provider.getFontSize().toDouble())),
             ),
           ],
         ),

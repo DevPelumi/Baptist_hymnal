@@ -5,7 +5,6 @@ import 'english_hymn_screen.dart';
 import 'responsive_reading_screen.dart';
 import 'yoruba_hymn_screen.dart';
 
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -33,172 +32,175 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: widget,
                   ),
                 ),
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'BAPTIST HYMNAL',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 23,
-                        fontFamily: 'Alata',
-                        fontWeight: FontWeight.w600),
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Text(
+                      'BAPTIST HYMNAL',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 23,
+                          fontFamily: 'Alata',
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Stack(children: <Widget>[
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Stack(children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => EnglishHymnScreen()),
+                        );
+                      },
+                      child: Container(
+                        height: 220,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                'assets/images/hymnal2.jpg',
+                              ),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black54,
+                                  offset: Offset(
+                                    8,
+                                    10,
+                                  ),
+                                  blurRadius: 20.0)
+                            ]),
+                      ),
+                    ),
+                    Positioned(
+                      left: 24,
+                      bottom: 20,
+                      child: Text(
+                        'English Hymns',
+                        style: TextStyle(
+                          fontFamily: 'Alata',
+                          fontSize: 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                          letterSpacing: 1.2,
+                        ),
+                      ),
+                    )
+                  ]),
+                  SizedBox(
+                    height: 10,
+                  ),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => EnglishHymnScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => YorubaHymnScreen()),
                       );
                     },
-                    child: Container(
-                      height: 220,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          color: Colors.blue,
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets/images/hymnal2.jpg',
+                    child: Stack(children: <Widget>[
+                      Container(
+                        height: 220,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.black26, BlendMode.darken),
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                'assets/images/hymnal3.jpg',
+                              ),
                             ),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black54,
+                                  offset: Offset(
+                                    8,
+                                    10,
+                                  ),
+                                  blurRadius: 20.0)
+                            ]),
+                      ),
+                      Positioned(
+                        left: 24,
+                        bottom: 20,
+                        child: Text(
+                          'Yoruba Hymns',
+                          style: TextStyle(
+                            fontFamily: 'Alata',
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: 1.2,
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black54,
-                                offset: Offset(
-                                  8,
-                                  10,
-                                ),
-                                blurRadius: 20.0)
-                          ]),
-                    ),
+                        ),
+                      )
+                    ]),
                   ),
-                  Positioned(
-                    left: 24,
-                    bottom: 20,
-                    child: Text(
-                      'English Hymns',
-                      style: TextStyle(
-                        fontFamily: 'Alata',
-                        fontSize: 25,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
-                  )
-                ]),
-                SizedBox(
-                  height: 10,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => YorubaHymnScreen()),
-                    );
-                  },
-                  child: Stack(children: <Widget>[
-                    Container(
-                      height: 220,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          color: Colors.blue,
-                          image: DecorationImage(
-                            colorFilter: ColorFilter.mode(
-                                Colors.black26, BlendMode.darken),
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets/images/hymnal3.jpg',
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResponsiveReading()));
+                    },
+                    child: Stack(children: <Widget>[
+                      Container(
+                        height: 220,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.black26, BlendMode.darken),
+                              fit: BoxFit.cover,
+                              alignment: Alignment.bottomCenter,
+                              image: AssetImage(
+                                'assets/images/hymnal1.jpg',
+                              ),
                             ),
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black54,
-                                offset: Offset(
-                                  8,
-                                  10,
-                                ),
-                                blurRadius: 20.0)
-                          ]),
-                    ),
-                    Positioned(
-                      left: 24,
-                      bottom: 20,
-                      child: Text(
-                        'Yoruba Hymns',
-                        style: TextStyle(
-                          fontFamily: 'Alata',
-                          fontSize: 25,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          letterSpacing: 1.2,
-                        ),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black54,
+                                  offset: Offset(
+                                    8,
+                                    10,
+                                  ),
+                                  blurRadius: 20.0)
+                            ]),
                       ),
-                    )
-                  ]),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ResponsiveReading()));
-                  },
-                  child: Stack(children: <Widget>[
-                    Container(
-                      height: 220,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          color: Colors.blue,
-                          image: DecorationImage(
-                            colorFilter: ColorFilter.mode(
-                                Colors.black26, BlendMode.darken),
-                            fit: BoxFit.cover,
-                            alignment: Alignment.bottomCenter,
-                            image: AssetImage(
-                              'assets/images/hymnal1.jpg',
-                            ),
+                      Positioned(
+                        left: 24,
+                        bottom: 20,
+                        child: Text(
+                          'Responsive Reading',
+                          style: TextStyle(
+                            fontFamily: 'Alata',
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: 1.2,
                           ),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black54,
-                                offset: Offset(
-                                  8,
-                                  10,
-                                ),
-                                blurRadius: 20.0)
-                          ]),
-                    ),
-                    Positioned(
-                      left: 24,
-                      bottom: 20,
-                      child: Text(
-                        'Resonsive Reading',
-                        style: TextStyle(
-                          fontFamily: 'Alata',
-                          fontSize: 25,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          letterSpacing: 1.2,
                         ),
-                      ),
-                    )
-                  ]),
-                ),
-              ],
+                      )
+                    ]),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-        )]),
+        )
+      ]),
     );
   }
 }
