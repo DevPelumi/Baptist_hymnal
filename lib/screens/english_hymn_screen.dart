@@ -35,6 +35,7 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
           controller: _scrollController,
           slivers: <Widget>[
             SliverAppBar(
+              floating: true,
               actions: <Widget>[
                 IconButton(
                     icon: Icon(

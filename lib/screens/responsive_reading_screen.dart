@@ -13,6 +13,7 @@ class ResponsiveReading extends StatelessWidget {
         // backgroundColor: Colors.green.shade300,
         body: CustomScrollView(slivers: <Widget>[
       SliverAppBar(
+        floating: true,
         actions: <Widget>[
           IconButton(
               icon: Icon(
