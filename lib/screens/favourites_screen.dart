@@ -53,7 +53,7 @@ class Favourites extends StatelessWidget {
                     child: const Align(
                       alignment: Alignment.center,
                       child: Icon(Icons.auto_stories,
-                        size: 60,
+                        size: 70,
                         color: const Color(0xFFF06292) ,
                       ),
                     ),

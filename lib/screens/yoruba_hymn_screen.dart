@@ -86,7 +86,40 @@ class YorubaHymnScreen extends StatelessWidget {
               ),
               childCount: yorubaHymnData.length,
             ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 70),
+              child: Column(
+                children: [
+                  Center(
+                    child: Container(
+                      height: 180.0,
+                      width: 180.0,
+                      decoration: new BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.green.shade100,
+                      ),
+                      child: const Align(
+                        alignment: Alignment.center,
+                        child: Icon(Icons.auto_stories,
+                          size: 70,
+                          color: const Color(0xFF81C784) ,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                  Text('Coming Soon!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontFamily: 'Alata',
+                      fontSize:22,)
+                    ,)
+                ],
+              ),
+            ),
           )
+
         ],
       ),
     );
