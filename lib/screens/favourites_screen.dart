@@ -44,8 +44,8 @@ class Favourites extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    height: 220.0,
-                    width: 220.0,
+                    height: 200.0,
+                    width: 200.0,
                     decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.pink.shade100,
