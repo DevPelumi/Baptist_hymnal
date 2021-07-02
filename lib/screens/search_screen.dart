@@ -87,7 +87,7 @@ class _SearchScreenState extends State<SearchScreen>
         child: SearchBar<HymnData>(
             textStyle: Theme.of(context).textTheme.bodyText1,
             hintText: 'Holy, Holy, Holy',
-            emptyWidget: Center(child: Text('Enter search text!')),
+            emptyWidget: Center(child: Text('Search by hymn title or hymn number')),
             header: Column(
               children: [
                 TabBar(
