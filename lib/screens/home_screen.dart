@@ -99,57 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => YorubaHymnScreen()),
-                      );
-                    },
-                    child: Stack(children: <Widget>[
-                      Container(
-                        height: 220,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.0),
-                            color: Colors.blue,
-                            image: DecorationImage(
-                              colorFilter: ColorFilter.mode(
-                                  Colors.black26, BlendMode.darken),
-                              fit: BoxFit.cover,
-                              image: AssetImage(
-                                'assets/images/hymnal3.jpg',
-                              ),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black54,
-                                  offset: Offset(
-                                    8,
-                                    10,
-                                  ),
-                                  blurRadius: 20.0)
-                            ]),
-                      ),
-                      Positioned(
-                        left: 24,
-                        bottom: 20,
-                        child: Text(
-                          'Yoruba Hymns',
-                          style: TextStyle(
-                            fontFamily: 'Alata',
-                            fontSize: 25,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            letterSpacing: 1.2,
-                          ),
-                        ),
-                      )
-                    ]),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => ResponsiveReading()));
@@ -195,6 +144,57 @@ class _HomeScreenState extends State<HomeScreen> {
                       )
                     ]),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => YorubaHymnScreen()),
+                      );
+                    },
+                    child: Stack(children: <Widget>[
+                      Container(
+                        height: 220,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            color: Colors.blue,
+                            image: DecorationImage(
+                              colorFilter: ColorFilter.mode(
+                                  Colors.black26, BlendMode.darken),
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                'assets/images/hymnal3.jpg',
+                              ),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black54,
+                                  offset: Offset(
+                                    8,
+                                    10,
+                                  ),
+                                  blurRadius: 20.0)
+                            ]),
+                      ),
+                      Positioned(
+                        left: 24,
+                        bottom: 20,
+                        child: Text(
+                          'Yoruba Hymns',
+                          style: TextStyle(
+                            fontFamily: 'Alata',
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: 1.2,
+                          ),
+                        ),
+                      )
+                    ]),
+                  )
                 ],
               ),
             ),
