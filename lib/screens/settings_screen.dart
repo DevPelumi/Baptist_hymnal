@@ -15,11 +15,16 @@ const style = TextStyle(
   letterSpacing: 1.2,
 );
 
+const subtitleStyle =
+    TextStyle(fontFamily: 'Alata', fontSize: 16, color: Colors.white);
+
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? Colors.black
+          : Colors.teal,
       body: SafeArea(
         child: Consumer<SettingsProvider>(
           child: Padding(
@@ -40,54 +45,60 @@ class SettingsScreen extends StatelessWidget {
                 child,
                 Expanded(
                     child: SettingsList(
-                      sections: [
-                  SettingsSection(title: null, tiles: [
-                    SettingsTile(
-                      title: Text('Language'),
-                      description: Text(provider.getLanguage().stringValue),
-                      leading: Icon(Icons.language),
-                    ),
-                  ]),
-                  SettingsSection(title: Container(), tiles: [
-                    SettingsTile.switchTile(
-                      initialValue: provider.isDarkMode(
-                          MediaQuery.of(context).platformBrightness ==
-                              Brightness.dark),
-                      title: Text('Mode'),
-                      description: Text(
-                          '${provider.isDarkMode(MediaQuery.of(context).platformBrightness == Brightness.dark) ? 'Dark' : 'Light'} Mode'),
-                      leading: Icon(Icons.palette),
-                      onToggle: (bool value) async {
-                        await provider.setDarkMode(value);
-                      },
-                    )
-                  ]),
-                  SettingsSection(title: null, tiles: [
-                    SettingsTile(
-                      title: Text('Font Size'),
-                      description: Text('Hymn font size'),
-                      trailing: DropdownButton(
-                          onChanged: (int newFont) async {
-                            await provider.setFontSize(newFont);
+                        lightTheme: const SettingsThemeData(
+                          settingsListBackground: Colors.teal,
+                        ),
+                        sections: [
+                      SettingsSection(title: null, tiles: [
+                        SettingsTile(
+                          title: Text('Language'),
+                          description: Text(provider.getLanguage().stringValue,
+                              style: subtitleStyle),
+                          leading: Icon(Icons.language),
+                        ),
+                      ]),
+                      SettingsSection(title: Container(), tiles: [
+                        SettingsTile.switchTile(
+                          initialValue: provider.isDarkMode(
+                              MediaQuery.of(context).platformBrightness ==
+                                  Brightness.dark),
+                          title: Text('Mode'),
+                          description: Text(
+                              '${provider.isDarkMode(MediaQuery.of(context).platformBrightness == Brightness.dark) ? 'Dark' : 'Light'} Mode',
+                              style: subtitleStyle),
+                          leading: Icon(Icons.palette),
+                          onToggle: (bool value) async {
+                            await provider.setDarkMode(value);
                           },
-                          dropdownColor: Colors.green.shade200,
-                          icon: Icon(CupertinoIcons.chevron_down),
-                          value: provider.getFontSize(),
-                          items: [14, 16, 18, 20, 22]
-                              .map((n) => DropdownMenuItem(
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Text(n.toString(),
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
-                                  ),
-                                  value: n))
-                              .toList()),
-                      leading: Icon(Icons.text_fields),
-                    ),
-                  ])
-                ])),
+                        )
+                      ]),
+                      SettingsSection(title: null, tiles: [
+                        SettingsTile(
+                          title: Text('Font Size'),
+                          description:
+                              Text('Hymn font size', style: subtitleStyle),
+                          trailing: DropdownButton(
+                              onChanged: (int newFont) async {
+                                await provider.setFontSize(newFont);
+                              },
+                              dropdownColor: Colors.green.shade200,
+                              icon: Icon(CupertinoIcons.chevron_down),
+                              value: provider.getFontSize(),
+                              items: [14, 16, 18, 20, 22]
+                                  .map((n) => DropdownMenuItem(
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8.0),
+                                        child: Text(n.toString(),
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                      value: n))
+                                  .toList()),
+                          leading: Icon(Icons.text_fields),
+                        ),
+                      ])
+                    ])),
               ],
             );
           },
