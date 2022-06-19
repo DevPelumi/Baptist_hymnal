@@ -41,8 +41,8 @@ class SettingsScreen extends StatelessWidget {
                 child: Card(
                   child: SettingsSection(title: null, tiles: [
                     SettingsTile(
-                      title: 'Language',
-                      subtitle: provider.getLanguage().stringValue,
+                      title: Text('Language'),
+                      description: Text(provider.getLanguage().stringValue),
                       leading: Icon(Icons.language),
                     ),
                   ]),
@@ -51,18 +51,19 @@ class SettingsScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
-                  child: SettingsSection(title: null, tiles: [
+                  child: SettingsSection(title: Container(), tiles: [
                     SettingsTile.switchTile(
-                        title: 'Mode',
-                        subtitle:
-                            '${provider.isDarkMode(MediaQuery.of(context).platformBrightness == Brightness.dark) ? 'Dark' : 'Light'} Mode',
-                        leading: Icon(Icons.palette),
-                        onToggle: (bool value) async {
-                          await provider.setDarkMode(value);
-                        },
-                        switchValue: provider.isDarkMode(
-                            MediaQuery.of(context).platformBrightness ==
-                                Brightness.dark)),
+                      initialValue: provider.isDarkMode(
+                          MediaQuery.of(context).platformBrightness ==
+                              Brightness.dark),
+                      title: Text('Mode'),
+                      description: Text(
+                          '${provider.isDarkMode(MediaQuery.of(context).platformBrightness == Brightness.dark) ? 'Dark' : 'Light'} Mode'),
+                      leading: Icon(Icons.palette),
+                      onToggle: (bool value) async {
+                        await provider.setDarkMode(value);
+                      },
+                    )
                   ]),
                 ),
               ),
@@ -71,8 +72,8 @@ class SettingsScreen extends StatelessWidget {
                 child: Card(
                   child: SettingsSection(title: null, tiles: [
                     SettingsTile(
-                      title: 'Font Size',
-                      subtitle: 'Hymn font size',
+                      title: Text('Font Size'),
+                      description: Text('Hymn font size'),
                       trailing: DropdownButton(
                           onChanged: (int newFont) async {
                             await provider.setFontSize(newFont);
