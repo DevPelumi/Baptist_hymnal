@@ -52,12 +52,12 @@ class _SearchScreenState extends State<SearchScreen>
       ..addListener(() {
         _getData(context);
       });
+    _textController = TextEditingController();
     _getData(context);
-    _textController = TextEditingController()
-      ..addListener(() {
-        _displayedData = _filterHymns(_textController.text);
-        setState(() {});
-      });
+    _textController.addListener(() {
+      _displayedData = _filterHymns(_textController.text);
+      setState(() {});
+    });
     super.initState();
   }
 
@@ -131,44 +131,44 @@ class _SearchScreenState extends State<SearchScreen>
               ]),
           body: Column(
             children: [
-              Row(
-                children: [
-                  TextButton(
-                      onPressed: () {
-                        setState(() {
-                          _ascending = !_ascending;
-                          _favorites = false;
-                        });
-                      },
-                      child: Flex(direction: Axis.horizontal, children: [
-                        Text('Hymn Number'),
-                        SizedBox(width: 5),
-                        AnimatedContainer(
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 300),
-                            child: _ascending
-                                ? Icon(Icons.arrow_upward, size: 16)
-                                : Icon(Icons.arrow_downward, size: 16))
-                      ])),
-                  TextButton(
-                      onPressed: () {
-                        setState(() {
-                          _favorites = !_favorites;
-                          _ascending = true;
-                        });
-                      },
-                      child: Flex(direction: Axis.horizontal, children: [
-                        Text('Favorites'),
-                        SizedBox(width: 5),
-                        AnimatedContainer(
-                            curve: Curves.bounceInOut,
-                            duration: Duration(milliseconds: 300),
-                            child: _favorites
-                                ? Icon(Icons.arrow_upward, size: 16)
-                                : Icon(Icons.arrow_downward, size: 16))
-                      ]))
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     TextButton(
+              //         onPressed: () {
+              //           setState(() {
+              //             _ascending = !_ascending;
+              //             _favorites = false;
+              //           });
+              //         },
+              //         child: Flex(direction: Axis.horizontal, children: [
+              //           Text('Hymn Number'),
+              //           SizedBox(width: 5),
+              //           AnimatedContainer(
+              //               curve: Curves.bounceInOut,
+              //               duration: Duration(milliseconds: 300),
+              //               child: _ascending
+              //                   ? Icon(Icons.arrow_upward, size: 16)
+              //                   : Icon(Icons.arrow_downward, size: 16))
+              //         ])),
+              //     TextButton(
+              //         onPressed: () {
+              //           setState(() {
+              //             _favorites = !_favorites;
+              //             _ascending = true;
+              //           });
+              //         },
+              //         child: Flex(direction: Axis.horizontal, children: [
+              //           Text('Favorites'),
+              //           SizedBox(width: 5),
+              //           AnimatedContainer(
+              //               curve: Curves.bounceInOut,
+              //               duration: Duration(milliseconds: 300),
+              //               child: _favorites
+              //                   ? Icon(Icons.arrow_upward, size: 16)
+              //                   : Icon(Icons.arrow_downward, size: 16))
+              //         ]))
+              //   ],
+              // ),
               Expanded(
                 child: _displayedData.length == 0
                     ? Container()
