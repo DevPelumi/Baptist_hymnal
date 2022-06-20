@@ -23,8 +23,8 @@ dependencies:
   cuberto_bottom_bar: ^1.1.1+1
   cupertino_icons: ^1.0.3
   draggable_scrollbar_sliver: ^0.0.3
-  flappy_search_bar: 1.4.1
   flutter_staggered_animations: ^1.0.0
+  anim_search_bar: ^2.0.2
   google_nav_bar: ^5.0.5
   line_icons: ^2.0.1
   path_provider: ^2.0.11
