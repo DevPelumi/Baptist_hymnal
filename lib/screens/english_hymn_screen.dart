@@ -1,5 +1,4 @@
 import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -86,8 +85,8 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
               builder: (ctx, provider, _) => SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, int i) => HymnTile<EnglishHymnProvider>(
-                      englishHymnData[i], provider),
-                  childCount: englishHymnData.length,
+                      provider.dataSource[i], provider),
+                  childCount: provider.dataSource.length,
                 ),
               ),
             )

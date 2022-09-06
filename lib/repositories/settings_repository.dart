@@ -7,7 +7,7 @@ class SettingsRepository {
 
   Future<void> updateLanguage(Language language) async {
     await assertNotNullSharedPrefs();
-    await _sharedPreferences.setString(_languageKey, language.stringValue);
+    await _sharedPreferences.setString(_languageKey, language.name);
   }
 
   Future<void> updateDarkMode(bool isDarkMode) async {

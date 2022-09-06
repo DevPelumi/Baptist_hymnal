@@ -52,7 +52,7 @@ class SettingsScreen extends StatelessWidget {
                       SettingsSection(title: null, tiles: [
                         SettingsTile(
                           title: Text('Language'),
-                          description: Text(provider.getLanguage().stringValue,
+                          description: Text(provider.getLanguage().name,
                               style: subtitleStyle),
                           leading: Icon(Icons.language),
                         ),

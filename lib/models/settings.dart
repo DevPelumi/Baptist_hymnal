@@ -11,7 +11,6 @@ class Settings {
 enum Language { English }
 
 extension LanguageFunctions on Language {
-  String get stringValue => this.toString().split('.')[1];
   Language languageFromString(String string) {
     switch (string) {
       default:

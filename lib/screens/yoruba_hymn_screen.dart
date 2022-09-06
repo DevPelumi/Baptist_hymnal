@@ -1,6 +1,9 @@
+import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../data/yoruba_hymns.dart';
+import '../widgets/hymn_tile.dart';
 
 class YorubaHymnScreen extends StatelessWidget {
   @override
@@ -52,74 +55,55 @@ class YorubaHymnScreen extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, int i) => Card(
-                child: ListTile(
-                  leading: new CircleAvatar(
-                      backgroundColor: Colors.green.shade300,
-                      foregroundColor: Colors.white,
-                      child: Text(
-                        yorubaHymnData[i].id.toString(),
-                        style: TextStyle(
-                            fontFamily: 'Alata', fontWeight: FontWeight.w600),
-                      )),
-                  title: new Text(
-                    yorubaHymnData[i].title,
-                    style: TextStyle(
-                      fontFamily: 'Alata',
-                    ),
-                  ),
-                  trailing: IconButton(
-                      icon: Icon(
-                        Icons.favorite_border,
-                        color: Colors.pink,
-                      ),
-                      onPressed: null),
-                  onTap: () {},
-                  onLongPress: () {
-                    print(
-                      Text("Long Pressed"),
-                    );
-                  },
-                ),
-              ),
-              childCount: yorubaHymnData.length,
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 70),
-              child: Column(
-                children: [
-                  Center(
-                    child: Container(
-                      height: 180.0,
-                      width: 180.0,
-                      decoration: new BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.green.shade100,
-                      ),
-                      child: const Align(
-                        alignment: Alignment.center,
-                        child: Icon(Icons.auto_stories,
-                          size: 70,
-                          color: const Color(0xFF81C784) ,
+          Consumer<YorubaHymnProvider>(
+            builder: (context, provider, _) {
+              if (provider.dataSource.isEmpty) {
+                return SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 70),
+                    child: Column(
+                      children: [
+                        Center(
+                          child: Container(
+                            height: 180.0,
+                            width: 180.0,
+                            decoration: new BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.green.shade100,
+                            ),
+                            child: const Align(
+                              alignment: Alignment.center,
+                              child: Icon(
+                                Icons.auto_stories,
+                                size: 70,
+                                color: const Color(0xFF81C784),
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
+                        SizedBox(height: 40),
+                        Text(
+                          'Coming Soon!',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: 'Alata',
+                            fontSize: 22,
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                  SizedBox(height: 40),
-                  Text('Coming Soon!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontFamily: 'Alata',
-                      fontSize:22,)
-                    ,)
-                ],
-              ),
-            ),
-          )
-
+                );
+              }
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, int i) =>
+                      HymnTile(provider.dataSource[i], provider),
+                  childCount: provider.dataSource.length,
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
