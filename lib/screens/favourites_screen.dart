@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../providers/english_hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
-import '../widgets/favorite_english_tab.dart';
+import '../widgets/favorite_tab.dart';
 
 const style = TextStyle(
   fontFamily: 'Alata',

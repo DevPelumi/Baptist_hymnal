@@ -1,3 +1,4 @@
+import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -20,27 +21,28 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen>
     with SingleTickerProviderStateMixin {
-  List<HymnData> _data;
   List<HymnData> _displayedData;
   TabController _tabController;
   TextEditingController _textController;
   IHymnProvider _provider;
   bool _ascending = true;
   bool _favorites = true;
+
   void _getData(BuildContext context) {
+    final _update = () => setState(() {});
+    _provider?.removeListener(_update);
     switch (_tabController.index) {
       case 1:
-        _data = yorubaHymnData;
+        _provider = context.read<YorubaHymnProvider>();
         break;
       case 2:
-        _data = responsive;
         _provider = context.read<ResponsiveReadingProvider>();
         break;
       default:
-        _data = englishHymnData;
         _provider = context.read<EnglishHymnProvider>();
         break;
     }
+    _provider.addListener(_update);
     _displayedData = _filterHymns(_textController.text);
     setState(() {});
   }
@@ -71,9 +73,9 @@ class _SearchScreenState extends State<SearchScreen>
   List<HymnData> _filterHymns(String searchString) {
     searchString = searchString?.trim();
     if (searchString == null || searchString.isEmpty) {
-      return List.from(_data);
+      return List.from(_provider.dataSource);
     } else {
-      return _data
+      return _provider.dataSource
           .where((hymn) =>
               hymn.id.toString() == searchString ||
               hymn.title.toLowerCase().contains(searchString.toLowerCase()) ||

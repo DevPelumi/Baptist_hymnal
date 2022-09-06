@@ -1,6 +1,7 @@
 import '../models/hymn_data.dart';
 
 class HymnHelperFunctions {
+  /// log N search where n is list.length
   static HymnData binSearch(List<HymnData> list, int id) {
     return _binSearch(list, id, 0, list.length - 1);
   }

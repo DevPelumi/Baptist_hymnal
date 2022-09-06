@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ComingSoonWidget extends StatelessWidget {
-  const ComingSoonWidget({
+class HymnPlaceholder extends StatelessWidget {
+  final String title;
+  const HymnPlaceholder({
     Key key,
+    this.title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0,100,0,0),
+      padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
       child: Column(
         children: [
           Center(
@@ -21,19 +23,23 @@ class ComingSoonWidget extends StatelessWidget {
               ),
               child: const Align(
                 alignment: Alignment.center,
-                child: Icon(Icons.auto_stories,
+                child: Icon(
+                  Icons.auto_stories,
                   size: 70,
-                  color: const Color(0xFFF06292) ,
+                  color: const Color(0xFFF06292),
                 ),
               ),
             ),
           ),
           SizedBox(height: 40),
-          Text('Coming Soon!',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: 'Alata',
-          fontSize:22,)
-            ,)
+          Text(
+            title == null ? 'Add hymn to favorite' : title,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Alata',
+              fontSize: 22,
+            ),
+          )
         ],
       ),
     );
