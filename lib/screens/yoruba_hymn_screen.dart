@@ -1,16 +1,34 @@
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
+import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/yoruba_hymns.dart';
 import '../widgets/hymn_tile.dart';
 
-class YorubaHymnScreen extends StatelessWidget {
+class YorubaHymnScreen extends StatefulWidget {
+  @override
+  State<YorubaHymnScreen> createState() => _YorubaHymnScreenState();
+}
+
+class _YorubaHymnScreenState extends State<YorubaHymnScreen> {
+  ScrollController _scrollController;
+  @override
+  void initState() {
+    _scrollController = ScrollController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.green.shade300,
-      body: CustomScrollView(
+        body: DraggableScrollbar.semicircle(
+      controller: _scrollController,
+      backgroundColor: Colors.green.shade300,
+      labelTextBuilder: (pos) => Text(
+          '${(pos * yorubaHymnData.length) ~/ _scrollController.position.maxScrollExtent}'),
+      child: CustomScrollView(
+        controller: _scrollController,
         slivers: <Widget>[
           SliverAppBar(
             actions: <Widget>[
@@ -106,6 +124,6 @@ class YorubaHymnScreen extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }
