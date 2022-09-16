@@ -3,48 +3,71 @@ import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share/share.dart';
-
+import "package:baptist_hymnal/ad_helper.dart";
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../models/hymn_data.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
 const textStyle = TextStyle(fontFamily: 'Alata', fontWeight: FontWeight.w600);
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
+
+  // TODO: Add a banner ad instance
+//  BannerAd? _ad;
+
+
   // Declare a field that holds the Todo.
   final HymnData hymn;
   final IHymnProvider provider;
   // In the constructor, require a Todo.
   DetailScreen({Key key, @required this.hymn, @required this.provider})
       : super(key: key);
+
+  @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+
   Widget _getContentWidget(double fontSize) {
-    if (provider is ResponsiveReadingProvider) {
+    if (widget.provider is ResponsiveReadingProvider) {
       int counter = 0;
       return Column(
-          children: hymn.contents
+          children: widget.hymn.contents
               .map(
                 (t) => Text(t + '\n',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        fontFamily: 'Alata',
-                        fontStyle: counter % 2 == 0
-                            ? FontStyle.normal
-                            : FontStyle.italic,
-                        fontWeight: (counter++) % 2 == 0
-                            ? FontWeight.bold
-                            : FontWeight.normal)),
-              )
+                style: TextStyle(
+                    fontSize: fontSize,
+                    fontFamily: 'Alata',
+                    fontStyle: counter % 2 == 0
+                        ? FontStyle.normal
+                        : FontStyle.italic,
+                    fontWeight: (counter++) % 2 == 0
+                        ? FontWeight.bold
+                        : FontWeight.normal)),
+          )
               .toList());
     } else
       return Text(
-        hymn.contents.join("\n"),
+        widget.hymn.contents.join("\n"),
         textAlign: TextAlign.start,
         style: TextStyle(
           fontSize: fontSize,
           fontFamily: 'Alata',
         ),
       );
+
   }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    AdHelper.myBanner.load();
+    super.initState();
+  }
+  final AdWidget adWidget = AdWidget(ad: AdHelper.myBanner);
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +77,9 @@ class DetailScreen extends StatelessWidget {
         onPressed: () {
           final RenderBox box = context.findRenderObject();
           Share.share(
-              hymn.title +
+              widget.hymn.title +
                   '\n' +
-                  hymn.contents.join("\n") +
+                  widget.hymn.contents.join("\n") +
                   '\n' +
                   "DOWNLOAD FROM PLAYSTORE",
               subject: 'Share Hymn',
@@ -72,7 +95,7 @@ class DetailScreen extends StatelessWidget {
               radius: 18,
               backgroundColor: Colors.white,
               child: Text(
-                hymn.id.toString(),
+                widget.hymn.id.toString(),
                 style: textStyle,
               ),
             ),
@@ -82,7 +105,7 @@ class DetailScreen extends StatelessWidget {
             Container(
               width: 160,
               child: Text(
-                hymn.title,
+                widget.hymn.title,
                 style: textStyle,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -91,18 +114,18 @@ class DetailScreen extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
-              onPressed: () => provider.toggleFavoriteForHymn(hymn.id),
-              icon: Icon(
-                  provider.isFavorite(hymn.id)
-                      ? Icons.favorite
-                      : Icons.favorite_border,
-                  color: Colors.pink)),
-          IconButton(
-              icon: Icon(
-                Icons.more_vert,
-                color: Colors.white,
+            onPressed: () => widget.provider.toggleFavoriteForHymn(widget.hymn.id),
+            icon: Center(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
+                child: Icon(
+                    widget.provider.isFavorite(widget.hymn.id)
+                        ? Icons.favorite
+                        : Icons.favorite_border,
+                    color: Colors.pink),
               ),
-              onPressed: null)
+            ),
+          ),
         ],
       ),
       body: SafeArea(
@@ -117,21 +140,21 @@ class DetailScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
                       child: Text(
-                    hymn.title,
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Alata',
-                    ),
-                  )),
+                        widget.hymn.title,
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Alata',
+                        ),
+                      )),
                 ),
                 Center(
                     child: Divider(
-                  thickness: 1.5,
-                  indent: 70,
-                  endIndent: 70,
-                  color: Colors.green.shade300,
-                )),
+                      thickness: 1.5,
+                      indent: 70,
+                      endIndent: 70,
+                      color: Colors.green.shade300,
+                    )),
               ],
             ),
             Padding(
@@ -142,6 +165,11 @@ class DetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        color: Colors.green,
+        child: adWidget,
       ),
     );
   }

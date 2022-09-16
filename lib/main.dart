@@ -11,8 +11,12 @@ import 'package:splashscreen/splashscreen.dart';
 import 'screens/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   runApp(MyApp());
 }
 

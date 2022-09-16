@@ -1101,15 +1101,15 @@ List<HymnData> responsive = [
     'And whatsoever ye do in word for deed, do all in the name of Lord Jesus giving thanks to God and the father by him.'
   ]),
   HymnData(91, 'Repentance for Sin', [
-    'Seek ye Lord while he may be found, call ye upon him s near;',
-    'Let the wicked forsake his way, and the unrighteousness and his thoughts.',
+    'Seek ye Lord while he may be found, call ye upon him while he is near;',
+    'Let the wicked forsake his way, and the unrighteous man his thoughts.',
     'And let him return unto the Lord, and he will have mercy upon him; and to our God, for he will abundantly pardon.',
     'Repent ye therefore, and be converted, that your sins may be blotted out.',
     'I will arise and go to my father, and will say unto him Father; I have sinned against heaven, and before thee',
     'And am no more worthy to be called thy son make me as one of thy hired servants.',
     'And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him,',
     'And the son unto him, Father I have sinned against heaven, and in thy sight, and am no more worthy to be called thy son.',
-    'But father said to his servants, Bring forth the best robe, and put it on him: but a ring on his hand, and shoes on his feet:',
+    'But father said to his servants, Bring forth the best robe, and put it on him: and put a ring on his hand, and shoes on his feet:',
     'And bring hither the fatted calf, and kill it; and let us eat, and be merry:',
     'For this my son was dead and his alive again: he lost, and is found.',
     'Come now, saith the Lord: through your sins be as scarlet, they shall he as white as snow: through they be as like crimson. Thy shall be as wool.'
