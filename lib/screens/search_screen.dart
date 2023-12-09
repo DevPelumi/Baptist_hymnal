@@ -21,10 +21,10 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen>
     with SingleTickerProviderStateMixin {
-  List<HymnData> _displayedData;
-  TabController _tabController;
-  TextEditingController _textController;
-  IHymnProvider _provider;
+  late List<HymnData> _displayedData;
+  late TabController _tabController;
+  late TextEditingController _textController;
+  late IHymnProvider _provider;
   bool _ascending = true;
   bool _favorites = true;
 
@@ -71,7 +71,7 @@ class _SearchScreenState extends State<SearchScreen>
   }
 
   List<HymnData> _filterHymns(String searchString) {
-    searchString = searchString?.trim();
+    searchString = searchString!.trim();
     if (searchString == null || searchString.isEmpty) {
       return List.from(_provider.dataSource);
     } else {
@@ -100,7 +100,7 @@ class _SearchScreenState extends State<SearchScreen>
               ? Colors.grey[900]
               : Colors.white,
           iconTheme: theme.primaryIconTheme.copyWith(color: Colors.grey),
-          textTheme: theme.textTheme,
+          // textTheme: theme.textTheme,
         ),
         inputDecorationTheme: InputDecorationTheme(
           hintStyle: theme.inputDecorationTheme.hintStyle,
@@ -111,7 +111,7 @@ class _SearchScreenState extends State<SearchScreen>
 
     final tabBar = TabBar(
       controller: _tabController,
-      labelColor: Theme.of(context).accentColor,
+      labelColor: Colors.white,
       tabs: [
         Tab(text: 'English Hymns'),
         Tab(text: 'Yoruba Hymns'),

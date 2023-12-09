@@ -11,15 +11,23 @@ class FavoriteTab<T extends IHymnProvider> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<T>(
-        child: HymnPlaceholder(),
-        builder: (ctx, provider, child) => provider.favoritesKeys.isEmpty
-            ? child
-            : ListView.builder(
-                itemBuilder: (ctx, index) => HymnTile<T>(
-                    HymnHelperFunctions.binSearch(
-                        provider.dataSource, provider.favoritesKeys[index]),
-                    provider),
-                itemCount: provider.favoritesKeys.length,
-              ));
+      child: HymnPlaceholder(),
+      builder: (context, provider, child) {
+        if (provider.favoritesKeys.isEmpty) {
+          return Container(child: child);
+        } else {
+          return ListView.builder(
+            itemBuilder: (context, index) {
+              final hymnIndex = HymnHelperFunctions.binSearch(
+                provider.dataSource,
+                provider.favoritesKeys[index],
+              );
+              return HymnTile<T>(hymnIndex!, provider);
+            },
+            itemCount: provider.favoritesKeys.length,
+          );
+        }
+      },
+    );
   }
 }

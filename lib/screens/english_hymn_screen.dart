@@ -1,4 +1,3 @@
-import 'package:draggable_scrollbar_sliver/draggable_scrollbar_sliver.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,14 +7,14 @@ import '../widgets/hymn_tile.dart';
 import 'search_screen.dart';
 
 class EnglishHymnScreen extends StatefulWidget {
-  EnglishHymnScreen({Key key}) : super(key: key);
+  EnglishHymnScreen({ Key? key}) : super(key: key);
 
   @override
   _EnglishHymnScreenState createState() => _EnglishHymnScreenState();
 }
 
 class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
-  ScrollController _scrollController;
+  late ScrollController _scrollController;
   @override
   void initState() {
     _scrollController = ScrollController();
@@ -25,12 +24,7 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DraggableScrollbar.semicircle(
-        controller: _scrollController,
-        backgroundColor: Colors.green.shade300,
-        labelTextBuilder: (pos) => Text(
-            '${(pos * englishHymnData.length) ~/ _scrollController.position.maxScrollExtent}'),
-        child: CustomScrollView(
+      body:CustomScrollView(
           controller: _scrollController,
           slivers: <Widget>[
             SliverAppBar(
@@ -91,9 +85,7 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
               ),
             )
           ],
-        ),
-      ),
-    );
+        ),);
   }
 }
 

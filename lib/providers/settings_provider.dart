@@ -4,15 +4,19 @@ import '../models/settings.dart';
 import '../repositories/settings_repository.dart';
 
 class SettingsProvider extends ChangeNotifier {
-  Settings _settings;
-  SettingsRepository _repo;
+  Settings _settings = Settings(darkMode: true, language: Language.English, textSize: 20); // Initialize with default values
+  final SettingsRepository _repo = SettingsRepository(); // Initialize _repo directly
+
   SettingsProvider() {
-    _repo = SettingsRepository();
     fetchSettings();
   }
 
   Future<void> fetchSettings() async {
-    _settings = await _repo.fetchSettings();
+    try {
+      _settings = await _repo.fetchSettings() ?? Settings(darkMode: true, language: Language.English, textSize: 20); // Use default if fetch fails
+    } catch (e) {
+      print("Error fetching settings: $e");
+    }
     notifyListeners();
   }
 

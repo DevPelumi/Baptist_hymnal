@@ -42,7 +42,7 @@ class SettingsScreen extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                child,
+                Container(child: child),
                 Expanded(
                     child: SettingsList(
                         lightTheme: const SettingsThemeData(
@@ -77,9 +77,11 @@ class SettingsScreen extends StatelessWidget {
                           title: Text('Font Size'),
                           description:
                               Text('Hymn font size', style: subtitleStyle),
-                          trailing: DropdownButton(
-                              onChanged: (int newFont) async {
-                                await provider.setFontSize(newFont);
+                          trailing: DropdownButton<int>(
+                              onChanged: (int? newFont) async {
+                                if (newFont != null) {
+                                  await provider.setFontSize(newFont);
+                                }
                               },
                               dropdownColor: Colors.green.shade200,
                               icon: Icon(CupertinoIcons.chevron_down),

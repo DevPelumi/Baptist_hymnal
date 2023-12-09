@@ -7,7 +7,7 @@ abstract class IHymnProvider extends ChangeNotifier {
   final HymnRepository repo;
   
   /// set of provider keys
-  Set<int> _favorites;
+  late Set<int> _favorites;
   
   /// To be overriden, stores pointer to the datasource for this
   /// provider
@@ -41,7 +41,7 @@ abstract class IHymnProvider extends ChangeNotifier {
   /// from the local storage/ persistence solution
   Future<void> fetchFavorites() async {
     _favorites = {};
-    List<int> result = await repo.fetchFavoriteHymns();
+    List<int>? result = await repo.fetchFavoriteHymns();
     if (result != null) {
       _favorites.addAll(result);
     }

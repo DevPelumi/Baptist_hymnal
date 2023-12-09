@@ -2,7 +2,6 @@ import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:share/share.dart';
 import "package:baptist_hymnal/ad_helper.dart";
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../models/hymn_data.dart';
@@ -21,7 +20,7 @@ class DetailScreen extends StatefulWidget {
   final HymnData hymn;
   final IHymnProvider provider;
   // In the constructor, require a Todo.
-  DetailScreen({Key key, @required this.hymn, @required this.provider})
+  DetailScreen({ Key? key, required this.hymn, required this.provider})
       : super(key: key);
 
   @override
@@ -75,15 +74,15 @@ class _DetailScreenState extends State<DetailScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          final RenderBox box = context.findRenderObject();
-          Share.share(
-              widget.hymn.title +
-                  '\n' +
-                  widget.hymn.contents.join("\n") +
-                  '\n' +
-                  "DOWNLOAD FROM PLAYSTORE",
-              subject: 'Share Hymn',
-              sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size);
+          final RenderObject? box = context.findRenderObject();
+          // Share.share(
+          //     widget.hymn.title +
+          //         '\n' +
+          //         widget.hymn.contents.join("\n") +
+          //         '\n' +
+          //         "DOWNLOAD FROM PLAYSTORE",
+          //     subject: 'Share Hymn',
+          //     sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size);
         },
         child: Icon(Icons.share),
       ),

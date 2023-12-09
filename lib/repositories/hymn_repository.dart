@@ -2,13 +2,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class HymnRepository {
   final String _key;
-  SharedPreferences _preferences;
+  late SharedPreferences _preferences;
 
   /// This class must be instantiated with a KEY indicating
   /// the local storage location of the class data to be used
   HymnRepository(String key) : this._key = key;
 
-  Future<List<int>> fetchFavoriteHymns() async {
+  Future<List<int>?> fetchFavoriteHymns() async {
     if (_preferences == null)
       _preferences = await SharedPreferences.getInstance();
     // check if we have a data
@@ -16,7 +16,7 @@ class HymnRepository {
     if (_preferences.containsKey(_key)) {
       return _preferences
           .getStringList(_key)
-          .map<int>((s) => int.parse(s))
+          ?.map<int>((s) => int.parse(s))
           .toList();
     } else {
       // if no -> return null

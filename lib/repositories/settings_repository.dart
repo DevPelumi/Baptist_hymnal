@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/settings.dart';
 
 class SettingsRepository {
-  SharedPreferences _sharedPreferences;
+  late SharedPreferences _sharedPreferences;
 
   Future<void> updateLanguage(Language language) async {
     await assertNotNullSharedPrefs();
@@ -23,16 +23,18 @@ class SettingsRepository {
   Future<Settings> fetchSettings() async {
     await assertNotNullSharedPrefs();
     return Settings(
-        language: _sharedPreferences.containsKey(_languageKey)
-            ? Language.English
-                .languageFromString(_sharedPreferences.getString(_languageKey))
-            : null,
-        darkMode: _sharedPreferences.containsKey(_darkModeKey)
-            ? _sharedPreferences.getBool(_darkModeKey)
-            : null,
-        textSize: _sharedPreferences.containsKey(_fontSizeKey)
-            ? _sharedPreferences.getInt(_fontSizeKey)
-            : null);
+      language: _sharedPreferences.containsKey(_languageKey)
+          ? Language.English.languageFromString(
+        _sharedPreferences.getString(_languageKey) ?? '',
+      )
+          : Language.English,
+      darkMode: _sharedPreferences.containsKey(_darkModeKey)
+          ? _sharedPreferences.getBool(_darkModeKey) ?? false
+          : false,
+      textSize: _sharedPreferences.containsKey(_fontSizeKey)
+          ? _sharedPreferences.getInt(_fontSizeKey) ?? 20
+          : 20,
+    );
   }
 
   Future<void> assertNotNullSharedPrefs() async {

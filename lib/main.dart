@@ -7,7 +7,6 @@ import 'package:flutter/scheduler.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'screens/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:cuberto_bottom_bar/cuberto_bottom_bar.dart';
@@ -41,11 +40,11 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
-  SettingsProvider _settingsProvider;
-  EnglishHymnProvider _englishHymn;
-  ResponsiveReadingProvider _responsive;
-  YorubaHymnProvider _yorubaHymn;
-  FirstScreen({Key key}) : super(key: key);
+ late SettingsProvider _settingsProvider;
+ late EnglishHymnProvider _englishHymn;
+ late ResponsiveReadingProvider _responsive;
+ late YorubaHymnProvider _yorubaHymn;
+  FirstScreen({Key? key}) : super(key: key);
   Future<Widget> _initProviders(BuildContext context) async {
     _settingsProvider = context.read<SettingsProvider>();
     await _settingsProvider.fetchSettings();
@@ -77,33 +76,22 @@ class FirstScreen extends StatelessWidget {
                     Brightness.dark)
             ? ThemeMode.dark
             : ThemeMode.light,
-        home: SplashScreen(
-          loadingText: Text('Fetching Hymns...'),
-          backgroundColor: Colors.green.shade300,
-          seconds: 2,
-          navigateAfterSeconds: MyHomePage(),
-          navigateAfterFuture: _initProviders(context),
-          title: Text('Baptist Hymnal',
-              style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Alata',
-                  fontSize: 20.0)),
-        ));
+        home: MyHomePage(title: "home"));
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  MyHomePage({Key? key,  this.title}) : super(key: key);
+  final String? title;
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  int currentPage;
+  late int currentPage;
   Color currentColor = Colors.deepPurple;
-  TabController tabBarController;
+  late TabController tabBarController;
   List<Tabs> tabs = [];
 
   int _selectedPage = 0;
@@ -136,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage>
           children: _pageOptions),
       bottomNavigationBar: CubertoBottomBar(
         inactiveIconColor: Theme.of(context).iconTheme.color,
-        tabStyle: CubertoTabStyle.STYLE_FADED_BACKGROUND,
+        tabStyle: CubertoTabStyle.styleFadedBackground,
         selectedTab: _selectedPage,
         tabs: tabs
             .map((value) => TabData(
