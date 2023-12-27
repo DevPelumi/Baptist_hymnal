@@ -14,10 +14,9 @@ List<HymnData> responsive = [
     'God shall bless us; and all the ends of the earth shall fear him.'
   ]),
   HymnData(2, 'Christian Fellowship', [
-    'Let love be without dissimulation, Abhor that which -is evil; cleave to that which is good.',
+    'Let love be without dissimulation, Abhor that which is evil; cleave to that which is good.',
     'Be kindly affectioned one to another with brotherly love; in honour preferring one another;',
-    'Distributing to the necessity of',
-    'saints; given to hospitality.',
+    'Distributing to the necessity of saints; given to hospitality.', 
     'Rejoice with them that do rejoice, and weep with them that weep.',
     'Be of the same mind one toward another. Mind .not high things,, but condescend to-meri^of low estate. Be not wise in your own conceits.',
     'Recompense to no man evil for evil, Provide things honest in the sight of all men.',
