@@ -6260,13 +6260,12 @@ S’ ilekun paya, okan ‘fe;
 Ki gbogb aiye je ‘joba Re.
 '''
   ]),
-  HymnData(200, 'Ko s’ ohun t’ o ku kin se', [
+  HymnData(200, 'KO s’ ohun t’ o ku kin se', [
     '''
-1. Ko s’ ohun t’ o ku kin se,
+1. KO s’ ohun t’ o ku kin se,
 B’ o ti wu k’ o kere;
 Jesu ku, O san gbogbo
 Igbese ti mo je.
-  Egbe
   Jesu san gbogbo,
   ‘Gbese ti mo je;
   Jesu ku, O san gbogbo
@@ -6277,49 +6276,29 @@ Igbese ti mo je.
 T’ O jiya, t’ O si ku,
 A ti s’ ohun gbogbo tan:
 “O pari” ni igbe Re.
-   Egbe
-  Jesu san gbogbo,
-  ‘Gbese ti mo je;
-  Jesu ku, O san gbogbo
-  Igbese ti mo je.
 ''',
     '''
 3. En’ are t’ o ti nsise,
 Eredi lala re?
 Dekun ‘se se, t’ase tan,
 Li ona ti o ti jin.
-   Egbe
-  Jesu san gbogbo,
-  ‘Gbese ti mo je;
-  Jesu ku, O san gbogbo
-  Igbese ti mo je.
 ''',
     '''
 4. Afi b’ of’ igbagbo ro
 Mo ‘se Jesu nikan,
 Ise ko n’ iye ninu,
 O kangun sinu iku.
-   Egbe
-  Jesu san gbogbo,
-  ‘Gbese ti mo je;
-  Jesu ku, O san gbogbo
-  Igbese ti mo je.
 ''',
     '''
 5. Da oku ‘se re sile,
 Da won s’ s’ ese Jesu;
 Duro ninu Re nikan
 Ni pipe ati ogo.
-   Egbe
-  Jesu san gbogbo,
-  ‘Gbese ti mo je;
-  Jesu ku, O san gbogbo
-  Igbese ti mo je.
 '''
   ]),
-  HymnData(201, 'Eyi, e yipada, ese t’ e o ku', [
+  HymnData(201, 'EYI, e yipada, ese t’ e o ku', [
     '''
-1. Eyi, e yipada, ese t’ e o ku,
+1. EYI, e yipada, ese t’ e o ku,
 Nigbat’ Olorun sunmo wa li anu?
 Jesu npe nyin, Emi sin wipe k’ e wa,
 Angeli si nduro lati mu nyin lo.
@@ -6337,9 +6316,9 @@ B’ ese re l’ o wuwo, ese t’ o ko wa?
 O npe o, y’o si se o ni “Ma-wo-‘le.”
 '''
   ]),
-  HymnData(202, 'Alafia w’ okan, t’ ohun re', [
+  HymnData(202, 'ALAFIA w’ okan, t’ ohun re', [
     '''
-1. Alafia w’ okan, t’ ohun re
+1. ALAFIA w’ okan, t’ ohun re
 Ko apata l’ ohun aro:
 Dekun ejo wi, pa ‘nu mo,
 Ki ekun ye san l’ oju re;
@@ -6399,9 +6378,9 @@ Awon ogun orun nwipe,
 Yio se.
 '''
   ]),
-  HymnData(204, 'Enyin omo oku', [
+  HymnData(204, 'ENYIN omo oku', [
     '''
-1. Enyin omo oku,
+1. ENYIN omo oku,
 T’ o wa ninu ese,
 Gb’ ohun ihinrere,
 Jesu ranse si iyin.
@@ -6433,9 +6412,9 @@ Enikeni t’ o fe k’ o wa
 Ni aiya anu, aye mbe.
 '''
   ]),
-  HymnData(205, 'Jesu npe wa l’ osan, l’ oru', [
+  HymnData(205, 'JESU npe wa l’ osan, l’ oru', [
     '''
-1. Jesu npe wa l’ osan, l’ oru
+1. JESU npe wa l’ osan, l’ oru
 Larin irumi aiye;
 Lojojumo l’ a ngb’ ohun Re
 Wipe, “Kristian, tele Mi.”
@@ -6465,13 +6444,12 @@ F’ eti ‘gboran fun gbogbo wa,
 K’ a fe O ju aiye lo.
 '''
   ]),
-  HymnData(206, 'Wa sodo Jesu, mase duro', [
+  HymnData(206, 'WA sodo Jesu, mase duro', [
     '''
-1. Wa sodo Jesu, mase duro,
+1. WA sodo Jesu, mase duro,
 N’ oro Re l’ O ti f’ ona han wa,
 O duro li arin wa loni,
 O nwi jeje pe, “Wa.”
- Egbe
   Ipade wa yio je ayo,
   Gb’ okan wa ba bo lowo ese,
   Ao si wa pelu Re, Jesu,
@@ -6482,27 +6460,17 @@ O nwi jeje pe, “Wa.”
 Jek’ okan gbogbo fo fun ayo;
 Ki a si yan A l’ ayanfe wa;
 Ma duro, sugbon wa.
-  Egbe
-  Ipade wa yio je ayo,
-  Gb’ okan wa ba bo lowo ese,
-  Ao si wa pelu Re, Jesu,
-  Ni ile wa lailai.
 ''',
     '''
 3. Tun ro, O wa pelu wa loni,
 F’ eti s’ ofin Re, k’ o si gboran,
 Gbo b’ ohun Re ti nwi pele pe,
 “Wa, omo Mi, e wa!”.
-  Egbe
-  Ipade wa yio je ayo,
-  Gb’ okan wa ba bo lowo ese,
-  Ao si wa pelu Re, Jesu,
-  Ni ile wa lailai.
-'''
+ '''
   ]),
-  HymnData(207, 'Gbo okan mi, bi Angeli ti nkorin', [
+  HymnData(207, 'GBO okan mi, bi Angeli ti nkorin', [
     '''
-1. Gbo okan mi, bi Angeli ti nkorin,
+1. GBO okan mi, bi Angeli ti nkorin,
 Yika orun ati yika aiye;
 E gbo bi oro orin won ti dun to!
 Ti nso ‘gbati ese ki y’ o si mo:
@@ -6538,9 +6506,9 @@ Ti a o si ma yo titi lailai.
   Angeli Jesu, etc
 '''
   ]),
-  HymnData(208, 'Wa sodo Mi, alare', [
+  HymnData(208, 'WA sodo Mi, alare', [
     '''
-1. “Wa sodo Mi, alare
+1. “WA sodo Mi, alare
 Ngo fun nyin n’ isimi.”
 A! ohun didun Jesu,
 Ti o p’ elese wa,
@@ -6580,9 +6548,9 @@ B’ a tile je alaiye
 S’ odo Re, Oluwa.
 '''
   ]),
-  HymnData(209, 'Nigbat’ idanwo yi mi ka', [
+  HymnData(209, 'NIGBAT’ idanwo yi mi ka', [
     '''
-1. Nigbat’ idanwo yi mi ka,
+1. NIGBAT’ idanwo yi mi ka,
 T’ idamu aiye mu mi,
 Ti Esu wa bi ore mi,
 Lati wa iparun mi.
@@ -6623,7 +6591,7 @@ Bi iyo ninu okun,
 6. Nigba bi aja ti ko gbo
 Fere ti olode mo,
 Sonu s’ aginju aiye lo,
-Latin’ ireti ipada,
+Lain’ ireti ipada,
   Oluwa, jo masai pe mi, etc
 ''',
     '''
@@ -6634,9 +6602,9 @@ T’ ofo di ajisa mi,
   Oluwa, jo masai pe mi, etc
 '''
   ]),
-  HymnData(210, 'Jesu nigba ‘danwo', [
+  HymnData(210, 'JESU nigba ‘danwo', [
     '''
-1. Jesu nigba ‘danwo,
+1. JESU nigba ‘danwo,
 Gbadua fun mi;
 K’ emi ma ba se O,
 Ki nsi sako lo:
@@ -6676,9 +6644,9 @@ Oluwa, gb’ emi mi,
 S’ iye ailopin.
 '''
   ]),
-  HymnData(211, 'Elese wa sodo Jesu', [
+  HymnData(211, 'ELESE wa sodo Jesu', [
     '''
-1. Elese wa sodo Jesu
+1. ELESE wa sodo Jesu
 Enit’ O wa gba o la
 Enit’ O gbe are re wo,
 Lati ru irora re.
@@ -6700,7 +6668,7 @@ Gbagbo, reti ma beru.”
   ]),
   HymnData(212, 'OKAN mi, sunmo ‘te anu', [
     '''
-1. Okan mi, sunmo ‘te anu,
+1. OKAN mi, sunmo ‘te anu,
 Nibi Jesu ngb’ ebe,
 F’ irele wole l’ ese Re,
 ‘Wo ko le gbe nibe.
@@ -6772,9 +6740,9 @@ Ninu ayo re gbogbo,
 Ranti Olore re.
 '''
   ]),
-  HymnData(214, 'Pada asako s’ ile re', [
+  HymnData(214, 'PADA asako s’ ile re', [
     '''
-1. Pada asako s’ ile re,
+1. PADA asako s’ ile re,
 Baba re l’ O npe o;
 Ma se alarinkiri mo,
 N’nu ese at’ osi.
@@ -6783,7 +6751,7 @@ Pada, pada, pada.
     '''
 2. Pada asako s’ ile re,
 Jesu l’ O sa npe o;
-Emi pelu ijo si npe,
+Emi pelu Ijo si npe,
 Yara sa asala.
 Pada, pada, pada.
 ''',
@@ -6795,9 +6763,9 @@ Ojo anu kuru
 Pada, pada, pada.
 '''
   ]),
-  HymnData(215, 'Omo Olorun nlo s’ ogun', [
+  HymnData(215, 'OMO Olorun nlo s’ ogun', [
     '''
-1. Omo Olorun nlo s’ ogun
+1. OMO Olorun nlo s’ ogun
 Lati gb’ ade Oba:
 Opagun Re si nfe, lele,
 Tal’ o s’ om-ogun Re?
@@ -6837,9 +6805,9 @@ Olorun fun wa l’ agbara
 K’ a le s’ om’-ogun Re.
 '''
   ]),
-  HymnData(216, 'Olorun npe, ngo ha s’ aigbo', [
+  HymnData(216, 'OLORUN npe, ngo ha s’ aigbo', [
     '''
-1. Olorun npe, ngo ha s’ aigbo?
+1. OLORUN npe, ngo ha s’ aigbo?
 Ngo ha s’ afe aiye d’ owon?
 Odun y’o ha ma rekoja
 K’ okan mi ma togbe sibe?
@@ -6869,11 +6837,11 @@ Aiye odigbose, mo lo!
 Ohun Olorun w’ okan mi.
 '''
   ]),
-  HymnData(217, 'O ha le je p’ a pe mi?', [
+  HymnData(217, 'O HA le je p’ a pe mi?', [
     '''
-1. O ha le je p’ a pe mi?
+1. O HA le je p’ a pe mi?
 Olugbala ha yan mi?
-Bi ebi mi tip o to
+Bi ebi mi ti po to
 O ha da oruko mi?
 Olor’ elese ni mi
 Mo ha je n’ ireti be?
@@ -6895,9 +6863,9 @@ Nibit’ okan mi yio sun
 L’ aiya Olugbala mi.
 '''
   ]),
-  HymnData(218, 'Mo ha le tun duro', [
+  HymnData(218, 'MO ha le tun duro', [
     '''
-1. Mo ha le tun duro
+1. MO ha le tun duro
 Laif’ ini mi toro?
 Ki nmu okan kuro l’ aiye,
 Ki ngba Olugbala?
@@ -6912,7 +6880,7 @@ Mo gba Asegun mi.
 3. Mo pe, sugbon mo ko
 Gbogbo ohun aiye;
 Baba alanu gba, ma mu
-Se mi ni tire lai.
+Se mi ni Tire lai.
 ''',
     '''
 4. Wa, gba gbogb’ okan mi,
@@ -6927,9 +6895,9 @@ Ki nko gbogbo ayo miran,
 Ati ere sile.
 '''
   ]),
-  HymnData(219, 'Wo ti ngb’ adura igbagbo', [
+  HymnData(219, 'WO ti ngb’ adura igbagbo', [
     '''
-1. Wo ti ngb’ adura igbagbo,
+1. WO ti ngb’ adura igbagbo,
 O ki o gb’ okan lowo ‘ku
 T’ o gb’ ara re le O?
 Emi ko l’ abo fun ‘ra mi,
@@ -6953,9 +6921,9 @@ Si so jeje fun okan mi,
 P’, “Ore re l’Oluwa.”
 '''
   ]),
-  HymnData(220, 'Baba, mo n’ owo mi si O', [
+  HymnData(220, 'BABA, mo n’ owo mi si O', [
     '''
-1. Baba, mo n’ owo mi si O;
+1. BABA, mo n’ owo mi si O;
 Nko mo ‘ranwo miran:
 Bi O ba kuro lodo mi,
 A! nibo ni ngo lo?
@@ -6973,9 +6941,9 @@ Mba je le ri ebun ni gba
 Laisi re mo segbe.
 '''
   ]),
-  HymnData(221, 'Jesu, Ore ‘lese ni O', [
+  HymnData(221, 'JESU, Ore ‘lese ni O', [
     '''
-1. Jesu, Ore ‘lese ni O;
+1. JESU, Ore ‘lese ni O;
 B’ elese, mo now O;
 Lat’ inu ekun ife Re,
 Oluwa, ranti mi.
@@ -7005,9 +6973,9 @@ Gbana, Olugbala owon,
 K’ O jowo, ranti mi.
 '''
   ]),
-  HymnData(222, 'Bi mo ti ri – laisawawi', [
+  HymnData(222, 'BI mo ti ri – laisawawi', [
     '''
-1. Bi mo ti ri – laisawawi,
+1. BI mo ti ri – laisawawi,
 Sugbon nitori eje Re,
 B’ O si ti pe mi pe ki nwa –
 Olugbala, mo de.
@@ -7038,7 +7006,7 @@ Olugbala, mo de.
 ''',
     '''
 6. Bi mo ti ri – ife Tire
-L’ o sele mi patapata;
+L’ o sete mi patapata;
 Mo di Tire, Tire nikan –
 Olugbala, mo de.
 '''
@@ -7139,7 +7107,7 @@ Afoju yo, lati gbo pe
 “Jesu ti Nasaret’ l’ O nkoja.”
 ''',
     '''
-4. On si tun de! Nibikibi
+4. On si tun de! nibikibi
 Ni awa si nri ‘pase Re;
 O nrekoja lojude wa –
 O wole lati ba wag be.
@@ -7169,7 +7137,6 @@ Yio si ko adura re;
 L’ a gbo ‘gbe awon adete mewa:
 Jesu sanu fun won, se wosan won
 Okan l’ o wa dupe, Mesan ha da?
-  Egbe
   Mesan ha da? Mesan ha da?
   Mewa k’a wosan, Mesan ha da?
 ''',
@@ -7178,27 +7145,21 @@ Okan l’ o wa dupe, Mesan ha da?
 O mo p’ Oro Re lo mu ‘wosan wa:
 O gba Onisegun nla l’ Oluwa,
 Jesu wi jeje pe, Mesan ha da?
-  Egbe
-  Mesan ha da? Mesan ha da?
-  Mewa k’a wosan, Mesan ha da?
+  Mesan ha da? etc.
 ''',
     '''
 3. Farisi bere, Tani Nasiri
 So fun ni daju bi On ni Krist’ na,
 Opo l’o ntele t’o nbere ami
 Ise ‘yanu nla Re, Mesan ha da?
-  Egbe
-  Mesan ha da? Mesan ha da?
-  Mewa k’a wosan, Mesan ha da?
+ Mesan ha da? etc.
 ''',
     '''
 4. Jesu niwaju Onidajo Aiye
 Opo l’o nf’ egan bere “Tani yi”?
 Nwon nko Oluwa re ati t’ emi
 Nwon m’ Olufisun wa, Mesan ha da?
-  Egbe
-  Mesan ha da? Mesan ha da?
-  Mewa k’a wosan, Mesan ha da?
+  Mesan ha da? etc.
 '''
   ]),
   HymnData(227, 'WA, Jesu fi ara han', [
@@ -7363,7 +7324,7 @@ To wa si ibugbe Re.
   HymnData(232, 'ISUN kan wa t’ o kun f’ eje', [
     '''
 1. ISUN kan wa t’ o kun f’ eje
-O yo n’ iha jesu,
+O yo n’ iha Jesu,
 Elese mokun ninu re,
 O bo ninu ebi.
 ''',
@@ -7484,7 +7445,7 @@ Mo wa sib’ orisun ni,
 We mi, Olugbala mi.
 ''',
     '''
-4. ‘Gbat emi mi ba nlo,
+4. ‘Gbati emi mi ba nlo,
 T’ iku ba p’ oju mi de,
 Ti mba lo s’ aiye aimo,
 Ti nri O n’ ite ‘dajo;
@@ -7687,7 +7648,7 @@ Od’ agutan mimo;
 O ru gbogbo eru mi,
 O so mi d’ominira;
 Mo ru ebi mi to wa
-K’O we eri minu.
+K’O we eri mi nu.
 K’ eje Re iyebiye
 Le so mi di funfun.
 ''',
@@ -7794,7 +7755,7 @@ Asa f’ ota at’ ogun mi,
 Igbala mi t’ o daju.
 ''',
     '''
-3. Nimu ijakadi aiye,,
+3. Ninu ijakadi aiye,,
 Emi o duro sinsin;
 Idanwo y’ o so ‘pa re nu,
 Nitori ‘Wo o so mi.
@@ -7890,10 +7851,10 @@ Ife itoju Re.
 ‘Gbekele ninu iji,
 B’ igbgbo tile kere,
 Ki nsa gbekele Jesu.
-B’ iseju ti nfo Kankan,
-Bi ojo nkoja lo,
-Ohunkohun t’ o le de,
-Gbekele Jesu nikan.
+  B’ iseju ti nfo Kankan,
+  Bi ojo nkoja lo,
+  Ohunkohun t’ o le de,
+  Gbekele Jesu nikan.
 ''',
     '''
 2. Emi Re nmole pupo,
@@ -7988,7 +7949,7 @@ Okun ailebute.
   HymnData(252, 'OLUWA, Baba orun', [
     '''
 1. OLUWA, Baba orun,
-B’ oju woo mo-‘do Re
+B’ oju wo mo-‘do Re
 Ti nro t’ igbe aiye re,
 Ati ipo re si O.
 ''',
@@ -8006,27 +7967,27 @@ L’ O mu mi gba Kristi gbo.
 ''',
     '''
 4. Sugbon sibe okan mi,
-Nd’igba se kilakilo,
-Nitor’ese to mo nda,
-Alailera sa l’emi.
+Nd’ igba se kilakilo,
+Nitor’ ese to mo nda,
+Alailera sa l’ emi.
 ''',
     '''
 5. Fun mi ni idaloju
 Isimi okan toto,
-T’awon ‘mo-ehin Re gbo,
+T’ awon ‘mo-ehin Re gbo,
 Ti aiya won si bale.
 ''',
     '''
-6. Wi f’okan mi, Oluwa,
-(Iwo nikan l’O le wi,)
-Pe a ti k’oruko re
-Sinu ‘we iye l’oke.
+6. Wi f’ okan mi, Oluwa,
+(Iwo nikan l’ O le wi,)
+Pe a ti k’ oruko re
+Sinu ‘we iye l’ oke.
 ''',
     '''
-7. ‘Gbana mo le n’igboya
+7. ‘Gbana mo le n’ igboya
 Lati wi bi paulu pe,
-“Ko s’ohun l’aiye, l’orun
-T’o le ya t’emi Tire.”
+“Ko s’ ohun l’ aiye, l’ orun
+T’ o le ya t’ emi Tire.”
 '''
   ]),
   HymnData(253, 'NIPA ife Olugbala', [
@@ -8035,9 +7996,9 @@ T’o le ya t’emi Tire.”
 Ki y’o si nkan;
 Oju rere Re ki pada.
 Ki y’o si nkan.
-Owon l’eje t’o wo wa san,
-Pipe l’edidi or’-ofe,
-Agbara l’owo t’o gba ni,
+Owon l’ eje t’o wo wa san,
+Pipe l’ edidi or’-ofe,
+Agbara l’ owo t’o gba ni,
 Ko le si nkan.
 ''',
     '''
@@ -8056,43 +8017,45 @@ Ki y’o si nkan.
 ‘Gbagbo le korin n’iponju
 Ki y’o si nkan
 A gbekele ‘fe Baba wa,
-Jesu fun wa l’ohun gbogbo.
+Jesu fun wa l’ ohun gbogbo.
 Ni yiye tabi ni kiku
 Ko le si nkan.
 '''
   ]),
-  HymnData(254, 'LAIFOYA l’apa Jesu', [
+  HymnData(254, 'LAIFOYA l’ apa Jesu', [
     '''
-1. LAIFOYA l’apa Jesu,
-Laifoya l’aiya Re,
-Labe ojij’ife Re,
-L’okan mi o simi.
+1. LAIFOYA l’ apa Jesu,
+Laifoya l’ aiya Re,
+Labe ojij’ ife Re,
+L’ okan mi o simi.
 Gbo ohun angeli ni,
-Orin won d’eti mi,
+Orin won d’ eti mi,
 Lati papa ogo wa,
 Lati okun jaspi.
-Laifoya l’apa Jesu, Laifoya l’aiya Re,
-Labe ojij’ife Re, L’okan mi o simi.
+Laifoya l’ apa Jesu, Laifoya l’ aiya Re,
+Labe ojij’ ife Re, L’ okan mi o simi.
 ''',
     '''
 2. Laifoya l’apa Jesu,
-Mo bo low’aniyan,
+Mo bo low’ aniyan,
 Mo bo lowo idanwo,
-Ese ko n’ipa mo.
+Ese ko n’ ipa mo.
 Mo bo lowo ‘banuje,
 Mo bo lowo eru,
 O ku idanwo die!
-O k’omije die!
+O k’ omije die!
+  Laifoya l’ apa Jesu,etc
 ''',
     '''
 3. Jesu abo okan mi,
 Jesu ti ku fun mi,
 Apata aiyeraiye
-L’emi o gbekele.
-Nihin l’emi o duro,
-Tit’oru y’o koja,
-Titi ngo fi r’imole
+L’ emi o gbekele.
+Nihin l’ emi o duro,
+Tit’ oru y’o koja,
+Titi ngo fi r’ imole
 Ni ebute ogo.
+  Laifoya l’ apa Jesu,etc
 '''
   ]),
   HymnData(255, 'GBA mo le ka oye mi re', [
@@ -8100,58 +8063,58 @@ Ni ebute ogo.
 1. GBA mo le ka oye mi re,
 Ni ibugbe l’oke;
 Mo dagbere f’eru gbogbo,
-Mo n’omije mi nu.
+Mo n’ omije mi nu.
 ''',
     '''
-2. B’aiye kojuja s’okan mi,
-T’a nso oko si I,
+2. B’ aiye kojuja s’ okan mi,
+T’ a nso oko si I,
 ‘Gbana mo le rin Satani,
-Mo le je ‘ju k’aiye.
+Mo le je ‘ju k’ aiye.
 ''',
     '''
-3. K’aniyan de b’ikun omi,
-K’iji ‘banuje ja;
+3. K’ aniyan de b’ ikun omi,
+K’ iji ‘banuje ja;
 Ki nsa de ‘le Alafia,
 Olorun, gbogbo mi.
 ''',
     '''
-4. Nibe l’okan mi y’o luwe,
-N’nu okun ‘b’isimi;
+4. Nibe l’ okan mi y’o luwe,
+N’nu okun ‘b’ isimi;
 Ko si wahala to le de,
-S’ibale aiya mi.
+S’ ibale aiya mi.
 '''
   ]),
   HymnData(256, 'IGBAGBO mi duro l’ori', [
     '''
 1. IGBAGBO mi duro l’ori,
-Eje at’ododo Jesu;
+Eje at’ ododo Jesu;
 Nko je gbekele ohun kan,
 Lehin oruko nla Jesu;
-Mo duro le Krist’Apata,
+Mo duro le Krist’ Apata,
 Ile miran, iyanrin ni.
 ''',
     '''
-2. B’ire-ije mi tile gun,
+2. B’ ire-ije mi tile gun,
 Or’-ofe Re ko yipada:
-B’o ti wu k’iji na le to,
+B’ o ti wu k’ iji na le to,
 Idakoro mi ko ni ye:
-Mo duro le Krist’Apata,
+Mo duro le Krist’ Apata,
 Ile miran, iyanrin ni.
 ''',
     '''
 3. Majemu ati eje Re,
-L’em’o ro mo b’ikunmi de:
+L’ em’ o ro mo b’ ikunmi de:
 Gbati ohun aiye bo tan,
 O je ireti nla fun mi;
-Mo duro le Krist’Apata,
+Mo duro le Krist’ Apata,
 Ile miran, iyanrin ni.
 ''',
     '''
-4. Gbat’ipe kehin ba si dun,
-A! mba le wa l’odo Jesu,
+4. Gbat’ ipe kehin ba si dun,
+A! mba le wa l’ odo Jesu,
 Ki now ododo Re nikan.
 Ki nduro niwaju ite.
-Mo duro le Krist’Apata,
+Mo duro le Krist’ Apata,
 Ile miran, iyanrin ni.
 '''
   ]),
@@ -8159,9 +8122,9 @@ Ile miran, iyanrin ni.
     '''
 1. OLORUN mi bojuwo mi
 F’ iyanu ‘fe nla Re han mi;
-Ma je ki ngbere fun ‘ra mi,
-Tori ‘Wo si ngbero fun mi;
-Baba mi to mi l’aiye yi
+Ma je ki ngbero fun ‘ra mi,
+Tori ‘Wo ni ngbero fun mi;
+Baba mi to mi l’ aiye yi
 Je k’ igbala Re to fun mi.
 ''',
     '''
@@ -8169,18 +8132,21 @@ Je k’ igbala Re to fun mi.
 ‘Tori ‘Wo li onipin mi,
 S’ eyi t’ Iwo ti pinnu re,
 Iba je’ ponju tab’ ogo.
+  Baba mi. etc
 ''',
     '''
 3. Oluwa tal’ o r’ idi Re,
 Iwo Olorun Ologo?
 Iwo l’ egbegberun ona
 Nibiti nko ni ‘kansoso.
+  Baba mi. etc
 ''',
     '''
 4. B’ orun ti ga ju aiye lo,
 Bel’ ero Re ga ju t’ emi,
 Ma dari mi k’ emi le lo
 S’ ipa ona ododo Re
+  Baba mi. etc
 '''
   ]),
   HymnData(258, 'NIGBA nwon kehin si Sion', [
@@ -8193,7 +8159,7 @@ Mo seb’ Olugbala wipe,
     '''
 2. T’ emi t’ okan b’ iru eyi
 A fi b’ O di mi mu;
-Nko le se kin ma fa sehin
+Nko le se ki nma fa sehin
 K’ emi si dabi won.
 ''',
     '''
@@ -8240,7 +8206,7 @@ N’ ipamo Jesu, iberu ko si.
 ''',
     '''
 5. Alafia, b’ a ko tile m’ ola?
-Sugbo a mo pe Jesu wa lailai.
+Sugbon a mo pe Jesu wa lailai.
 ''',
     '''
 6. Alafia, nigb’ akoko iku?
@@ -8251,50 +8217,38 @@ Olugbala wa ti segun iku.
 Jesu y’ o pe wa s’ orun alafia.
 '''
   ]),
-  HymnData(260, 'GB’ ori soke alare', [
+  HymnData(260, 'GB’ ori re soke alare', [
     '''
-1. GB’ ori soke alare,
+1. GB’ ori re soke alare,
 Tori ayo nbo l’ owuro,
 Olorun so n’nu oro Re
 Pe ayo ma nbo l’ owuro,
-Refrain
-Ayo ma nbo l’ owuro,
-Ayo ma nbo l’ owuro,
-Ekun le pe titi d’ ale
-Sugbon ayo nbo l’ owuro.
+  Ayo ma nbo l’ owuro,
+  Ayo ma nbo l’ owuro,
+  Ekun le pe titi d’ ale
+  Sugbon ayo nbo l’ owuro.
 ''',
     '''
-2. Enyin mimo ma beru mop
+2. Enyin mimo ma beru mo
 Tori ayo nbo l’ owuro;
 Enyin olofo nu ‘ju nu,
 Tori ayo nbo l’ owuro.
-Refrain
-Ayo ma nbo l’ owuro,
-Ayo ma nbo l’ owuro,
-Ekun le pe titi d’ ale
-Sugbon ayo nbo l’ owuro.
 ''',
     '''
 3. E yo oru fere koja,
 Tori ayo nbo l’ owuro;
 O ‘ro t’ o logo yio si de
 Tori ayo nbo l’ owuro.
-Refrain
-Ayo ma nbo l’ owuro,
-Ayo ma nbo l’ owuro,
-Ekun le pe titi d’ ale
-Sugbon ayo nbo l’ owuro.
 ''',
     '''
 4. Ki gbogbo wa ma yo loni
 Tori ayo nbo l’ owuro.
 Olorun yio n’ omije nu
 Tori ayo nbo l’ owuro.
-Refrain
-Ayo ma nbo l’ owuro,
-Ayo ma nbo l’ owuro,
-Ekun le pe titi d’ ale
-Sugbon ayo nbo l’ owuro.
+  Ayo ma nbo l’ owuro,
+  Ayo ma nbo l’ owuro,
+  Ekun le pe titi d’ ale
+  Sugbon ayo nbo l’ owuro.
 '''
   ]),
   HymnData(261, 'F’ORUKO Jesu s’ okan re', [
