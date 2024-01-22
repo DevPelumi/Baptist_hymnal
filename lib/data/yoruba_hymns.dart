@@ -12742,7 +12742,7 @@ Eje, kiki eje Jesu,
   HymnData(404, 'PELU iwa mimo, b’ Oluwa s’ oro', [
     '''
 1. PELU iwa mimo, b’ Oluwa s’ oro
-Be ‘nu Re n’ gbagbogbo je onje iye,
+Gbe ‘nu Re n’ gbagbogbo je onje iye,
 B’ onigbagbo s’ ore, Ran ailera lowo;
 Ma gbagbe nigbakan, wa ibukun Re.
 ''',
@@ -12770,46 +12770,43 @@ Yio si mu o ye, ibugbe orun.
 1. ALABUKUN n’ isun eje,
 T’ a fi han elese aiye;
 Olubukun n’ om Olorun,
-Nipa ‘na Re la wow a san,
+Nipa ‘na Re la wo wa san,
 Bi mo ti nu lo l’ agbo Re
 Ti mo m’ egbe ba okan mi
 F’ eje Od’ Agutan we mi
 Emi o si fun ju yinyin lo.
-Refrain
-Fun ju yinyin lo
-Fun ju yinyin lo
-We mi nin’ eje Odagutan
-Em’ o si fun ju yinyin lo.
+  Fun ju yinyin lo
+  Fun ju yinyin lo
+  We mi nin’ eje Odagutan
+  Em’ o si fun ju yinyin lo.
 ''',
     '''
 2. Egun ni ade ori Re,
 Agbelebu si l’ eru Re,
-Ibanuje Re po julo,
+Ibanuje Re po julo.
 Sugbon ko jiya na lasan
 Ki a mu mi lo s’ isun na,
-Ti nsan lati foe se mi nu
+Ti nsan lati fo ese mi nu
 F’ eje T’ O ta sile we mi
 Em o si fun ju yinyin lo.
-Refrain
-Fun ju yinyin lo
-Fun ju yinyin lo
-We mi nin’ eje Odagutan
-Em’ o si fun ju yinyin lo.
+  Fun ju yinyin lo
+  Fun ju yinyin lo
+  We mi nin’ eje Odagutan
+  Em’ o si fun ju yinyin lo.
 ''',
     '''
 3. Baba mo sako lodo Re,
-Nigba pupo l’ okan mi nse;
+Nigba pupo l’ okan mi n se;
 Ese mi po o pan yanyan,
 Ko s’ omi t’ o le we won mo,
 Jesu mo wa si odo Re,
 Mo gbekele ileri Re;
 Fi eje mimo Re we mi,
 Emi o si fun ju yinyin lo.
-Refrain
-Fun ju yinyin lo
-Fun ju yinyin lo
-We mi nin’ eje Odagutan
-Em’ o si fun ju yinyin lo.
+  Fun ju yinyin lo
+  Fun ju yinyin lo
+  We mi nin’ eje Odagutan
+  Em’ o si fun ju yinyin lo.
 '''
   ]),
   HymnData(406, 'LO wasu Mi,” l’ Oluwa wi', [
@@ -12938,14 +12935,14 @@ K’ o le f’ ara re s’ apere
 Imole ododo.
 ''',
     '''
-5. Nigbat’ o ba duro n’waju
+5. Nigbat’ o ba duro n’ waju
 Awon t’ O rapada,
 B’ ibawi tabi iyin ni
 K’ o je bi oro Re.
 ''',
     '''
 6. Tu ibukun Re s’ ori re,
-K’ Emi Re ma bag be,
+K’ Emi Re ma ba gbe,
 Bo o k’ o le waon Tire,
 Pelu onje emi.
 '''
@@ -12955,10 +12952,10 @@ Pelu onje emi.
 1. OWO l’ eni ororo Re,
 L’ ojise oro mimo Re
 Ipo eni owo l’ o wa,
-Jek a f’ iyin at’ ola fun.
+Jek' a f’ iyin at’ ola fun.
 ''',
     '''
-2. Ipo elegbe n’ ipo re,
+2. Ipo elege n’ ipo re,
 Aso ti ko fe abawon,
 Jek’ a fi ife ran lowo,
 K’ a fi irele gb’ oro re.
@@ -12971,7 +12968,7 @@ Ati opo if’ ara da.
 ''',
     '''
 4. Ma jek’ ise wa mu binu,
-Ki iwa wa tan si subu;
+Ki iwa wa tan si suru;
 Fun l’ agbara bi ojo re,
 B’ ipo re, fun l’ or’-ofe Re.
 ''',
@@ -13039,7 +13036,7 @@ Fun won n’ itelorun.
     '''
 5. Gege b’ ire ojo kini,
 Ni ogba Edeni,
-Ki nwon ma bi, kin won ma re,
+Ki nwon ma bi, ki nwon ma re,
 Tit’ opin emi won.
 '''
   ]),
