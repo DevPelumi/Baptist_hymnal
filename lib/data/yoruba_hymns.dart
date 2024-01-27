@@ -16877,28 +16877,31 @@ S’ oke orun; L’ oke orun.
 Li eba odo imole,
 Nibit’ awon mimo wa l’ aiku,
 T’ a wo won li aso funfun.
-Lok’ orun! Lok’ orun!
-A! ro ti ibugbe orun!
-Lok’ orun! Lok’ orun
-A! ro ti ibugbe orun.
+  Lok’ orun! Lok’ orun!
+  A! ro ti ibugbe orun!
+  Lok’ orun! Lok’ orun
+  A! ro ti ibugbe orun.
 ''',
     '''
 2. A! ro t’ awon ore nibe,
 Awon ti o ti lo saju wa,
-Ati awon orin tin won nko,
+Ati awon orin ti nwon nko,
 N’ ile won, l’ afin Olorun.
+   Lok’ orun, etc.
 ''',
     '''
 3. Olugbala mi wa nibe,
 N’be l’ awon ‘batan mi nsimi,
 Jeki nfi’ banuje s’ apakan,
 Ki nfo lo ile abukun.
+   Lok’ orun, etc.
 ''',
     '''
 4. Mo fere de ibugbe na,
 Nitori mo r’ opin ajo mi,
 Opo awon ti okan mi fe,
 Nwon ns’ ona, nwon nduro de mi.
+   Lok’ orun, etc.
 ''',
   ]),
   HymnData(532,'GBAT’ aiye yi ba koja',[
