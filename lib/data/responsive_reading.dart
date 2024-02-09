@@ -188,7 +188,7 @@ List<HymnData> responsive = [
     'Who Is this King of glory?',
     'The Lord of hosts, he is the King of glory,',
     'But the hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him.',
-    'God is a Spirit: and they that worship him roust worship him in spirit and in truth.'
+    'God is a Spirit: and they that worship him must worship him in spirit and in truth.'
   ]),
   HymnData(14, 'Dignity of Man', [
     'O Lord our Lord, how excellent is thy name in all the earth! Who hast set thy glory above the heavens.',
@@ -199,8 +199,7 @@ List<HymnData> responsive = [
     'Thou madest him to have dominion over the works of thy hands;',
     'Thou hast put all things under his feet: all sheep and oxen, yea, and the beasts of the field;',
     'The fowl of the air, and the fish of the sea, and whatsoever passeth through the paths of the seas.',
-    'O Lord our Lord, how excellent is',
-    'thy name in all the earth!',
+    'O Lord our Lord, how excellent is thy name in all the earth!',
     'Behold, what manner of Jove the Father hath bestowed upon us, that we should be called the son of Cod.',
     'Beloved, now are we the sons of God, and it doth not yet appear what we shall be;',
     'But we know that, when he shall appear, we shall be like him;',
@@ -211,43 +210,38 @@ List<HymnData> responsive = [
     'The Lord is my shepherd; I shall not want,',
     'He maketh me to lie clown in green pastures: he leadeth me beside the still waters,',
     'He restoreth my soul: he leadeth me in the paths of righteousness for his name\'s sake.',
-    'Yea, though I walk through the valley of the shadow of death, I will fear',
-    'no evil for thou art with me; thy rod and thy staff they comfort me.',
+    'Yea, though I walk through the valley of the shadow of death, I will fear no evil for thou art with me; thy rod and thy staff they comfort me.',
     'Thou preparest a table before me in the presence of mine enemies; thou anointest my head with oil; my cup runneth over.',
-    'Surely goodness and mercy shall follow me all the days of my life: and I Kill dwell in the house of the Lord forever,'
+    'Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the Lord for ever,'
   ]),
   HymnData(16, 'Jesus Our Friend', [
     'Then drew near unto Jesus al! the publicans and sinners to hear him,',
     'And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.',
     'And Jesus answering said unto them, They that are whole need not a physician; but they that are sick.',
     'I came not to call the righteous, but sinners to repentance.',
-    'And him that cometh to me I will',
-    'in no wise cast out',
-    'Ye have not chosen roe, but I have chosen you.',
+    'And him that cometh to me I will', in no wise cast out',
+    'Ye have not chosen me, but I have chosen you.',
     'As the Father hath loved me, so have I loved you: continue ye in my love,',
-    'Greater love hath no man than this, that a man lay down his life for his',
-    'friends.',
+    'Greater love hath no man than this, that a man lay down his life for his friends.',
     'Ye are my friends, if ye do whatsoever I command you.',
-    'Henceforth I call you not servants; for the servant knowcth not what his lord docth: _ but I have called you',
-    'friends," for all things chat I have heard of my Falter I have mad known unto you.'
+    'Henceforth I call you not servants; for the servant knowcth not what his lord docth: but I have called you friends," for all things that I have heard of my Father I have mad known unto you.'
   ]),
   HymnData(17, 'Patience', [
-    'I had fainted, unless I had believed',
-    'to see the goodness of the Lord in the land of the living.',
+    'I had fainted, unless I had believed to see the goodness of the Lord in the land of the living.',
     'Wait on the Lord: be of good courage, and he shall strengthen thine heart: wait I say, on the Lord',
     'My brethren, count it all joy when ye fall into divers temptations;',
     'Knowing this, that the trying of your faith worketh patience,',
     'But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.',
     'We glory in tribulations also: knowing that tribulation worketh patience;',
     'And patience, experience; and experience, hope:',
-    'And hope maketh not ashamed; because the love of God is shed abroad in our heart by the Holy Spirit which b given unto us.',
+    'And hope maketh not ashamed; because the love of God is shed abroad in our heart by the Holy Spirit which is given unto us.',
     'Be patient therefore, brethren, unto the coming of the Lord. Behold, the husbandman waiteth for the precious fruit of the earth, and hath Jong patience for it, until he receive the early and fatter rain,',
     'Be ye also patient; stablish your hearts: for the coming of the Lord draweth nigh.'
   ]),
   HymnData(18, 'God\'s Word', [
     'Blessed art thou, O Lord: teach me thy statutes.',
-    'Thy word have I hid in mine heart, that I might not tin against thee.',
-    'I have rejoiced in the way of thy testimonies, as much m in all riches.',
+    'Thy word have I hid in mine heart, that I might not sin against thee.',
+    'I have rejoiced in the way of thy testimonies, as much as in all riches.',
     'I will meditate in thy precepts, and have respect unto thy ways.',
     'I will delight myself in thy statutes: I will not forget thy word.',
     'Thy hands have made me and fashioned me; give me understanding, that I may, learn thy commandments.',
@@ -257,30 +251,30 @@ List<HymnData> responsive = [
     'That the man of God may be perfect thoroughly furnished unto all good works.'
   ]),
   HymnData(19, 'Sanctification', [
-    'But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temper ance: against such there is no law,',
+    'But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temperance: against such there is no law,',
     'And they that are Christ\'s have crucified the flesh with the affections and lusts.',
     'If we live in the Spirit, let us also walk in the Spirit.',
     'Therefore, brethren, we are debtor, not to the flash, to live after the flesh,',
-    'For if ye live after the flesh, ye shall disc: bat if ye through the Spirit da mortify the deeds of the body, ye shall',
-    'Live.',
+    'For if ye live after the flesh, ye shall die: but if ye through the Spirit da mortify the deeds of the body, ye shall Live.',
     'For as many as are led by the Spirit of God, they are the sons of God.',
     'Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof.',
-    'Neither yield ye your members as instruments of unrighteousness unto',
-    'sin:',
-    'But yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto Cod,',
+    'Neither yield ye your members as instruments of unrighteousness unto sin:',
+    'But yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God,',
     'For sin shall not have dominion over you: for ye are not under law, but under grace.'
   ]),
   HymnData(20, 'Christian Patriotism', [
     'Blessed is the nation whose God is the Lord; and the people whom he hath chosen for his own inheritance.',
-    'Righteousness exalted a nation: but sin in a reproach to any people.',
-    'Let every soul be subject unto the higher powers. For there is no power of God: the powers that be are ordained of God.',
-    'Whosoever therefore resisteth the higher power, resisiteth the ordained of God: and they that resist shall receive to themselves deamination.',
-    'For rulers is not a terror to good work, but to the evil. Will thou than not be afraid; for he is the minister of God, a revenger to execute wrath upon him that doeth evil.',
-    'Wherefore ye must need be subject, not for wrath, but also for conscience sake.',
-    'Submit yourselves to every to every ordnance of man for the Lord sake:',
-    'Whether it be to the king, as supreme; or unto governors, as unto them that are sent by him for the praise by him for the punishment of evildoers and for the praise of them that do well.',
+    'Righteousness exalteth a nation: but sin in a reproach to any people.',
+    'Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God.',
+    'Whosoever therefore resisteth the power, resisiteth the ordinance of God: and they that resist shall receive to themselves deamination.',
+    'For rulers are not a terror to good works, but to the evil. Wilt thou then not be afraid of the power?
+    'Do that which is good, and thou shalt have praise of the same: for he is the minister of God to thee for good.', 
+    'But if thou do that which is evil, be afriad; for he beareth not the sword in vain; for he is the minister of God, a revenger to execute wrath upon him that doeth evil.',
+    'Wherefore ye must need be subject, not only for wrath, but also for conscience sake.',
+    'Submit yourselves to every ordnance of man for the Lord\'s sake:',
+    'Whether it be to the king, as supreme; or unto governors, as unto them that are sent by him for the punishment of evildoers and for the praise of them that do well.',
     'Honor all men. Love the brotherhood. Fear God. Honor the king.',
-    'Render therefore unto Caesar the things which are Caesars and unto God things that are Gods'
+    'Render therefore unto Caesar the things which are Caesar\'s and unto God things that are Gods'
   ]),
   HymnData(21, 'Ideal Church Leaders', [
     'He gave some. Apostle; and some prophets; and some evangelist; and some pastors and teachers;',
