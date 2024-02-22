@@ -1174,16 +1174,17 @@ List<HymnData> responsive = [
   ]),
   HymnData(90, 'The Christian Home', [
     'Hear, O Israel: the Lord our God is one Lord.',
-    'And thou shalt love the Lord thy God with all thine heart, and with all thy soul, and with all tjy night.',
-    'And these words. Which I command thee this day, shall be in thine sittest in thine house.',
-    'Children, obey your parent in the Lord, for this right.',
+    'And thou shalt love the Lord thy God with all thine heart, and with all thy soul, and with all thy might.',
+    'And these words, which I command thee this day, shall be in thine heart.',
+    'And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house.',
+    'Children, obey your parent in the Lord, for this is right.',
     'Honour thy father and mother: which is the first commandment with Promise',
-    'And ye father, provoke not your children to wrath but bring them up in the nurture and admonition of the Lord.',
-    'Put on there, as the elect of God Kindness, humbles of mind meekness longsuffering.',
+    'And ye fathers, provoke not your children to wrath but bring them up in the nurture and admonition of the Lord.',
+    'Put on therefore, as the elect of God, Kindness, humblenes of mind, meekness, longsuffering.',
     'Forbearing one another, and forging one another.',
-    'And above all these things put on love, which is bond of preferences.',
+    'And above all these things put on love, which is bond of prefectness.',
     'And let the peace of god rule in your heart and be ye thankful.',
-    'And whatsoever ye do in word for deed, do all in the name of Lord Jesus giving thanks to God and the father by him.'
+    'And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the father by him.'
   ]),
   HymnData(91, 'Repentance for Sin', [
     'Seek ye Lord while he may be found, call ye upon him while he is near;',
