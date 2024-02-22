@@ -956,28 +956,82 @@ List<HymnData> responsive = [
   HymnData(73, 'Call to Consecration', [
     'If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God.',
     'Set your affection on things above, not on things on the earth.',
+    'For ye are dead, and your life is hid with Christ in God.',
     'When Christ, who is our life, shall appear, then shall ye also appear with him glory.',
-    'Wherefore grid up the loins of your mind, be sober, and hope to end for the grace that is to be brought unto you at the revelation of Jesus Christ;',
+    'Wherefore grid up the loins of your mind, be sober, and hope to the end for the grace that is to be brought unto you at the revelation of Jesus Christ;',
     'As obedient children, not fashioning yourselves according to the former lusts in your ignorance.',
-    'But as he which hath called you is holy, so ye holy in all manner of conversation;',
+    'But as he which hath called you is holy, so be ye holy in all manner of conversation;',
     'Because it is written, be ye holy; for am holy.',
     'For the love of Christ constraineth us; because we thus judge, that if one died for all, then were all dead:',
-    'And that he died for all, that they which live should which died for them, and rose again.',
+    'And that he died for all, that they which live should not henceforth live unto themselves, but unto him which died for them, and rose again.',
     'I am crucified with Christ; nevertheless I live; yet not I. but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the son of God who loved me, and gave himself for me.',
     'God forbid that I should glory, save in the cross of our Lord Jesus Christ. By whom the world is crucified unto me, and I unto world.'
   ]),
-  HymnData(74, 'Our Commission', [
+  HymnData(74, 'Our Great Commission', [
     'Then the eleven disciples went away into Galilee, into a mountain were Jesus had appointed them.',
-    'And when they saw him, they worshipped: but some doubted.',
-    'And Jesus came and spake unto them saying. All power is given unto ne in heaven and earth.',
+    'And when they saw him, they worshipped him: but some doubted.',
+    'And Jesus came and spake unto them saying, All power is given unto me in heaven and in earth.',
     'Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Spirit:',
-    'Teaching them observes all things whatsoever I have commanded you: and lo, I am you always, even unto the end of the world.',
+    'Teaching them to observe all things whatsoever I have commanded you: and lo, I am with you always, even unto the end of the world.',
+    'And Jesus said unto them, Thus it is written, and thus it behooved Christ to suffer, and to rise from the dead the third day;',
     'And that repentance and remission of sins should be preached in his name among all nations.',
-    'And ye witnesses these things.',
-    'Ye shall receive power, after that the Holy Spirit is come upon you: and ye shall be witnesses unto me both in Jerusalem and, and in all Judaea, and in Samaria, and unto the uttermost part of the earth.'
-  ]),
+    'And ye are witnesses of these things.',
+    'Ye shall receive power, after that the Holy Spirit is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth.',
+    'Now then we are anbassadors for Christ, as though God did beseech you by us; we pray you in Christ\'s stead, be ye reconciled to God.'
+    ]),
+  HymnData(75, 'The Croos of Christ', [
+    'Surely he hath borne our griefs, and carried our sorrows; yet we did esteem him stricken, smitten of God, and afflicted.',
+    'But he was wounded for our transgressions, he was bruised for our iniquities; the chaistisement of our peace was upon him; and with his stripes we are healed.',
+    'All we like sheep have gone astray; we have turned every one to his own way; and the Lord hath laid on him the iniquity of us all.',
+    'For when we were yet without strenght, in due time Christ died for the ungodly.',
+    'God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.',
+    'For he hat made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.',
+    'Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, but with the precious blood of Christ, as of a lamb without blemish and without spot.',
+    'The preaching of the cross is to them that perish foolishness, but unto us which are saved it is the power of God.',
+    'We preach Christ crucified, unto the Jews a stumblingblock, and unto the Greeks foolishness;',
+    'But unto them which are called, both Jews and Greeks, Christ the power of God, and the wisdom of God.'
+    ]),
+ HymnData(76, 'Heaven', [
+   'Let not your heart be troubled; ye believe in God, believe also in me.',
+   'In my Father\'s house are many mansions; if it were not so, I would have told you. I go to prepare a place for you.',
+   'And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.',
+   'And I John saw a new heaven and a new earth; for the first heaven and the firsst earth were passed away; and there was no more sea.',
+   'And I saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband.',
+   'And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and they shall be his people,',
+   'And God himself shall be with them, and be their God.',
+   'Ang God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain; for the former things are passed away.',
+   'And there shall in no wise enter any thing that defileth, neither whatsoever worketh abomination, or maketh a lie; but they which are written in the Lamb\'s book of life.',
+   'And there shall be no night there; and they need no candle, neither light of the sun; for the Lord God giveth them light; and they shall reign for ever and ever.'
+   ]),
+  HymnData(77, 'The Lord\'s Day', [
+   'Remember the sabbath day, to keep it holy.',
+   'Six days shall thou labour, and do all thy work;',
+   'But the seventh day is the sabbath of the Lord thy God; in it thou shalt not do any work.',
+   'For in six days the Lord made heaven and earth, the sea, and all that in them is, and rested the seventh day; wherefore the Lord blessed the sabbath day, and hallowed it.
+   'And Jesus said unto them. the sabbath was made for man, and not man for the sabbath;',
+   'Therefore the Son of man is Lord also of the sabbath.',
+   'And when the sabbath was past, very early in the morning the first day of the week, the women came unto the sepulchre at the rising of the sun.',
+   'And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted.',
+   'And he saith unto them, Be not affrighted; Ye seek Jesus of Nasareth, which was crucified; he is risen; he is not here; behold the place where they laid him.',
+   'Then the same day at evening, being the first day of the week, when the doors were shut where the disciples were assembled for fear of the Jews, came Jesus and stood in the midst, and saith unto them. Peace be unto you.',
+   'Unto him that loved us, and washed us from our sins in his own blood,',
+   'And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever.',
+   'Amen.'
+   ]),
+  HymnData(78, 'Christian Hope', [
+   'The Lord is my portion, saith my soul; therefore will I hope in him.',
+   'It is good that a man should both hope and quitely wait for the salvation of the Lord.',
+   'For we are saved by hope; but hope that is seen is not hope; for what a man seeth, why doth he yet hope for?',
+   'But if we hope for that we see not, then do we with patience wait for it.',
+   'Which hope we have as an anchor of the soul, both sure and stedfast, and which entereth into that within the veil;',
+   'And every man that hath this hope in him purifieth himself, even as he is pure.',
+   'Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead,'.
+   'To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,',
+   'Who are kept by the power of God through faith unto salvation ready to be revealed in the last time.',
+   'Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Spirit.'
+   ]),
   HymnData(79, 'Christian Influence', [
-    'Ye are the salt of the salt of the earth: but if the salt have savour, where with it be salted?',
+    'Ye are the salt of the earth: but if the salt have lost his savour, where with it be salted?',
     'It is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men.',
     'Ye are light of the world. A city that is set on an hill cannot be hid.',
     'Neither do man light a candle, and put it under a bushel: but on a candlestick; and it giveth light unto all that are in the house.',
