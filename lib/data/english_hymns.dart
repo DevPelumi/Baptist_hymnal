@@ -1,26 +1,20 @@
 import 'package:baptist_hymnal/models/hymn_data.dart';
 List<HymnData> englishHymnData = [
 HymnData(1, 'Holy, Holy, Holy', ['''
-1. Holy, holy, holy!
-Lord God Almighty!
-Early in the morning our song
-Shall rise to Thee;
+1. Holy, holy, holy! Lord God Almighty!
+Early in the morning our song Shall rise to Thee;
 Holy, holy, holy’ merciful and mighty!
 God in three Persons, blessed Trinity!
 ''',
 '''
-2. Holy, holy, holy!
-All the saints adore Thee,
-Casting down their golden
-Crowns around the glassy sea;
-Cherubim and Seraphim, falling
-Down before Thee
+2. Holy, holy, holy! All the saints adore Thee,
+Casting down their golden Crowns around the glassy sea;
+Cherubim and Seraphim, falling down before Thee
 Who wert, and art, and evermore shalt be.
 ''',
 '''
 3. Holy, holy, holy! tho the darkness hide Thee;
-tho’ the eye of sinful man
-Thy glory may not see;
+Tho’ the eye of sinful man Thy glory may not see;
 Only Thou art holy, there is none beside Thee;
 Perfect in power, in love and purity.
 ''',
@@ -28,8 +22,7 @@ Perfect in power, in love and purity.
 4. Holy, holy, holy! Lord God Almighty!
 All Thy works shall praise Thy name, in earth, and sky and sea;
 Holy, holy, holy; merciful and mighty!
-God in three persons, blessed
-Trinity! Amen.
+God in three persons, blessed Trinity! Amen.
 ''']),
 HymnData(2, 'Love Divine, All Loves Excelling', ['''
 1. Love divine, all loves excelling,
@@ -56,9 +49,8 @@ Set our hearts at liberty.
 Let us all Thy grace receive;
 Suddenly return, and never,
 Never more Thy temples leave.
-Thee we would be always
-Blessing,
-Serve Thee as Thy host above
+Thee we would be always Blessing,
+Serve Thee as Thy host above,
 Pray and praise Thee without ceasing,
 Glory in Thy perfect love.
 ''',
@@ -69,8 +61,7 @@ Let us see Thy great salvation
 Perfectly restored in Thee:
 Changed from glory into glory
 Till in heaven we take our place,
-Till we cast our crowns before
-Thee,
+Till we cast our crowns before Thee,
 Lost in wonder, Love and praise
 ''']),
 HymnData(3, 'All Creatures of Our God and King', ['''
@@ -93,7 +84,7 @@ Alleluia! Alleluia! Alleluia!
 ''',
 '''
 3. Dear mother earth, who day by day
-Unfoldest blessings our way,
+Unfoldest blessings on our way,
 O praise Him! Alleluia!
 The flowers and fruits that in thee grow,
 Let them His glory also show!
@@ -101,7 +92,8 @@ O Praise Him, O praise Him!
 Alleluia! Alleluia! Alleluia!
 ''',
 '''
-4. Let all things their Creator bless, And worship Him in humbleness,
+4. Let all things their Creator bless, 
+And worship Him in humbleness,
 O praise Him! Alleluia!
 Praise, praise the Father, praise the Son,
 And praise the Spirit, Three in One!
@@ -122,11 +114,14 @@ Be Thy just and endless praise
 Grand beyond a seraph’s thought;
 For the wonders of creation;
 Works with skill and kindness wrought;
-For Thy providence that governs Thro’ Thine empire’s wide domain,
-Wings hand angel, guides a sparrow, Blessed be Thy gentle reign.
+For Thy providence that governs Thro’ 
+Thine empire’s wide domain,
+Wings hand angel, guides a sparrow, 
+Blessed be Thy gentle reign.
 ''',
 '''
-3. But Thy rich, Thy free redemption, Bight, tho’veiled in darkness long;
+3. But Thy rich, Thy free redemption, 
+Bight, tho’veiled in darkness long;
 Thought is poor, and poor expression;
 Who can sing that wondrous song?
 Brightness of the Father’s glory,
@@ -142,7 +137,7 @@ Flow my praise, forever flow.
 Re-ascend immortal Saviour,
 Leave Thy foot-stool, take Thy throne:
 Thence return and reign forever:
-Be the kingdom all thine own!
+Be the kingdom all Thine own!
 ''']),
 HymnData(5, 'God, Our Father, We Adore Thee', ['''
 1. God, our Father, we adore Thee!
@@ -179,6 +174,8 @@ For the riches we inherit,
 Heart and voice to Thee we raise!
 We adore Thee! We adore Thee!
 Thee we bless thro’ endless days!
+We adore Thee! We adore Thee!
+Thee we bless thro’ endless days!
 ''']),
 HymnData(6, 'Praise to the Lord, the Almighty', ['''
 1. Praise to the Lord, the Almighty, the King of Creation!
@@ -187,14 +184,15 @@ All ye who hear, Now to His temple draw near;
 Join me in glad adoration!
 ''',
 '''
-2. Praise to the Lord, who o’er all things so wondrously reigneth, Shelters thee under His wings,
-Yea, so gently sustaineth!
-Hast thou not seen How thy desires e’er have been Granted in what He ordaineth?
+2. Praise to the Lord, who o’er all things so wondrously reigneth, 
+Shelters thee under His wings, Yea, so gently sustaineth!
+Hast thou not seen How thy desires e’er have been 
+Granted in what He ordaineth?
 ''',
 '''
 3. Praise to the Lord, who doth prosper thy work and defend thee;
 Surely His goodness and mercy here daily attend Thee.
-Ponder anew that the Almighty can do
+Ponder anew What the Almighty can do
 If with His love, He befriend Thee.
 ''',
 '''
@@ -214,7 +212,8 @@ His saving grace proclaim.
 ''',
 '''
 2. He framed the globe; He built the sky;
-He made the shining worlds on high And reigns in Glory there;
+He made the shining worlds on high 
+And reigns in Glory there;
 His beams are majesty and light;
 His beauties, how divinely bright!
 His dwelling place, how fair!
@@ -252,7 +251,8 @@ Who doeth all things well.
 HymnData(9, 'Praise the Lord! Ye Heavens, Adore Him', ['''
 1. Praise the Lord! Ye heavens, adore Him;
 Praise Him, angels, in the height;
-Sun and moon, rejoice before Him; Praise Him, all the stars of light.
+Sun and moon, rejoice before Him; 
+Praise Him, all the stars of light.
 Praise the Lord! For He hath spoken;
 Worlds His mighty voice obeyed;
 Law which never shall be broken
@@ -307,8 +307,7 @@ We bless Thy Holy name, glad praises we sing.
 '''
 2. We worship Thee, God of our fathers, we bless Thee;
 Thro’ life’s storm and tempest our Guide hast Thou been.
-When perils o’er take us, escape
-Thou wilt make us,
+When perils o’er take us, escape Thou wilt make us,
 And with Thy help O Lord, our battles we win.
 ''',
 '''
@@ -334,7 +333,8 @@ Spirit of holiness, On us descend.
 ''',
 '''
 3. Come, Holy Comforter,
-Thy sacred witness bear, In this glad hour! Thou, whole almighty art,
+Thy sacred witness bear, 
+In this glad hour! Thou, who almighty art,
 Now rule in every heart,
 And ne’er from us depart, Spirit of pow’r.
 ''',
@@ -350,15 +350,16 @@ HymnData(13, 'All People That on Earth Do Dwell', ['''
 Sing to the Lord with cheerful voice;
 Him serve with fear, His praise forthtell;
 Come ye before Him and rejoice.
-Praise God, from whom all blessings flow:
-Praise Him, all creatures here below;
-Praise Him above, ye heavenly host;
-Praise Father, Son and Holy Ghost.
+  Praise God, from whom all blessings flow:
+  Praise Him, all creatures here below;
+  Praise Him above, ye heavenly host;
+  Praise Father, Son and Holy Ghost.
 ''',
 '''
 2. The Lord ye known, is God indeed,
-Without our aid he did us make; We are His flock, He doth us feed
-And for His sheep he both us take.
+Without our aid He did us make; 
+We are His flock, He doth us feed
+And for His sheep he doth us take.
 ''',
 '''
 3. Oh, enter then His gates with praise,
@@ -367,9 +368,10 @@ Praise, laud, and bless His name always,
 For it is seemly so to do.
 ''',
 '''
-4. For why? the Lord our God is good, His mercy is forever sure:
+4. For why? the Lord our God is good, 
+His mercy is forever sure:
 His truth at all times firmly stood,
-And truth shall from age to age endure. Amen.
+And shall from age to age endure. Amen.
 ''']),
 HymnData(14, 'Praise to God Immortal Praise', ['''
 1. Praise to God, immortal praise,
@@ -380,12 +382,28 @@ All to Thee, our God, we owe,
 Source whence all our blessings flow.
 ''',
 '''
-2. All plenty summer pours;
+2. All the plenty summer pours;
 Autumn’s rich o’er flowing stores;
 Flocks that whiten all the pain;
 Yellow sheaves of ripened grain;
 Lord for these our souls shall raise
 Grateful vows and solemn praise.
+''',
+'''
+3. Peace, prosperity and health,
+Private bliss, and public wealth,
+Knowledge with its gladd'ning streams,
+Pure religion's holier beams;
+Lord, for these our souls shall raise
+Grateful vows and solemn praise.
+''',
+'''
+4. As Thy prosp'ring hand hath blest,
+May we give Thee of our best:
+And by deeds of kindly love
+For Thy mercies grateful prov;
+Singing thus thro' all our days,
+Praise to God, immortal praise.                                               
 ''']),
 HymnData(15, 'Sun of My Soul, Thou Savior Dear', ['''
 1. Sun of my soul, Thou Saviour
@@ -402,7 +420,7 @@ For without Thee I dare not die.
 ''',
 '''
 3. If some poor wandr’ing child of Thine.
-Have spurn’s today the voice divine,
+Have spurn’d today the voice divine,
 Now, Lord the gracious work begin;
 Let him no more lie down in sin.
 ''',
