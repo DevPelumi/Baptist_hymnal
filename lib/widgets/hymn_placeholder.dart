@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HymnPlaceholder extends StatelessWidget {
-  final String title;
+  final String? title;
   const HymnPlaceholder({
-    Key key,
+    super.key,
     this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class HymnPlaceholder extends StatelessWidget {
           ),
           SizedBox(height: 40),
           Text(
-            title == null ? 'Add hymn to favorite' : title,
+            title ?? 'Add hymn to favorite',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Alata',

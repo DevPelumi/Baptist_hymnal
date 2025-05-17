@@ -2,7 +2,10 @@ class Settings {
   Language language;
   int textSize;
   bool darkMode;
-  Settings({this.language, this.darkMode, this.textSize});
+  Settings(
+      {this.language = defaultLanguage,
+      this.darkMode = false,
+      this.textSize = defaulTextSize});
 
   static const Language defaultLanguage = Language.English;
   static const int defaulTextSize = 20;

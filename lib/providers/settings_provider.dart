@@ -4,8 +4,8 @@ import '../models/settings.dart';
 import '../repositories/settings_repository.dart';
 
 class SettingsProvider extends ChangeNotifier {
-  Settings _settings;
-  SettingsRepository _repo;
+  late Settings _settings;
+  late SettingsRepository _repo;
   SettingsProvider() {
     _repo = SettingsRepository();
     fetchSettings();

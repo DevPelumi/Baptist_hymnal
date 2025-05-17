@@ -5,20 +5,17 @@ import '../repositories/hymn_repository.dart';
 
 abstract class IHymnProvider extends ChangeNotifier {
   final HymnRepository repo;
-  
+  final Set<int> _favorites = {};
+
   /// set of provider keys
-  Set<int> _favorites;
-  
-  /// To be overriden, stores pointer to the datasource for this
-  /// provider
   List<HymnData> get dataSource;
 
-  /// IHymnProvider abstract class must be initialised 
-  /// with a HymnRepository instance 
-  /// that will communicate with the local storage 
+  /// IHymnProvider abstract class must be initialised
+  /// with a HymnRepository instance
+  /// that will communicate with the local storage
   /// to fetch and update user's favorites
   IHymnProvider(this.repo) {
-    if (this._favorites == null) fetchFavorites();
+    fetchFavorites();
   }
 
   /// returns true if item is in the English hymn and was liked
@@ -40,7 +37,6 @@ abstract class IHymnProvider extends ChangeNotifier {
   /// Function that fetches all hymns
   /// from the local storage/ persistence solution
   Future<void> fetchFavorites() async {
-    _favorites = {};
     List<int> result = await repo.fetchFavoriteHymns();
     if (result != null) {
       _favorites.addAll(result);

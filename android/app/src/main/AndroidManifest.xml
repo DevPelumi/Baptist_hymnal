@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="website.creativdesign.baptist_hymnal">
    <application
-        android:label="baptist_hymnal"
+        android:label="Baptist Hymnal"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../data/responsive_reading.dart';
 import '../providers/responsive_reading_provider.dart';
-import '../widgets/hymn_tile.dart';
+import '../widgets/hymn_list_item.dart';
 import 'search_screen.dart';
 
 class ResponsiveReading extends StatelessWidget {
@@ -61,8 +61,10 @@ class ResponsiveReading extends StatelessWidget {
       Consumer<ResponsiveReadingProvider>(
         builder: (ctx, provider, child) => SliverList(
           delegate: SliverChildBuilderDelegate(
-            (context, int i) =>
-                HymnTile<ResponsiveReadingProvider>(responsive[i], provider),
+            (context, int i) => HymnListItem(
+              hymn: responsive[i],
+              provider: provider,
+            ),
             childCount: responsive.length,
           ),
         ),

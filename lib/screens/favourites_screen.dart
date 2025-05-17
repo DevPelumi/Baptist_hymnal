@@ -24,6 +24,8 @@ class Favourites extends StatelessWidget {
           backgroundColor: Colors.pink.shade300,
           bottom: TabBar(
             indicatorColor: Colors.white,
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.white70,
             labelStyle: TextStyle(fontFamily: 'Alata'),
             tabs: [
               Tab(text: 'English Hymns'),

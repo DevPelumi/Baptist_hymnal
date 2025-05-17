@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569646419419",
+    "project_id": "baptist-hymnal-6a3a7",
+    "storage_bucket": "baptist-hymnal-6a3a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569646419419:android:1c79eb18b1c9abcbd62bfe",
+        "android_client_info": {
+          "package_name": "website.creativdesign.baptist_hymnal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf86YvrvLQLwYJxcC53n7bheOX45kmwT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
