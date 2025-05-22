@@ -71,7 +71,7 @@ Lost in wonder, Love and praise
   ]),
   HymnData(3, 'All Creatures of Our God and King', [
     '''
-1. All creature or our God and King,
+1. All creature of our God and King,
 Lift up your voice and with us sing
 Alleluia! Alleluia!
 Thou burning sun with golden beam,
@@ -124,7 +124,7 @@ For the wonders of creation;
 Works with skill and kindness wrought;
 For Thy providence that governs Thro’ 
 Thine empire’s wide domain,
-Wings hand angel, guides a sparrow, 
+Wings an angel, guides a sparrow, 
 Blessed be Thy gentle reign.
 ''',
     '''
@@ -429,7 +429,7 @@ Grateful vows and solemn praise.
 4. As Thy prosp'ring hand hath blest,
 May we give Thee of our best:
 And by deeds of kindly love
-For Thy mercies grateful prov;
+For Thy mercies grateful prove;
 Singing thus thro' all our days,
 Praise to God, immortal praise.                                               
 '''
@@ -531,15 +531,18 @@ Alleluia! Alleluia!!
 Praise the everlasting King.
 ''',
     '''
-2. Praise Him for His grace and favourTo our fathers in distress;
+2. Praise Him for His grace and favour
+To our fathers in distress;
 Praise Him, still the same as ever,
 Slow to chide, and swift to bless,
 Alleluia! Alleluia!
-Glorious in Hisfaithfulness
+Glorious in His faithfulness
 ''',
     '''
-3. Father-like, He tends and spares us; well our feeble frame he knows;
-In His hands He gently bears us, Rescues us from all our foes;
+3. Father-like, He tends and spares us; 
+well our feeble frame he knows;
+In His hands He gently bears us, 
+Rescues us from all our foes;
 Alleluia! Alleluia!
 Widely yet His mercy flows
 ''',
@@ -562,11 +565,12 @@ And all His boundless love proclaim.
     '''
 2. See where it shines in Jesus’ face,
 The brightest image of His grace.
-God, in the person of His Son Has all His mightiest works out done.
+God, in the person of His Son 
+Has all His mightiest works out done.
 ''',
     '''
 3. Grace! ‘tis sweet, a charming theme;
-My tho ‘ts rejoice at Jesus’ name,
+My tho‘ts rejoice at Jesus’ name,
 Ye angels, dwell upon the sound,
 Ye heav’ns reflect it to the ground
 ''',
@@ -579,15 +583,13 @@ His beauties there may I behold, And sing His name to harps of gold .Amen
     '''
 1. O worship the King, all glorious above,
 And gratefully sing His wonderful love;
-Our shield and defender, the
-Ancient of days
-Pavilioned in splendor and girded with praise.
+Our shield and defender, the Ancient of Days
+Pavilioned in splendor, and girded with praise.
 ''',
     '''
 2. O tell of His might, O sing of His grace,
 Whose robe is the light, whose canopy space!
-His chariots of wrath the deep
-thunder clouds form,
+His chariots of wrath the deep thunder clouds form,
 And dark is His path on the wings of the storm.
 ''',
     '''
