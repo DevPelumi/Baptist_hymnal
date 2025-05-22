@@ -12,7 +12,7 @@ description: Hymns for the Baptish Church.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.0.0
+version: 2.0.4+4
 
 environment:
   sdk: ">=3.4.1 <4.0.0"
@@ -27,15 +27,16 @@ dependencies:
   anim_search_bar: ^2.0.2
   google_nav_bar: ^5.0.5
   line_icons: ^2.0.1
-  path_provider: ^2.0.11
+  path_provider: ^2.1.5
   provider: ^5.0.0
   settings_ui: ^2.0.2
   share_plus: ^7.2.2
-  shared_preferences: ^2.0.6
+  shared_preferences: ^2.5.3
   equatable: ^2.0.3
   flutter_native_splash: ^2.3.10
   firebase_core: ^3.13.0
   firebase_analytics: ^11.4.5
+  draggable_scrollbar: ^0.1.0
 
 dev_dependencies:
   flutter_test:
@@ -54,8 +55,16 @@ flutter:
     - assets/images/hymnal1.jpg
     - assets/images/hymnal2.jpg
     - assets/images/hymnal3.jpg
+    - assets/images/splash_logo.png
 
   fonts:
     - family: Alata
       fonts:
         - asset: assets/fonts/Alata-Regular.ttf
+
+flutter_native_splash:
+  color: "#4CAF50" # Placeholder: Replace with your desired color
+  image: assets/images/splash_logo.png # Placeholder: Uncomment and replace if you have an image
+  android_12:
+    color: "#4CAF50" # Placeholder: Replace with your desired color
+    # image: assets/images/splash_logo.png # Placeholder: Uncomment and replace if you have an image

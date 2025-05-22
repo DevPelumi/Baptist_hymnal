@@ -1,0 +1,1 @@
+/Users/lumi/Dev/Mobile/Baptist_hymnal/build/app/intermediates/cxx/RelWithDebInfo/356p6768/obj/x86_64

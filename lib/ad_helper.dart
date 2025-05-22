@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'dart:io' show Platform;
 
 class AdHelper {
+  static bool adsEnabled = true;
   static BannerAd? myBanner;
   static InterstitialAd? _interstitialAd;
   static int _hymnViewCount = 0;
@@ -27,7 +28,16 @@ class AdHelper {
     }
   }
 
+  static void toggleAds(bool enabled) {
+    adsEnabled = enabled;
+    if (!enabled) {
+      disposeBannerAd();
+      disposeInterstitialAd();
+    }
+  }
+
   static void loadBannerAd() {
+    if (!adsEnabled) return;
     myBanner = BannerAd(
       adUnitId: bannerAdUnitId,
       size: AdSize.banner,
@@ -48,9 +58,11 @@ class AdHelper {
 
   static void disposeBannerAd() {
     myBanner?.dispose();
+    myBanner = null;
   }
 
   static void loadInterstitialAd() {
+    if (!adsEnabled) return;
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
       request: const AdRequest(),
@@ -67,6 +79,7 @@ class AdHelper {
   }
 
   static void incrementHymnViewCount() {
+    if (!adsEnabled) return;
     _hymnViewCount++;
     if (_hymnViewCount >= 2) {
       _hymnViewCount = 0;
@@ -75,14 +88,14 @@ class AdHelper {
   }
 
   static void showInterstitialAd() {
-    if (_interstitialAd != null) {
-      _interstitialAd!.show();
-      _interstitialAd = null;
-      loadInterstitialAd(); // Load the next ad
-    }
+    if (!adsEnabled || _interstitialAd == null) return;
+    _interstitialAd!.show();
+    _interstitialAd = null;
+    loadInterstitialAd();
   }
 
   static void disposeInterstitialAd() {
     _interstitialAd?.dispose();
+    _interstitialAd = null;
   }
 }

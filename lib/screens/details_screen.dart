@@ -1,4 +1,6 @@
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
+import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
+import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -8,8 +10,8 @@ import '../models/hymn_data.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
-const textStyle = TextStyle(
-    fontFamily: 'Alata', fontWeight: FontWeight.w600, color: Colors.black);
+const textStyle =
+    TextStyle(fontFamily: 'Alata', fontSize: 14, fontWeight: FontWeight.w600);
 
 class DetailScreen extends StatefulWidget {
   // Declare a field that holds the Todo.
@@ -28,6 +30,7 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreenState extends State<DetailScreen> {
   Widget _getContentWidget(double fontSize) {
+    final textColor = Theme.of(context).textTheme.bodyLarge?.color;
     if (widget.provider is ResponsiveReadingProvider) {
       int counter = 0;
       return Column(
@@ -37,6 +40,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     style: TextStyle(
                         fontSize: fontSize,
                         fontFamily: 'Alata',
+                        color: textColor,
                         fontStyle: counter % 2 == 0
                             ? FontStyle.normal
                             : FontStyle.italic,
@@ -52,8 +56,20 @@ class _DetailScreenState extends State<DetailScreen> {
         style: TextStyle(
           fontSize: fontSize,
           fontFamily: 'Alata',
+          color: textColor,
         ),
       );
+  }
+
+  String _getHymnCategory() {
+    if (widget.provider is EnglishHymnProvider) {
+      return "English Hymn";
+    } else if (widget.provider is YorubaHymnProvider) {
+      return "Yoruba Hymn";
+    } else if (widget.provider is ResponsiveReadingProvider) {
+      return "Responsive Reading";
+    }
+    return ""; // Default or unknown category
   }
 
   void _navigateToHymn(HymnData hymn) {
@@ -115,7 +131,7 @@ class _DetailScreenState extends State<DetailScreen> {
         return true;
       },
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         floatingActionButton: FloatingActionButton(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
@@ -149,14 +165,31 @@ class _DetailScreenState extends State<DetailScreen> {
             },
           ),
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Flexible(
+                child: Text(
+                  _getHymnCategory(),
+                  style: const TextStyle(
+                    fontFamily: 'Alata',
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              const SizedBox(width: 8),
               CircleAvatar(
-                radius: 18,
+                radius: 14,
                 backgroundColor: Colors.white,
                 child: Text(
                   widget.hymn.id.toString(),
-                  style: textStyle,
+                  style: textStyle.copyWith(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.black
+                        : Colors.black,
+                  ),
                 ),
               ),
             ],
@@ -181,8 +214,10 @@ class _DetailScreenState extends State<DetailScreen> {
               },
             ),
             IconButton(
-              onPressed: () =>
-                  widget.provider.toggleFavoriteForHymn(widget.hymn.id),
+              onPressed: () {
+                widget.provider.toggleFavoriteForHymn(widget.hymn.id);
+                setState(() {});
+              },
               icon: Center(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
@@ -210,10 +245,11 @@ class _DetailScreenState extends State<DetailScreen> {
                         child: Text(
                       widget.hymn.title,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'Alata',
+                        color: Theme.of(context).textTheme.bodyLarge?.color,
                       ),
                     )),
                   ),

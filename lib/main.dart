@@ -13,11 +13,12 @@ import 'package:line_icons/line_icons.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'utils/analytics_tracker.dart';
 import 'firebase_options.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Initialize Firebase
   await Firebase.initializeApp(
@@ -29,7 +30,6 @@ void main() async {
       debugPrint('Adapter status for $key: ${value.description}');
     });
   });
-
   runApp(const MyApp());
 }
 
@@ -57,19 +57,47 @@ class MyApp extends StatelessWidget {
           lazy: true,
         ),
       ],
-      child: MaterialApp(
-        title: 'Baptist Hymn',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
-        darkTheme: ThemeData(
-          brightness: Brightness.dark,
-        ),
-        themeMode: ThemeMode.system,
-        navigatorObservers: [
-          FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
-        ],
-        home: const FirstScreen(),
+      child: Consumer<SettingsProvider>(
+        builder: (context, settingsProvider, _) {
+          return MaterialApp(
+            title: 'Baptist Hymn',
+            theme: ThemeData(
+              primarySwatch: Colors.green,
+              brightness: Brightness.light,
+              textTheme: TextTheme(
+                bodyLarge: TextStyle(color: Colors.black87),
+                bodyMedium: TextStyle(color: Colors.black87),
+                titleLarge: TextStyle(color: Colors.black87),
+                titleMedium: TextStyle(color: Colors.black87),
+              ),
+              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                backgroundColor: Colors.white,
+              ),
+            ),
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              primarySwatch: Colors.green,
+              textTheme: TextTheme(
+                bodyLarge: TextStyle(color: Colors.white),
+                bodyMedium: TextStyle(color: Colors.white),
+                titleLarge: TextStyle(color: Colors.white),
+                titleMedium: TextStyle(color: Colors.white),
+              ),
+              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                backgroundColor: Color(0xFF1A1A1A),
+              ),
+            ),
+            themeMode: settingsProvider.isDarkMode(
+                    MediaQuery.of(context).platformBrightness ==
+                        Brightness.dark)
+                ? ThemeMode.dark
+                : ThemeMode.light,
+            navigatorObservers: [
+              FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+            ],
+            home: const FirstScreen(),
+          );
+        },
       ),
     );
   }
@@ -88,14 +116,17 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   void initState() {
     super.initState();
-    _initializationFuture = _initializeProviders();
+    _initializationFuture = _initializeAppAndProviders();
   }
 
-  Future<void> _initializeProviders() async {
-    final settingsProvider = context.read<SettingsProvider>();
-    final englishHymn = context.read<EnglishHymnProvider>();
-    final responsive = context.read<ResponsiveReadingProvider>();
-    final yorubaHymn = context.read<YorubaHymnProvider>();
+  Future<void> _initializeAppAndProviders() async {
+    final settingsProvider =
+        Provider.of<SettingsProvider>(context, listen: false);
+    final englishHymn =
+        Provider.of<EnglishHymnProvider>(context, listen: false);
+    final responsive =
+        Provider.of<ResponsiveReadingProvider>(context, listen: false);
+    final yorubaHymn = Provider.of<YorubaHymnProvider>(context, listen: false);
 
     await Future.wait([
       settingsProvider.fetchSettings(),
@@ -103,64 +134,29 @@ class _FirstScreenState extends State<FirstScreen> {
       responsive.fetchFavorites(),
       yorubaHymn.fetchFavorites(),
     ]);
+
+    FlutterNativeSplash.remove();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Baptist Hymn',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
-      themeMode: ThemeMode.system,
-      home: FutureBuilder(
-        future: _initializationFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            return const MyHomePage();
+    return FutureBuilder(
+      future: _initializationFuture,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            print("Error during initialization: ${snapshot.error}");
+            print("Stack trace: ${snapshot.stackTrace}");
+            return Scaffold(
+              body: Center(
+                child: Text('Error initializing app. Please restart.'),
+              ),
+            );
           }
-          return const SplashScreen();
-        },
-      ),
-    );
-  }
-}
-
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF4CAF50),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Baptist Hymnal',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Alata',
-              ),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'Hymns for Worship',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontFamily: 'Alata',
-              ),
-            ),
-          ],
-        ),
-      ),
+          return const MyHomePage();
+        }
+        return const SizedBox.shrink();
+      },
     );
   }
 }
@@ -189,12 +185,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              color: Colors.black.withOpacity(.1),
-            )
-          ],
         ),
         child: SafeArea(
           child: Padding(

@@ -1,0 +1,2 @@
+/Users/lumi/Dev/Mobile/Baptist_hymnal/android/app/.cxx/RelWithDebInfo/356p6768/x86_64/CMakeFiles/edit_cache.dir
+/Users/lumi/Dev/Mobile/Baptist_hymnal/android/app/.cxx/RelWithDebInfo/356p6768/x86_64/CMakeFiles/rebuild_cache.dir

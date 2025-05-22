@@ -86,7 +86,7 @@ class SettingsScreen extends StatelessWidget {
                   _buildInfoTile(
                     context,
                     title: 'Version',
-                    subtitle: '1.0.0',
+                    subtitle: '2.0.1',
                     icon: CupertinoIcons.info_circle_fill,
                   ),
                 ],
@@ -148,6 +148,7 @@ class SettingsScreen extends StatelessWidget {
     required bool value,
     required ValueChanged<bool> onChanged,
   }) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       decoration: BoxDecoration(
         border: Border(
@@ -162,7 +163,12 @@ class SettingsScreen extends StatelessWidget {
           icon,
           color: CupertinoColors.activeGreen.resolveFrom(context),
         ),
-        title: Text(title),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isDark ? Colors.white : Colors.black87,
+          ),
+        ),
         subtitle: Text(
           subtitle,
           style: TextStyle(
@@ -187,6 +193,7 @@ class SettingsScreen extends StatelessWidget {
     required List<int> items,
     required ValueChanged<int?> onChanged,
   }) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       decoration: BoxDecoration(
         border: Border(
@@ -201,7 +208,12 @@ class SettingsScreen extends StatelessWidget {
           icon,
           color: CupertinoColors.activeGreen.resolveFrom(context),
         ),
-        title: Text(title),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isDark ? Colors.white : Colors.black87,
+          ),
+        ),
         subtitle: Text(
           subtitle,
           style: TextStyle(
@@ -216,12 +228,16 @@ class SettingsScreen extends StatelessWidget {
               Text(
                 value.toString(),
                 style: TextStyle(
-                  color: CupertinoColors.systemGrey.resolveFrom(context),
+                  color: isDark
+                      ? Colors.white
+                      : CupertinoColors.systemGrey.resolveFrom(context),
                 ),
               ),
               Icon(
                 CupertinoIcons.chevron_right,
-                color: CupertinoColors.systemGrey.resolveFrom(context),
+                color: isDark
+                    ? Colors.white
+                    : CupertinoColors.systemGrey.resolveFrom(context),
                 size: 20,
               ),
             ],
@@ -311,6 +327,7 @@ class SettingsScreen extends StatelessWidget {
     required String subtitle,
     required IconData icon,
   }) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       decoration: BoxDecoration(
         border: Border(
@@ -325,7 +342,12 @@ class SettingsScreen extends StatelessWidget {
           icon,
           color: CupertinoColors.activeGreen.resolveFrom(context),
         ),
-        title: Text(title),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: isDark ? Colors.white : Colors.black87,
+          ),
+        ),
         subtitle: Text(
           subtitle,
           style: TextStyle(
