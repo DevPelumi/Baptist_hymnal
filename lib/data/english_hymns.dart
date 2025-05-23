@@ -625,7 +625,8 @@ And learn to know and fear the Lord,
 And learn to know and fear the Lord.
 ''',
     '''
-3. Descend, celestial Dove, With all Thy quickening powers;
+3. Descend, celestial Dove, 
+With all Thy quickening powers;
 Disclose a Saviour’s love,
 And bless the sacred hours;
 Then shall my soul new life obtain,
@@ -643,7 +644,8 @@ Day spring from on high, be near,
 Day star, in my heart appear.
 ''',
     '''
-2. Dark and cheerful is the morn Unaccompanied by Thee;
+2. Dark and cheerful is the morn 
+Unaccompanied by Thee;
 Joyless is the day’s return;
 Till Thy mercy’s beams I see;
 Till they inward light impart,
@@ -664,7 +666,8 @@ Shining to the perfect day. Amen.
 My heart awaking cries,
 May Jesus Christ be praised!
 Alike at work and prayer,
-To Jesus I repair May Christ be praised.
+To Jesus I repair,
+May Jesus Christ be praised.
 ''',
     '''
 2. Whene’er the sweet church bell
@@ -694,7 +697,7 @@ May Jesus Christ be praised. Amen
   HymnData(24, 'Awake, My Tongue, Thy Tribute Bring', [
     '''
 1. Awake, my tongue, Thy tribute bring
-To Him who gave these pow’r to sing;
+To Him who gave thee pow’r to sing;
 Praise Him who is all praise above,
 The source of wisdom and of love.
 ''',
@@ -782,8 +785,7 @@ His loving kindness changes not
 1. Saviour, again to Thy dear name we raise,
 With one accord our parting hymn of praise;
 We stand to bless Thee ere our worship cease,
-And still our hearts to wait
-Thy word of peace
+And still our hearts to wait Thy word of peace
 ''',
     '''
 2. Grant us Thy peace upon our homeward way;
@@ -811,8 +813,7 @@ Call us, O Lord, to Thine eternal peace. Amen
 Brings the night its peace profound;
 Let our vesper hymn be blending
 With the holy calm around.
-Jubilate! Jubilate! Jubilate!
-Amen!
+Jubilate! Jubilate! Jubilate! Amen!
 Let our vesper hymn be blending
 With the holy calm around.
 ''',
@@ -821,8 +822,7 @@ With the holy calm around.
 Stars of heaven shine out above,
 Telling still the ancient story;
 Their Creator’s changeless love.
-Jubilate! Jubilate! Jubilate!
-Amen!
+Jubilate! Jubilate! Jubilate! Amen!
 Telling still the ancient story;
 Their Creator’s changeless love
 ''',
@@ -831,8 +831,7 @@ Their Creator’s changeless love
 To His care who cares for all,
 Cease we fearing, cease we grieving;
 At His touch our burdens fall
-Jubilate! Jubilate! Jubilate!
-Amen!
+Jubilate! Jubilate! Jubilate! Amen!
 Cease we fearing, cease we grieving;
 At His touch our burdens fall.
 ''',
@@ -841,7 +840,7 @@ At His touch our burdens fall.
 Lo! eternal starts arise;
 Hope and faith and love rise glorious
 Shining in the spirit’s skies;
-Jubilate! Jubilate! Jubilate!Amen!
+Jubilate! Jubilate! Jubilate! Amen!
 Hope and faith and love rise glorious,
 Shining in the spirit’s skies. Amen
 '''
@@ -851,15 +850,15 @@ Shining in the spirit’s skies. Amen
 1. Day is dying in the west,
 Heav’n is touching earth with rest;
 Wait and worship while the night
-Sets her ev’ning lamps alight
-Thro’ all the sky
-Holy, holy, holy Lord God of Hosts!
-Heav’n and earth are full of Thee!
-Heav’n and earth are praising Thee,
-O Lord most high! Amen.
+Sets her ev’ning lamps alight Thro’ all the sky
+ Holy, holy, holy Lord God of Hosts!
+ Heav’n and earth are full of Thee!
+ Heav’n and earth are praising Thee,
+ O Lord most high! Amen.
 ''',
     '''
-2. Lord of life, beneath the dome of the universe, Thy home,
+2. Lord of life, beneath the dome 
+Of the universe, Thy home,
 Gather us who seek Thy face
 To the fold of Thy embrace,
 For Thou art nigh.
@@ -867,7 +866,7 @@ For Thou art nigh.
     '''
 3. While the deep’ning shadows fall,
 Heart of love, enfolding all,
-Thro’ the glory and the grace
+Thro’ the glory and the grace,
 Of the stars that veil Thy face
 Our hearts ascend.
 ''',
@@ -971,7 +970,8 @@ Free from care, from labor free,
 Lord, we would commune with Thee!
 ''',
     '''
-2. Thou, whose allpervading eye Naught escapes, without, within,
+2. Thou, whose all pervading eye 
+Naught escapes, without, within,
 Pardon each infirmity,
 Open fault, and secret sin!
 ''',
@@ -1093,7 +1093,7 @@ Thro’ the dear Redeemer’s name,
 Show Thy reconciled face,
 Take away our sin and shame;
 From our worldly cares set free,
-May we rest this dayin Thee;
+May we rest this day in Thee;
 From our worldly cares set free,
 May we rest this day in Thee.
 ''',
@@ -1126,7 +1126,8 @@ With Joy the summons we obey
 To worship at his throne
 ''',
     '''
-2. Spirit of grace, O deign to dwell within Thy church below!
+2. Spirit of grace, O deign to dwell 
+Within Thy church below!
 Make her in holiness excel,
 With pure devotion glow.
 ''',
@@ -1143,7 +1144,7 @@ With joy the summons we obey
 To worship at Thy throne. Amen
 '''
   ]),
-  HymnData(39, 'his is the Day the Lord Hath made', [
+  HymnData(39, 'This is the Day the Lord Hath made', [
     '''
 1. This is the day the Lord hath made;
 He calls the hours His own;
@@ -1221,9 +1222,11 @@ His kingdom is forever. Amen.
 So loved He the world that He gave us His Son,
 Who yielded His life an atonement for sin,
 And opened the life gate that all may go in.
-Praise the Lord, praise the Lord, let the earth hear His voice!
+Praise the Lord, praise the Lord, 
+let the earth hear His voice!
 Praise the Lord, Praise the Lord,
-Let the people rejoice! O come to the Father, thro’ Jesus the Son
+Let the people rejoice! O come to the 
+Father, thro’ Jesus the Son,
 And give him the glory, great things
 He hath done.
 ''',
@@ -1231,12 +1234,11 @@ He hath done.
 2. O perfect redemption, the purchase of blood
 To ev’ry believer the promise of God;
 The vilest offender who truly believes,
-That moment from Jesus a pardon receives
+That moment from Jesus a pardon receives.
 ''',
     '''
-3. Great things He hath taught us,
-Great things He hath done, And great our rejoicing thro’
-Jesus the Son;
+3. Great things He hath taught us, great things He hath done, 
+And great our rejoicing thro’ Jesus the Son;
 But purer, and higher, and greater will be
 Our wonder, our transport, when Jesus we see. Amen
 '''
@@ -1337,7 +1339,8 @@ With Thy Spirit recreate me,
 Make my heart a new
 ''',
     '''
-2. Like Thy springs and running waters, Make me crystal pure;
+2. Like Thy springs and running waters, 
+Make me crystal pure;
 Like Thy rocks of towering grandeur,
 Make me strong and sure.
 ''',
@@ -1421,7 +1424,8 @@ There is healing in His blood
     '''
 3. For the love of God is broader
 Than the measure of man’s mind;
-And the heart of the Eternal is most wonderfull kind.
+And the heart of the Eternal 
+Is most wonderfully kind.
 ''',
     '''
 4. If our love were but more simple
@@ -1466,14 +1470,13 @@ God is wisdom, God is love.
     '''
 2. Chance and change are busy ever,
 Man decays and ages move;
-But His mercy warneth never;
+But His mercy waneth never;
 God is wisdom, God is love
 ''',
     '''
 3. E’en the hour that darkest seemeth
 Will His changeless goodness prove;
-Thro’ the gloom His brightness
-Streameth;
+Thro’ the gloom His brightness streameth;
 God is wisdom, God is love
 ''',
     '''
@@ -1513,15 +1516,13 @@ Bless the Father, Oh My soul.
     '''
 1. O love of God most full,
 O love of God most Free,
-Come warm, my heart, come,
-fill my soul,
+Come warm, my heart, come, fill my soul,
 Come, lead me unto Thee!
 ''',
     '''
 2. Warm as the glowing sun,
 So shines Thy love on me
-It wraps me ‘round with
-Kindly care,
+It wraps me ‘round with Kindly care,
 It draws me unto Thee!
 ''',
     '''
@@ -1533,30 +1534,25 @@ Because Thy love is near.
     '''
 4. O love of God most full,
 O love of God most free,
-Thou warm’st my heart. Thou
-fill’st my soul,
-With might Thou strength’nest
-Me. Amen
+Thou warm’st my heart. Thou fill’st my soul,
+With might Thou strength’nest Me. Amen
 '''
   ]),
   HymnData(53, 'God Moves in a Mysterious Way', [
     '''
 1. I God Moves in a mysterious way
 His wonders to perform;
-He plants His footsteps in the
-Sea,
+He plants His footsteps in the Sea,
 And rides upon the storm.
 ''',
     '''
-2. Ye fearful saints, fresh courage
-Take;
+2. Ye fearful saints, fresh courage take;
 The clouds ye so much dread
-Are big mercy, and shallreak
+Are big with mercy, and shall break
 With blessing on thy head.
 ''',
     '''
-3. Judge not Lord by feeble
-sense,
+3. Judge not Lord by feeble sense,
 But trust Him for His grace;
 Behind a frowning providence
 He hides a smiling face.
@@ -1565,47 +1561,32 @@ He hides a smiling face.
 4. Blind unbelief is sure to err,
 And scan His work in vain,
 God is His own interpreter,
-And He will make it plain.
+And He will make it plain. Amen.
 '''
   ]),
   HymnData(54, 'God of our Fathers, Whose Almighty Hand', [
     '''
-1. God of our fathers, whose
-Mighty hand
-Leads forth in beauty all the
-Starry band
-Of shining worlds in splendor
-through the skies,
-Our grateful songs before Thy
-Throne arise.
+1. God of our fathers, whose almighty hand
+Leads forth in beauty all the starry band
+Of shining worlds in splendor through the skies,
+Our grateful songs before Thy throne arise.
 ''',
     '''
-2. Thy Love divine hath led us in
-The past,
-In this free land by thee our lot
-Is cast:
-Be Thou our ruler, guardians,
-Guide, and stay,
-Thy word our law, Thy paths our
-Chosen way.
+2. Thy Love divine hath led us in the past,
+In this free land by thee our lot is cast:
+Be Thou our ruler, guardians, guide, and stay,
+Thy word our law, Thy paths our chosen way.
 ''',
     '''
-3. From war’s alarms, from deadly
-pestilence,
-Be Thy strong arm our ever
-sure defense;
-Thy bounteous goodness nourish
-us in peace.
+3. From war’s alarms, from deadly pestilence,
+Be Thy strong arm our ever sure defense;
+Thy bounteous goodness nourish us in peace.
 ''',
     '''
-4. Refresh Thy people on their
-toil-some way,
-Lead us from night to never
-ending day;
-Fill all our lives with love and
-grace divine,
-And glory, laud, and praise be
-Even Thine.Amen.
+4. Refresh Thy people on their toil-some way,
+Lead us from night to never ending day;
+Fill all our lives with love and grace divine,
+And glory, laud, and praise be even Thine.Amen.
 '''
   ]),
   HymnData(55, 'Guide Me, O Thou Great Jehovah', [
@@ -1613,27 +1594,25 @@ Even Thine.Amen.
 1. Guide me, O Thou great Jehovah,
 Pilgrim through this barren land;
 I am weak, but Thou art mighty;
-Hold me with Thy powerfulhand;
-Bread of heaven, Bread ofheaven,
-Feed me till I want no more,
-Feed me till I want no more.
+Hold me with Thy powerful hand;
+Bread of heaven, Feed me till I want no more,
+Bread of heaven, Feed me till I want no more.
 ''',
     '''
 2. Open now the crystal fountain
-Whence the healing stream dothFlow;
+Whence the healing waters Flow;
 Let the fire and cloudy pillar
 Lead all my journey through:
-Strong Deliverer, strong Deliverer,
-Be Thou Still my strength and Shield.
+Strong Deliverer, Be Thou Still my strength and Shield;
+Strong Deliverer, Be Thou Still my strength and Shield.
 ''',
     '''
-3. When I tread the verge Jordan,
+3. When I tread the verge of Jordan,
 Bid my anxious fears subside;
 Bear me through the swelling current,
 Land me safe on Canaan’s side;
-Songs of praise, songs of praises
-I will ever give to Thee,
-I will ever give to Thee.
+Songs of praises I will ever give to Thee;
+Songs of praises I will ever give to Thee.
 '''
   ]),
   HymnData(56, 'Guide Me, O Thou Great Jehovah', [
@@ -1642,80 +1621,57 @@ I will ever give to Thee.
 Pilgrim through this barren land;
 I am weak, but Thou art mighty,
 Hold me with Thy powerful hand;
-Bread of heaven, Feed me till
-I want no more;
-Bread of heaven, Feed me till
-I want no more.
+Bread of heaven, Feed me till I want no more;
+Bread of heaven, Feed me till I want no more.
 ''',
     '''
 2. Open now the crystal fountain,
 Whence the healing waters flow:
 Let the fire and cloudy pillar
 Lead me all my journey through:
-Strong Deliverer, Be Thou still
-My strength and shield;
-Strong Deliverer, Be Thou still
-My strength and shield.
+Strong Deliverer, Be Thou still my strength and shield;
+Strong Deliverer, Be Thou still my strength and shield.
 ''',
     '''
 3. When I tread the verge of Jordan,
 Bid my anxious fears subside;
 Bear me through the swelling current.
-Land me safe on Canaa’s side;
+Land me safe on Canaan’s side;
 Songs of praise I will ever give to Thee;
 Songs of praise I will ever give to Thee.
 '''
   ]),
   HymnData(57, 'The Lord is my Shepherd', [
     '''
-1. The Lord is my shepherd. no
-want shall I know,
-I feed in green pastures, safe
-folded I rest;
-He leadeth my soul where the
-still waters flow,
-Restores me when wandering.
-redeems when oppressed,
-Restores me when wandering.
-redeems when oppressed.
+1. The Lord is my shepherd. no want shall I know,
+I feed in green pastures, safe folded I rest;
+He leadeth my soul where the still waters flow,
+Restores me when wandering, redeems when oppressed,
+Restores me when wandering, redeems when oppressed.
 ''',
     '''
-2. Thro’ the valley and shadow of
-death though I stray,
-Since Thou art my guardians, no
-evil I fear;
-Thy rod shall defend me. Thy
-staff be my stay:
-No harm can befall with my
-Comforter near.
-No harm can befall with my
-Comforter near.
+2. Thro’ the valley and shadow of death though I stray,
+Since Thou art my guardian, no evil I fear;
+Thy rod shall defend me. Thy staff be my stay:
+No harm can befall with my Comforter near.
+No harm can befall with my Comforter near.
 ''',
     '''
-3. In the midst of affliction
-My table is spread,
-With blessing unmeasured my
-Cup run-neth o’er,
-With perfume and oil Thou
-anointest my head;
-O what shall I ask of Thy
-providence more?
-O what shall I ask of Thy
-providence more?
+3. In the midst of affliction my table is spread,
+With blessing unmeasured my cup run-neth o’er,
+With perfume and oil Thou anointest my head;
+O what shall I ask of Thy providence more?
+O what shall I ask of Thy providence more?
 ''',
     '''
-4. Let goodness and mercy,my
-bountiful God.
-Still follow my steps till I meet
-Thee above;
+4. Let goodness and mercy, my bountiful God.
+Still follow my steps till I meet Thee above;
 I seek, by the path which my forefathers trod
-Thro’ the land of their sojourn,
-Thy Kingdom of love,
-Thro’ the land of their sojourn,
-Thy kingdom of love. Amen
+Thro’ the land of their sojourn, Thy Kingdom of love,
+Thro’ the land of their sojourn, Thy kingdom of love. Amen
 '''
   ]),
-  HymnData(58, 'Leadeth Me! O Blessed Tho’t!', [
+  HymnData(58, ' He Leadeth Me! O Blessed Tho’t!', [
     '''
 1. He leadeth me! O blessed tho’t!
 O words with heav’nly comfort fraught!
@@ -1764,7 +1720,7 @@ Declare their Maker’s praise,
 This is my Father’s world,
 He shines in all that’s fair,
 In rustling grass I hear Him pass.
-He speaks to me ev’rywhere
+He speaks to me ev’ry where
 ''',
     '''
 3. This is my Father’s world,
@@ -1779,7 +1735,7 @@ And earth and heaven be one. Amen
   ]),
   HymnData(60, 'Lead, Kindly Light', [
     '''
-1. Lead, kindly Light! A mid th’encircling gloom,
+1. Lead, kindly Light! a mid th’encircling gloom,
 Lead Thou me on;
 The night is dark, and I am far from home,
 Lead Thou me on;
@@ -1787,7 +1743,7 @@ Keep Thou my feet; I do not ask to see
 The distant scene; one step enough for me.
 ''',
     '''
-2. I was not ever thus, nor prayer that Thou
+2. I was not ever thus, nor prayerd that Thou
 Shouldst lead me on;
 I loved to choose and see my path; but now,
 Lead Thou me on;
