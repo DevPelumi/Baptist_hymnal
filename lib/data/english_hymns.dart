@@ -1937,7 +1937,7 @@ Word of the Father, now in flesh appearing!
 O come, let us adore Him,
 O come, let us adore Him,
 O come, let us adore Him,
-Christ the Lord!Amen
+Christ the Lord! Amen
 '''
   ]),
   HymnData(67, 'Brightest and Best', [
@@ -1954,7 +1954,8 @@ Angels adore Him in slumber reclining,
 Maker and monarch and Saviour of all.
 ''',
     '''
-3. Say, shall we yield Him, in costly devotion, Odors of Edom and offerings divine,
+3. Say, shall we yield Him, in costly devotion, 
+Odors of Edom and offerings divine,
 Gems of the mountain and pearls of the ocean,
 Myrrh from the forest, or gold from the mine?
 ''',
@@ -1971,7 +1972,8 @@ Dearer to God are the prayers of the poor. Amen.
 Did the guiding star behold;
 As with joy they hailed its light,
 Leading onward, beaming bright,
-So, most gracious Lord, may we Ever more be led to Thee.
+So, most gracious Lord, may we 
+Ever more be led to Thee.
 ''',
     '''
 2. As with joyous steps they sped
@@ -1986,14 +1988,14 @@ Ever seek Thy mercy seat.
 At that manger rude and bare,
 So may we with holy joy,
 Pure and free from sin’s alloy,
-All our costliest treasure bring,
+All our costliest treasures bring,
 Christ, to Thee, our heavenly King.
 ''',
     '''
 4. Holy Jesus, every day
 Keep us in the narrow way;
 And when earthly things are past,
-Bring our ransomed sould at last
+Bring our ransomed souls at last
 Where they need no star to guide,
 Where no clouds Thy glory hide
 '''
@@ -2005,17 +2007,15 @@ There’s a star in the sky!
 There’s a mother’s deep prayer
 And a baby’s low cry!
 And the star rains its fire while the beautiful sing,
-For the manger of Bethlehem
-cradles a King!
+For the manger of Bethlehem cradles a King!
 ''',
     '''
-2. There’s tumuit of joy
+2. There’s tumult of joy
 O’er the wonderful birth,
 For the Virgin’s sweet boy
 Is the Lord of the earth,
 Ay! The star rains its fire while the beautiful sing,
-For the Manger of Bethlehem
-cradles a King!
+For the Manger of Bethlehem cradles a King!
 ''',
     '''
 3. In the light of that star
@@ -2023,18 +2023,15 @@ Lie the ages impearled;
 And that song from afar
 Has swept over the world,
 Every heart is aflame, and the beautiful sing
-In the homes of the nations
-that Jesus is King!
+In the homes of the nations that Jesus is King!
 ''',
     '''
 4. We rejoice in the light
-And we echo the song
+And we echo the song,
 That comes down thro’ the night
 From the heavenly throng,
-Ay! we shout to the lovely
-evangel they bring,
-And we greet in His cradle our
-Saviour and King! Amen.
+Ay! we shout to the lovely evangel they bring,
+And we greet in His cradle our Saviour and King! Amen.
 '''
   ]),
   HymnData(70, 'Hail, Thou Long-expected Jesus', [
@@ -2108,7 +2105,7 @@ All is calm, all is bright
 Round yon Virgin Mother and child!
 Holy Infant so tender and mild,
 Sleep in heavenly peace,
-Sleep in heavenly peace,
+Sleep in heavenly peace.
 ''',
     '''
 2. Silent night, holy night,
@@ -2132,7 +2129,7 @@ Wondrous Star, lend Thy light;
 With the angels let us sing,
 Alleluia to our King
 Christ the Saviour is born,
-Christ the Saviour is born,
+Christ the Saviour is born.
 Amen.
 '''
   ]),
@@ -2145,7 +2142,7 @@ To the world a stranger;
 Such a Babe in such a place,
 Can He be the Saviour?
 Ask the saved of all the race
-Who have found His favor,
+Who have found His favor.
 ''',
     '''
 2. Angels sang about His birth;
@@ -2211,7 +2208,8 @@ Are met in thee tonight
     '''
 2. For Christ is born of Mary,
 And gathered all above,
-While mortals sleep, the angels keep Their watch of wondering love,
+While mortals sleep, the angels keep 
+Their watch of wondering love.
 O Morning Stars, together,
 Proclaim the holy birth,
 And praises sing to God the King,
@@ -2231,7 +2229,8 @@ The dear Christ enters in
 4. O holy child of Bethlehem,
 Descend to us, we pray;
 Cast out our sin, and enter in,
-Be born in us today! We hear the Christmas angels
+Be born in us today! 
+We hear the Christmas angels
 The great glad tidings tell;
 O come to us abide with us,
 Our Lord Immanuel! Amen
@@ -2244,7 +2243,7 @@ Wing your flight o’er all the earth,
 Ye who sang creation’s story,
 Now proclaim Messiah’s birth;
 Come and worship, come and worship,
-Worship Christ, the new born King!
+Worship Christ, the new-born King!
 ''',
     '''
 2. Shepherds, in the fields abiding,
@@ -2306,14 +2305,13 @@ Of peace on earth, good will to men.
 ''',
     '''
 3. And in despair I bowed my head;
-“there is no peace on earth”
-I said,
+“there is no peace on earth” I said,
 “For hate is strong, and mocks the song
 Of peace on earth, good will to men”
 ''',
     '''
 4. Then pealed the bells more loud and deep;
-“God is not dead , nor doth He sleep;
+“God is not dead, nor doth He sleep;
 The wrong shall fail, the right prevail,
 With peace on earth, good will to men”
 ''',
@@ -2330,13 +2328,13 @@ Of peace on earth, good will to men. Amen
 All seated on the ground,
 The angel of the Lord came down,
 And glory shone around,
-And glory shone around,
+And glory shone around.
 ''',
     '''
 2. “Fear not!” said he; for mighty dread
 Had seized their troubled mind,
 “Glad tidings of great joy I bring,
-To you and all mankind
+To you and all mankind,
 To you and all mankind.
 ''',
     '''
@@ -2351,14 +2349,14 @@ And this shall be the sign;
 To human view displayed,
 All meanly wrapped in swathing bands,
 And in a manger laid;
-And in a manger laid;
+And in a manger laid."
 ''',
     '''
 5. “All glory be to God on high,
 And to the earth be peace;
 Goodwill hence-forth from heav’n to men,
 Begin and never cease;
-Begin and never cease;
+Begin and never cease!"
 '''
   ]),
   HymnData(80, 'Let All Mortal Flesh Keep Silence', [
@@ -2398,20 +2396,20 @@ Join the triumph of the skies;
 With angelic hosts proclaim,
 “Christ is born in Bethlehem!”
 Hark the herald angels sing,
-“Glory to the new born King
+“Glory to the new-born King"
 ''',
     '''
-2. Christ, by highest heaver adored,
+2. Christ, by highest heaven adored,
 Christ, the everlasting Lord,
 Late in time, behold Him come,
 Offspring of a virgin’s womb,
 Veiled in flesh the Godhead see,
 Hail th’incarnate Deity!
 Pleased as man with men to dwell,
-Jesus our Immanuel
+Jesus our Immanuel.
 ''',
     '''
-3. Hail the heav’n born prince of Peace!
+3. Hail the heav’n-born prince of Peace!
 Hail the Sun of righteousness!
 Light and life to all He brings,
 Risen with healing in His wings,
@@ -2432,7 +2430,7 @@ For Thy holy nativity.
 O come to my heart, Lord Jesus,
 There is room in my heart for Thee.
 My heart shall rejoice, Lord Jesus.
-When thoucomest and callest for me.
+When thou comest and callest for me.
 ''',
     '''
 2. Heaven’s arches rang
@@ -2447,7 +2445,7 @@ And in great humility,
 And the birds their nest
 In the shade of the forest tree;
 But Thy couch was the sod,
-O Thou Son of God
+O Thou Son of God,
 In the deserts of Galilee
 ''',
     '''
@@ -2548,8 +2546,7 @@ Hope of the hopeless, my
 Saviour is He!
 ''',
     '''
-4. One day the grave could conceal
-Him no longer,
+4. One day the grave could conceal Him no longer,
 One day the stone rolled away from the door,
 Then He arose, over death He had conquered;
 Now is ascended, my Lord ever more!
@@ -2568,7 +2565,7 @@ Amen
 The sympathizing Jesus;
 He speaks the drooping heart to cheer,
 Oh! Hear the voice of Jesus,
-Sweetest note in seraph song
+Sweetest note in seraph song,
 Sweetest name on mortal tongue;
 Sweetest carol ever sung,
 Jesus, blessed Jesus.
@@ -2601,27 +2598,23 @@ The Lily of the Valley, in Him alone I see
 All I need to cleanse and make me fully whole
 In sorrow He’s my comfort, In trouble He’s my stay;
 He tells me every care on Him to roll; He’s the
-Lily of the valley the Bright
-And Morning Star,
-He’s the fairest of ten thousand to my soul.
+  Lily of the valley the Bright and Morning Star,
+  He’s the fairest of ten thousand to my soul.
 ''',
     '''
 2. He all my griefs has taken and all my sorrows borne;
 In temptation He’s my strong and mighty tower;
-I have all for Him forsaken,
-And all my idols torn
+I have all for Him forsaken, and all my idols torn
 From my heart, and now He keeps me by His power
 Though all the world forsake me, and Satan tempt me sore,
 Through Jesus I shall safely reach the goal; He’s the
 ''',
     '''
-3. He will never, never leave me,
-nor yet forsake me here,
+3. He will never, never leave me, nor yet forsake me here,
 While I live by faith and do His blessed will;
 A wall of fire about me, I’ve nothing now to fear,
 With His manna He my hungry soul shall fill
-Then sweeping up to glory to see
-His blessed face
+Then sweeping up to glory to see His blessed face
 Where rivers of delight shall ever roll; He’s the
 '''
   ]),
@@ -2630,11 +2623,11 @@ Where rivers of delight shall ever roll; He’s the
 1. The whole world was lost in the darkness of sin,
 The Light of the world is Jesus;
 Like sunshine as noonday His glory shone in.
-The Light of the world is Jesus
-Come to the Light, ‘tis shining for thee;
-Sweetly the Light has dawned upon me,
-Once I was blind but nowI can see;
-The light of the world is Jesus
+The Light of the world is Jesus.
+  Come to the Light, ‘tis shining for thee;
+  Sweetly the Light has dawned upon me,
+  Once I was blind but now I can see;
+  The light of the world is Jesus
 ''',
     '''
 2. No darkness have we who in Jesus abide.
@@ -2676,14 +2669,15 @@ The blessedness which simple trust has found.
 ''',
     '''
 4. We would see Jesus; in the early morning,
-Still as of old he calleth, “Follow me”;
+Still as of old He calleth, “Follow me”;
 Let us arise, all meaner service scoring;
-Lord, we are Thine, we give ourselves ti Thee. Amen
+Lord, we are Thine, we give ourselves to Thee. Amen
 '''
   ]),
   HymnData(90, 'Into the Woods My Master Went', [
     '''
-1. Into the wilds my Master went, clean forspent, for spent;
+1. Into the wilds my Master went,
+Clean forspent, for spent;
 Into the woods my master came,
 Forspent with love and shame.
 But the olives they were not blind to Him,
@@ -2692,9 +2686,11 @@ The throne tree had a mind to Him
 When into the woods He came.
 ''',
     '''
-2. Out of the woods my Master went, And He was well content:
-Out of the woods Master came
-Content with death and shame would woo Him last,
+2. Out of the woods my Master went, 
+And He was well content:
+Out of the woods Master came,
+Content with death and shame 
+When death and shame would woo Him last,
 From under the trees they drew Him last,
 ‘Twas on a tree they slew Him last,
 When out of the woods He came.
@@ -2718,7 +2714,7 @@ Was all for sinner’s gain;
 Mine, mine was the transgression,
 But Thine the deadly pain;
 Lo, here I fall, my saviour!
-‘Tis I deserve thy place;
+‘Tis I deserve Thy place;
 Look on me with Thy favor,
 Vouch safe to me Thy grace
 ''',
