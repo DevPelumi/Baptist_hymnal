@@ -4556,7 +4556,7 @@ To The, Redeemer, King,
 To whom the lips of children
 Made sweet hosannas ring;
 Thou art the King of Israel,
-Thou David’s royalSon,
+Thou David’s royal Son,
 Who in the Lord’s name comest,
 The King and blessed One.
 ''',
@@ -4575,7 +4575,7 @@ Before Thee we present.
 They sang their hymns of praise;
 To thee, now high exalted,
 Our melody we raise;
-Thou didst accept their praise;
+Thou didst accept their praises;
 Accept the praise we bring,
 Who in all good delightest,
 Thou good and gracious King. Amen.
@@ -4626,10 +4626,10 @@ Throughout eternity, Amen.
   HymnData(153, 'For the Beauty of the Earth', [
     '''
 1. For the beauty of the earth,
-For the glory of skies,
+For the glory of the skies,
 For the love which from our birth
-Over and round us lies;
-Christ our God, thee we raise
+Over and around us lies;
+Christ our God, Thee we raise
 This is our hymn of grateful praise.
 ''',
     '''
@@ -4637,14 +4637,14 @@ This is our hymn of grateful praise.
 Of the day and of the night,
 Hill and vale, and tree and flower,
 Sun and moon, and stars of light;
-Christ our god, to Thee we raise
-This our hymn of grate praises.
+Christ our God, to Thee we raise
+This our hymn of grateful praise.
 ''',
     '''
 3. For the joy of human love.
 Brother, sister, parent, child
 Friends on the earth and friends al
-For all gentle thoughts and mild
+For all gentle thoughts and mind
 Christ our God, to Thee we raise
 This is our hymn of grateful praise.
 ''',
@@ -4675,7 +4675,7 @@ Cause thy face to smile upon us,
 Shine on us Thy light today!
 Great Redeemer, we adore Thee
 Highest hills proclaim Thy fame;
-We adore thee great Redeemer,
+We adore thee Great Redeemer,
 Men and angels praise thy name.
 ''',
     '''
@@ -4750,7 +4750,7 @@ While the tempest still is high;
 Hide me, O my Saviour, hide,
 Till the storm of life is past,
 Safe into the heaven guide;
-O receives my soul at last.
+O receive my soul at last.
 ''',
     '''
 2. Other refuge have I none;
@@ -4779,7 +4779,7 @@ Let the healing streams abound;
 Make and keep me pure within;
 Thou of life the fountain art,
 Freely let me take of Thee;
-Spring Thou up within my heart
+Spring Thou up within my heart,
 Rise to all eternity. Amen
 '''
   ]),
@@ -4792,10 +4792,10 @@ While the tempest still is high;
 Hide me, O my Saviour, hide,
 Till the storm of life is past,
 Safe into the heaven guide;
-O receives my soul at last.
+O receive my soul at last.
 ''',
     '''
-2. 2Other refuge have I none;
+2. Other refuge have I none;
 Hangs my helpless soul on Thee;
 Leave, O leave me not alone,
 Still support and comfort me;
@@ -4897,7 +4897,7 @@ Than all the angels heavens can boast
     '''
 1. How sweet the name of Jesus sounds
 In a believer’s ear!
-It soothes his sorrows, heal his wounds,
+It soothes his sorrows, heals his wounds,
 And drives away his fear,
 And drives away his fear.
 ''',
@@ -4916,7 +4916,7 @@ With boundless stores of grace!
 With boundless stores of grace!
 ''',
     '''
-4. Jesus, my shepherd , brother, friend
+4. Jesus, my shepherd, brother, friend
 My prophet, priest, and king
 My lord, my life, my way, my end,
 Accept the praise I bring,
