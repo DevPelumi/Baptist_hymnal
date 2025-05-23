@@ -2735,7 +2735,7 @@ Out live my love to Thee. Amen
 Drawn from Immanuel’s veins;
 And sinners, plunged beneath that flood,
 Lose all their guilty stain;
-Lose all their guilty stains;
+Lose all their guilty stains,
 Lose all their guilty stains;
 And sinners, plunged beneath that flood,
 Lose all their guilty stains,
@@ -2745,7 +2745,7 @@ Lose all their guilty stains,
 That fountain in his day;
 And there may I, though vile as he,
 Wash all my sin away:
-Wash all my sin away:
+Wash all my sin away,
 Wash all my sin away:
 And there may I, though vile as he,
 Wash all my sins away.
@@ -2755,18 +2755,17 @@ Wash all my sins away.
 Shall never lose its power
 Till all the ransomed church of God
 Be saved, to sin no more:
+Be saved, to sin no more.
 Be saved, to sin no more:
-Be saved, to sin no more:
-Till all the ransomed church of
-God
+Till all the ransomed church of God
 Be saved, to sin no more
 ''',
     '''
 4. E’er since by faith I saw the stream
 Thy flowing wounds supply,
-Redeeming love has been mytheme
+Redeeming love has been my theme
 And shall be till I die:
-And shall be till I die:
+And shall be till I die,
 And shall be till I die:
 Redeeming love has been my theme
 And shall be till I die
@@ -2776,29 +2775,29 @@ And shall be till I die
 Lies silent in the grave,
 Then in a nobler, sweeter song
 I’ll sing Thy power to save:
-I’ll sing Thy power to save:
+I’ll sing Thy power to save,
 I’ll sing Thy power to save:
 Then in a nobler, sweeter song
-I’ll sing Thy power to save:
+I’ll sing Thy power to save.
 '''
   ]),
   HymnData(93, 'The Old Rugged Cross', [
     '''
 1. On a hill far away stood an old rugged cross
-The emblem of suffering and shame.
+The emblem of suffering and shame;
 And I love that old cross where the
 dearest and best
 For a world of lost sinners was slain.
-So I’ll cherish the old rugged cross.
-Till my trophies at last I lay down
-I will cling to the old rugged cross.
-And exchange it some lay for a crown.
+  So I’ll cherish the old rugged cross,
+  Till my trophies at last I lay down;
+  I will cling to the old rugged cross,
+  And exchange it some day for a crown.
 ''',
     '''
 2. Oh that old rugged cross so despised by the world,
 Has a wondrous attraction for me;
 For the dear lamb of God left His glory above.
-To bear it to dark Calvary
+To bear it to dark Calvary.
 ''',
     '''
 3. In the old rugged cross, stained with blood so divine,
@@ -2808,24 +2807,26 @@ To pardon and sanctify me.
 ''',
     '''
 4. To the old rugged cross I will ever be true.
-Its shame and reproached gladly bear.
+Its shame and reproach gladly bear.
 Then He’ll call me some day to my home far away
-Where His glory forever I’ll share
+Where His glory forever I’ll share.
 '''
   ]),
   HymnData(94, 'At the Cross', [
     '''
-1. Alas, and did my Saviour bleed and did my Sovereign die?
+1. Alas, and did my Saviour bleed 
+And did my Sovereign die?
 Would He devote that sacred head?
 For sinners such as I?
-At the cross, at the cross where
-I first saw the light,
-And the burden of my heart rolled away (rolled away)
-It was there by faith I received my sight,
-And now I am happy all the day!
+  At the cross, at the cross where
+  I first saw the light,
+  And the burden of my heart rolled away (rolled away)
+  It was there by faith I received my sight,
+  And now I am happy all the day!
 ''',
     '''
-2. Was it for crimes that I have done Hegroaned upon the tree?
+2. Was it for crimes that I have done 
+He groaned upon the tree?
 Amazing pity, grace unknown.
 And love beyond degree!
 ''',
@@ -2833,7 +2834,7 @@ And love beyond degree!
 3. Well might the sun in darkness hide,
 And shut his glories in,
 When Christ the mighty Maker died
-For man the creature’s sin
+For man the creature’s sin.
 ''',
     '''
 4. But drops of grief can n’er repay
@@ -2844,43 +2845,44 @@ Here, lord, I give myself away,
   ]),
   HymnData(95, 'Down at the Cross', [
     '''
-1. Down at the cross where my saviour died,
+1. Down at the cross where my Saviour died,
 Down where for cleasning from sin I cried,
 There to my heart was the blood applied:
-Glory to His name.
-Glory to His name,
-Glory to His name,
-There to my heart was the blood applied
-Glory to His name.
+  Glory to His name.
+  Glory to His name,
+  Glory to His name;
+  There to my heart was the blood applied
+  Glory to His name.
 ''',
     '''
 2. I am so wondrously saved from sin.
 Jesus so sweetly abides within;
 There at the cross where He took me in;
-Glory to His name.
+  Glory to His name.
 ''',
     '''
 3. Oh, precious fountain that saves from sin.
-I am so glad I have entered in
+I am so glad I have entered in;
 There Jesus saves me and keeps me clean;
-Glory to His name.
+  Glory to His name.
 ''',
     '''
 4. Come to this fountain so rich and sweet
 Cast Thy poor soul at the Saviour’s feet
-Plunged in today, and be made complete Glory to His name.
+Plunged in today, and be made complete; 
+  Glory to His name.
 '''
   ]),
   HymnData(96, 'At Calvary', [
     '''
-1. Year I spent in vanity and pride.
+1. Years I spent in vanity and pride.
 Caring not my Lord was crucified,
 Knowing not it was for me He died
-On Calvary
-Mercy there was great, and grace was free:
-Pardon there was multiplied to me:
-There my burdened soul found liberty,
-At Calvary
+On Calvary.
+  Mercy there was great, and grace was free:
+  Pardon there was multiplied to me:
+  There my burdened soul found liberty,
+  At Calvary
 ''',
     '''
 2. By God’s Word at last my sin I learned;
@@ -2907,10 +2909,10 @@ At Calvary.
 There a precious fountain,
 Free to all, a healing stream,
 Flows from Calv‘ry’s mountain.
-In the cross, in the cross
-Be my glory ever,
-Till my raptured soul shall find
-Rest beyond the river
+  In the cross, in the cross
+  Be my glory ever,
+  Till my raptur'd soul shall find
+  Rest beyond the river
 ''',
     '''
 2. Near the cross, a trembling soul,
@@ -2928,19 +2930,19 @@ With its shadow o’er me
 4. Near the cross! I’ll watch and wait
 Hoping, trusting ever,
 Till I reach the golden strand,
-Just beyond the river, Amen
+Just beyond the river,  Amen
 '''
   ]),
-  HymnData(98, 'There Is a Green Hill Away', [
+  HymnData(98, 'There Is a Green Hill far Away', [
     '''
 1. There is a green hill far away,
 Without a city wall,
 Where the dear lord was crucified,
 Who died to save us all.
-Oh dearly, dearly has He loved,
-And we must love Him, too.
-And trust in His redeeming blood,
-And try His works to do
+  Oh dearly, dearly has He loved,
+  And we must love Him, too.
+  And trust in His redeeming blood,
+  And try His works to do
 ''',
     '''
 2. We may not know, we cannot tell
@@ -2971,8 +2973,8 @@ My richest gain I count but loss,
 And pour contempt on all my pride.
 ''',
     '''
-2. Forbid it, Lord, that I should boast save,
-In the death of Christ my God;
+2. Forbid it, Lord, that I should boast ,
+Save in the death of Christ my God;
 All the vain things that charm me most,
 I sacrifice them to His blood.
 ''',
@@ -3011,9 +3013,8 @@ Add new luster to the day.
     '''
 4. Bane and blessing, pain and pleasure,
 By the cross are sanctified;
-Peace is there that knows no
-Measure,
-Joys that thro’ all time abide.Amen
+Peace is there that knows no Measure,
+Joys that thro’ all time abide.  Amen
 '''
   ]),
   HymnData(101, 'Alas, and Did My Saviour Bleed', [
