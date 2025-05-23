@@ -3310,18 +3310,17 @@ Of resurrection light;
 And, listening to His accents.
 May hear so calm and plain
 His own “all hail” and, hearing,
-May raise the victor stream.
+May raise the victor strain.
 ''',
     '''
 3. Now let the heavens be joyful,
 Let earth her song begin
 The round world keep high triumph
-And all the that therein;
+And all that is therein;
 Let all things seen and unseen
 Their notes together blend,
-For Christ the Lord is risen.
-Our joy that hath no end.
-Amen.
+For Christ the Lord is risen,
+Our joy that hath no end. Amen.
 '''
   ]),
   HymnData(112, 'Our Lord Christ Hath Risen', [
@@ -3344,33 +3343,30 @@ Death cannot affright us, Christ Jesus is king!
 Though still thou dost vex us, we dread thee no more
 O sing, alleluia! O sing, alleluia!
 O Sing, alleluia! Be joyful and sing.
-Who now can condemn us
-Christ Jesus is King!
+Who now can condemn us, Christ Jesus is King!
 ''',
     '''
-4. Our Lord Christ hath risen! Day breaketh at last;
-The long night of weeping is now well is now well – nigh past
+4. Our Lord Christ hath risen! day breaketh at last;
+The long night of weeping is now well–nigh past
 O sing, alleluia! O sing, alleluia!
 O sing, alleluia! Be joyful and sing,
-Our foes are all conquered.
-Christ Jesus is King! Amen
+Our foes are all conquered, Christ Jesus is King! Amen
 '''
   ]),
   HymnData(113, 'Low in the Grave He Lay', [
     '''
-1. Low in the grave He lay,
-Jesus my saviour!
+1. Low in the grave He lay, 
+Jesus my Saviour!
 Waiting the coming day,
 Jesus my Lord!
-Jesus my Lord!
-Up from the grave He arose
-With a mighty triumph over
-His foes;
-He arose a victor from the dark domain
-And He lives forever with His saints to reign
-He arose! He arose! Hallelujah!
-Christ arose!
-He arose! He arose!
+  Jesus my Lord!
+  Up from the grave He arose
+  With a mighty triumph o'er His foes;
+  He arose a victor from the dark domain,
+  And He lives forever with His saints to reign.
+  He arose! He arose! Hallelujah!
+  Christ arose!
+  He arose! He arose!
 ''',
     '''
 2. Vainly they watch His bed,
@@ -3385,12 +3381,12 @@ He tore the bars away
 Jesus my lord!
 '''
   ]),
-  HymnData(114, 'Hallelujah! ChristIs Risen', [
+  HymnData(114, 'Hallelujah! Christ Is Risen', [
     '''
 1. Hallelujah! Hallelujah!
-Heart and voice to heaven rise
-Sing to God a hymn of gladness
-Sing to god a hymn of praise
+Heart and voice to heaven rise,
+Sing to God a hymn of gladness,
+Sing to god a hymn of praise;
 He who on the cross a ransom
 For the world’s salvation bled,
 Jesus Christ the king of glory
@@ -3398,8 +3394,8 @@ Now is risen from the dead
 ''',
     '''
 2. Christ is risen, Christ the first fruit
-Of the holy harvest field
-Which will all its full abundance
+Of the holy harvest field,
+Which will all its full abundance,
 At His glorious advent, yield;
 Then the golden ears of harvest
 Will before His presences wave.
@@ -3409,7 +3405,7 @@ From the furrows of the grave
     '''
 3. Hallelujah, hallelujah!
 Glory be to God above!
-Hallelujah, to the saviour
+Hallelujah, to the Saviour
 Fount of life and source of love;
 Hallelujah, to the spirit
 Let our high ascriptions be;
@@ -3421,15 +3417,16 @@ To the blessed Trinity
     '''
 1. Christ the Lord is risen today,
 Alleluia!
-Sons of men and angels say
+Sons of men and angels say,
 Alleluia!
-Raises your joys and triumphs high, Alleluia!
+Raise your joys and triumphs high, Alleluia!
 Sing, ye heavens, and earth reply, Alleluia!
 ''',
     '''
 2. Lives again our glorious King.
 Alleluia!
-Where, O Death. Is now thy sting? Alleluia!
+Where, O Death. Is now thy sting? 
+Alleluia!
 Dying once He all doth save,
 Alleluia!
 Where thy victory, O grave?
@@ -3438,58 +3435,61 @@ Alleluia!
     '''
 3. Love’s redeeming works is done,
 Alleluia!
-Fought the fight; the battle won
+Fought the fight; the battle won,
 alleluia!
-Death in vain forbids Him rise
+Death in vain forbids Him rise,
 Alleluia!
-Christ hath opened paradise
+Christ hath opened paradise,
 Alleluia!
 ''',
     '''
-4. Soar we now where Christ has led, Alleluia!
-Following our exalted Head. Alleluia!
-Made like Him, like Him we rise. Alleluia!
-Ours the cross, the grave, the skies, Alleluia! Amen
+4. Soar we now where Christ has led, 
+Alleluia!
+Following our exalted Head. 
+Alleluia!
+Made like Him, like Him we rise. 
+Alleluia!
+Ours the cross, the grave, the skies, 
+Alleluia! Amen
 '''
   ]),
-  HymnData(116, 'Jesus Shall Reign Wherever the sun', [
+  HymnData(116, 'Jesus Shall Reign Where'er the Sun', [
     '''
-1. Jesus shall reign wherever the sun
-Dose his successive journeys run;
+1. Jesus shall reign where'er the sun
+Does his successive journeys run;
 His kingdom spread from shore to shore;
 Till moon shall wax and wane no more;
 ''',
     '''
-2. From north to south the princess meet
-To pay their homepage at His feet;
-While western empires own their
-Lord;
+2. From north to south the princes meet
+To pay their homage at His feet;
+While Western empires own their Lord;
 And savage tribes attend His words
 ''',
     '''
 3. To Him shall endless pray’r be made;
-And endless praisescrowns His head;
+And endless praise crowns His head;
 His name like sweet perfume shall rise
 With every morning sacrifice
 ''',
     '''
-4. People and realms of every tongue
-Dwell on His love with sweetest song
+4. People and realms of ev'ry tongue
+Dwell on His love with sweetest song,
 And infant voice shall proclaim
-Their early blessing on his name Amen
+Their early blessing on his name.  Amen
 '''
   ]),
   HymnData(117, 'The Head That Once Was Crowned', [
     '''
-1. The head that once was crowned with thons
+1. The head that once was crowned with thorns
 Is crowned with glory now;
 A royal diadem adorns
 The mighty victor’s brow
 ''',
     '''
 2. The joy of all who dwell above,
-The joy all below,
-To whom He Manifests His love.
+The joy of all below,
+To whom He manifests His love.
 And grants His name to know
 ''',
     '''
@@ -3508,22 +3508,22 @@ Their everlasting theme. Amen
   HymnData(118, 'Majestic Sweetness Sits Enthroned', [
     '''
 1. Majestic sweetness sits enthroned
-Upon the savior’s brow;
-His head with radiant glories crowned
+Upon the Saviour’s brow;
+His head with radiant glories crowned,
 His lips with grace o’er flow,
-His lips with grace o’er flow;
+His lips with grace o’er flow.
 ''',
     '''
-2. No mortal can with Him compare
+2. No mortal can with Him compare,
 Among the sons of men;
 Fairer is he than the entire fair
-Who fill the heav’nlytrain.
-Who fill the heav’nlytrain.
+Who fill the heav’nly train,
+Who fill the heav’nly train.
 ''',
     '''
 3. His saw me plunged in deep distress.
 And flew to my relief;
-For me He bore the shameful cross
+For me He bore the shameful cross,
 And carried all my grief,
 And carried all my grief,
 ''',
@@ -3539,23 +3539,23 @@ And saves me from the grave,
     '''
 1. When Jesus comes to reward His servants.
 Whether it be noon or night,
-Faithful to him will he find us watching.
+Faithful to Him will he find us watching.
 With our lamps all trimmed and bright?
-Oh, can we say we are ready, brother?
-Ready for the soul’s bright home?
-Say, will He find you and me still watching,
-Waiting, watching when the lord shall come?
+  Oh, can we say we are ready, brother?
+  Ready for the soul’s bright home?
+  Say, will He find you and me still watching,
+  Waiting, watching when the lord shall come?
 ''',
     '''
 2. If, at the dawn of the early morning,
-He shall call us one by one
-When to the lord we restore our talents,
+He shall call us one by one,
+When to the Lord we restore our talents,
 Will He answer us, “Well done”?
 ''',
     '''
 3. Have we been true to the trust he left us?
 Do we seek to do our best?
-If in our heart there is naughty condemn us,
+If in our heart there is naught condemns us,
 We shall have a glorious rest.
 ''',
     '''
@@ -3571,27 +3571,28 @@ Will He find us watching there?
 When sunlight thro’ darkness and shadow is breaking,
 That Jesus will come in the fullness of glory,
 To receive from the world His own.
-O lord Jesus, how long, how long
-Ere we shout the glad song, Christ returneth!
-Hallelujah! Hallelujah!
-Amen, hallelujah! Amen
+  O lord Jesus, how long, how long
+  Ere we shout the glad song, Christ returneth!
+  Hallelujah! Hallelujah!
+  Amen, hallelujah! Amen
 ''',
     '''
 2. It may be at mid-day, it may be at twilight,
 It may be, perchance, that the blackness of mid-night
-Will burst into light in blaze of His glory
+Will burst into light in blaze of His glory,
 When Jesus receives His own.
 ''',
     '''
-3. While host cry hosanna, from heaven descending,
+3. While hosts cry hosanna, from heaven descending,
 With glorified saints and the angels attending.
-With grace on His brow, like a halo of gloryWill Jesus receive His own
+With grace on His brow, like a halo of glory, 
+Will Jesus receive His own.
 ''',
     '''
 4. Oh, joy! Oh, delight! Should we go without dying,
-No sickness, no sadness, no dread and no crying
+No sickness, no sadness, no dread and no crying,
 Caught up thro’ the clouds with our lord into glory,
-When Jesus receive His own
+When Jesus receives His own.
 '''
   ]),
   HymnData(121, 'He Is Coming', [
@@ -3600,10 +3601,10 @@ When Jesus receive His own
 Now exalted on high;
 He is coming with loud hosannas
 In the clouds of the sky,
-Hallelujah! Hallelujah!
-He is coming again;
-And with joy we shall gather round Him
-At His Coming to reign.
+  Hallelujah! Hallelujah!
+  He is coming again;
+  And with joy we shall gather round Him
+  At His Coming to reign.
 ''',
     '''
 2. He is coming, our loving Saviour,
@@ -3619,8 +3620,9 @@ And His praise we shall sing.
 ''',
     '''
 4. He shall gather His chosen people,
-Who are called by is name;
-And the ransomed of every nation for His own He shall claim.
+Who are called by His name;
+And the ransomed of every nation 
+For His own He shall claim.
 '''
   ]),
   HymnData(122, 'Rises, My Soul, and Stretch Thy Wings', [
@@ -3647,7 +3649,7 @@ Forward tends to His abode.
 Press onward to the price;
 Soon the Saviour will return
 Triumphant in the skies;
-Yet a seasons, and we know
+Yet a season, and we know
 Happy entrance will be given,
 All our sorrows left below,
 And earth exchanged for heaven, Amen
@@ -3657,10 +3659,10 @@ And earth exchanged for heaven, Amen
     '''
 1. Lo, He comes with clouds descending,
 Once for favored sinners slain;
-Thousands thousand saints attending
-Swell the triumph of His train
+Thousand thousand saints attending
+Swell the triumph of His train:
 Alleluia, alleluia!
-God appears on earth to reign
+God appears on earth to reign.
 ''',
     '''
 2. Every eye shall now behold Him,
@@ -3684,7 +3686,7 @@ High on Thine eternal throne;
 Saviour, take the power and glory,
 Claim the kingdom for Thine own;
 Oh, come quickly, oh, come quickly!
-Everlasting God, come down Amen
+Everlasting God, come down.  Amen.
 '''
   ]),
   HymnData(124, 'There’s a Light upon the Mountains', [
@@ -3706,7 +3708,7 @@ In the splendors of the dawn;
 For the eastern skies are glowing
 As with light of hidden fire,
 And the hearts of men are stirring
-With the throbs of deep desire
+With the throbs of deep desire.
 ''',
     '''
 3. There’s a hush of expectation
@@ -3714,7 +3716,7 @@ And a quiet in the air,
 And the breath of God is moving
 In the fervent breath of prayer;
 For suffering, dying Jesus
-Is the Christ upon the throne
+Is the Christ upon the throne,
 And the travail of our spirit
 Is the travail of His own
 ''',
@@ -3739,12 +3741,11 @@ Coming to claim His chosen Bride,
 All the redeemed and purified,
 Over this whole earth scattered wide,
 What if it were today?
-Glory, glory! Joy to my heart
-Will bring;
-Glory, glory!
-When we shall crown Him King;
-Glory, glory! Haste to prepare the way
-Glory, glory! Jesus will come some day
+  Glory, glory! Joy to my heart 'twill bring;
+  Glory, glory!
+  When we shall crown Him King;
+  Glory, glory! Haste to prepare the way
+  Glory, glory! Jesus will come some day.
 ''',
     '''
 2. Satan’s dominion will then be o’er
@@ -3752,7 +3753,7 @@ O that it were today!
 Sorrow and sighing shall be no more,
 O that it were today!
 Then shall the dead in Christ arise,
-Caught up to meet Him in the skies
+Caught up to meet Him in the skies,
 When shall these glories meet our eyes?
 What if it were today?
 ''',
@@ -3771,13 +3772,13 @@ What if it were today?
     '''
 1. The Lord will come and not be slow,
 His footsteps cannot err;
-Before Him righteousness shall go
-Him royal harbinger
+Before Him righteousness shall go,
+Him royal harbinger.
 ''',
     '''
 2. Truth from the earth, like to a flower.
 Shall bud and blossom then;
-And justice, from her heavenly bower.
+And justice, from her heavenly bower,
 Look down on mortal men.
 ''',
     '''
@@ -3799,13 +3800,13 @@ Remainest God alone, Amen
 And on the earth again shall stand;
 I know eternal life he giveth,
 That grace power are in His hand
-I know, I know that Jesus liveth.
-And on the earth again shall stand;
-I know, I know that life He giveth,
-That grace and power are in His hand
+  I know, I know that Jesus liveth.
+  And on the earth again shall stand;
+  I know, I know that life He giveth,
+  That grace and power are in His hand
 ''',
     '''
-2. I know His promise never faileth
+2. I know His promise never faileth,
 The word He speaks, it cannot die
 Tho’ cruel death my flesh assaileth,
 Yet I shall see Him by and by.
@@ -3813,7 +3814,7 @@ Yet I shall see Him by and by.
     '''
 3. I know my mansion He prepareth;
 That where He is there I may be;
-o wondrous th’t for me He careth
+O wondrous tho’t for me He careth
 And He at last will come for me.
 '''
   ]),
@@ -3841,7 +3842,7 @@ Your voices in His praise employ.
 4. Extol the lamb with loftiest song;
 Prolong for Him your cheerful strain;
 Worship and thanks to Him belong
-who reigns and shall forever reign.Amen
+who reigns and shall forever reign.  Amen
 '''
   ]),
   HymnData(129, 'O for a Thousand Tongues to Sing', [
@@ -3872,13 +3873,12 @@ His blood availed for me. Amen
   ]),
   HymnData(130, 'What a Wonderful Saviour!', [
     '''
-1. Christ has for sin atonement made;
+1. Christ has for sin atonement made,
 What a wonderful Saviour!
 I am redeemed, the price is paid;
 What a wonderful Saviour!
-What a wonderful Saviour is Jesus, my Jesus!
-What a wonderful saviour is
-Jesus, my Lord.
+  What a wonderful Saviour is Jesus, my Jesus!
+  What a wonderful saviour is Jesus, my Lord.
 ''',
     '''
 2. I praise Him for the cleansing blood,
@@ -3893,7 +3893,7 @@ And now He reigns and rules therein;
 What a wonderful Saviour!
 ''',
     '''
-4. He gives me overcoming pow’r
+4. He gives me overcoming pow’r,
 What a wonderful Saviour!
 And triumph in each trying hour;
 What a wonderful Saviour! Amen
@@ -3905,20 +3905,20 @@ What a wonderful Saviour! Amen
 I love to sing its worth;
 It sounds like music in mine ear;
 The sweetest name on earth;
-Oh, how I love Jesus;
-Oh, how I love Jesus;
-Oh, how I love Jesus;
-Because He first loved me.
+  Oh, how I love Jesus,
+  Oh, how I love Jesus,
+  Oh, how I love Jesus,
+  Because He first loved me.
 ''',
     '''
-2. It tells me of a Savior’s love;
+2. It tells me of a Saviour’s love;
 Who died to set me free?
 It tells me of His precious blood,
 The sinner’s perfect plea.
 ''',
     '''
 3. It tells me what my father hath
-In store for ev’ryday,
+In store for ev’ry day,
 And though I tread a darksome path
 Yields sunshine all the way.
 ''',
@@ -3926,7 +3926,7 @@ Yields sunshine all the way.
 4. It tells of one whose loving heart
 Can feel my deepest woe,
 Who in each sorrow bears a part?
-That none can bear below
+That none can bear below.
 '''
   ]),
   HymnData(132, 'All Hail the Power of Jesus’ Name', [
@@ -3995,7 +3995,7 @@ Crown Him Lord of all. Amen
   ]),
   HymnData(134, 'All Hail the Power of Jesus’ Name', [
     '''
-1.All hail the power of Jesus’ name!
+1. All hail the power of Jesus’ name!
 Let angels prostrate fall,
 Let angels prostrate fall;
 Bring forth the royal diadem,
@@ -4055,7 +4055,7 @@ How good to those who seek!
 4. But what to those who find? Ah! this
 No tongue or pen can show
 The love of Jesus, what it is
-None but His loved ones Know. Amen
+None but His loved ones know. Amen
 '''
   ]),
   HymnData(136, 'Jesus, Thou joy of Loving Hearts', [
@@ -4067,7 +4067,7 @@ We turn unfilled. To Thee again
 ''',
     '''
 2. Thy truth unchanged hath ever stood;
-Thou savest those who Thee call;
+Thou savest those who on Thee call;
 To them who seek Thee thou art good,
 To them who find Thee all in all.
 ''',
@@ -4081,10 +4081,10 @@ Blest when our faith can hold Thee fast.
 4. O Jesus, ever with us stay,
 Make all our moments calm and bright;
 Chase the dark night of sin away,
-Shed o’er the world Thy holy light.Amen
+Shed o’er the world Thy holy light. Amen
 '''
   ]),
-  HymnData(137, 'Praise Him! Praise', [
+  HymnData(137, 'Praise Him! Praise Him!', [
     '''
 1. Praise Him! Praise Him!
 Jesus, our blessed Redeemer!
@@ -4093,9 +4093,9 @@ Hail Him! Hail Him! Highest archangels in glory;
 Strength and honor give to His holy name!
 Like a shepherd, Jesus will guard His children;
 In His arms he carries them all day long;
-Praise him! Praise Him! tell of
-His excellent greatness;
-Praise Him! Praise Him! Ever in joyful song!
+  Praise him! Praise Him! tell of
+  His excellent greatness;
+  Praise Him! Praise Him! Ever in joyful song!
 ''',
     '''
 2. Praise Him! Praise Him!
@@ -4122,18 +4122,17 @@ Pow’r and glory unto the Lord belong:
 We Thy love and grace proclaim;
 Thou art mighty, Thou art holy,
 Glorious is Thy matchless name!
-Glorious, Glorious
-Glorious is Thy name, O Lord!
-Glorious is Thy name, O Lord!
-Glorious is Thy name, O Lord!
-Glorious, Glorious is Thy name,
-O Lord!
-Glorious, glorious is Thy name
-O Lord!
+  Glorious, Glorious
+  Glorious is Thy name, O Lord!
+  Glorious is Thy name, O Lord!
+  Glorious is Thy name, O Lord!
+  Glorious, Glorious is Thy name,
+  O Lord!
+  Glorious, glorious is Thy name
+  O Lord!
 ''',
     '''
-2. Great Redeemer, Lord and
-Master,
+2. Great Redeemer, Lord and Master,
 Light of all eternal days,
 Let the saints of ev’ry nation
 Sing Thy just and endless praise!
@@ -4157,23 +4156,22 @@ Be the kingdom all Thine own! Amen
 Of Jesus the Nazarene,
 And wonder how He could love me,
 A sinner, condemned, unclean.
-How marvelous! How wonderful!
-And my song shall ever be;
-How marvelous! How wonderful!
-Is my Saviour’s love for me!
+  How marvelous! How wonderful!
+  And my song shall ever be;
+  How marvelous! How wonderful!
+  Is my Saviour’s love for me!
 ''',
     '''
 2. For me it was in the garden
-He prayed, “Not my will, but
-Thine;”
+He prayed, “Not my will, but Thine;”
 He had no tears for His own griefs,
-But sweat drops of blood for mine
+But sweat drops of blood for mine.
 ''',
     '''
 3. In pity angels beheld Him,
 And came from the world of light
 To comfort Him in the sorrows
-He bore my soul that night
+He bore for my soul that night.
 ''',
     '''
 4. He took my sins and my sorrows,
@@ -4194,10 +4192,10 @@ To sing of His love for me.
 Blessed be the name of the Lord!
 The glories of my God and King,
 Blessed be the name of the lord!
-Blessed be the name, blessed be the name,
-Blessed be the name of the lord!
-Blessed be the name, blessed be the name,
-Blessed be the name of the Lord!
+  Blessed be the name, blessed be the name,
+  Blessed be the name of the lord!
+  Blessed be the name, blessed be the name,
+  Blessed be the name of the Lord!
 ''',
     '''
 2. Jesus, the name that calms my fears,
@@ -4206,7 +4204,7 @@ Blessed be the name of the lord!
 Blessed be the name of the lord!
 ''',
     '''
-3. He breaks the power of cancelled is sin
+3. He breaks the power of canceled sin
 Blessed be the name of the lord!
 His blood can make the foulest clean,
 Blessed be the name of the Lord!
@@ -4222,10 +4220,10 @@ I love to tell the story
 Because I know ‘tis true;
 It satisfies my longing
 As nothing else can do.
-I love to tell the story,
-‘Twill be my theme in glory
-To tell the old, old story
-Of Jesus and His love.
+  I love to tell the story,
+  ‘Twill be my theme in glory
+  To tell the old, old story
+  Of Jesus and His love.
 ''',
     '''
 2. I love to tell the story;
@@ -4242,7 +4240,7 @@ From God’s own holy Word.
 For those who know it best
 Seem hungering and thirsting
 To hear it, like the rest;
-And when it seenes of glory
+And when it scenes of glory
 I sing the new, new song
 ‘Twill be the old, old story
 That I have loved so long.
@@ -4254,10 +4252,10 @@ That I have loved so long.
 There is never a night so long,
 But the soul that is trusting Jesus
 Will somewhere find a song.
-Wonderful, wonderful Jesus,
-In the heart He implanteth a song;
-A song of deliv’rance, of courage, of strength:
-In the heart He implanteth a song.
+  Wonderful, wonderful Jesus,
+  In the heart He implanteth a song;
+  A song of deliv’rance, of courage, of strength:
+  In the heart He implanteth a song.
 ''',
     '''
 2. There is never a cross so heavy,
@@ -4272,7 +4270,7 @@ But that Jesus in love will lighten
 When carried to the cross.
 ''',
     '''
-4. There is never a guilty, sinner,
+4. There is never a guilty sinner,
 There is never a wand’ring one,
 But that God can in mercy pardon
 Thro’ Jesus Christ, His Son.
@@ -4284,10 +4282,10 @@ Thro’ Jesus Christ, His Son.
 And His wondrous Love to me;
 On the cruel cross He suffered
 From the curse to set me free.
-Sing, oh, sing of my Redeemer,
-With His blood He purchased me;
-On the cross He sealed my pardon
-Paid the debt and made me free.
+  Sing, oh, sing of my Redeemer,
+  With His blood He purchased me;
+  On the cross He sealed my pardon
+  Paid the debt and made me free.
 ''',
     '''
 2. I will tell the wondrous story,
@@ -4314,10 +4312,10 @@ Son of God, with Him to be.
 Of the Christ who died for me,
 How He left His home in glory
 For the cross of Calvary.
-Yes, I’ll sing the wondrous story
-Of the Christ who died for me,
-Sing it with the saints in glory,
-Gathered by the crystal seaI
+  Yes, I’ll sing the wondrous story
+  Of the Christ who died for me,
+  Sing it with the saints in glory,
+  Gathered by the crystal sea.
 ''',
     '''
 2. I was lost, but Jesus found me,
@@ -4388,7 +4386,7 @@ Alleluia! Alleluia! Alleluia! Amen.
     '''
 1. O could I speak the matchless worth,
 O could I sound the glories forth
-Which in my Saviourshine,
+Which in my Saviour shine,
 I’d sour and touch the heav’nly strings,
 And vie with Gabriel while he sings
 In notes almost divine,
@@ -4398,7 +4396,7 @@ In notes almost divine.
 2. I’d sing the precious blood He spilt,
 My ransom from the dreadful guilt
 Of sin and wrath divine!
-I’d sing His glorious ritheousness,
+I’d sing His glorious righteousness,
 In which all perfect heavenly dress
 My soul shall ever shine
 My soul shall ever shine
@@ -4410,7 +4408,7 @@ Exalted on His throne:
 In loftiest songs of sweetest praise,
 I would to everlasting days
 Make all His glories known,
-Make all His glories know.
+Make all His glories known.
 ''',
     '''
 4. Soon the delightful day will come
@@ -4453,10 +4451,10 @@ And thanks never ceasing, and infinite love. Amen
     '''
 1. Look, ye saints! The sight is glorious;
 See the Man of Sorrows now;
-From the fight returned victorious,,
+From the fight returned victorious,
 Every knee to him shall bow:
 Crown Him! Crown Him! Crown Him! Crown Him!
-Crown became the victor’s brow
+Crown became the victor’s brow.
 ''',
     '''
 2. Crown the Saviour! angels crown Him
@@ -4464,7 +4462,7 @@ Rich the trophies Jesus brings;
 In the seat of power enthrone Him,
 While the vault of heaven rings:
 Crown him! Crown Him! Crown Him! Crown Him!
-Crown theSaviour King of kings.
+Crown the Saviour King of kings.
 ''',
     '''
 3. Sinners in decision crowned Him
@@ -4472,7 +4470,7 @@ Mocking thus the Savior’s claim;
 Saints and angels crowed around Him,
 Own His title, praise His name:
 Crown Him! Crown Him! Crown Him! Crown Him
-Spread abroad the victor’s fame
+Spread abroad the victor’s fame.
 ''',
     '''
 4. Hark, those burst of acclamation!
@@ -4492,7 +4490,7 @@ Thou didst free salvation bring;
 Hail, thou agonizing Savior,
 Bearer of our sin and shame!
 By Thy merits we find favor;
-Life is given thro’Thy name.
+Life is given thro’ Thy name.
 ''',
     '''
 2. Paschal Lamb, by God appointed,
@@ -4507,8 +4505,7 @@ Peace is made ‘twixt man and God.
     '''
 3. Jesus, hail! Enthroned in glory,
 There forever to abide;
-All the heavenly host adore
-Thee;
+All the heavenly host adore Thee;
 Seated at thy Father’s side:
 There for sinners Thou art pleading,
 There Thou dost our place prepare,
@@ -4529,10 +4526,8 @@ Help to chant Immanuel’s praise!
   HymnData(150, 'I Love Thee', [
     '''
 1. I love Thee, I love Thee, I love Thee my lord;
-I love Thee, my Saviour, I love
-Thee, my God
-I love Thee, I love thee, and that
-Thou dost know;
+I love Thee, my Saviour, I love Thee, my God
+I love Thee, I love thee, and that Thou dost know;
 But how much I love thee my actions will show.
 ''',
     '''
@@ -4542,16 +4537,13 @@ I gaze on my treasure and long to be there,
 With Jesus and angels and kindred so dear.
 ''',
     '''
-3. O Jesus, my Saviour, with Thee
-I am blest,
+3. O Jesus, my Saviour, with Thee I am blest,
 My life and salvation, my joy and my rest;
-Thy name be my theme, and
-Thy love be my song;
+Thy name be my theme, and Thy love be my song;
 Thy grace shall inspire both my heart and my tongue.
 ''',
     '''
-4. Oh, who’s like my Saviour?
-He’s Salem’s bright king;
+4. Oh, who’s like my Saviour? He’s Salem’s bright king;
 He smiles and He loves me and helps me to sing:
 I’ll praise Him; I’ll praise Him with notes loud and clear,
 While rivers of pleasure my spirit shall cheer. Amen
