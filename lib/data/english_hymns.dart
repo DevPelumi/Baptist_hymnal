@@ -3021,9 +3021,8 @@ Joys that thro’ all time abide.  Amen
     '''
 1. Alas, and did my Saviour bleed
 And did my Sov’reign die?
-Would he devote that sacred
-head
-for sinners such as I?
+Would he devote that sacred head
+For sinners such as I?
 ''',
     '''
 2. Was it for crimes that I have done
@@ -3033,8 +3032,8 @@ And love beyond degree!
 ''',
     '''
 3. Well might the sun in darkness hide,
-And shut his glories in
-When Christ the mighty maker died
+And shut his glories in,
+When Christ the mighty Maker died
 For man the creature’s sin
 ''',
     '''
@@ -3049,25 +3048,25 @@ Here, lord, I give myself away,
 1. Ride on! Ride on in majesty!
 Hark! All the tribes Hosanna cry:
 O Saviour meek, pursue Thy road
-With palms and scattered garment strowed
+With palms and scattered garments strowed
 ''',
     '''
 2. Ride on! Ride on in majesty!
 In lowly pomp ride on to die:
-O Christ, Thy triumphs nowbegin
+O Christ, Thy triumphs now begin
 O’er captive death and conquered sin.
 ''',
     '''
 3. Ride on! Ride on in majesty!
 The winged squadrons of the sky
 Look down with sad and wondering eyes
-To seeth’ approaching sacrifice.
+To see th’ approaching sacrifice.
 ''',
     '''
 4. Ride on! Ride on in majesty!
 In lowly pomp ride on to die
 Bow Thy meek Head to mortal pain,
-Then take, O God, Thy pow’r and reign. Amen
+Then take, O God, Thy pow’r and reign.   Amen
 '''
   ]),
   HymnData(103, 'Rocks of Ages, Cleft for Me', [
@@ -3093,14 +3092,15 @@ When mine eyes shall close in death.
 When I rise to worlds unknown
 And behold Thee on Thy throne.
 Rock of ages, cleft for me.
-Let me hide myself in Thee. Amen
+Let me hide myself in Thee.   Amen
 '''
   ]),
   HymnData(104, '‘Tis Midnight and on Olive’s Brow', [
     '''
 1. ‘Tis midnight, and on Olive’s brow
 The star is dimmed that lately shone;
-Tis midnight. In the garden nowThesuff‘ringSavior prays alone.
+Tis midnight. In the garden now
+The suff‘ring Savior prays alone.
 ''',
     '''
 2. ‘Tis midnight, and from all removed,
@@ -3109,7 +3109,7 @@ E’en the disciple that he loved
 Heeds not his master’s grief and tears.
 ''',
     '''
-3. Tis midnight, and for other’s guilt
+3. Tis midnight, and for others’ guilt
 The man of sorrows weeps in blood;
 Yet he that hath anguish knelt
 Is not forsaken by his God
@@ -3118,8 +3118,7 @@ Is not forsaken by his God
 4. Tis midnight, and from heavenly plains
 Is borne the song that angels know:
 Unheard by mortals are the strain
-That sweetly soothes the Saviour’s woe.
-Amen
+That sweetly soothes the Saviour’s woe.  Amen
 '''
   ]),
   HymnData(105, 'Go to Dark Gethsemane', [
@@ -3136,14 +3135,14 @@ Learn of Jesus Christ to pray.
 View the Lord of life arraigned
 Oh, the worm-wood and the gall!
 Oh, the pangs His soul sustained!
-Shun not suff ring, shame, or loss;
+Shun not suff'ring, shame, or loss;
 Learn of Him to bear the cross.
 ''',
     '''
 3. Calvary’s moumful mountain climb;
 There, adoring at His feet,
 Mark the miracle of time
-God’s own sacrifice complete
+God’s own sacrifice complete;
 “it is finished!” hear the cry;
 Learn of Jesus Christ to die.
 ''',
@@ -3153,7 +3152,7 @@ Where they laid His breathless clay;
 All is solitude and gloom;
 Who hath taken Him away?
 Christ is ris’n! He meets our eyes;
-Savior, teach us so to rise. Amen
+Saviour, teach us so to rise. Amen
 '''
   ]),
   HymnData(106, 'Blessed Redeemer', [
@@ -3162,10 +3161,10 @@ Savior, teach us so to rise. Amen
 Walked Christ my Savior weary and worn
 Facing for sinners death on the cross,
 That he might save them from endless loss
-Blessed Redeemer! Precious Redeemer
-Seems now I see Him on Calvary’s tree;
-Wounded and bleeding, for sinners pleading
-Blind and unheeding dying for me!
+  Blessed Redeemer! Precious Redeemer
+  Seems now I see Him on Calvary’s tree;
+  Wounded and bleeding, for sinners pleading
+  Blind and unheeding dying for me!
 ''',
     '''
 2. “Father, forgive them!” thus did He pray
@@ -3180,10 +3179,10 @@ Thro’ years unnumbered on heaven’s shore.
 My tongue shall praise Him forever more.
 '''
   ]),
-  HymnData(107, 'The Strife Is Over', [
+  HymnData(107, 'The Strife Is O'er', [
     '''
 1. Alleluia! Alleluia! Alleluia!
-The strife is over, the battle done;
+The strife is o'er, the battle done;
 The victory of life is won;
 The song of triumph has begun;
 Alleluia!
@@ -3192,7 +3191,7 @@ Alleluia!
 2. Alleluia! Alleluia! Alleluia!
 The powers of death have done their worst,
 But Christ their legions hath dispersed;
-Let shout of holy joy out- burst;
+Let shout of holy joy out-burst;
 Alleluia!
 ''',
     '''
@@ -3204,16 +3203,16 @@ Alleluia!
 ''',
     '''
 4. Alleluia! Alleluia! Alleluia!
-Lord by the stripes which wounded thee,
+Lord by the stripes which wounded Thee,
 From death’s dread sting Thy servant free
-That we may live and sing to
-Thee; Alleluia! Amen
+That we may live and sing to Thee; 
+Alleluia! Amen
 '''
   ]),
   HymnData(108, 'Rejoice, the Lord Is King', [
     '''
 1. Rejoice, the Lord Is King;
-Your Lord and king adore !
+Your Lord and king adore!
 Rejoice, give thanks and sing,
 And triumph ever more;
 Lift up your heart, lift up your voice!
@@ -3255,7 +3254,7 @@ Light and life have risen;
 All the winter of our sins,
 Long and dark is flying
 From His light, to whom we give
-Thanks and praise undying
+Thanks and praise undying.
 ''',
     '''
 3. “Alleluia! Now we cry
@@ -3270,31 +3269,25 @@ To the Spirit rising. Amen
   ]),
   HymnData(110, 'Welcome, Happy Mornings', [
     '''
-1. “Welcome, happy morning.
-Age to age shall say;
-Hell today is vanquished;
-Heaven is won today!
+1. “Welcome, happy morning. Age to age shall say;
+Hell today is vanquished; Heaven is won today!
 Lo! The dead is living; God for ever more
 Him, their true Creator. All His works, adore.
-“welcome, happy morning”
-Age to age shall say;
-Hell today is vanquished
-Heaven is won today
+  “Welcome, happy morning”
+  Age to age shall say;
+  Hell today is vanquish'd
+  Heav'n is won today
 ''',
     '''
-2. Earth her joy confesses, Clothing of spring
+2. Earth her joy confesses, Clothing of spring,
 All good gifts returned with Her returning King
 Bloom in every meadow, leaves on every bough
-Speak His sorrows ended. Hail
-His triumph now
+Speak His sorrows ended. Hail His triumph now
 ''',
     '''
-3. Come then, true and faithful,
-Now fulfill Thy word
-Tis Thine own third morning
-Rise, O buried lord!
-Show Thy face in brightness,
-Bid the nations see,
+3. Come then, true and faithful, Now fulfill Thy word
+'Tis Thine own third morning, Rise, O buried lord!
+Show Thy face in brightness, Bid the nations see,
 Bring again our daylight; Day returns with Thee! Amen
 '''
   ]),
