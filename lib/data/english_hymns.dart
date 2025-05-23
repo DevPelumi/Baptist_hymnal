@@ -1762,9 +1762,9 @@ Which I have loved long since, and lost a while. Amen
     '''
 1. Eternal Father, strong to save,
 Whose arm doth bind the restless wave,
-Who bidd’stthemighty ocean deep
+Who bidd’st the mighty ocean deep
 Its own appointed limits keep;
-O hear us when we cry to Thee;
+O hear us when we cry to Thee
 For those in peril on the sea,
 ''',
     '''
@@ -1800,7 +1800,7 @@ Thou my best thought, by day or by night,
 Waking or sleeping, Thy presence my light
 ''',
     '''
-2. BeThoumywisdom,and Thou my true word;
+2. Be Thou my wisdom, and Thou my true word;
 I ever with Thee and Thou with me, Lord;
 Thou my great Father, I Thy true Son,
 Thou in me dwelling, and I
@@ -1829,9 +1829,10 @@ Noel, Noel, Noel, Noel,
 Born is the King of Israel.
 ''',
     '''
-2. They looked up and saw a star Shining in the east, beyond them far,
+2. They looked up and saw a star 
+Shining in the east, beyond them far,
 And to the earth it gave great light,
-And use it continued both day and night,
+And so it continued both day and night,
 ''',
     '''
 3. And by the light of that same star,
@@ -1843,8 +1844,7 @@ And to follow the star wherever it went.
 4. Then let us all with one accord
 Sing praises to our heavenly Lord
 Who hath made heaven and earth of naught,
-And with His blood mankind
-hath bought. Amen.
+And with His blood mankind hath bought. Amen.
 '''
   ]),
   HymnData(64, 'Angels We Have Heard on High', [
@@ -1882,8 +1882,7 @@ Let earth receive her King;
 Let every heart prepare Him room,
 And heaven and nature sing,
 And heaven and nature sing,
-And heaven, and heaven
-and nature sings,
+And heaven, and heaven and nature sings,
 And heaven and nature sing,
 And heaven and nature sing,
 ''',
