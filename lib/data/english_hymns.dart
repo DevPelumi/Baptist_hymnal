@@ -6071,9 +6071,9 @@ Will you this moment His grace receive?
 1. Lord Jesus, I long to be perfectly whole;
 I want Thee forever to live in my soul;
 Break down ev’ry idol, cast out ev’ry foe:
-Now wash me, and I shall be whiter than snow
-Whiter than snow, yes, whiter than snow;
-Now wash me and I shall be whiter than snow.
+  Now wash me, and I shall be whiter than snow
+  Whiter than snow, yes, whiter than snow;
+  Now wash me and I shall be whiter than snow.
 ''',
     '''
 2. Lord Jesus, look down from Thy throne in the skies,
@@ -6088,7 +6088,7 @@ By faith, for my cleansing I see Thy blood flow:
 Now wash me, and I shall be whiter than snow.
 ''',
     '''
-4. Lord Jesus, Thouknowest I patiently wait;
+4. Lord Jesus, Thou knowest I patiently wait;
 Come now, and within me a new heart create;
 To those who have sought Thee, Thou never saidst No:
 Now wash me, and I shall be whiter than snow.
@@ -6100,10 +6100,10 @@ Now wash me, and I shall be whiter than snow.
 My soul in mercy to reclaim,
 And from the depths of sin and shame
 Thro’ grace He lifted me.
-From sinking sand-He lifted me,
-With tender hand He Med me,
-From shades of night to plains of light,
-Op raise His name, He lifted me!
+  From sinking sand-He lifted me,
+  With tender hand He lifted me,
+  From shades of night to plains of light,
+  O praise His name, He lifted me!
 ''',
     '''
 2. He called me long before I heard,
@@ -6130,10 +6130,10 @@ He should have lifted me.
 Redeemed by the blood of then Lamb;
 Redeemed thro’ His infinite mercy,
 His child, and forever, I am.
-Redeemed, redeemed,
-Redeemed by the blood of the Lamb;
-Redeemed, redeemed,.
-His child, and forever, I am,
+  Redeemed, redeemed,
+  Redeemed by the blood of the Lamb;
+  Redeemed, redeemed,.
+  His child, and forever, I am,
 ''',
     '''
 2. Redeemed, and so happy in Jesus,
@@ -6160,10 +6160,10 @@ And giveth me songs in the night.
 Nothing but the blood of Jesus;
 What can make me whole again?
 Nothing but the blood of Jesus.
-Oh! precious is the flow
-that makes me white as snow;
-no other fount I know,
-nothing but the blood of Jesus.
+  Oh! precious is the flow
+  that makes me white as snow;
+  no other fount I know,
+  nothing but the blood of Jesus.
 ''',
     '''
 2. For my pardon this I see,
@@ -6186,20 +6186,20 @@ Nothing but the blood of Jesus.
   ]),
   HymnData(205, 'We Praise Thee, O God', [
     '''
-1. We praise thee, O God, for the Son of thy love,
+1. We praise thee, O God! for the Son of Thy love,
 For Jesus who died and is now gone above
-Hallelujah! thine the glory!
-Hallelujah! Amen!
-Hallelujah! thine the glory!
-Revive us again.
+  Hallelujah! thine the glory,
+  Hallelujah! Amen,
+  Hallelujah! thine the glory,
+  Revive us again.
 ''',
     '''
-2. We praise thee, O God, for thy Spirit of light,
+2. We praise thee, O God! for thy Spirit of light,
 Who has shown us our Savior and scatter’d our night.
 ''',
     '''
 3. All glory and praise to the Lamb that was slain,
-Who hath borne all our sins and has cleans’dev'ry stain.
+Who hath borne all our sins and has cleans’d ev'ry stain.
 ''',
     '''
 4. Revive us again; fill each heart with thy love;
@@ -6208,30 +6208,27 @@ May each soul be rekindled with fire from above.
   ]),
   HymnData(206, 'No, Not Despairingly', [
     '''
-1. No, not despairinglyCome I to Thee;
-No, not distrustinglyBend I the knee:
-Sin hath gone over me,Yet is this still my plea;
+1. No, not despairingly Come I to Thee;
+No, not distrustingly Bend I the knee:
+Sin hath gone over me, Yet is this still my plea;
 Jesus hath died.
 ''',
     '''
-2. Ah! Mine iniquityCrimson has been,
+2. Ah! Mine iniquity Crimson has been,
 Infinite, infinite, Sin upon sin.
-Sin of not loving Thee,Sin of not trusting Thee,
+Sin of not loving Thee, Sin of not trusting Thee,
 Infinite sin.
 ''',
     '''
-3. Lord, I confess to TheeSadly my sin;
-All am tell I Thee,All I have been:
-Purge Thou my sin away,Wash Thou my soul this day;
+3. Lord, I confess to Thee Sadly my sin;
+All am tell I Thee, All I have been:
+Purge Thou my sin away, Wash Thou my soul this day;
 Lord, make me clean.
 ''',
     '''
-4. Faithful and just art Thou,
-Forgiving all;
-Loving and kind art Thou
-When poor ones call:
-Lord, let the cleansing blood,
-Blood of the Lamb of God,
+4. Faithful and just art Thou, Forgiving all;
+Loving and kind art Thou When poor ones call:
+Lord, let the cleansing blood, Blood of the Lamb of God,
 Pass o'er my soul.
 ''',
     '''
@@ -6250,13 +6247,13 @@ Nothing between. Amen.
 Snatch them in pity from sin and the grave;
 Weep o'er the erring one, Lift up the fallen,
 Tell them of Jesus the mighty to save.
-Rescue the perishing,
-Care for the dying;
-Jesus is merciful,
-Jesus will save.
+  Rescue the perishing,
+  Care for the dying;
+  Jesus is merciful,
+  Jesus will save.
 ''',
     '''
-2. Tho’gh they are slighting Him, still He is waiting,
+2. Tho’ they are slighting Him, still He is waiting,
 Waiting the penitent child to receive;
 Plead with them earnestly, plead with them gently,
 He will forgive if they only believe.
@@ -6264,14 +6261,14 @@ He will forgive if they only believe.
     '''
 3. Down in the human heart, crush’d by the tempter,
 Feelings lie buried that grace can restore;
-Touch’d by a loving heart, wakened by kindness,
+Touch’d by a loving heart, waken'd by kindness,
 Chords that are broken will vibrate once more.
 ''',
     '''
 4. Rescue the perishing, Duty demands it;
 Strength for thy labor the Lord will provide;
 Back to the narrow way patiently win them,
-Tell the poor wanderer a Savior has died.
+Tell the poor wand'rer a Savior has died.
 '''
   ]),
   HymnData(208, 'Since I Have Been Redeemed', [
@@ -6280,11 +6277,11 @@ Tell the poor wanderer a Savior has died.
 Since I have been redeemed,
 Of my Redeemer, Savior, King,
 Since I have been redeemed.
-Since I have been redeemed,
-Since I have been redeemed,
-I will glory in His name;
-Since I have been redeemed,
-I will glory in my Savior's name.
+  Since I have been redeemed,
+  Since I have been redeemed,
+  I will glory in His name;
+  Since I have been redeemed,
+  I will glory in my Savior's name.
 ''',
     '''
 2. I have a Christ who satisfies,
@@ -6305,16 +6302,16 @@ Where I shall dwell eternally,
 Since I have been redeemed.
 '''
   ]),
-  HymnData(209, '“Whoever” Meanth Me', [
+  HymnData(209, '“Whosoever” Meaneth Me', [
     '''
 1. I am happy today and the sun shines bright,
 The clouds have been rolled away;
 For the Savior said, whosoever will
 May come with Him to (stay).
-"Whosoever," surely meaneth me,
-Surely meaneth me, O surely meaneth me;
-"Whosoever," surely meaneth me,
-"Whosoever," meaneth me.
+  "Whosoever," surely meaneth me,
+  Surely meaneth me, O surely meaneth me;
+  "Whosoever," surely meaneth me,
+  "Whosoever," meaneth me.
 ''',
     '''
 2. All my hopes have been raised, O His name be praised,
@@ -6358,7 +6355,7 @@ The Father's holy child:
 I long to be with Jesus,
 Amid the heav'nly throng,
 To sing with saints His praises,
-To learn the angels' song.Amen.
+To learn the angels' song.  Amen.
 '''
   ]),
   HymnData(211, 'Tell Me the Story of Jesus', [
@@ -6371,10 +6368,10 @@ Tell how the angels, in chorus,
 Sang as they welcomed His birth,
 "Glory to God in the highest!
 Peace and good tidings to earth."
-Tell me the story of Jesus,
-Write on my heart every word;
-Tell me the story most precious,
-Sweetest that ever was heard.
+  Tell me the story of Jesus,
+  Write on my heart every word;
+  Tell me the story most precious,
+  Sweetest that ever was heard.
 ''',
     '''
 2. Fasting alone in the desert,
@@ -6407,12 +6404,14 @@ But the Master of the sea
 Heard my despairing cry,
 From the waters lifted me,
 Now safe am I.
-Love lifted me! Love lifted me!
-When nothing else could help,
-Love lifted me.Love lifted me.
+  Love lifted me! 
+  Love lifted me!
+  When nothing else could help,
+  Love lifted me.
+  Love lifted me.
 ''',
     '''
-2. All to Him I give,
+2. All my heart to Him I give,
 Ever to Him I'll cling,
 In his blessed presence live,
 Ever his praises sing;
@@ -6476,16 +6475,16 @@ And remember them no more.
 Jesus is the Friend you need;
 When the clouds hang low in this world of woe,
 Jesus is the Friend you need.
-Jesus is the Friend you need,
-Such a Friend is He indeed;
-He Who notethev’ry tear,
-He will banish ev’ry fear,
-Jesus is the Friend you need.
+  Jesus is the Friend you need,
+  Such a Friend is He indeed;
+  He Who noteth ev’ry tear,
+  He will banish ev’ry fear,
+  Jesus is the Friend you need.
 ''',
     '''
 2. If you’re lost in sin, all is dark within,
 Jesus is the Friend you need;
-God alone can save through the Son He gave,
+God alone can save thro' the Son He gave,
 Jesus is the Friend you need.
 ''',
     '''
@@ -6507,10 +6506,10 @@ Jesus is the Friend you need.
 To ask Him the way of salvation and light;
 The Master made answer in words true and plain,
 "Ye must be born again.
-Ye must be born again,
-Ye must be born again….
-I verily, verily say unto thee,
-Ye must be born again.
+  Ye must be born again,
+  Ye must be born again….
+  I verily, verily say unto thee,
+  Ye must be born again.
 ''',
     '''
 2. Ye children of men, attend to the word
@@ -6537,10 +6536,10 @@ Then list to the note of this solemn refrain,
 Charmed by the world's delight;
 Things that are higher, things that are nobler,
 These have allured my sight.
-I will hasten to Him,
-Hasten so glad and free,
-Jesus, greatest, highest,
-I will come to Thee.
+  I will hasten to Him,
+  Hasten so glad and free,
+  Jesus, greatest, highest,
+  I will come to Thee.
 ''',
     '''
 2. I am resolved to go to the Saviour,
@@ -6573,10 +6572,10 @@ We'll walk the heavenly way.
 There is a brother whom someone should save;
 Somebody’s brother! oh, who then will dare
 To throw out the Life-Line, his peril to share?
-Throw out the Life-Line!
-Throw out the Life-Line!
-Someone is drifting away;
-Someone is sinking today.
+  Throw out the Life-Line!
+  Throw out the Life-Line!
+  Someone is drifting away;
+  Someone is sinking today.
 ''',
     '''
 2. Throw out the Life-Line with hand quick and strong.
@@ -6585,7 +6584,7 @@ See! he is sinking; oh; hasten today,
 And out with the life-boat, away, then, away!
 ''',
     '''
-3. Throw out the LifeLine to dangerfraught men,
+3. Throw out the LifeLine to danger fraught men,
 Sinking in anguish where you’ve never been:
 Winds of temptation and billows of woe
 Will soon hurl them out where the dark waters flow.
@@ -6603,10 +6602,10 @@ But throw out the Life-Line and save them today.
 While you see your soul’s deep need,
 While our Father calls you home,
 Will you not, my brother, come?
-Why not now? Why not now?
-Why not come to Jesus now?
-Why not now? Why not now?
-Why not come to Jesus now?
+  Why not now? Why not now?
+  Why not come to Jesus now?
+  Why not now? Why not now?
+  Why not come to Jesus now?
 ''',
     '''
 2. You have wandered far away;
@@ -6633,10 +6632,10 @@ He will keep you all the way.
 Hear my humble cry;
 While on others thou art calling,
 Do not pass me by.
-Savior, Savior,
-Hear my humble cry;
-While on others thou art calling,
-Do not pass me by.
+  Savior, Savior,
+  Hear my humble cry;
+  While on others thou art calling,
+  Do not pass me by.
 ''',
     '''
 2. Let me at thy throne of mercy
@@ -6663,10 +6662,10 @@ Whom in heav’n but Thee?
 Oh, why do you tarry so long?
 Your Savior is waiting to give you
 A place in His sanctified throng.
-Why not? why not?
-Why not come to Him now?
-Why not? why not?
-Why not come to Him now?
+  Why not? why not?
+  Why not come to Him now?
+  Why not? why not?
+  Why not come to Him now?
 ''',
     '''
 2. What do you hope, dear brother,
@@ -6715,7 +6714,7 @@ A friend to soothe and pity,
 A friend to care for me:
 I need the heart of Jesus
 To feel each anxious care,
-To tell my ev’rytrial,
+To tell my ev’ryt rial,
 And all my sorrow share. Amen.
 '''
   ]),
@@ -6729,10 +6728,10 @@ Tell me the story simply,
 As to a little child,
 For I am weak and weary,
 And helpless and defiled.
-Tell me the old, old story,
-Tell me the old, old story,
-Tell me the old, old story,
-Of Jesus and His love.
+  Tell me the old, old story,
+  Tell me the old, old story,
+  Tell me the old, old story,
+  Of Jesus and His love.
 ''',
     '''
 2. Tell me the story slowly,
@@ -6767,13 +6766,13 @@ Tell me the old, old story:
   ]),
   HymnData(223, 'God Calling Yet! Shall I Not Hear?', [
     '''
-1. God calling yet; shall I not hear?
+1. God calling yet! shall I not hear?
 Earth’s pleasures shall I hold dear?
 Shall life’s swift passing years all fly,
 And still my soul in slumber lie?
 ''',
     '''
-2. God calling yet, and shall He knock,
+2. God calling yet! and shall He knock,
 And I my heart the closer lock?
 He still is waiting to receive,
 And shall I dare His Spirit grieve?
@@ -6797,10 +6796,10 @@ The voice of God hath reach’d my heart.
 That calls me, Lord, to Thee,
 For cleansing in Thy precious blood
 That flowed on Calvary.
-I am coming, Lord!
-Coming now to Thee!
-Wash me, cleanse me in the blood
-That flowed on Calvary!
+  I am coming, Lord!
+  Coming now to Thee!
+  Wash me, cleanse me in the blood
+  That flowed on Calvary!
 ''',
     '''
 2. Tho' coming weak and vile,
@@ -6827,10 +6826,10 @@ Our strength and righteousness.
 "Thy strength indeed is small,
 Child of weakness, watch and pray,
 Find in Me thine all in all."
-Jesus paid it all,
-All to Him I owe;
-Sin had left a crimson stain,
-He wash’d it white as snow.
+  Jesus paid it all,
+  All to Him I owe;
+  Sin had left a crimson stain,
+  He wash’d it white as snow.
 ''',
     '''
 2. Lord, now indeed I find
@@ -6900,14 +6899,14 @@ And I will give you life."
 O cheering voice of Jesus,
 Which comes to banish strife!
 The foe is stern and eager,
-the fight is fierce and long;
-but thou hast made us mighty,
-and stronger than the strong.
+The fight is fierce and long;
+But Thou hast made us mighty,
+And stronger than the strong.
 ''',
     '''
 3. "And whosoever cometh
 I will not cast him out."
-O welcome love of Jesus,
+O welcome voice of Jesus,
 Which drives away our doubt;
 Which calls us, very sinners,
 Unworthy though we be,
@@ -6922,10 +6921,10 @@ So burdened with sin and distrest
 Till I heard a sweet voice saying,
 "Make me your choice;"
 And I entered the haven of rest.
-I've anchored my soul in the haven of rest,
-I'll sail the wide seas no more;
-The tempest may sweep o'er the wild, stormy deep,
-In Jesus I'm safe evermore.
+  I've anchored my soul in the haven of rest,
+  I'll sail the wide seas no more;
+  The tempest may sweep o'er the wild, stormy deep,
+  In Jesus I'm safe evermore.
 ''',
     '''
 2. I yielded myself to His tender embrace,
@@ -6942,7 +6941,7 @@ A home in haven of rest.
     '''
 4. Oh, come to the Savior, He patiently waits
 To save by His power divine,
-Come, anchor your soul in the haven of Rest,
+Come, anchor your soul in the haven of rest,
 And say, "My Beloved is mine."
 '''
   ]),
@@ -6952,10 +6951,10 @@ And say, "My Beloved is mine."
 Calling today, calling today;
 Why from the sunshine of love wilt thou roam
 Farther and farther away?
-Call………….ing today…………..
-Call………….ing today…………..
-Je…………..sus is call………..ing,
-Is tenderly calling today.
+  Call………….ing today…………..
+  Call………….ing today…………..
+  Je…………..sus is call………..ing,
+  Is tenderly calling today.
 ''',
     '''
 2. Jesus is calling the weary to rest,
@@ -6982,10 +6981,10 @@ Quickly arise and away.
 Let Jesus come into your heart;
 If you desire a new life to begin,
 Let Jesus come into your heart.
-Just now, your doubtings give o'er;
-Just now, reject Him no more;
-Just now, throw open the door;
-Let Jesus come into your heart.
+  Just now, your doubtings give o'er;
+  Just now, reject Him no more;
+  Just now, throw open the door;
+  Let Jesus come into your heart.
 ''',
     '''
 2. If it's for purity now that you sigh,
@@ -7012,10 +7011,10 @@ Let Jesus come into your heart.
 Place you hand in the nail-scarred hand;
 Are you weary and worn from its toil and strife?
 Place your hand in the nail-scarred hand.
-Place your hand in the nail-scarred hand,
-Place your hand in the nail-scarred hand;
-He will keep to the end, He's your dearest friend,
-Place your hand in the nail-scarred hand.
+  Place your hand in the nail-scarred hand,
+  Place your hand in the nail-scarred hand;
+  He will keep to the end, He's your dearest friend,
+  Place your hand in the nail-scarred hand.
 ''',
     '''
 2. Are you walking alone through the shadows dim?
@@ -7042,10 +7041,10 @@ Place your hand in the nail-scarred hand.
 A dear loving Savior, tho’ earth-friends be few;
 And now He is watching in tenderness o’er me,
 And, oh, that my Savior were your Savior, too.
-For you I am praying,
-For you I am praying,
-For you I am praying,
-I’m praying for you.
+  For you I am praying,
+  For you I am praying,
+  For you I am praying,
+  I’m praying for you.
 ''',
     '''
 2. I have a Father; to me He has given
@@ -7060,7 +7059,7 @@ Oh, when I receive it all shining in brightness,
 Dear friend, could I see you receiving one, too!
 ''',
     '''
-4. WhenChrist has found you, tell others the story,
+4. When Christ has found you, tell others the story,
 That my loving Savior is your Savior, too;
 Then pray that your Savior may bring them to glory,
 And prayer will be answered; ’twas answered for you!
@@ -7072,10 +7071,10 @@ And prayer will be answered; ’twas answered for you!
 Jesus, I come, Jesus, I come;
 Into Thy freedom, gladness and light,
 Jesus, I come to Thee;
-Out of my sickness into Thy health,
-Out of my want and into Thy wealth,
-Out of my sin and into Thyself,
-Jesus, I come to Thee.
+  Out of my sickness into Thy health,
+  Out of my want and into Thy wealth,
+  Out of my sin and into Thyself,
+  Jesus, I come to Thee.
 ''',
     '''
 2. Out of my shameful failure and loss,
@@ -7144,10 +7143,10 @@ Be saved, O tonight.
 There's mercy with the Lord,
 And He will surely give you rest
 By trusting in His word.
-Only trust Him, only trust Him,
-only trust Him now;
-He will save you, He will save you,
-He will save you now.
+  Only trust Him, only trust Him,
+  only trust Him now;
+  He will save you, He will save you,
+  He will save you now.
 ''',
     '''
 2. For Jesus shed His precious blood
@@ -7174,10 +7173,10 @@ Where joys immortal flow.
 Calling for you and for me;
 See, on the portals He's waiting and watching,
 Watching for you and for me.
-Come home, come home,
-Ye who are weary come home.
-Earnestly, tenderly, Jesus is calling,
-calling, O sinner, come home!
+  Come home, come home,
+  Ye who are weary come home.
+  Earnestly, tenderly, Jesus is calling,
+  calling, O sinner, come home!
 ''',
     '''
 2. Why should we tarry when Jesus is pleading,
@@ -7188,7 +7187,7 @@ Mercies for you and for me?
     '''
 3. Time is now fleeting, the moments are passing,
 Passing from you and from me;
-Shadows are gathering, deathbeds are coming,
+Shadows are gathering, death beds are coming,
 Coming for you and for me.
 ''',
     '''
@@ -7204,10 +7203,10 @@ Pardon for you and for me.
 Now I'm coming home;
 The paths of sin too long I've trod,
 Lord, I'm coming home.
-Coming home, coming home,
-Nevermore to roam,
-Open wide Thine arms of love,
-Lord, I'm coming home.
+  Coming home, coming home,
+  Never more to roam,
+  Open wide Thine arms of love,
+  Lord, I'm coming home.
 ''',
     '''
 2. I've wasted many precious years,
@@ -7234,10 +7233,10 @@ Lord, I'm coming home.
 Spread the blessed tidings all the world around;
 Tell the joyful news wherever man is found,
 "Whosoever will may come."
-"Whosoever will, whosoever will!"
-Send the proclamation over vale and hill;
-"Tis a loving Father calls the wanderer home:
-"Whosoever will may come."
+  "Whosoever will, whosoever will!"
+  Send the proclamation over vale and hill;
+  "Tis a loving Father calls the wanderer home:
+  "Whosoever will may come."
 ''',
     '''
 2. Whosoever cometh need not delay,
@@ -7258,10 +7257,10 @@ Jesus is the true, the only Living Way:
 Would you walk with Him within the narrow road?
 Would you have Him bear your burden, carry all your load?
 Let Him have His way with thee.
-His power can make you what you ought to be;
-His blood can cleanse your heart and make you free;
-His love can fill your soul, and you will see
-’Twas best for Him to have His way with thee.
+  His power can make you what you ought to be;
+  His blood can cleanse your heart and make you free;
+  His love can fill your soul, and you will see
+  ’Twas best for Him to have His way with thee.
 ''',
     '''
 2. Would you have Him make you free, and follow at His call?
@@ -7320,19 +7319,19 @@ O Lamb of God, I come! I come!
 Weak and wounded, sick and sore;
 Jesus ready stands to save you,
 Full of pity, love and pow'r.
-I will arise and go to Jesus,
-He will embrace me in His arms;
-In the arms of my dear Savior,
-Oh, there are ten thousand charms.
+  I will arise and go to Jesus,
+  He will embrace me in His arms;
+  In the arms of my dear Savior,
+  Oh, there are ten thousand charms.
 ''',
     '''
 2. Come, ye thirsty, come and welcome,
 God's free bounty glorify,
 True belief and true repentance,
-Ev’rygrace that brings you nigh.
+Ev’ry grace that brings you nigh.
 ''',
     '''
-3. Come, ye weary, heavyladen,
+3. Come, ye weary, heavy laden,
 Lost and ruined by the fall;
 If you tarry till you're better,
 You will never come at all.
@@ -7348,7 +7347,7 @@ And the chief of sinners, spare?
     '''
 2. I have long withstood His grace;
 Long provoked Him to His face;
-would not hearHis gracious calls;
+would not hear His gracious calls;
 Grieved Him by a thousand falls.
 ''',
     '''
@@ -7370,10 +7369,10 @@ Weep, believe, and sin no more. Amen
 I am poor and weak and blind;
 I am counting all but dross;
 I shall full salvation find.
-I am trusting, Lord, in Thee,
-Dear Lamb of Calvary;
-Humbly at thy cross I bow;
-Save me, Jesus, save me now.
+  I am trusting, Lord, in Thee,
+  Dear Lamb of Calvary;
+  Humbly at thy cross I bow;
+  Save me, Jesus, save me now.
 ''',
     '''
 2. Long my heart has sighed for Thee;
@@ -7605,7 +7604,7 @@ And sing, in life or death,
 "My Lord, thy will be done."Amen.
 '''
   ]),
-  HymnData(252, 'Faith of Our Father', [
+  HymnData(252, 'Faith of Our Fathers', [
     '''
 1. Faith of our fathers! living still
 In spite of dungeon, fire, and sword,
@@ -7615,11 +7614,11 @@ Faith of our fathers, holy faith!
 We will be true to thee till death.
 ''',
     '''
-2. Faith of our father!We will strive
+2. Faith of our father! We will strive
 To win all nations unto thee,
 And through the truth that comes from God
 Mankind shall then be truly free:
-Faith of our fathers! holy faith!
+Faith of our fathers, holy faith!
 We will be true to thee till death!
 ''',
     '''
@@ -7637,10 +7636,10 @@ We will be true to thee till death. Amen.
 Hesees and knows all the way you have trod;
 Never alone are the least of His children;
 Have faith in God, have faith in God.
-Have faith in God, He’s on His throne;
-Have faith in God, He watches o’er His own
-He cannont fail, He must prevail;
-Have faith in God, have faith in God
+  Have faith in God, He’s on His throne;
+  Have faith in God, He watches o’er His own
+  He cannont fail, He must prevail;
+  Have faith in God, have faith in God
 ''',
     '''
 2. Have faith in God when your prayers are unanswered,
@@ -7710,7 +7709,7 @@ In darkness feels no doubt.
 4. Lord, give me such a faith as this;
 And then, whate’er may come,
 I’ll know while here, the hallowed bliss
-Of my eternal home.Amen
+Of my eternal home.  Amen
 '''
   ]),
   HymnData(256, 'Faith is the Victory', [
@@ -7723,10 +7722,10 @@ Against the foe in vales below,
 Let all our strength be hurl’d;
 Faith is the victory, we know,
 That overcomes the world.
-Faith is the victory!
-Faith is the victory!
-Oh, glorious victory,
-That overcomes the world.
+  Faith is the victory!
+  Faith is the victory!
+  Oh, glorious victory,
+  That overcomes the world.
 ''',
     '''
 2. His banner over us is love,
@@ -7771,7 +7770,7 @@ A living fire.
     '''
 3. While life's dark maze I tread,
 And griefs around me spread,
-BeThou my guide;
+Be Thou my guide;
 Bid darkness turn to day,
 Wipe sorrow's tears away,
 Nor let me ever stray
@@ -7793,10 +7792,10 @@ A ransomed soul! Amen
 And to take Him at His word;
 Just to rest upon His promise,
 And to know, "Thus saith the Lord."
-Jesus, Jesus, how I trust Him!
-How I've proved Him o'er and o'er!
-Jesus, Jesus, precious Jesus!
-O for grace to trust Him more!
+  Jesus, Jesus, how I trust Him!
+  How I've proved Him o'er and o'er!
+  Jesus, Jesus, precious Jesus!
+  O for grace to trust Him more!
 ''',
     '''
 2. O how sweet to trust in Jesus,
@@ -7823,10 +7822,10 @@ Wilt be with me to the end.
 Trusting through a stormy way;
 Even when my faith is small,
 Trusting Jesus, that is all.
-Trusting as the moments fly,
-Trusting as the days go by;
-Trusting Him whate’er befall,
-Trusting Jesus, that is all.
+  Trusting as the moments fly,
+  Trusting as the days go by;
+  Trusting Him what e’er befall,
+  Trusting Jesus, that is all.
 ''',
     '''
 2. Brightly doth His Spirit shine
@@ -7855,8 +7854,8 @@ what a glory he sheds on our way!
 While we do his good will,
 he abides with us still,
 and with all who will trust and obey.
-Trust and obey, for there's no other way
-to be happy in Jesus, but to trust and obey.
+  Trust and obey, for there's no other way
+  to be happy in Jesus, but to trust and obey.
 ''',
     '''
 2. Not a burden we bear,
