@@ -4928,7 +4928,7 @@ Accept the praise I bring.
 1. Ask ye what great thing I know
 That delights and stirs me so?
 What the high reward I win?
-Whose the name I gloryin?
+Whose the name I glory in?
 Jesus Christ, the crucified.
 ''',
     '''
@@ -4965,8 +4965,8 @@ To shout Thy praise.
 ''',
     '''
 2. Thou art our holy lord,
-The all subduing word
-Healer of strife ,
+Tho all subduing word
+Healer of strife,
 Thou didst thyself abase,
 That from sin’s deep disgrace
 Thou mightiest save our race
@@ -4987,7 +4987,7 @@ Our shepherd and our pride,
 Our staff and song;
 Jesus, Thou Christ of God,
 By Thy perennial word,
-Leads us where thou hast trod
+Leads us where thou hast trod,
 Make our faith strong. Amen
 '''
   ]),
@@ -4995,7 +4995,7 @@ Make our faith strong. Amen
     '''
 1. “Man of sorrows,” what a name
 For the son of God who came
-Ruined sinners in reclaim!
+Ruined sinners to reclaim!
 Hallelujah! What a Saviour!
 ''',
     '''
@@ -5011,7 +5011,7 @@ Now in heav’n exalted high,
 Hallelujah! What a saviour!
 ''',
     '''
-4.When He comes,our glorious King,
+4. When He comes, our glorious King,
 All His ransomed home to bring,
 Then anew this song we’ll sing
 Hallelujah! What a Saviour! Amen.
@@ -5025,7 +5025,7 @@ Moved by Thy divine compassion,
 Who has died my heart to win?
 I will praise Thee;
 I will praise Thee;
-Where shall I Thy begin?
+Where shall I Thy praise begin?
 ''',
     '''
 2. Though unseen, I love the saviour,
@@ -5049,12 +5049,12 @@ Unperceived amid the throng;
 Wond’ring at the love that crowned us,
 Glad to join the holy song:
 Hallelujah. Hallelujah.
-Love and praise to Christ Belong!Amen
+Love and praise to Christ Belong!  Amen
 '''
   ]),
   HymnData(165, 'Holy Spirit, Faithful guide', [
     '''
-1. Holy spirit faithful guide,
+1. Holy Spirit, faithful guide,
 Ever near the Christian’s side;
 Gently lead us by the hand,
 Pilgrims in a desert land;
@@ -5064,11 +5064,11 @@ Whispering softly, “wanderer, come!
 Follow Me, I’ll guide thee home.”
 ''',
     '''
-2. Ever present, trust friend
+2. Ever present, truest friend,
 Ever near Thine aid to lend,
 Leave us not to doubt and fear,
 Groping on in darkness drear;
-When the storm are raging sore,
+When the storms are raging sore,
 Heart grow faint, and hopes gives o’er.
 Whisper softly, “wanderer, come!
 Follow me; I’ll guide thee home,”
@@ -5087,8 +5087,7 @@ Follow Me. I’ll guide thee home,” Amen
   HymnData(166, 'Spirit of God, Descend', [
     '''
 1. Spirit of God, descend upon my heart:
-Wean it from earth, through all
-its pulses move;
+Wean it from earth, through all its pulses move;
 Stoop to my weakness, mighty as Thou art,
 And make me love Thee as I ought to love.
 ''',
@@ -5099,8 +5098,7 @@ No angel visitant, no op’ning skies;
 But take the dimness of my soul away.
 ''',
     '''
-3. Hast Thou not bid us love Thee,
-God and King?
+3. Hast Thou not bid us love Thee, God and King?
 All, all Thine own, soul, heart, and strength, and mind;
 I see Thy cross, there teach my heart to cling
 Oh, let me seek Thee, and oh, let me find.
@@ -5109,7 +5107,7 @@ Oh, let me seek Thee, and oh, let me find.
 4. Teach me to feel that Thou art always nigh;
 Teach me the struggles of the soul to bear,
 To check the rising doubt, the rebel sigh;
-Teach me the patience of unanswered prayer.Amen.
+Teach me the patience of unanswered prayer.  Amen.
 '''
   ]),
   HymnData(167, 'Breathe on Me, Breath of God', [
@@ -5159,7 +5157,7 @@ As monarch in the breast,
 ''',
     '''
 4. Obedient to Thy will,
-We wait to feel Thy pow’r
+We wait to feel Thy pow’r,
 O Lord of life, our hopes fulfil,
 And bless this hallowed hour.
 '''
@@ -5167,7 +5165,7 @@ And bless this hallowed hour.
   HymnData(169, 'Come, Holy Spirit, Heavenly Dove', [
     '''
 1. Come, Holy spirit, heav’nly Dove,
-With all Thy quick’ningpowr’s
+With all Thy quick’ning pow'rs
 Kindle a flame of sacred love
 In these cold hearts of ours.
 ''',
@@ -5265,7 +5263,7 @@ In love's redeeming name.
 4. Come as the wind, O Breath of God!
 O Pentecostal grace!
 Come, make Thy great salvation known,
-Wide as the human race.Amen.
+Wide as the human race. Amen.
 '''
   ]),
   HymnData(173, 'Pentecostal Power', [
@@ -5274,16 +5272,16 @@ Wide as the human race.Amen.
 Thou didst Thy pow’r display,
 With cleansing, purifying flame,
 Descend on us today.
-Lord, send the old time pow’r, the Pentecostal pow’r!
-Thy floodgates of blessing on us throw open wide!
-Lord, send the old time pow’r, the Pentecostal pow’r,
-That sinners be converted and Thy name glorified!
+  Lord, send the old time pow’r, the Pentecostal pow’r!
+  Thy floodgates of blessing on us throw open wide!
+  Lord, send the old time pow’r, the Pentecostal pow’r,
+  That sinners be converted and Thy name glorified!
 ''',
     '''
 2. For mighty works for Thee, prepare
 And strengthen ev'ry heart;
 Come, take possession of Thine own,
-And nevermore depart.
+And never more depart.
 ''',
     '''
 3. All self consume, all sin destroy!
@@ -5304,10 +5302,10 @@ The blessing we receive.
 Until my heart is clean;
 Let sunshine fill its inmost part,
 With not a cloud between.
-Breathe on me, breathe on me,
-Holy Spirit, breathe on me;
-Take Thou my heart, cleanse every part,
-Holy Spirit, breathe on me.
+  Breathe on me, breathe on me,
+  Holy Spirit, breathe on me;
+  Take Thou my heart, cleanse every part,
+  Holy Spirit, breathe on me.
 ''',
     '''
 2. Holy Spirit, breathe on me,
@@ -5317,7 +5315,7 @@ What Christ would have me do.
 ''',
     '''
 3. Holy Spirit, breathe on me,
-Fill me with pow'r divine;
+Fill me with power divine;
 Kindle a flame of love and zeal
 Within this heart of mine.
 ''',
@@ -5328,16 +5326,16 @@ Until my will is lost in Thine,
 To live for Thee alone.
 '''
   ]),
-  HymnData(175, 'Seal Us,OHoly Spirit', [
+  HymnData(175, 'Seal Us,O Holy Spirit', [
     '''
 1. Seal us, O holy Spirit,
 Grant us Thine Impress, we pray;
 We would be more like the Saviour,
 Stamped with His image today.
-Seal us, seal us,
-Seal us just now, we pray;
-Seal us, O Holy spirit,
-Seal us for service today.
+  Seal us, seal us,
+  Seal us just now, we pray;
+  Seal us, O Holy Spirit,
+  Seal us for service today.
 ''',
     '''
 2. Seal us, O Holy Spirit,
@@ -5355,7 +5353,7 @@ Seal us with witnessing power.
   HymnData(176, 'Word of God, Across the Ages', [
     '''
 1. Word of God, across the ages
-Comes thy massage to our life;
+Comes thy message to our life;
 Source of hope forever present
 In our toil and fears and strife;
 Constant witness to God’s mercy,
@@ -5390,15 +5388,16 @@ And Thy knowledge fills the earth. Amen
 The work of God through endless days;
 We view His wisdom, pow’r and love,
 That show the form of things Above;
-How splendid are the plan divine
-Which though thy sacred pages shine!
+How splendid are the plans divine
+Which through thy sacred pages shine!
 ''',
     '''
-2. Inspiring Word, thy truth imparts Triumphant hope to human hearts;
+2. Inspiring Word, thy truth imparts 
+Triumphant hope to human hearts;
 Through thee, enslaved man find release,
 Earth’s burden’d ones find welcome peace:
 What deeps the sons of God discern
-When from thy sacred page thy learn.
+When from thy sacred page they learn!.
 ''',
     '''
 3. Enduring Word, thy strength abides
@@ -5411,34 +5410,27 @@ Wherein god writes our heritage! Amen.
   ]),
   HymnData(178, '178 Break Thou the Bread of life', [
     '''
-1. Break Thou the bread of life,
-Dear Lord, to me,
-As Thou didst break the loaves
-Beside the sea;
-Beyond the sacred page I seek Thee Lord;
-My spirit pants for Thee O living Word.
+1. Break Thou the bread of life, Dear Lord, to me,
+As Thou didst break the loaves beside the sea;
+Beyond the sacred page I seek Thee, Lord;
+My spirit pants for Thee, O living Word.
 ''',
     '''
-2. Bless Thou the truth, dear lord,
-To me, to me,
-As Thou didst bless the bread
-By Galilee;
-Then shall all bondage cease.
-All fetters fall;
+2. Bless Thou the truth, dear lord, to me, to me,
+As Thou didst bless the bread by Galilee;
+Then shall all bondage cease, all fetters fall;
 And I shall find my peace, My all in all.
 ''',
     '''
-3. Thou at the bread of life, O Lord, to me,
+3. Thou art the bread of life, O Lord, to me,
 Thy holy Word the truth That saveth me;
 Give me to eat and live With Thee above;
 Teach me to be love Thy truth, For Thou art love.
 ''',
     '''
 4. O send thy Spirit, Lord, Now unto me,
-That He may touch mine eyes,
-And make me see;
-Show me the truth concealed
-Within Thy Word,
+That He may touch mine eyes, and make me see;
+Show me the truth concealed within Thy Word,
 And in thy Book revealed I see the Lord. Amen.
 '''
   ]),
@@ -5471,13 +5463,13 @@ Precious treasure, thou art mine. Amen.
   HymnData(180, 'Thy Word is a Lamp to my Feet', [
     '''
 1. Thy Word is a lamp to my feet,
-A lighit to my path alway,
+A light to my path alway,
 To guide and to save me from sin,
 And show me the heav’nly way.
-Thy Word have I hid in my heart,
-That I might not sin against Thee,
-That I might not sin, that I might not sin.
-Thy Word have I hid in my heart.
+  Thy Word have I hid in my heart,
+  That I might not sin against Thee,
+  That I might not sin, that I might not sin.
+  Thy Word have I hid in my heart.
 ''',
     '''
 2. Forever, O Lord, is Thy Word
@@ -5487,7 +5479,7 @@ Abideth forever nigh.
 ''',
     '''
 3. At morning, at noon, and at night,
-I ever give Thee praise;
+I ever will give Thee praise;
 For Thou art my portion, O Lord,
 And shalt be thto’ all my days.
 '''
@@ -5500,10 +5492,10 @@ Let me more of their beauty see.
 Wonderful words of life;
 Words of life and beauty,
 Teach me faith and duty:
-Beautiful words, wonderful words,
-Wonderful words of life;
-Beautiful words, wonderful words.
-Wonder words of life.
+  Beautiful words, wonderful words,
+  Wonderful words of life;
+  Beautiful words, wonderful words.
+  Wonder words of life.
 ''',
     '''
 2. Christ, the blesses One, gives to all
@@ -5518,7 +5510,7 @@ Wooing us to heaven:
 Wonderful words of life;
 Offer pardon and peace to all,
 Wonderful words of life;
-Jesus only savior,
+Jesus, only saviour,
 Sanctify forever,
 '''
   ]),
@@ -5538,7 +5530,7 @@ For ev’ry searcher there.
 A thousand rays of light
 Are seen to guide the traveler
 And make his pathway bright.
-O may I love thy precious Word.
+O may I love Thy precious Word.
 May I explore the mine,
 May I the fragrant flowers glean,
 May light upon me shine. Amen.
@@ -5553,12 +5545,12 @@ O Light of our dark sky:
 We praise Thee for the radiance
 That from the hallowed page,
 A lantern to our footsteps,
-Shines on fromage to age.
+Shines on from age to age.
 ''',
     '''
 2. The church from Thee, her Master,
 Received the gift divine,
-And still that light it lifteth
+And still that light she lifteth
 O’er all the earth to shine:
 It is the sacred casket,
 Where gems of truth are stored;
@@ -5570,7 +5562,7 @@ Of Thee, the living Word.
 Before God’s host unfurled;
 It shineth like a beacon
 Above the darkling world:
-It is the chat and compass
+It is the chart and compass
 That o’er life’s surging sea,
 ‘Mid mists and rocks and quick sands,
 Still guides, O Christ, to Thee.
@@ -5586,27 +5578,27 @@ Till clouds and darkness ended,
 They see Thee face to face. Amen
 '''
   ]),
-  HymnData(184, 'I Know this Bible Is True', [
+  HymnData(184, 'I Know the Bible Is True', [
     '''
 1. I Know the Bible was sent from God,
 The Old, as well as the New;
 Inspired and holy, the living word,
-I know the bible is true.
-I know, I know, I know the bible is true;
-Divinely inspired the whole way thro’,
-I know the bible is true.
+  I know the bible is true.
+  I know, I know, I know the bible is true;
+  Divinely inspired the whole way thro’,
+  I know the bible is true.
 ''',
     '''
 2. I know the story of Christ is true,
 His virgin, glorious birth,
-His life, His death, and the open tomb
+His life, His death, and the open tomb,
 And His return to the earth.
 ''',
     '''
 3. I know the Bible is wholly true.
 For peace it gave me within;
 It finds me, Comforts me day by day,
-And gives me vict’ry over sin.
+And gives me vict’ry o'er sin.
 ''',
     '''
 4. Tho’ foes deny with a spirit bold
@@ -5624,9 +5616,9 @@ Guiding our steps to Thine eternal day.
 ''',
     '''
 2. From days of old, through swiftly rolling ages.
-Thou hast revealed thy will to moral men,
+Thou hast revealed thy will to mortal men,
 Speaking to saints, to prophets, kings, and sages,
-Who wrote the message with immoral pen.
+Who wrote the message with immortal pen.
 ''',
     '''
 3. Undimmed by time, the Word is still revealing
@@ -5636,7 +5628,7 @@ See Thy compassion in the Saviour’s face
 ''',
     '''
 4. To all the world the message Thou art sending,
-To ev’ry land, to ev’ry race and clean;
+To ev’ry land, to ev’ry race and clan;
 And myriad tongues, in one great anthem blending,
 Acclaim with joy Thy wondrous gift to man. Amen.
 '''
@@ -5655,7 +5647,7 @@ His truths upon the nations rise;
 They rise, but never set.
 ''',
     '''
-3. Let everlasting thanks be thine
+3. Let everlasting thanks be Thine
 For such a bright display
 That makes a world of darkness shine
 With beams of heavenly day.
@@ -5683,7 +5675,7 @@ Reveals Thy justice and Thy grace.
     '''
 3. Great Sun of Righteousness, arise,
 Bless the dark world with heav’nly light;
-Thy gospel makes thesimple wise,
+Thy gospel makes the simple wise,
 Thy laws are pure, Thy judgment right.
 ''',
     '''
@@ -5702,7 +5694,7 @@ Was blind, but now I see.
 ''',
     '''
 2. ‘Twas grace that taught my heart to fear,
-And grace my fears relived;
+And grace my fears relieved;
 How precious did that grace appear
 The hour I first believed!
 ''',
@@ -5715,7 +5707,7 @@ And grace will lead me home.
     '''
 4. When we’ev been there ten thousand years
 Bright shining as the sun,
-We’ve no less days to sing Gods praise
+We’ve no less days to sing God's praise
 Than when we first begun. Amen
 '''
   ]),
@@ -5740,7 +5732,7 @@ Faith that triumphs over wrong.
 ''',
     '''
 4. When this pilgrimage is o’er
-When I Reach that blissful shore,
+When I reach that blissful shore,
 Then I’ll see Thy blessed face
 Through Thy soul-redeeming grace. Amen.
 '''
@@ -5748,7 +5740,7 @@ Through Thy soul-redeeming grace. Amen.
   HymnData(190, 'I saw the Cross of Jesus', [
     '''
 1. I saw the cross of Jesus
-When burden with my sin;
+When burdened with my sin;
 I sought the cross of Jesus,
 To give me peace within;
 I brought my soul to Jesus
@@ -5839,11 +5831,11 @@ Are you fully trusting in His
 grace this hour?
 Are you washed in the blood of
 the Lamb?
-Are you washed in the blood.
-In the soul cleansing blood of the Lamb?
-Are your garments spotless?
-Are they white as snow?
-Are you washed in the blood of the Lamb?
+  Are you washed in the blood.
+  In the soul cleansing blood of the Lamb?
+  Are your garments spotless?
+  Are they white as snow?
+  Are you washed in the blood of the Lamb?
 ''',
     '''
 2. Are you walking daily by the Saviour’s side?
@@ -5884,7 +5876,7 @@ There’s wonderful pow’r in the blood.
     '''
 3. Would you be whiter, much whiter than snow
 There’s pow’r in the blood, pow’r in the blood;
-Sin stains arc lost in its lifegiving flow;
+Sin stains are lost in its lifegiving flow;
 There’s wonderful pow’r in the blood.
 ''',
     '''
@@ -5900,10 +5892,10 @@ There’s wonderful pow’r in the blood’
 That I go singing along my way;
 Yes, I’m so happy to know and say,
 “Jesus included me too,”
-Jesus included me, Yes, he included me,
-When the Lord said “Whosoever.”
-He included me; Jesus included me,
-Yes he included me, When the Lord said “Whosoever,” He included me.
+  Jesus included me, Yes, he included me,
+  When the Lord said “Whosoever.”
+  He included me; Jesus included me,
+  Yes he included me, When the Lord said “Whosoever,” He included me.
 ''',
     '''
 2. Gladly I read, “Whosoever may
@@ -5930,15 +5922,15 @@ Jesus included me too.
 Sound this word of grace to all
 Who the heav’nly pathway leave,
 All who linger, all who fall.
-Sing it o’er……..and o’er again;….
-Christ receiv……..eth sinful men;…
-Make the mes….sage clear and plain …
-Christ receiveth sinful men.
+  Sing it o’er……..and o’er again;….
+  Christ receiv……..eth sinful men;…
+  Make the mes….sage clear and plain …
+  Christ receiveth sinful men.
 ''',
     '''
 2. Come, and He will give you rest;
 Trust Him, for His word is plain;
-Ile will take the sinfulest;
+He will take the sinfulest;
 Christ receiveth sinful men.
 ''',
     '''
@@ -5960,10 +5952,10 @@ Heav’n with Him I enter in,
 There’s no other way but this;
 I shall ne’er get sight of the gates of light,
 If the way of tile cross I miss.
-The way of the cross leads home,
-The way of the cross leads home;
-It is sweet to know as I onward go,
-The way of the cross leads home.
+  The way of the cross leads home,
+  The way of the cross leads home;
+  It is sweet to know as I onward go,
+  The way of the cross leads home.
 ''',
     '''
 2. I must needs go on in the blood sprinkled way,
@@ -5980,15 +5972,14 @@ Where He waits at the open door.
   ]),
   HymnData(197, 'Saved, Saved!', [
     '''
-1. I’ve found a friend who Home,
+1. I’ve found a friend who is all to me,
 His love is ever true;
 I love to tell how He lifted me,
 And what His grace can do for you
-Saved by His power divine,
-Saved to new life sublime!
-Life now is sweet and my Joy
-is complete.
-For I’m saved, saved, saved!
+  Saved by His power divine,
+  Saved to new life sublime!
+  Life now is sweet and my Joy is complete.
+  For I’m saved, saved, saved!
 ''',
     '''
 2. He saves me from every sin and harm,
@@ -6007,14 +5998,12 @@ To live with Me eternally.”
     '''
 1. ‘Tis the grandest theme thro’ the ages rung;
 ‘Tis the grandest theme for a mortal tongue;
-Tis the grandest theme that the
-world e’er sung
+Tis the grandest theme that the world e’er sung
 Our God is able to deliver thee.
-He is able to deliver thee.
-He is able to deliver thee;
-Tho’ by sin opprest, Go to
-Him for rest;
-Our God is able to deliver thee.
+  He is able to deliver thee.
+  He is able to deliver thee;
+  Tho’ by sin opprest, Go to Him for rest;
+  Our God is able to deliver thee.
 ''',
     '''
 2. ‘Tis the grandest theme in the earth or main;
@@ -6035,10 +6024,10 @@ Our God is able to deliver thee.
 Jesus hath bled, and there is remission;
 Cursed by the law and bruised by the fall,
 Grace hath redeemed us once for all.
-Once for all, O sinner, receive it,
-Once for all, O brother believe it;
-Cling to the cross, the burden will fall,
-Christ hath redeemed us once for all.
+  Once for all, O sinner, receive it,
+  Once for all, O brother believe it;
+  Cling to the cross, the burden will fall,
+  Christ hath redeemed us once for all.
 ''',
     '''
 2. Now are we free there’s no condemnation,
@@ -6049,7 +6038,7 @@ Come, and He saves us once for all.
     '''
 3. “Children of God,” O glorious calling,
 Surely His grace will keep us from falling;
-Passing from death lo life at His call,
+Passing from death to life at His call,
 Blessed salvation once for all.
 '''
   ]),
@@ -6059,10 +6048,10 @@ Blessed salvation once for all.
 Grace that exceeds our sin and our guilt.
 Yonder on Calvary’s mount out poured,
 There where the blood of the Lamb was split.
-Grace, grace, God’s grace.
-Grace that will pardon and cleanse within:
-Grace, grace, God’s grace,
-Grace that is greater thin all our sin.
+  Grace, grace, God’s grace.
+  Grace that will pardon and cleanse within:
+  Grace, grace, God’s grace,
+  Grace that is greater than all our sin.
 ''',
     '''
 2. Dark is the stain that we cannot hide.
@@ -6073,8 +6062,8 @@ Whiter than snow you may be today.
     '''
 3. Marvelous, infinite, matchless grace.
 Freely bestowed on all who believe;
-You that are longing to His face,
-Will, you this moment His grace receive?
+You that are longing to see His face,
+Will you this moment His grace receive?
 '''
   ]),
   HymnData(201, 'Whiter Than Snow', [
