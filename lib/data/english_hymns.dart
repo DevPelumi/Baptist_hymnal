@@ -9118,10 +9118,10 @@ For He is so precious to me.
 Child of sorrow and of woe;
 It will joy and comfort give you,
 Take it where’er you go.
-Precious name O how sweet!
-Hope of earth and joy of heaven,
-Precious name O how is sweet!
-Hope of earth and joy of hea’en
+  Precious name O how sweet!
+  Hope of earth and joy of heaven,
+  Precious name O how is sweet!
+  Hope of earth and joy of hea’en
 ''',
     '''
 2. Take the name of Jesus ever
@@ -9133,7 +9133,7 @@ Breathe they holy name in pray’r
 3. O precious name of the Jesus!
 How it thrills our soul with joy,
 When his loving arms receive us,
-And his song our tongue employ
+And his song our tongue employ.
 ''',
     '''
 4. At the name of Jesus bowing
@@ -9145,7 +9145,7 @@ When our journey is completed
   HymnData(306, 'How Tedious and Tasteless the Hours', [
     '''
 1. How tedious and tasteless the hours,
-When jesus no linger I see!
+When jesus no longer I see!
 Sweet prospect, sweet bird and sweet flow’rs
 Have all lost their sweetness to me.
 The midsummer sun shine but dim;
@@ -9161,7 +9161,7 @@ And makes all within me rejoice:
 I should, were He always thus nigh,
 have nothing to wish or to fear:
 No mortal so happy as I;
-My summer wouldlastall the year.
+My summer would last all the year.
 ''',
     '''
 3. Content with beholding His face,
@@ -9190,10 +9190,10 @@ Where winter and clouds are no more.
 Jesus whispers sweet and low,
 “Fear not, I am with thee, peace, be still,”
 In all of life’s ebb and flow,
-Jesus, jesus, Jesus,
-Sweetest name I know,
-Fills my ev’ry longing,
-Keeps me singing as I go,
+  Jesus, Jesus, Jesus,
+  Sweetest name I know,
+  Fills my ev’ry longing,
+  Keeps me singing as I go,
 ''',
     '''
 2. All my life was wrecked by sin and strife,
@@ -9267,7 +9267,7 @@ And an immortal crown,
 And an immortal crown,
 ''',
     '''
-2. A cloud of witness around
+2. A cloud of witnesses around
 Hold thee in full survey;
 Forget the steps already trod,
 And onward urge Thy way,
@@ -9294,10 +9294,10 @@ I’ll lay honors down.
 Since Jesus came into my heart!
 I have light in my soul for which long I had sought
 Since Jesus came into my heart!
-Since Jesus came into my heart,
-Since Jesus came into my hear,
-Floods of joy o’er my soul like the sea, billows roll,
-Since Jesus came into my heart,
+  Since Jesus came into my heart,
+  Since Jesus came into my heart,
+  Floods of joy o’er my soul like the sea, billows roll,
+  Since Jesus came into my heart,
 ''',
     '''
 2. I have ceased from my wandering and going astray,
@@ -9324,18 +9324,20 @@ Since Jesus came into my heart!
 Such as angels would sing above,
 And the whole day long it doth joy impart;
 ‘Tis the song of redeeming love.
-Of His love… I shall ever sing
-Till above I behold the King;
-Through eternity my glad song shall be
-Of the Saviour’s redeeming love.
+  Of His love… I shall ever sing
+  Till above I behold the King;
+  Through eternity my glad song shall be
+  Of the Saviour’s redeeming love.
 ''',
     '''
-2. When my soul was lost in a starless night Where my feet never ceased to rove,
+2. When my soul was lost in a starless night 
+Where my feet never ceased to rove,
 At a dreadful cost Jesus brought me light,
 All because of redeeming love.
 ''',
     '''
-3. When at last I stand with the heav’nly choir in the light of the throne above,
+3. When at last I stand with the heav’nly choir 
+In the light of the throne above,
 On the golden strand I shall never tire
 Of the song of redeeming love.
 '''
@@ -9396,6 +9398,7 @@ Interposed His precious blood.
     '''
 3. O to grace how great a debtor
 Daily I’m constrained to be!
+Let Thy goodness, like a fetter,
 Blind my wand’ring heart to Thee:
 Prone to wander, Lord, I feel it,
 Prone to leave the God I love;
@@ -9429,9 +9432,9 @@ Thy love made known.
 May my prayer be;
 Lift Thou Thy world, O Christ,
 Closer to Thee!
-Cleanse it from guit and wrong.
+Cleanse it from guilt and wrong.
 Teach it salvation’s song,
-Till earth, as heaven, fulfill
+Till earth, as heaven, fulfil
 God’s holy will. Amen.
 '''
   ]),
@@ -9440,16 +9443,18 @@ God’s holy will. Amen.
 1. I would be true, for there are those who trust me;
 I would be pure, for there are those who care;
 I would be strong, for there is much to suffer;
-I would bebrave, for there is much to dare, I would be brave, for there is much to dare.
+I would be brave, for there is much to dare, 
+I would be brave, for there is much to dare.
 ''',
     '''
 2. I would be friend of all-the foe, the friendless;
 I would be giving, and forget the gift;
-I would be humble,for I know my weakness; I would look up, and laugh, and Love, and lift,
-I would lok up, and laugh, and love, and lift.
+I would be humble, for I know my weakness; 
+I would look up, and laugh, and Love, and lift,
+I would look up, and laugh, and love, and lift.
 ''',
     '''
-3. I would be prayerful thro’each busy moment;
+3. I would be prayerful thro’ each busy moment;
 I would be constantly in touch with God;
 I would be tuned to hear the slightest whisper;
 I would have faith to keep the path Christ trod,
@@ -9465,11 +9470,11 @@ Make me gentle as a dove;
 More like Jesus, while I go,
 Pilgrim in this world below;
 Poor in Spirit would I be;
-Let my savior dwell in me.
+Let my saviour dwell in me.
 ''',
     '''
 2. If He hears the raven’s cry,
-If Hiseverwatchful eye
+If His ever watchful eye
 Marks the sparrows when thy fall,
 Surely He will hear my call:
 He will teach me how to live,
@@ -9497,7 +9502,7 @@ I depart from The:
 When Thou see’st me waver,
 With a look recall,
 Nor for fear or favour
-Suffer m to fall.
+Suffer me to fall.
 ''',
     '''
 2. With forbidden pleasures
@@ -9523,15 +9528,16 @@ To eternal life, Amen
   HymnData(318, 'Count Your Blessings', [
     '''
 1. When upon life’s billows you are tempest tossed,
-When you arediscouraged, think-ing all is lost,
+When you are discouraged, thinking all is lost,
 Count your many blessings, name them one by one,
 And it will surprise you what the Lord hath done
-Count your blessing, name them one by one: Count your blessings, See What God hath done;
-Count your blessings name them one by one; Count your many blessings, see what God hath done.
+  Count your blessings, name them one by one: Count your blessings, See What God hath done;
+  Count your blessings, name them one by one; Count your many blessings, see what God hath done.
 ''',
     '''
-2. Are you ever burdened with a load of care? Does the cross seem heavy you are called to bear?
-Count your many blessing, ev’ry doubt will fly,
+2. Are you ever burdened with a load of care? 
+Does the cross seem heavy you are called to bear?
+Count your many blessings, ev’ry doubt will fly,
 And you will be singing as the days go by.
 ''',
     '''
@@ -9541,7 +9547,8 @@ Count your many blessings money, cannot buy
 Your reward in heaven, nor your home on high.
 ''',
     '''
-4. So, amid the conflict, whather great or small, Do not be discourage, God is over all;
+4. So, amid the conflict, whather great or small, 
+Do not be discourage, God is over all;
 Count your many blessings, angels will attend,
 Help and comfort give you to your journey’s end.
 '''
@@ -9552,25 +9559,27 @@ Help and comfort give you to your journey’s end.
 New heights I’m gaining ev’ry day;
 Still praying as I onward bound,
 “Lord, plant my feet on higher ground”
-Lord, lift me up and let me stand,
-By faith on heaven’s table-land,
-A higher plan than I have found;
-Lord, plant my feet on higher ground.
+  Lord, lift me up and let me stand,
+  By faith on heaven’s table-land,
+  A higher plan than I have found;
+  Lord, plant my feet on higher ground.
 ''',
     '''
-2. My heart has no desire to stay Where doubts arise and fears dismay;
-Tho’some may dwell where these abound, My prayer, my aim is higher ground.
+2. My heart has no desire to stay 
+Where doubts arise and fears dismay;
+Tho’ some may dwell where these abound, 
+My prayer, my aim is higher ground.
 ''',
     '''
 3. I want to live above the world,
-Tho’Satan’s darts at me are hurled;
+Tho’ Satan’s darts at me are hurled;
 For faith has caught the joyful sound,
 The song of saints on higher ground.
 ''',
     '''
-4. I want to seale the utmost height
+4. I want to scale the utmost height
 And catch a gleam of glory bright;
-But still I’ll pray fill heav’nI’vefound,
+But still I’ll pray fill heav’n I’ve found,
 “Lord, lead me on the higher ground.” Amen.
 '''
   ]),
@@ -9580,10 +9589,10 @@ But still I’ll pray fill heav’nI’vefound,
 And rough seems the path to the goal,
 And sorrows, sometimes how they sweep
 Like tempests down over the soul!
-O then to the Rock let me fly,
-To the Rock that is higher than I;
-O then to the Rock let me fly,
-To the Rock that is higher than I!
+  O then to the Rock let me fly,
+  To the Rock that is higher than I;
+  O then to the Rock let me fly,
+  To the Rock that is higher than I!
 ''',
     '''
 2. O sometimes how long seems the day,
@@ -9604,10 +9613,10 @@ Or walking the shadowy vale.
 More of His grace to others show;
 More of His saving-fulness see,
 More of His love who died for me.
-More, more about Jesus,
-More, more about Jesus;
-More of His saving fullness see,
-More of His love who died for me.
+  More, more about Jesus,
+  More, more about Jesus;
+  More of His saving fullness see,
+  More of His love who died for me.
 ''',
     '''
 2. More about Jesus let me learn,
@@ -9660,7 +9669,7 @@ Nearer, my God, to Thee,
 Nearer to Thee!
 ''',
     '''
-4. Then with my walking tho’ts
+4. Then with my waking tho’ts
 Bright with Thy praise,
 Out of my stony griefs
 Bethel I’ll raise;
@@ -9728,10 +9737,10 @@ Then welcome, day! and farewell, mortal night!
 More of His meekness, more humility;
 More zeal to labour, more courage to be true,
 More consecration for work He bids me do.
-Take Thou my heart, I would be Thine alone;
-Take Thou my heart and make it all Thine own;
-Purge me from sin O Lord, I now implore;
-Wash me and keep me Thine forever more.
+  Take Thou my heart, I would be Thine alone;
+  Take Thou my heart and make it all Thine own;
+  Purge me from sin O Lord, I now implore;
+  Wash me and keep me Thine forever more.
 ''',
     '''
 2. More like the Master is my daily prayer;
@@ -9752,10 +9761,10 @@ More like the Master I long to ever be.
 I am clinging, clinging close to Thee’
 Let Thy precious blood applied,
 Keep me ever, ever near Thy side.
-Ev’ry day ev’ry hour,
-Let me feel Thy cleansing pow’r ,
-May Thy tender love to me
-Bind me closer, closer, Lord to Thee.
+  Ev’ry day ev’ry hour,
+  Let me feel Thy cleansing pow’r,
+  May Thy tender love to me
+  Bind me closer, closer, Lord to Thee.
 ''',
     '''
 2. Thro’ this changing world below,
@@ -9836,29 +9845,25 @@ Thou wilt find a solace there.
   ]),
   HymnData(329, '‘Tis the Blessed Hour of Prayer', [
     '''
-1. ‘Tis the blessed hour of prayer,
-When our hearts lowly bend
+1. ‘Tis the blessed hour of prayer, When our hearts lowly bend
 And we gather to Jesus, our Saviour and friend;
-If we come to Him in faith,
-His protection to share,
+If we come to Him in faith, His protection to share,
 What a balm for the weary! Oh how sweet to be there!
-Blessed hour of prayer,
-Blessed hour of prayer;
-What a balm for the weary!
-Oh, how sweet to be there!
+  Blessed hour of prayer,
+  Blessed hour of prayer;
+  What a balm for the weary!
+  Oh, how sweet to be there!
 ''',
     '''
-2. ‘Tis the blessed hour of prayer,
-When the Saviour draws near,
+2. ‘Tis the blessed hour of prayer, When the Saviour draws near,
 With a tender compassion, His children to hear!
 When He tells us we may cast at His feet every care,
 What a balm for the weary! Oh, how sweet to be there!
 ''',
     '''
-3. ‘Tis the blessed hour of prayer,
-When the tempted and tried
+3. ‘Tis the blessed hour of prayer, When the tempted and tried
 To the Saviour who loves them their sorrow confide;
-With a sympathizing heart He removes every care;
+With a sympathising heart He removes every care;
 What a balm for the weary! Oh, how sweet to be there!
 ''',
     '''
@@ -9874,10 +9879,10 @@ What a balm for the weary! Oh, how sweet to be there!
 This is my heart-cry day unto day;
 I long to know Thy will and Thy way;
 Teach me to pray, Lord, teach me to pray.
-Living in Thee, Lord and Thou in me,
-Constant abiding, this is my plea;
-Grant me Thy power, boundless and free,
-Power with men and power with Thee.
+  Living in Thee, Lord and Thou in me,
+  Constant abiding, this is my plea;
+  Grant me Thy power, boundless and free,
+  Power with men and power with Thee.
 ''',
     '''
 2. Power in prayer, Lord, power in prayer!
@@ -9904,10 +9909,10 @@ Teach me to pray, Lord, teach me to pray
 Speak that my soul may hear;
 Speak to my heart, Lord Jesus,
 Calm every doubt and fear,
-Speak to my heart, oh, speak to my heart,
-Speak to my heart, I pray;
-Yielded and still, seeking Thy will,
-Oh, speak to my heart today.
+  Speak to my heart, oh, speak to my heart,
+  Speak to my heart, I pray;
+  Yielded and still, seeking Thy will,
+  Oh, speak to my heart today.
 ''',
     '''
 2. Speak to my heart, Lord Jesus,
@@ -9928,10 +9933,10 @@ I would be wholly Thine.
 And love that soul through me;
 And may I bravely do my part
 To win that soul for Thee.
-Some soul for Thee, some soul for Thee.
-This is my earliest plea;
-Help me each day, on life’s highway,
-To win some soul for Thee.
+  Some soul for Thee, some soul for Thee.
+  This is my earliest plea;
+  Help me each day, on life’s highway,
+  To win some soul for Thee.
 ''',
     '''
 2. Lord, lead me to some soul in sin,
@@ -9952,10 +9957,10 @@ I’ll meet that dear one there.
 Let it go over the land and sea,
 Send it according to Thy dear Word,
 And let it begin in me,
-Lord, send a revival,
-Lord, send a revival,
-Lord, send a revival,
-And let it begin in me
+  Lord, send a revival,
+  Lord, send a revival,
+  Lord, send a revival,
+  And let it begin in me
 ''',
     '''
 2. Send a revival among Thine own,
@@ -9982,10 +9987,10 @@ And let it begin in me.
 Most gracious Lord;
 No tender voice like Thine
 Can peace afford.
-I need Thee; O I need Thee;
-Ev’ry hour I need Thee!
-O bless me now, my Saviour,
-I come to Thee.
+  I need Thee; O I need Thee;
+  Ev’ry hour I need Thee!
+  O bless me now, my Saviour,
+  I come to Thee.
 ''',
     '''
 2. I need Thee ev’ry hour,
@@ -10075,7 +10080,7 @@ Jesus, Saviour, pilot me.
 2. As a mother stills her child,
 Thou canst hush the ocean wild;
 Boist’rous waves obey Thy will
-When Thousay’st to them, “Be still”,
+When Thou say’st to them, “Be still”,
 Wondrous Sove’reign of the sea,’
 Jesus, Saviour, pilot me.
 ''',
@@ -10190,7 +10195,7 @@ And all that makes the the world so fair,
 2. Help us to us to do things we should,
 To be to others kind and good;
 In all we do, in work or play,
-To love Thee better day by day Amen
+To love Thee better day by day. Amen
 '''
   ]),
   HymnData(342, 'Send a Great Revival', [
@@ -10199,10 +10204,10 @@ To love Thee better day by day Amen
 Trusting only in Thy precious word;
 Let my humble prayer to Thee be heard,
 And send a great revival in my soul
-Send a great revival in my soul
-Send a great revival in my soul,
-Let the Holy Spirit come and take control,
-And send a great revival in my soul.
+  Send a great revival in my soul
+  Send a great revival in my soul,
+  Let the Holy Spirit come and take control,
+  And send a great revival in my soul.
 ''',
     '''
 2. Send the Holy Spirit now within,
@@ -10211,7 +10216,7 @@ Let thy mighty works of grace begin,
 Oh, send a great revival in my soul.
 ''',
     '''
-3. Send a great revival, Lord,in me,
+3. Send a great revival, Lord, in me,
 Help me that I may rejoice in Thee;
 Give me strength to win the victory,
 And send a great revival in my soul,
@@ -10264,7 +10269,7 @@ Hear, O hear us when we pray.
 3. Thou hast promised to receive us,
 Poor and sinful though we be;
 Thou hast mercy to relive us,
-Grace to cleanse, and and power to free;
+Grace to cleanse, and pow'r to free;
 Blessed Jesus, blessed Jesus,
 Early let us turn to Thee;
 Blessed Jesus, Blessed Jesus,
@@ -10295,8 +10300,7 @@ And the burden of the day.
     '''
 2. Upon that cross of Jesus
 Mine eye at times can see
-The very dying from one
-Who suffered there from of One
+The very dying from One
 Who suffered there for me;
 And from my smitten heart with tears
 Two wonders I confess,
@@ -10329,7 +10333,7 @@ To keep Him standing there!
 2. O Jesus, Thou art knocking;
 And lo! Thy hand is scarred,
 And Throns Thy brow encircle,
-And tears Thy face have have marred:
+And tears Thy face have marred:
 O love that passeth knowledge,
 So patiently to wait!
 O sin that hath no equal,
@@ -10341,7 +10345,7 @@ In accents meek and low,
 “I died for you, my children,
 And will ye treat me so?”
 O lord, with shame and sorrow
-We open now the dor;
+We open now the door;
 Dear Saviour, enter, enter,
 Abide forever more! Amen.
 '''
@@ -10352,10 +10356,10 @@ Abide forever more! Amen.
 I heard my master say;
 “ I gave My life to ransom thee,
 Surrender your all today,”
-Wherever He leads I’ll go,…
-Wherever He leads I’ll go,…
-I’ll follow my Christ who loves me so,
-Wherever he leads I’ll go.
+  Wherever He leads I’ll go,…
+  Wherever He leads I’ll go,…
+  I’ll follow my Christ who loves me so,
+  Wherever he leads I’ll go.
 ''',
     '''
 2. He drew me closer to His side,
@@ -10381,11 +10385,11 @@ Wherever He leads I’ll go.
 1. While passing thro’ this world of sin,
 And others your life shall view,
 Be clean and pure without, within,
-Let others see Jesus in you,
-Let others see Jesus in you
-Let others see Jesus in you;
-Keep telling the story, be faithful and true.
-Let others see Jesus in you
+Let others see Jesus in you.
+  Let others see Jesus in you,
+  Let others see Jesus in you;
+  Keep telling the story, be faithful and true.
+  Let others see Jesus in you
 ''',
     '''
 2. Your life’s a book before their eyes,
@@ -10408,33 +10412,29 @@ Let others see Jesus in you.
   ]),
   HymnData(349, 'I Am Thine O Lord', [
     '''
-1. I am Thine, O Lord, I have heard
-Thy voice,
+1. I am Thine, O Lord, I have heard Thy voice,
 And it told thy love to me;
 But I long to rise in the arms of faith,
 And be closer drawn to Thee,
-Draw me nearer, nearer,
-nearer, blessed Lord,
-To the cross where thou hast died;
-Draw me nearer, nearer, nearer, blessed Lord,
-To Thy precious, bleeding side.
+  Draw me nearer, nearer, nearer, blessed Lord,
+  To the cross where thou hast died;
+  Draw me nearer, nearer, nearer, blessed Lord,
+  To Thy precious, bleeding side.
 ''',
     '''
 2. Consecrate me now to Thy service, Lord,
 By the pow’r of grace divine;
-Let my soul look up with up with a steadfast hope,
+Let my soul look up with a steadfast hope,
 And my will be lost in Thine.
 ''',
     '''
 3. O the pure delight of a single hour
 That before Thy throne I spend;
-When before Thy throne I spend;
-When I kneel in pray’r, and
-with Thee, my God,
+When I kneel in pray’r, and with Thee, my God,
 I commune as friend with friend!
 ''',
     '''
-4. There are depths of love that cannot know
+4. There are depths of love that I cannot know
 Till I cross the narrow sea;
 There are heights of joy that I may not reach
 Till I rest in peace with Thee.
@@ -10446,10 +10446,10 @@ Till I rest in peace with Thee.
 And have earnestly, fervently prayed;
 But you cannot have rest or be perfectly blest
 Until all on the altar is laid.
-Is your all on the altar of sacrifices laid?
-Your heart, does the spirit control?
-You can only be blest and have peace and sweet rest,
-As you yield Him your body and soul.
+  Is your all on the altar of sacrifices laid?
+  Your heart, does the spirit control?
+  You can only be blest and have peace and sweet rest,
+  As you yield Him your body and soul.
 ''',
     '''
 2. Would you walk with the lord in the light of His word,
@@ -10495,18 +10495,18 @@ Striving to please Him all that
 I do,
 Yielding allegiance, glad hearted and free,
 This is the pathway of blessing for me.
-O Jesus, Lord and Savior,
-I give myself to Thee;
-For Thou, in Thine atonement,
-Didst give Thyself for me;
-I own no other Master,
-My heart shall be Thy throne;
-My life I give, henceforth to live,
-O Christ, for Thee alone.
+  O Jesus, Lord and Savior,
+  I give myself to Thee;
+  For Thou, in Thine atonement,
+  Didst give Thyself for me;
+  I own no other Master,
+  My heart shall be Thy throne;
+  My life I give, henceforth to live,
+  O Christ, for Thee alone.
 ''',
     '''
 2. Living for Jesus who died in my place,
-Bearing on Calvary my sin and disgrace,
+Bearing on Calv'ry my sin and disgrace,
 Such love constrains me to answer His call,
 Follow His leading and give Him my all.
 ''',
@@ -10527,10 +10527,10 @@ Jesus has set the example,
 Dauntless was He, young and brave;
 Give Him your loyal devotion,
 Give Him the best that you have.
-Give of your best to the master,
-Give of the strength of your youth
-Clad in salvation’s full armor,
-Join in the battle for truth.
+  Give of your best to the master,
+  Give of the strength of your youth
+  Clad in salvation’s full armor,
+  Join in the battle for truth.
 ''',
     '''
 2. Give of your best to the Master
@@ -10549,7 +10549,7 @@ He gave Himself for your ransom,
 Gave up His glory above;
 Laid down His life without murmur,
 You from sin’s ruin to save;
-Give Him your heart’s adortion,
+Give Him your heart’s adoration,
 Give Him the best that you have.
 '''
   ]),
