@@ -8186,11 +8186,10 @@ An heir to a mansion, a robe, and a crown.
 1. O safe to the Rock that is higher than I,
 My soul in its conflicts and sorrows would fly;
 So sinful, so weary,Thine own would I be;
-Thou blest “Rock of Ages,”
-I’m hinding in Thee.
-Hiding in Thee, hiding in Thee,
-Thou blest “ Rock of Ages”
-I’m hinding in Thee.
+Thou blest “Rock of Ages,” I’m hinding in Thee.
+  Hiding in Thee, hiding in Thee,
+  Thou blest “ Rock of Ages”
+  I’m hinding in Thee.
 ''',
     '''
 2. In the calm of the noontide, in sorrow’s lone hour,
@@ -8200,9 +8199,9 @@ Thou blest “Rock of Ages,” I’m hiding in Thee.
 ''',
     '''
 3. How oft in the conflict, when press’d by the foe,
-I have fled to my woe;
+I have fled to my refuge and breath'd out my woe;
 How often, when trials like sea billows roll,
-Have I hidden in Thee, OThou Rock of my soul.
+Have I hidden in Thee, O Thou Rock of my soul.
 '''
   ]),
   HymnData(272, 'He Hideth My Soul', [
@@ -8211,11 +8210,11 @@ Have I hidden in Thee, OThou Rock of my soul.
 A wonderful Saviour to me;
 He hideth my soul in the cleft of the rock,
 Where rivers of pleasure I see.
-He hideth my soul in the cleft of the rock
-That shadows a dry, thirty land;
-He hideth my life in the depths of His love,
-And covers me there with His hand,
-And covers me there with His hand.
+  He hideth my soul in the cleft of the rock
+  That shadows a dry, thirty land;
+  He hideth my life in the depths of His love,
+  And covers me there with His hand,
+  And covers me there with His hand.
 ''',
     '''
 2. A wonderful Saviour is Jesus my lord,
@@ -8242,10 +8241,10 @@ I’ll shout with the millions on high.
 More glorious and bright
 Than glows in any earthly sky,
 For Jesus Is my light.
-O there’s sunshine, blessed sunshine,
-When the peaceful, happy moments roll;
-When Jesus shows His smiling face,
-There is sunshine in my soul.
+  O there’s sunshine, blessed sunshine,
+  When the peaceful, happy moments roll;
+  When Jesus shows His smiling face,
+  There is sunshine in my soul.
 ''',
     '''
 2. There is music in my soul today,
@@ -8254,7 +8253,7 @@ And Jesus, listening, can hear
 The songs I cannot sing.
 ''',
     '''
-3. There is music in soul today,
+3. There is music in my soul today,
 For when the lord is near,
 The dove of peace sings in my heart,
 The flow’rs of grace appear
@@ -8272,10 +8271,10 @@ For joys “laid up” above.
 God will take care of you;
 Beneath His wings of love abide,
 God will take care of you.
-God will take care of you,
-Thro’ ev’ry day, o’er all the way;
-He will take care of you,
-God will take care of you.
+  God will take care of you,
+  Thro’ ev’ry day, o’er all the way;
+  He will take care of you,
+  God will take care of you.
 ''',
     '''
 2. Thro’ daysof toil when heart doth fail,
@@ -8302,11 +8301,11 @@ God will take care of you.
 To me He hath made known,
 Nor why, unworthy, Christ in love
 Redeemed me for His own.
-But “ I know whom
-I have believed, and am persuaded that
-He is able to keep that Which
-I’ve committed
-Unto Him against that day”
+  But “ I know whom
+  I have believed, and am persuaded that
+  He is able to keep that Which
+  I’ve committed
+  Unto Him against that day”
 ''',
     '''
 2. I know not how this saving faith
@@ -8319,11 +8318,10 @@ Wrought peace within my heart.
 Convicing men of sin,
 Revealing Jesus thro’ the Word,
 Creating faith in him.
-I know not when my Lord may come,
 ''',
     '''
 4. I know not when my Lord may come,
-At night or nooday fair,
+At night or noonday fair,
 Nor if I’ll walk the vale with Him,
 Or meet Him in the air.
 '''
@@ -8380,10 +8378,10 @@ We test our lives by Thine. Amen
 Nothing can molest or turn my soul away;
 E’en tho’ the night be dark within the valley,
 Just beyond is shining one eternal day
-“I will not forget thee or leave thee;
-In My hands I’ll fold thee;
-I will not forget thee or leave thee;
-I am thy redeemer, I will care for thee,”
+  “I will not forget thee or leave thee;
+  In My hands I’ll hold thee, in My arms I'll fold thee;
+  I will not forget thee or leave thee;
+  I am thy redeemer, I will care for thee,”
 ''',
     '''
 2. Trusting the promise, “I will not forget thee,”
@@ -8403,13 +8401,12 @@ How sweet to hear the blessed proclamation,
 1. I serve a risen Saviour, He’s in the world today;
 I know that He is living, whatever men may say;
 I see His hand of mercy, I hear His love of cheer
-And just the time I need Him
-He’s always near.
-He lives, he lives, Christ Jesus lives today!
-He walks with me and talks with me along life’s narrow way;
-He lives; He lives, salvation to impart!
-You ask me how I know He lives:
-He lives within my heart.
+And just the time I need Him He’s always near.
+  He lives, he lives, Christ Jesus lives today!
+  He walks with me and talks with me along life’s narrow way;
+  He lives; He lives, salvation to impart!
+  You ask me how I know He lives:
+  He lives within my heart.
 ''',
     '''
 2. In all the world around me I see His loving care,
@@ -8418,10 +8415,8 @@ I know that He is leading thro’ all the stormy blast,
 The day of His appearing will come at last.
 ''',
     '''
-3. Rejoice, rejoice, O Christian,
-Lift up your voice and sing
+3. Rejoice, rejoice, O Christian, Lift up your voice and sing
 Eternal hallelujahs to Jesus Christ the King!
-The hope of all who seek Him, the help of all who find,
 The hope of all who seek Him, the help of all who find,
 None other is so loving, so, good and kind.
 '''
@@ -8520,9 +8515,9 @@ Thou art our Lord! Thou dost forever reign. Amen.
 Than Jesus’s blood and righteousness
 I dare not trust the sweetest frame,
 But wholly lean on Jesus’ name.
-On Christ the solid Rock, I stand;
-All other ground is sinking sand;
-All other ground is sinking sand
+  On Christ the solid Rock, I stand;
+  All other ground is sinking sand;
+  All other ground is sinking sand
 ''',
     '''
 2. When darkness seems to hide His face,
@@ -8548,11 +8543,11 @@ Faultless to stand before the throne.
 1. O land of rest for thee I sigh!
 When will the moment come
 When I shall lay my armor by
-Nd dwell in peace at home?
-We’ll work till Jesus comes,
-We’ll work till Jesus comes,
-We’ll work till Jesus comes,
-And we’ll be gathered home.
+And dwell in peace at home?
+  We’ll work till Jesus comes,
+  We’ll work till Jesus comes,
+  We’ll work till Jesus comes,
+  And we’ll be gathered home.
 ''',
     '''
 2. To Jesus Christ I fled for rest;
@@ -8573,10 +8568,10 @@ And reach my heav‘nly home.
 Like beautiful rest after sorrow and pain.
 Like hope that is kindled returning again
 Is the wonderful peace of my Saviour.
-Wonderful peace, beautiful peace,
-Wonderful peace of my Saviour,
-There’s nothing on earth can such gladness impart
-As this wonderful peace of my Saviour
+  Wonderful peace, beautiful peace,
+  Wonderful peace of my Saviour,
+  There’s nothing on earth can such gladness impart
+  As this wonderful peace of my Saviour
 ''',
     '''
 2. So soft and refreshing, as sweet as the dew,
@@ -8670,7 +8665,7 @@ May dwell but Thy pure love alone;
 Oh, May thy love possess me whole,
 My joy, my treasure and my crown;
 All coldness from my heart remove;
-Myev’ry act, word, thought, be love.
+May ev’ry act, word, thought, be love.
 ''',
     '''
 3. O Love, how gracious is Thy way!
@@ -8696,7 +8691,7 @@ If ever I loved Thee, my Jesus, ‘tis now.
 ''',
     '''
 3. I’ll love Thee in life, I will love Thee in death,
-And praise Thee as long as, Thoulendest me breath;
+And praise Thee as long as, Thou lendest me breath;
 And say when the death dew lies cold on my brow,
 If ever I loved Thee, my Jesus, ’tis now.
 ''',
@@ -8733,9 +8728,8 @@ That morn shall tearless be.
 4. O Cross that liftest up my head,
 I dare not ask to hide from thee;
 I lay in dust life’s glory dead,
-And from the ground dead,
 And from the ground there blossoms red
-Lift that shall endless be. Amen.
+Life that shall endless be. Amen.
 '''
   ]),
   HymnData(291, 'Saviour, Teach Me Day By Day', [
@@ -8761,7 +8755,7 @@ Loving Him who first loved me
 4. Thus may I rejoice to show
 That I feel the love I owe;
 Singing, till Thy face I see,
-Of His love first loved me. Amen
+Of His love who first loved me. Amen
 '''
   ]),
   HymnData(292, 'More Love to Thee, O Christ', [
@@ -8793,7 +8787,7 @@ My heart shall raise;
 This still its prayer shall be;
 More love, O Christ, to Thee,
 More love to thee!
-More love to Thee!.Amen
+More love to Thee!.  Amen
 '''
   ]),
   HymnData(293, 'Love Is the Theme', [
@@ -8802,10 +8796,10 @@ More love to Thee!.Amen
 One supremely stands alone;
 Thro’ the ages it has shown,
 ‘Tis His wonderful, wonderful love.
-Love is the theme, love is supreme,
-Sweeter it grows, glory bestows,
-Bright as the sun ever it grows!
-Love is the theme, eternal theme!
+  Love is the theme, love is supreme,
+  Sweeter it grows, glory bestows,
+  Bright as the sun ever it grows!
+  Love is the theme, eternal theme!
 ''',
     '''
 2. Let the bells of heaven ring,
@@ -8829,13 +8823,13 @@ Trust His wonderful, wonderful love
   HymnData(294, 'Like a River Glorious', [
     '''
 1. Like a river glorious Is God’s perfect peace,
-Over all victorious in its bright increase;
-Perfect, yet it flowethFullerev’ry day;
+Over all victorious In its bright increase;
+Perfect, yet it floweth Fullerev’ry day;
 Perfect, yet it groweth Deeper all the way.
-Stayed Upon Jehovah
-Hearts are fully blest;
-Finding, as He promised,
-Perfect peace and rest.
+  Stayed Upon Jehovah
+  Hearts are fully blest;
+  Finding, as He promised,
+  Perfect peace and rest.
 ''',
     '''
 2. Hidden in the hollow Of His blessed hand,
@@ -8846,8 +8840,8 @@ Not a blast of hurry Touch the spirit there.
     '''
 3. Ev’ry joy or trial Falleth from above,
 Trac’d upon our dial By the Sun of Love;
-We may trust Him wholly
-Find Him wholly true.
+We may trust Him fully All for us to do; 
+They who trust Him wholly Find Him wholly true.
 '''
   ]),
   HymnData(295, 'Abide with Me', [
@@ -8873,7 +8867,7 @@ Thro’ cloud and sunshine, O abide with me!
 4. Hold Thou Thy cross before my closing eyes;
 Shine thro’ the gloom, and point me to the skies;
 Heav’n morning breaks and earth’s vain shadows flee;
-In life, in death, O Lord, abide with! Amen.
+In life, in death, O Lord, abide with with me! Amen.
 '''
   ]),
   HymnData(296, 'From Every Stormy Wind That Blows', [
@@ -8897,7 +8891,7 @@ Around one common mercy seat.
 ''',
     '''
 4. Ah! There on eagle wings we soar,
-And sin sorrow molest no more,
+And sin and sorrow molest no more,
 And heav’n comes down our souls to greet,
 While glory crowns the mercy seat.
 '''
@@ -8911,7 +8905,7 @@ Earth has no sorrow that heav’n cannot heal.
 ''',
     '''
 2. Joy of the desolate, light of the straying,
-Hope of the patient, fadeless and pure!
+Hope of the penitent, fadeless and pure!
 Here speaks the Comforter, tenderly saying,
 “Earth has no sorrow that heav’n cannot cure.”
 ''',
@@ -8928,11 +8922,11 @@ Earth has no sorrow but heav’n can remove.
 I cannot bear these burdens alone;
 In my distress He kindly will help me;
 He ever loves and cares for His own.
-I must tell Jesus! I must tell Jesus!
-I cannot bear my burdens alone;
-I must tell Jesus! I must tell Jesus!
-I cannot bear my burdens alone
-Jesus can help me, Jesus alone.
+  I must tell Jesus! I must tell Jesus!
+  I cannot bear my burdens alone;
+  I must tell Jesus! I must tell Jesus!
+  I cannot bear my burdens alone
+  Jesus can help me, Jesus alone.
 ''',
     '''
 2. I must tell Jesus all of my troubles;
@@ -8959,10 +8953,10 @@ Over the world the vict’ry to win.
 A glad and a joyous refrain; (refrain)
 I sing it again and again,
 Sweet peace, the gift of God’s love.
-Peace, peace, sweet peace!
-Wonderful gift from above (above)!
-Oh, wonderful, wonderful! Peace!
-Sweet peace, the gift of God’s love!
+  Peace, peace, sweet peace!
+  Wonderful gift from above (above)!
+  Oh, wonderful, wonderful! Peace!
+  Sweet peace, the gift of God’s love!
 ''',
     '''
 2. Through Christ on the cross peace was made, (was made)
@@ -8983,10 +8977,10 @@ Sweet peace, the gift of God’s love.
 From His light house ever more,
 But to us He gives the keeping
 Of the lights along the shore.
-Let the lower lights be burning!
-Send a gleam across the wave!
-Some poor, fainting, struggling seaman
-You may rescue, you may save.
+  Let the lower lights be burning!
+  Send a gleam across the wave!
+  Some poor, fainting, struggling seaman
+  You may rescue, you may save.
 ''',
     '''
 2. Dark the night of sin has settled,
@@ -8995,7 +8989,7 @@ Eager eyes are watching, longing
 For the lights along the shore.
 ''',
     '''
-3. Trim the feeble lamp, my brother;
+3. Trim your feeble lamp, my brother;
 Some poor sailor tempest tossed,
 Trying now to make the harbor,
 In the darkness may be lost.
@@ -9007,10 +9001,10 @@ In the darkness may be lost.
 Near to the heart of God,
 A place where sin cannot molest,
 Near to the heart of God,
-O Jesus, blest Redeemer,
-Sent from the heart of God,
-Hold us who wait before Thee
-Near to the heart of God.
+  O Jesus, blest Redeemer,
+  Sent from the heart of God,
+  Hold us who wait before Thee
+  Near to the heart of God.
 ''',
     '''
 2. There is a place of comfort sweet,
@@ -9034,7 +9028,7 @@ Thy head upon My breast,”
 I came to Jesus as I was,
 Weary, and worn, and sad;
 I found in Him a resting place;
-And He was made me glad
+And He has made me glad
 ''',
     '''
 2. I heard the voice of Jesus say,
@@ -9094,10 +9088,10 @@ And He will walk with me. Amen.
 His praise all the day long with rapture I sing;
 To Him in my weakness for strength I can cling,
 For He is so precious to me.
-For He is so precious to me,
-For He is so precious to me,
-‘Tis heaven below My Redeemer to know,
-For He is so precious to me.
+  For He is so precious to me,
+  For He is so precious to me,
+  ‘Tis heaven below My Redeemer to know,
+  For He is so precious to me.
 ''',
     '''
 2. He stood at my heart’s door in sunshine and rain,
