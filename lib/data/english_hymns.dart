@@ -10901,8 +10901,7 @@ Is like to that above.
     '''
 2. Before our father’s throne
 We pour our ardent pray’rs;
-Our fears, our hopes, our aims
-are one,
+Our fears, our hopes, our aims are one,
 Our comforts and our cares.
 ''',
     '''
@@ -10921,7 +10920,7 @@ And hope to meet again. Amen.
   HymnData(367, 'Take Time to Be Holy', [
     '''
 1. Take time to be holy,
-Speak oft with the Lord;
+Speak oft with thy Lord;
 Abide in Him always,
 And feed in His word;
 Make friends of God’s children,
@@ -10966,14 +10965,14 @@ For service above.
 And adore the Lord our God;
 Will you pray with all your power,
 While we try to preach we Word?
-All is vain unless the spirit
+All is vain unless the Spirit
 Of he Holy one comes down;
 Brethren, pray, and holy manna
 Will be showered all around.
 ''',
     '''
 2. Brethren, see poor sinners around you
-Slumbered on the brink of woe;
+Slumbering on the brink of woe;
 Death is coming, hell is moving,
 Can you bear to let them go?
 See our fathers and mothers,
@@ -10985,7 +10984,7 @@ Will be showered all around.
 3. Sisters, will you join and help us?
 Moses’ sister aided him;
 Will you help the trembling mourners
-Who are struggling gard with sin?
+Who are struggling hard with sin?
 Tell them all about the Saviour,
 Tell them that He will be found;
 Sisters, pray, and holy manna
@@ -10994,7 +10993,7 @@ Will be showered all around.
     '''
 4. Let us love our God supremely,
 Let us love each other too;
-Let us love and pray for sinner,
+Let us love and pray for sinners,
 Till our God makes all things new,
 Then He’ll call us home to heaven,
 At His table we’ll sit down;
@@ -11057,10 +11056,10 @@ And God himself is light. Amen.
 Leaning on the everlasting arms;
 What a blessedness, what a peace is mine,
 Leaning on the everlasting arms;
-Leaning, leaning,
-Safe and secure from all alarms;
-Leaning, leaning,
-Leaning on the everlasting arms
+  Leaning, leaning,
+  Safe and secure from all alarms;
+  Leaning, leaning,
+  Leaning on the everlasting arms
 ''',
     '''
 2. Oh, how sweet to walk in this pilgrim way,
@@ -11115,7 +11114,7 @@ When it is done, O Lord, as unto Thee.
 ''',
     '''
 3. O happy home where Thou art not forgotten
-When joyis over flowing, full, and free;
+When joy is over flowing, full, and free;
 O happy home where every wounded spirit
 Is brought, Physician, comforter,
 To Thee.
@@ -11144,7 +11143,7 @@ And parents hold him dear.
     '''
 3. Happy the home where prayer is heard,
 And praise is wont to rise;
-Where parents love the secredWord
+Where parents love the secred Word
 And all its wisdom prize.
 ''',
     '''
@@ -11164,7 +11163,7 @@ We dedicate to Thee.
 ''',
     '''
 2. When thou didst pass the Temple gate,
-To pray beneath is dome,
+To pray beneath its dome,
 It was Thy Father’s house, more great
 Because by love made consecrate;
 It was Thine only home.
@@ -11182,11 +11181,11 @@ Will be a holy place. Amen.
 1. Friend of the home, as when in Galilee,
 The mothers brought their little ones to Thee,
 So we, dear Lord, would now the children bring,
-And seek for them the shelter of Thy wing
+And seek for them the shelter of Thy wing.
 ''',
     '''
 2. Lord, may Thy church as with a mother’s care,
-For thee the lambs within her bossom bear;
+For Thee the lambs within her bossom bear;
 And grant, as morning grows to noon, that they
 Still in her love and holy service stay.
 ''',
@@ -11265,7 +11264,8 @@ Unto this joyful day,
 Accept our glad thanksgiving,
 And listen as we pray;
 And may our preparation
-For this day’s service be with one accord to offer
+For this day’s service be 
+With one accord to offer
 Ourselves, O Lord, to Thee.
 ''',
     '''
@@ -11273,12 +11273,13 @@ Ourselves, O Lord, to Thee.
 Reared at Thine own command,
 For every gen’rous spirit,
 And every willing hand;
-And now within Thy temple Thy glory let us see,
+And now within Thy temple 
+Thy glory let us see,
 For all its strength and beauty
 Are nothing without Thee.
 ''',
     '''
-3. And oft here we gather,
+3. And oft as here we gather,
 And hearts in worship blend,
 May truth reveal its power,
 And fervent prayer ascend;
@@ -11316,7 +11317,7 @@ She waits the consummation
 Of peace forever more;
 Till with the vision glorious,
 Her longig eyes are blest,
-And be the church victorious
+And the great church victorious
 Shall be the church at rest.
 ''',
     '''
@@ -11336,13 +11337,13 @@ On high may dwell with Thee.
 Zion, city of our God;
 He, whose word cannot be broken
 Formed thee for His own abode:
-On the rock of Ages founded,
+On the Rock of Ages founded,
 What can shake thy sure repose?
 With salvation’s walls surrounded,
 Thou may’st smile at all thy foes.
 ''',
     '''
-2. See, thee stream of living waters,
+2. See, the streams of living waters,
 Springing from eternal love,
 Well supply thy sons and daughters,
 And all fear of want remove:
@@ -11358,7 +11359,7 @@ Showing that the Lord is near!
 Glorious Things of thee are spoken,
 Zion, city of our God;
 He whose word cannot be broken,
-Formed thee for His owned abode. Amen.
+Formed thee for His own abode. Amen.
 '''
   ]),
   HymnData(382, 'I Love Thy Kingdom, Lord', [
@@ -11421,7 +11422,7 @@ A house not made by hands.
   ]),
   HymnData(384, 'This Rite Our Blest Redeemer Gave', [
     '''
-1. This rite lest redeemer gave
+1. This rite lest Redeemer gave
 To all in Him believing;
 He leads us through this hallowed wave,
 To His example cleaving.
@@ -11459,7 +11460,7 @@ We love Thy cross. The shame, the pain,
 O Lamb of God, for sinners slain.
 ''',
     '''
-3. We sink beneath The Water’s face;
+3. We sink beneath the Water’s face;
 And thank Thee for Thy saving grace;
 We die to sin, and seek a grave
 With Thee, beneath the yielding wave.
@@ -11518,7 +11519,7 @@ Thou guardian of my soul! Amen
 1. Jesus, I my cross have taken
 All to leave, and follow Thee;
 Destitute, despised, Forsaken,
-Thou, from hence,my all shalt be;
+Thou, from hence, my all shalt be;
 Perish Ev’ry fond ambition,
 All I’ve sought or hoped or known;
 Yet how rich is my condition:
@@ -11541,7 +11542,7 @@ Life With trials hard may press me,
 Heav’n will bring me sweeter rest,
 O ‘tis not in grief to harm me
 While Thy love is left to me;
-O ’twere not in grief to harm me,
+O ’twere not in joy to harm me,
 Were that joy unmixed with thee.
 ''',
     '''
@@ -11550,7 +11551,7 @@ Armed by faith and winged by prayer;
 Heaven’s eternal days before thee
 God’s own hand shall guild thee there;
 Soon shall close thy earthly mission,
-Swift shall passthy pilgrim days;
+Swift shall pass thy pilgrim days;
 Hope shall change to glad fruition,
 Faith to sight and prayer to praise. Amen
 '''
@@ -11558,7 +11559,7 @@ Faith to sight and prayer to praise. Amen
   HymnData(388, 'O Thou Who in Jordan', [
     '''
 1. O Thou who in Jordan didst bow Thy meek head,
-And, whelmed in our sorrow, didst sink to the dead,
+And, 'whelmed in our sorrow, didst sink to the dead,
 Then rose from the darkness to glory above,
 And claimed from Thy chosen the kingdom of love.
 ''',
@@ -11575,7 +11576,7 @@ Accept us, redeem us, dwell ever within,
 To keep, by Thy spirit, our spirits from sin.
 ''',
     '''
-4. Till,crown’d with Thy glory, and waving the palm,
+4. Till, crown’d with Thy glory, and waving the palm,
 Our garments all white from the blood of the Lamb.
 We join the bright millions of saints gone before,
 And bless Thee, and wonder, and praise evermore. Amen
@@ -11587,12 +11588,12 @@ And bless Thee, and wonder, and praise evermore. Amen
 On Thee, my Savior and my God!
 Well may this glowing heart rejoice,
 And tell its raptures all abroad.
-Happy day, Happy day,
-When Jesus washed my sins away!
-He taught me how to watch and pray.
-And live rejoicing ev’ry day;
-Happy day, happy day,
-When Jesus washed my sins away!
+  Happy day, Happy day,
+  When Jesus washed my sins away!
+  He taught me how to watch and pray.
+  And live rejoicing ev’ry day;
+  Happy day, happy day,
+  When Jesus washed my sins away!
 ''',
     '''
 2. ‘Tis done the great transaction’s done;
@@ -11601,7 +11602,7 @@ He drew me and I followed on,
 Rejoiced to own the call divine.
 ''',
     '''
-3. Now rest my longdivided heart,
+3. Now rest my long divided heart,
 Fixed on this blissful center, rest
 Here have I found a noble part
 Here heav’nly pleasures fill my breast.
@@ -11627,7 +11628,8 @@ And rejoicing follow Thee.
 Emblem of my Saviour’s grave,
 Shall I shun Its brink, betraying
 Feelings worthy of a slave?
-No, I’ll enter Jordan’s wave.
+No, I’ll enter, No, I'll enter,
+Jesus enter Jordan’s wave.
 ''',
     '''
 3. Blest the sign which thus reminds me,
@@ -11650,7 +11652,8 @@ Fellow where my Lord has been.
     '''
 1. Here O my Lord, I see Thee face to face;
 Here would I touch and handle things unseen
-Here, grasp with firmer hand eternal grace, And all my weariness upon Thee lean.
+Here, grasp with firmer hand eternal grace, 
+And all my weariness upon Thee lean.
 ''',
     '''
 2. Here would I feed upon the bread of God,
@@ -11693,7 +11696,7 @@ Till in the home of heav’n
 We find out place. Amen
 '''
   ]),
-  HymnData(393, 'in Memory of the Savior’s Love', [
+  HymnData(393, 'In Memory of the Savior’s Love', [
     '''
 1. In mem’ry of the saviou’s love
 We Keep the sacred fest
@@ -11711,9 +11714,10 @@ That was for sinners shed.
 The wonders of His Love,
 And so anticipate by faith
 The heav’nly feast above. Amen.
-394Bread of the World in Mercy Broken
-''',
-    '''
+'''
+  ]),
+  HymnData(394, 'Bread of the World in Mercy Broken' [
+'''
 1. Bread of the world, in mercy broken,
 Wine of the soul, in mercy shed,
 By whom the words of life were spoken,
@@ -11741,7 +11745,7 @@ To Thy cross we look and live.
 ''',
     '''
 3. Day by day with strength supplied
-Thro’the life of Him who died,
+Thro’ the life of Him who died,
 Lord of life, O let us be
 Rooted, grafted, built in Thee! Amen
 '''
@@ -11758,7 +11762,7 @@ May feast in paradise with Thee. Amen
     '''
 1. A parting hymn we sing,
 Around Thy table, lord,
-Againour grateful tribute bring,
+Again our grateful tribute bring,
 Our solemn vows record.
 ''',
     '''
@@ -11844,7 +11848,7 @@ Nor should I aught withhold,
 Dear Lord, From Thee.
 In Love my soul would bow,
 My heart fulfill its vow,
-Some offering bringThee now,
+Some offering bring Thee now,
 Something for Thee.
 ''',
     '''
@@ -11906,14 +11910,14 @@ Dear Lord, to Thee, Dear Lord, to Thee.
 4. Thus, In Thy service, Lord,
 Till even tide Closes the day of life,
 May we abide:
-And when earths labors cease,
+And when earth's labors cease,
 Bid us depart in peace,
 Dear Lord, to Thee, Dear Lord, to Thee. Amen
 '''
   ]),
   HymnData(402, 'We Give Thee but Thine Own', [
     '''
-1. We give Thee but Thine own ,
+1. We give Thee but Thine own,
 Whatever the gift may be;
 All that we have is Thine alone,
 A trust, O lord, from thee.
@@ -11956,7 +11960,7 @@ Thy glory is Thy children’s good;
 Thy joy Thy tender fatherhood.
 ''',
     '''
-4. O Father, deign thesewalls to bless;
+4. O Father, deign these walls to bless;
 Fill with Thy love their emptiness;
 And let their door a gateway be
 To lead us from ourselves to Thee. Amen
@@ -11968,9 +11972,9 @@ To lead us from ourselves to Thee. Amen
 All your money, talents, time, and love;
 Consecrate them all upon the altar,
 While your Saviour from above speaks sweetly,
-Trust me, try me, prove me, saith the Lord of hosts,
-and see if a blessing, unmeasured blessing,
-I will not pour out on thee.
+  Trust me, try me, prove me, saith the Lord of hosts,
+  and see if a blessing, unmeasured blessing,
+  I will not pour out on thee.
 ''',
     '''
 2. When my wavering faith, in trials, falters,
