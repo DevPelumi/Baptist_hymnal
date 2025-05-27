@@ -10559,8 +10559,8 @@ Give Him the best that you have.
 More than friend or life to me;
 All along my pilgrim journey,
 Savior, let me walk with Thee.
-Close to thee. Close to thee
-Close to thee, close to thee;
+Close to thee. Close to Thee
+Close to thee, close to Thee;
 All along my pilgrim journey.
 Savior, let me walk with Thee.
 ''',
@@ -10569,8 +10569,8 @@ Savior, let me walk with Thee.
 Not for fame my prayer shall be;
 Gladly will I toil and suffer,
 Only let me walk with Thee’
-Close to Thee, close to thee
-Close to Thee, close thee;
+Close to Thee, close to Thee
+Close to Thee, close Thee;
 Gladly will I toil and suffer
 Only let me walk with Thee
 ''',
@@ -10602,15 +10602,15 @@ Wash me just now, As in Thy presence Humbly I bow.
     '''
 3. Have Thine own way, Lord!
 Have Thine own way! Wounded and weary,
-Help me, I pray! Power allPower
+Help me, I pray! Power all Power
 Surely is Thine! Touch me and heal me.
 Savior divine.
 ''',
     '''
 4. Have Thine own way, Lord!
 Have Thine own way! Hold o’er my being
-Absolute sway!Fill with Thy spirit
-Till all shall see Christ only,always,
+Absolute sway! Fill with Thy spirit
+Till all shall see Christ only, always,
 Living in me. Amen
 '''
   ]),
@@ -10640,7 +10640,7 @@ Let them flow in creaseless praise.
     '''
 4. Take my will, and make it Thine,
 It shall be no longer mine;
-Take my heart, it is thine own,
+Take my heart, it is Thine own,
 It shall be Thy royal throne.
 '''
   ]),
@@ -10669,9 +10669,9 @@ Let them flow in ceaseless praise,
     '''
 4. Take my will and make it Thine,
 It shall be no longer mine;
-Take my heart, it is thine own,
-It shall be thy royal throne,
-It shall be thy royal throne, Amen
+Take my heart, it is Thine own,
+It shall be Thy royal throne,
+It shall be Thy royal throne, Amen
 '''
   ]),
   HymnData(358, 'A Charge to Keep I Have', [
@@ -10706,7 +10706,7 @@ I’ll live for Him who died for me,
 My Savior and my God!
 ''',
     '''
-2. I now believe thou dost receive,
+2. I now believe Thou dost receive,
 For Thou hast died that I might live;
 And now henceforth I’ll trust in Thee,
 My Savior and my God!
@@ -10723,7 +10723,7 @@ My Savior and my God!
 1. Jesus calls us o’er the tumult
 Of our life’s wild, restless sea;
 Day by day His sweet voice soundeth,
-Saying, “Christian, follow me!
+Saying, “Christian, follow me!"
 ''',
     '''
 2. Jesus calls us from the worship
@@ -10746,15 +10746,14 @@ Serve and love Thee best of all.
   ]),
   HymnData(361, 'Where He Leads Me', [
     '''
-1. I can hear my Savior calling,
-I can hear my Savior calling
-I can hear my Savior calling,
-“take thy cross and follow, follow
-Me,”
-Where he leads me I will follow
-Where he leads me I will follow
-Where he leads me I will follow
-I’ll go with Him, with Him all the way,
+1. I can hear my Saviour calling,
+I can hear my Saviour calling,
+I can hear my Saviour calling,
+“take thy cross and follow, follow Me,”
+  Where he leads me I will follow,
+  Where he leads me I will follow,
+  Where he leads me I will follow,
+  I’ll go with Him, with Him all the way,
 ''',
     '''
 2. I’ll go with Him through the garden,
@@ -10763,7 +10762,7 @@ I’ll go with Him through the garden,
 I’ll go with Him, with Him all the way.
 ''',
     '''
-3. I’ll go with through the judgment,
+3. I’ll go with Him through the judgment,
 I’ll go with Him through the judgment,
 I’ll go with Him through the judgment,
 I’ll go with Him, with Him all the way.
@@ -10772,23 +10771,22 @@ I’ll go with Him, with Him all the way.
 4. He will give me grace and glory,
 He will give me grace and glory,
 He will give me grace and glory,
-And go with me, with me all theway.
+And go with me, with me all the way.
 '''
   ]),
   HymnData(362, 'Footsteps of Jesus', [
     '''
-1. Sweetly, Lord have we heard
+1. Sweetly, Lord, have we heard
 Thee calling, “Come follow me!”
-And we see where thy foot-prints falling,
+And we see where Thy footprints falling,
 Lead us to Thee.
-Footprints of Jesus that make
-the pathway glow;
-We will follow the steps of
-Jesus where’er they go.
+  Footprints of Jesus that make
+  the pathway glow;
+  We will follow the steps of
+  Jesus where’er they go.
 ''',
     '''
-2. Through they lead o’er the cold,
-dark mountains,
+2. Through they lead o’er the cold, dark mountains,
 Seeking His sheep,
 Or along by Silaon’s fountains,
 Helping the weak,
@@ -10812,11 +10810,10 @@ End at His throne.
 All to Him I freely give;
 I will ever love and trust Him,
 In His presence daily live.
-I surrender all,
-I surrender all;
-All to Thee, my blessed
-Saviour,
-I surrender all,
+  I surrender all,
+  I surrender all;
+  All to Thee, my blessed Saviour,
+  I surrender all,
 ''',
     '''
 2. All to Jesus I surrender,
@@ -10841,13 +10838,13 @@ Fight manfully onward,
 Dark passions subdue,
 Look ever to Jesus,
 He’ll carry you through.
-Ask the Saviour to help you.
-Comfort, strengthen, and keep you;
-He is willing to aid you,
-He will carry you through.
+  Ask the Saviour to help you.
+  Comfort, strengthen, and keep you;
+  He is willing to aid you,
+  He will carry you through.
 ''',
     '''
-2. Shun evil compansions,
+2. Shun evil companions,
 Bad language disdain,
 God’s name hold in rev’rence,
 Nor take it in vain;
@@ -10887,7 +10884,7 @@ But they have left an aching void
 The world can never fill.
 ''',
     '''
-4. Return, o Holy dave, return,
+4. Return, O Holy Dove, return,
 Sweet messenger of rest;
 I hate the sins that made Thee mourn,
 And drove thee from my breast.
