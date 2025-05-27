@@ -7928,7 +7928,7 @@ No: I am His forever.
     '''
 1. How firm a foundation, ye saints of the Lord,
 Is laid for your faith in His excellent Word!
-What more can He say than to you
+What more can He say than to you He hath said,
 To you who for refuge to Jesus have fled?
 To you who for refuge to Jesus have fled?
 ''',
@@ -7936,11 +7936,11 @@ To you who for refuge to Jesus have fled?
 2. “Fear not, I am with thee; O be the Lord, not dismayed
 For I am thy God, and will still give thee aid;
 I’ll strengthen thee, help thee; and cause thee to stand,
-Upheld by My righteous, ominipotenthand,
+Upheld by My righteous, ominipotent hand,
 Upheld by My righteous, omni potentent hand.
 ''',
     '''
-3. “When through fiery trials thy pathway
+3. “When through fiery trials thy pathway shall lie,
 My grace, all sufficient, shall be thy supply:
 The flame shall not hurt thee; I only design
 Thy dross to consume, and thy gold to refine,
@@ -7949,7 +7949,7 @@ Thy dross to consume, and thy gold to refine.
     '''
 4. “The soul that on Jesus hath leaned for repose
 I will not, I will not desert to his foes;
-That soul, though all hell should endeavor to shake
+That soul, though all hell should endeavor to shake,
 I’ll never, no never no, never forsake!
 I’ll never, no never, never forsake!” Amen.
 '''
@@ -7987,10 +7987,10 @@ Forsake!” Amen
 This is the promise of love;
 There shall be season refreshing,
 Sent from the Savior above.
-Shower of blessing
-Shower of blessing we need:
-Mercy-drops round us are falling
-But for the shower we plead
+  Shower of blessing
+  Shower of blessing we need:
+  Mercy-drops round us are falling
+  But for the shower we plead
 ''',
     '''
 2. There shall be shower of blessing;
@@ -8008,7 +8008,7 @@ Come, and now honor Thy word.
 4. There shall be shower of Blessing:
 Oh, that today they might fall
 Now as to God we’re confessing,
-Now as on Jesus call!
+Now as on Jesus we call!
 '''
   ]),
   HymnData(265, 'It is well with my soul', [
@@ -8017,8 +8017,8 @@ Now as on Jesus call!
 When sorrow like sea billows roll;
 Whatever my lot, Thou hast taught me to say,
 It is well, it is well with my soul.
-It is well with my soul,
-It is well, it is well with my soul
+  It is well with my soul,
+  It is well, it is well with my soul
 ''',
     '''
 2. Though Satan shold buffet, tho’ trials should come.
@@ -8029,15 +8029,13 @@ And hath shed his own blood for my soul.
     '''
 3. My sin oh, the bliss of this glorious tho’t
 My sin not in part, but the whole
-Is nail’d to do the cross and I bear it is no
-more,
+Is nail’d to the cross and I bear it is no more,
 Praise the Lord, praise the Lord. O my soul.
 ''',
     '''
 4. And,Lord, haste the day when the faith shall be sight,
 The clouds be roll’d back as a scroll,
-The trump shall resound and the
-Lord shall descend,
+The trump shall resound and the Lord shall descend,
 “Even so,” it is well with my soul,
 '''
   ]),
@@ -8054,15 +8052,15 @@ I’m standing on the promises of God.
 ''',
     '''
 2. Standing on the promises that cannot fail,
-When the howling storms of doubt and
-fear assail,
+When the howling storms of doubt and fear assail,
 By the living word of God I shall prevail,
 Standing on the promises of God.
 ''',
     '''
 3. Standing on the promises of Christ the Lord,
 Bound to Him eternaly by love’s strong cord,
-Overcoming daily with the Spirit’s Sword, Standing on the promises of God.
+Overcoming daily with the Spirit’s Sword, 
+Standing on the promises of God.
 ''',
     '''
 4. Standing on the promises I cannot fail,
@@ -8076,10 +8074,11 @@ Standing on the promises of God.
 1. Just when I need Him, Jesus is near,
 Just when I falter, just when I fear;
 Ready to help me, ready to cheer,
-Just when I need Him most,
-Just when I need Him most
-Just is near to comfort and cheer,
 Just when I need Him most.
+  Just when I need Him most,
+  Just when I need Him most,
+  Just is near to comfort and cheer,
+  Just when I need Him most.
 ''',
     '''
 2. Just when I need Him, Jesus is true,
@@ -8119,9 +8118,9 @@ Feeds me with the living bread;
 Tho’ my weary steps may falter,
 And my soul athirst may be,
 Gushing from the Rock before me,
-Lo! A sring of Joy I see;
+Lo! a sring of Joy I see;
 Gushing from the Rock before me,
-Lo! A spring of joy I see.
+Lo! a spring of joy I see.
 ''',
     '''
 3. All the way my Saviour leads me;
@@ -8140,10 +8139,10 @@ Jesus led me all the way.
 Oh, what a foretaste of glory divine!
 Heir of salvation, purchase of God,
 Born of His Spirit, wash’d in His blood.
-This is my story, this is my song,
-Praising my Saviour all the day long;
-This is my story, this is my song,
-Praising my Saviour all the day long.
+  This is my story, this is my song,
+  Praising my Saviour all the day long;
+  This is my story, this is my song,
+  Praising my Saviour all the day long.
 ''',
     '''
 2. Perfect submission, perfect delight,
@@ -8164,10 +8163,10 @@ Fill’d with His Fill’d with His goodness, lost in His love.
 He holdeth the wealth of the world in His hands!
 Of rubies and diamonds, of silver and gold,
 His coffers are full, He has riches untold.
-I’m a child of the King,
-A child of the King:
-With jesus my Saviour,
-I’m a child of the King,
+  I’m a child of the King,
+  A child of the King:
+  With jesus my Saviour,
+  I’m a child of the King,
 ''',
     '''
 2. My Father’s own Son, the Saviour of men,
