@@ -12049,12 +12049,12 @@ There comes the signal strain,
 Its music rolls along,
 The hills take up the song,
 Of loyalty, loyalty, yes, loyalty to Christ.
-“On to victory! On to victory!”
-Cries our great Commander: “On!”
-We’ll move at His Command,
-Well soon possess the land,
-Thro’ loyalty, loyalty,
-Yes, loyalty to Christ.
+  “On to victory! On to victory!”
+  Cries our great Commander: “On!”
+  We’ll move at His Command,
+  We'll soon possess the land,
+  Thro’ loyalty, loyalty,
+  Yes, loyalty to Christ.
 ''',
     '''
 2. O hear, ye brave, the sound
@@ -12066,8 +12066,8 @@ Of loyalty, loyalty, yes loyalty to Christ
 ''',
     '''
 3. The Strength of youth we lay
-At Jesus’ feet today, “Tis loylty, loyalty
-Loyalty to Christ; His gospel well proclaim
+At Jesus’ feet today, 'Tis loylty, loyalty
+Loyalty to Christ; His gospel we'll proclaim
 Thro’out the world’s domain,
 Of loyalty, loyalty, yes loyalty to Christ.
 '''
@@ -12075,14 +12075,14 @@ Of loyalty, loyalty, yes loyalty to Christ.
   HymnData(408, 'The Banner of the Cross', [
     '''
 1. There’s a royal banner given for display
-To the solders of the King;
+To the soldiers of the King;
 As an ensign fair we lift it up today,
 While as ransomed ones we sing.
-Marching on, marching on,
-For Christ count everything but loss!
-And to crown Him King.
-We’ll toil and sing
-‘Neath the banner of the cross!
+  Marching on, marching on,
+  For Christ count everything but loss!
+  And to crown Him King.
+  We’ll toil and sing
+  ‘Neath the banner of the cross!
 ''',
     '''
 2. Though the foe may rage
@@ -12112,12 +12112,12 @@ O see how the thick shadows fly!
 The voice of salvation
 Awakes every nation;
 “Come over and help us” they cry.
-The Kingdom is coming,
-O tell ye the story,
-God’s banner exalted shall be!
-The earth shall be full of
-His knowledge and glory,
-As waters that cover the sea!
+  The Kingdom is coming,
+  O tell ye the story,
+  God’s banner exalted shall be!
+  The earth shall be full of
+  His knowledge and glory,
+  As waters that cover the sea!
 ''',
     '''
 2. The sunlight is glancing
@@ -12141,12 +12141,12 @@ Their King and Redeemer shall crown!
 1. True heated, whole-heated, faithful, and loyal,
 King of our lives, by Thy grace, we will be;
 Under the starndard, exalted and loyal,
-Strong in thy strength, we will battle for thee,
-Pealout the watch-word! silence it never!
-Song of our spirits, rejoicing and fee;
-Pealout the watch-word!
-Loyal forever, king of our lives, by
-Thy grace we will be.
+Strong in thy strength, we will battle for Thee,
+  Pealout the watch-word! silence it never!
+  Song of our spirits, rejoicing and free;
+  Pealout the watch-word!
+  Loyal forever, king of our lives, by
+  Thy grace we will be.
 ''',
     '''
 2. True hearted, whole-hearted, fullest allegiance
@@ -12155,7 +12155,7 @@ Valiant endeavor and loving obedience,
 Freely and joyously now would we bring .
 ''',
     '''
-3. True heated, whole hearted, savour all glorious!
+3. True heated, whole hearted, Savour all glorious!
 Take Thy great power and reign there alone
 Over our wills and affections victorious,
 Freely surrendered and wholly Thine own.
@@ -12167,13 +12167,13 @@ Freely surrendered and wholly Thine own.
 Strive for the righ, for the Lord is with you;
 Fight with sin bravely, fight and be strong,
 Christ is your captain, fear only what’s wrong
-Fight then, good soldiers, fight and be brave,
-Christ is your captain, mighty to save.
+  Fight then, good soldiers, fight and be brave,
+  Christ is your captain, mighty to save.
 ''',
     '''
 2. Dare to be brave, dare to be true,
 God is your Father, he watches o’er you;
-He knows your trails; when your heart quails,
+He knows your trials; when your heart quails,
 Call Him to rescue, his grace never fails
 ''',
     '''
@@ -12193,25 +12193,25 @@ Christ, the royal Master,
 Leads against the foe;
 Forward into battle,
 See His banner go!
-Onward, Christian soldiers,
-Marching as to war,
-With the cross of cross of Jesus
-Going on before!
+  Onward, Christian soldiers,
+  Marching as to war,
+  With the cross of Jesus
+  Going on before!
 ''',
     '''
 2. At the sign of triumph
 Satan’s host doth flee;
-On then Christian soldiers,
+On, then Christian soldiers,
 On to victory !
 Hell’s foundations quiver
 At the shout of praise ;
-Brother, lift your voices,
+Brothers, lift your voices,
 Loud your anthems raise!
 ''',
     '''
 3. Like a mighty army
 Moves the church of God;
-Brothers, we are trading
+Brothers, we are treading
 Where the saints have trod,
 We are not divided;
 All one body we,
@@ -12224,7 +12224,7 @@ Join our happy throng,
 Blend with ours your voices
 In the triumph song;
 Glory, loud, and honor,
-Unto Christ the king;
+Unto Christ the King;
 This thro’ countless ages
 Men and angels sing. Amen
 '''
@@ -12366,8 +12366,7 @@ And win the well-fought day:
 Still let the Sprit cry,
 In all His Soldiers, “Come!”
 Till Christ the Lord who reigns on high
-Shall take the conquerors home.
-Amen.
+Shall take the conquerors home.  Amen.
 '''
   ]),
   HymnData(417, 'Lead On, O King Eternal', [
@@ -12397,7 +12396,7 @@ We follow, not with fears;
 For gladness break like morning
 Where’er Thy face appears;
 Thy cross is lifted o’er us;
-We journey in iuts light:
+We journey in its light:
 The crown awaits the conquest;
 Lead on, O God of might.
 '''
@@ -12431,8 +12430,7 @@ And upon the throne be wrong;
 Yet that scaffold sways the future,
 And behind the dim unknown,
 Standeth God within the shadow,
-Keeping watch above His own.
-Amen.
+Keeping watch above His own.  Amen.
 '''
   ]),
   HymnData(419, 'Stand Up, Stand Up for Jesus', [
@@ -12445,10 +12443,10 @@ From vict’ry unto vict’ry
 His army shall he lead,
 Till every foe is vanquished,
 And Christ is Lord indeed.
-Stand up, stand up for Jesus,
-Ye soldiers of the cross:
-Lift high His royal banner,
-It must not, it must not suffer loss:
+  Stand up, stand up for Jesus,
+  Ye soldiers of the cross:
+  Lift high His royal banner,
+  It must not, it must not suffer loss:
 ''',
     '''
 2. Stand up, stand up for Jesus
@@ -12473,9 +12471,9 @@ Be never wanting there.
     '''
 4. Stand up, stand up for Jesus,
 The strife will not be long;
-The day the noise of battle,
+This day the noise of battle,
 The next the victor’s song:
-To him that overcometh
+To him that over cometh
 A crown of life shall be;
 He, with the King of glory,
 Shall reign eternally.
@@ -12504,7 +12502,7 @@ Till thou obtain thy crown.
 4. Fight on, my soul, till death
 Shall bring thee to thy God;
 He’ll take thee, at thy parting breath,
-To His dievine abode. Amen
+To His divine abode. Amen
 '''
   ]),
   HymnData(421, 'We Are Living, We Are Dwelling', [
@@ -12558,7 +12556,7 @@ By any lure or guile, enticed.
 ''',
     '''
 3. March on, O soul, with strength,
-As strong the battle rols!
+As strong the battle rolls!
 ‘Gainst lies and lusts and wrongs,
 Let courage rule our souls:
 In keenest strife, Lord may we stand,
@@ -12577,14 +12575,14 @@ Amen.
   HymnData(423, 'Arise, O Youth of God', [
     '''
 1. Arise, O youth of God!
-Have done with jesser things;
+Have done with lesser things;
 Give heart and soul and
 mind and strength
 To serve the kings of kings.
-Arise, arise,
-The Master calls for thee;
-Arise, arise O youth of God,
-March on to Victory!
+  Arise, arise,
+  The Master calls for thee;
+  Arise, arise O youth of God,
+  March on to Victory!
 ''',
     '''
 2. Arise, O youth of God!
@@ -12648,10 +12646,10 @@ But if by a still, small voice He calls
 To Paths I do not know, I’ll answer,
 Dear Lord, with my hand in Thine,
 I’ll go where you want me to go.
-I’ll go where you want me to go, dear Lord,
-O’er mountain or plain or sea:
-I’ll say what you want me to say, dear Lord,
-I’ll be what you want me to be.
+  I’ll go where you want me to go, dear Lord,
+  O’er mountain or plain or sea:
+  I’ll say what you want me to say, dear Lord,
+  I’ll be what you want me to be.
 ''',
     '''
 2. Perhaps today there are loving words
@@ -12667,7 +12665,7 @@ I’ll say what you want me to say.
 3. There’s surely somewhere a lowly place
 In earth’s harvest fields so wide,
 Where I may labor thro’life’s short day,
-For Jesus the crucified;
+For Jesus the Crucified;
 So, trusting my all unto thy care,
 I know thou lovest me,
 I’ll do Thy will with a heart sincere,
@@ -12683,7 +12681,7 @@ The strain of toil, the fret of care.
 ''',
     '''
 2. Help me the slow of heart to move
-Some clear,,winning word of love;
+By Some clear,,winning word of love;
 Teach me the wayward feet to stay,
 And guide them in the homeward way.
 ''',
@@ -12705,7 +12703,7 @@ With Thee, O Master, let me live. Amen.
 1. The Master hath come, and He calls us to follow
 The track of the foot prints
 He leaves on our way;
-Far over the mountain and through the deep hallow,
+Far over the mountain and through the deep hollow,
 The path leads us onto the mansions of day:
 The master hath called us, the Children who fear Him,
 Who march ‘neath Christ’s banner,
@@ -12717,8 +12715,8 @@ And rest in the light of His beautiful land.
 2. The Master hath called us; the road may be dreary,
 And dangers and sorrows are strewn on the track:
 But God’s Holy Spirit shall comfort the weary;
-We follow the Saviour and cannot tirn back;
-The Master hat called us: though doubt and temptation
+We follow the Saviour and cannot turn back;
+The Master hath called us: though doubt and temptation
 May compass our journey, we cheerfully sing:
 “press onward, look upward” thro’ much tribulation;
 The children of Zion must follow their King.
@@ -12737,12 +12735,12 @@ He’ll lead us at last to His kingdom above.
   HymnData(428, 'Must Jesus Bear the Cross Alone', [
     '''
 1. Must Jesus bear the cross alone,
-And the entire world goes free?
-No, there’s a cross from ev’ry one,
+And all the entire world go free?
+No, there’s a cross for ev’ry one,
 And there’s a cross for me.
 ''',
     '''
-2. How happy are the saint above,
+2. How happy are the saints above,
 Who once went sorrowing here!
 But now they taste unmingled love
 And joy without a tear.
@@ -12760,10 +12758,10 @@ For there’s a crown for me. Amen.
 Out in the desert dark and drear,
 Calling the sheep who’ve gove astray,
 Far from the Shepherd’s fold away.
-Bring them in, bring them in,
-Bring them in from the field of sin:
-Bring them in, bring them in,
-Bring the wand’ring ones to Jesus.
+  Bring them in, bring them in,
+  Bring them in from the field of sin:
+  Bring them in, bring them in,
+  Bring the wand’ring ones to Jesus.
 ''',
     '''
 2. Who’ll go and help this shepherd kind,
@@ -12784,10 +12782,10 @@ Hark! ‘tis the Master speaks to thee,
 Thus my dear Redeemer meet,
 Not one day of service give Him,
 Lay no trophy at His feet?
-Must I go, and empty handed?
-Must I meet my Saviour so?
-Not one soul with which to greet Him:
-Must I empty handed go?
+  Must I go, and empty handed?
+  Must I meet my Saviour so?
+  Not one soul with which to greet Him:
+  Must I empty handed go?
 ''',
     '''
 2. Not at death I shrink nor falter,
