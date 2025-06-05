@@ -14955,10 +14955,10 @@ Their hallowed path they trace.  Amen.
   HymnData(503, 'Gracious Saviour, Who Didst Honour', [
     '''
 1. 1 Gracious Savior, who didst honor
-Womankind as woman’s son;
-Very man, though God begotten,
+Woman-kind as woman’s son;
+Very man, though God-begotten,
 And with God the Father One;
-Grant that womanhood may be
+Grant our womanhood may be
 Consecrated, Lord, to Thee.
 ''',
     '''
@@ -14974,7 +14974,7 @@ Dedicated, Lord, to Thee.
 Nor didst humble work disdain,
 Grant we may Thy footsteps follow
 Patiently through toil or pain;
-May our quiet home-life beLived,
+May our quiet home life be lived,
 O Lord, in Thee, to Thee.
 ''',
     '''
@@ -14986,9 +14986,9 @@ Humble though our influence be,
 Use it in the world for Thee. Amen.
 '''
   ]),
-  HymnData(504, 'O Blessing Day of Motherhood', [
+  HymnData(504, 'O Blessing Day of Motherhood!', [
     '''
-1. blessed day of motherhood!
+1. O blessed day of motherhood!
 We lift our hearts in praise,
 To thank the Source of every good:
 Thy joy crowns all our days.
@@ -15077,7 +15077,7 @@ And that I might have seen his kind look when he said,
 3. Yet still to His footstool in prayer I may go,
 And ask for a share in His love;
 And if I now earnestly seek Him below,
-I shall see Him and hear Him above;Amen.
+I shall see Him and hear Him above; Amen.
 '''
   ]),
   HymnData(507, 'With happy Voices Ringing', [
@@ -15104,12 +15104,12 @@ Of One who reigns above.
     '''
 3. And shall we not adore Thee,
 With more than joyous song,
-And livein truth before Thee,
+And live in truth before Thee,
 All beautiful and strong?
-Lord, bless our souls' endeavor
+Lord, bless our souls' endeavour
 Thy servants true to be,
 And through all life, forever,
-To live our praise to Thee.Amen.
+To live our praise to Thee.  Amen.
 '''
   ]),
   HymnData(508, 'What Can I Give to Jesus', [
@@ -15150,10 +15150,10 @@ Who died on calvary.
 Tells of His love in the Book He has giv'n;
 Wonderful things in the Bible I see;
 This is the dearest, that Jesus loves me.
-I am so glad that Jesus loves me,
-Jesus loves me, Jesus loves me;
-I am so glad that Jesus loves me,
-Jesus loves even me.
+  I am so glad that Jesus loves me,
+  Jesus loves me, Jesus loves me;
+  I am so glad that Jesus loves me,
+  Jesus loves even me.
 ''',
     '''
 2. Tho’ I forget Him and wander away,
@@ -15190,7 +15190,7 @@ Let me have Thy loving mind.
     '''
 4. Loving Jesus, gentle Lamb,
 In thy gracious hands I am;
-Make me, Savior, what Thou art,
+Make me, Saviour, what Thou art,
 Live Thyself within my heart.
 ''',
     '''
@@ -15222,14 +15222,14 @@ God is love, God is love.
   ]),
   HymnData(512, 'Jesus Loves Me', [
     '''
-1. Jesus loves me! this I know,
+1. Jesus loves me! This I know,
 For the Bible tells me so;
 Little ones to Him belong;
 They are weak, but He is strong.
-Yes, Jesus loves me,
-Yes, Jesus loves me,
-Yes, Jesus loves me,
-The Bible tells me so.
+  Yes, Jesus loves me,
+  Yes, Jesus loves me,
+  Yes, Jesus loves me,
+  The Bible tells me so.
 ''',
     '''
 2. Jesus loves me! He who died
@@ -15256,7 +15256,7 @@ He will take me home on high.
 The rich may bring their wealth,
 And some may bring their greatness,
 And some bring strength and health;
-We too, would bring our treasures
+We, too, would bring our treasures
 To offer to the King;
 We have no wealth or learning:
 What shall we children bring?
@@ -15279,7 +15279,7 @@ At home, at school, at play:
 And better are these treasures
 To offer to our King,
 Than richest gifts without them;
-Yet these a child may bring.Amen.
+Yet these a child may bring. Amen.
 '''
   ]),
   HymnData(514, 'Doxology', [
@@ -15292,25 +15292,31 @@ Praise Father, Son, and Holy Ghost.Amen.
   ]),
   HymnData(515, 'The Lord is in His Holy Temple', [
     '''
-1. The Lord is in his holy temple,
-The Lord is in his holy temple;
+1. The Lord is in His holy temple,
+The Lord is in his Holy temple;
 Let all the earth keep silence,
-Let all the earth keep silence before him,
-Keep silence, keep silence before him.Amen
-''',
-    '''
-516 The Lord is in His Holy Temple
-The Lord is in his holy temple,
-The Lord is in his holy temple;
-Let all the earth keep silence before him,
-Keep silence temple;
-Let all the earth keep silence before him,
-Keep silence, keep silence before him.Amen
+Let all the earth keep silence before Him,
+Keep silence, keep silence before Him. Amen
 '''
+  ]),
+  HymnData(516, 'The Lord is in His Holy Temple', [
+  ...
+1. The Lord is in His holy temple,
+The Lord is in His holy temple;
+Let all the earth keep silence before Him,
+Keep silence temple;
+Let all the earth keep silence before Him,
+Keep silence, keep silence before Him. Amen
+'''
+  ]),
+  HymnData(517, 'O Father, Unto Thee', [
+  ...
+  1. O Father, unto Thee we pray. Amen.
+  ...
   ]),
   HymnData(518, 'Create in Me a Clean Heart', [
     '''
-1. Create in Me a Clean Heart, O God,
+1. Create in me a Clean Heart, O God,
 and renew a right spirit within me. Amen
 '''
   ]),
@@ -15324,7 +15330,7 @@ And in truth. Amen.
   ]),
   HymnData(520, 'O Lord of Love, Thou Light Divine', [
     '''
-1. Lord of love,
+1. O Lord of love,
 Thou light divine,
 O’er all the world
 Thy glories shine;
@@ -15334,8 +15340,8 @@ For we are Thine. Amen
   ]),
   HymnData(521, 'O WORSHIP THE LORD', [
     '''
-1. worship the lord in the beauty of holiness;
-Service Him with gladness, all the earth. Amen.
+1. O worship the lord in the beauty of holiness;
+Serve Him with gladness, all the earth. Amen.
 '''
   ]),
   HymnData(522, 'Lead Me, Lord', [
@@ -15380,17 +15386,23 @@ And ever shall be, world without end. Amen
     '''
 1. Now for each yearning heart,
 Thy gracious love impart;
-Hear us, O lord.Amen.
+Hear us, O lord. Amen.
 '''
+  ]),
+  Hymdata(528, 'In Jesus' Name We Pray', [
+  ...
+  1. In Jesus's name we pray.  A..........men.
+  ...
   ]),
   HymnData(529, 'Almighty Father, Hear Our Prayer', [
     '''
 1. Almighty Father, hear our prayer,
 and bless all souls that wait before Thee. Amen.
-''',
-    '''
-530 Hear Our Prayer, O Lord
-Hear Our prayer, O Lord;
+'''
+]),
+HymnData(530, 'Hear Our Prayer, O Lord',[
+...
+1. Hear Our prayer, O Lord;
 Hear our prayer O Lord;
 Incline Thine ear to us,
 And grant us Thy peace. Amen.
@@ -15404,7 +15416,8 @@ For the dear Redeemer’s sake. Amen.
   ]),
   HymnData(532, 'let the Words of My Mouth', [
     '''
-1. Let the words of my mouth and the meditation of my heart be acceptable in Thy sight,
+1. Let the words of my mouth and the meditation of 
+my heart be acceptable in Thy sight,
 O Lord, my strength and my Redeemer. Amen.
 '''
   ]),
@@ -15433,13 +15446,14 @@ A trust, O Lord, from Thee. Amen
   HymnData(536, 'All Things Are Thine', [
     '''
 1. All things are Thine: no gift have we,
-Lord of all gifts,to offer Thee;
+Lord of all gifts, to offer Thee;
 And hence with grateful hearts today,
 Thine own before Thy feet we lay. Amen
-''',
-    '''
-537 Grant Us, Lord, The Grace of Giving
-Grant us, lord the grace of giving,
+'''
+    ]),
+  HymnData(537, 'Grant Us, Lord, The Grace of Giving', [
+    ...
+1. Grant us, lord the grace of giving,
 With a Spirit large and free,
 That ourselves and all our living
 We may offer unto Thee. Amen
@@ -15476,7 +15490,7 @@ Rest upon us from above. Amen
   HymnData(541, 'The Lord Bless Thee and Keep Thee', [
     '''
 1. The Lord bless thee and keep thee:
-The Lord makes His to Shine upon thee,
+The Lord makes His face to Shine upon thee,
 And be gracious unto thee;
 The Lord lifts up His countenance upon thee,
 And give thee peace, and give thee peace.
@@ -15491,56 +15505,75 @@ The Lord makes His face to shine upon you,
 And be gracious unto you, be gracious,
 The Lord be gracious unto you. Amen.
 ''',
-    '''
+...
 543 DRESDEN
-A – men, A - men.
-''',
-    '''
+ ...,
+ ...
+1. A – men, A - men,
+...,
+'''
 544 THREEFOLD
+...,
+...
 A – men, A - men.
 ''',
-    '''
+...
 545 THREEFOLD
-A - - - - - men, A - men, A - - men.
+...,
+...
+1. A - - - - - men, A - men, A - - men.
 ''',
-    '''
+  ...
 546 FOURFOLD
+...,
+ ...
 A – men, A – men, A - - men, A – men.
 ''',
-    '''
+...
 547 SEVENFOLD
+ ...,
+ ...
 A – men, A – men, A – men, A – - men,
 A – - - - - men, A - - - men, A – men.
 ''',
-    '''
-548 ST. PETER
+...
+548, 'ST. PETER
+...,
+  ...
 A – men, A - men, A - - men, A – men.
 ''',
-    '''
-549 CHOLMONDELY
+...
+549, 'CHOLMONDELY
+ ...,
+ ...
 A – men, A – men, A - - men A - - men.
 ''',
-    '''
+  ...
 550 GUNNER
+...,
+  ...
 A – men, A – men, A - - men, A - - men.
 ''',
-    '''
+...
 551 PACEM
+...
 A - - men, A – men, A . - - men.
 ''',
-    '''
-552 RESTARE
+...
+ 552 RESTARE
+...
 A - - - - men, A - - men, A - - - - men.
 ''',
-    '''
+...
 553 THE BELL CADENCE
-A – men, A – men, A – men, A – men,
+  ...
+1. A – men, A – men, A – men, A – men,
 A - - men, A - - men, A - - - men, A - - men,
 A - - men, A - men, A - - - men,
 A – men, A - - men.
 ''',
-    '''
-554 FINIR
+  ...
+554 FINIR'
 A - - - - - men, A - - men.
 '''
   ]),
@@ -15567,7 +15600,7 @@ We feebly struggle, they in glory shine;
 Yet all are one in thee, for all are thine:
 ''',
     '''
-5. And when the strife is fierce, the warfare long,
+5. And when the strife is fierce, the war-fare long,
 Steals on the ear the distant triumph song,
 And hearts are brave again, and arms are strong:
 ''',
