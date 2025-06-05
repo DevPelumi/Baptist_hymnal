@@ -12813,7 +12813,7 @@ Many are weary and sad;
 Carry the sunshine where darkness is strife,
 Making the sorrowing glad.
 Make me a blessing,
-Make me a blessing, outOut of my life…
+Make me a blessing, Out of my life…
 May Jesus shine
 Make me a blessing, O Saviour, I pray,
 Make me a blessing to someone today.
@@ -12825,7 +12825,7 @@ Others will trust Him if only you prove
 True, every moment you live.
 ''',
     '''
-3. Give as’t was given to you in your need,
+3. Give as ’t was given to you in your need,
 Love as the Master loved you;
 Be to the helpless a helper indeed,
 Unto your mission be true.
@@ -12837,15 +12837,15 @@ Unto your mission be true.
 Sowing in the noontide and the dewy eve;
 Waiting for the harvest, and the time of reaping,
 We shall come rejoicing, bringing in the sheaves.
-Bringing in the sheaves, bringing in the sheaves;
-We shall come rejoicing, bringingithe sheaves;
-Bringing in that sheaves.
+  Bringing in the sheaves, bringing in the sheaves;
+  We shall come rejoicing, bringing in the sheaves;
+  Bringing in the sheaves.
 ''',
     '''
 2. Sowing in the sunshine, sowing in the shadows;
 Fearing neither clouds winter’s chilling breeze;
 By and by the harvest and the labor ended,
-We shall come rejoice, bringing the sheaves.
+We shall come rejoicing, bringing in the sheaves.
 ''',
     '''
 3. Going forth with weeping, sowing for the Masters;
@@ -12860,11 +12860,11 @@ We shall come rejoicing, bringing in the sheaves.
 My home is far away, upon a golden strand;
 Ambassador to be of realms beyond the sea,
 I’m here on business for my King,
-This is the massage that I bring,
-A mssageangels fain would sing:
-“Oh be ye reconciled,”
-Thus saith my Lord and King
-“Oh, be ye reconciled to God.”
+  This is the message that I bring,
+  A message angels fain would sing:
+  “Oh be ye reconciled,”
+  Thus saith my Lord and King
+  “Oh, be ye reconciled to God.”
 ''',
     '''
 2. This is the King’s command: That all men, ev’rywhere,
@@ -12875,7 +12875,7 @@ And that’s my business for my King.
     '''
 3. My home is brighter far than Sharon’s rosy plain,
 Eternal life and joy thro’out its vast domain;
-My sov’s reign me tell how mortals there may dwell,
+My sov’s reign bids me tell how mortals there may dwell,
 And that’s my business for the king.
 '''
   ]),
@@ -12884,17 +12884,18 @@ And that’s my business for the king.
 1. “ Serve The Lord with gladness”
 In our works and ways,
 Come before His presence
-With Him our maker
+With our songs of praise;
+Unto Him our maker
 We would pledge anew
 Life’s supreme devotion
 To service true.
-“Serve Him with gladness,
-“Enter His court with song;
-To our creator True praises belong.
-Great is his mercy
-Wonderful is His name
-We gladly serve Him,
-His great love proclaim.
+  “Serve Him with gladness,
+  “Enter His court with song;
+  To our creator True praises belong.
+  Great is his mercy
+  Wonderful is His name
+  We gladly serve Him,
+  His great love proclaim.
 ''',
     '''
 2. “Serve the Lord with gladness,”
@@ -12907,7 +12908,7 @@ We will serve with gladness
 And praise His name.
 ''',
     '''
-3. “Serve the Lord with glad ness.
+3. “Serve the Lord with gladness.
 “This shall be our theme,
 As we walk together
 In his love supreme:
@@ -12923,11 +12924,11 @@ Will be our choice
 Let us follow the path that our Master had trod;
 With the balm of His counsel our strength to renew,
 Let us do with our might what our hand find to do.
-Toiling on, Toiling on,
-Toiling on, toiling on;
-Let us hope, and trust
-Let us watch, and pray,
-And labor till the master comes.
+  Toiling on, Toiling on,
+  Toiling on, toiling on;
+  Let us hope, and trust
+  Let us watch, and pray,
+  And labor till the master comes.
 ''',
     '''
 2. To the work! To the work! Let the hungry be fed;
@@ -12942,7 +12943,7 @@ And the name of Jehovah exalted shall be,
 In the loud swelling chorus, “Salvation is free!”
 ''',
     '''
-4. To the wok! to the work! In the strength of the Lord,
+4. To the work! to the work! In the strength of the Lord,
 And a robe and a crown shall our labor reward,
 When the home of the faithful our dwelling shall be,
 And we shout with the ransomed, “Salvation is free!”
@@ -12954,14 +12955,14 @@ And we shout with the ransomed, “Salvation is free!”
 He has done so much for me;
 He has suffered to redeem me,
 He has died to set me free.
-I am satisfied, I am satisfied,
-I am satisfied withJesus,
-But the question comes to me,
-As I think of Calvary,
-Is my master satisfied with me?
+  I am satisfied, I am satisfied,
+  I am satisfied with Jesus,
+  But the question comes to me,
+  As I think of Calvary,
+  Is my master satisfied with me?
 ''',
     '''
-2. He is with me in my trails,
+2. He is with me in my trials,
 Best of friends of all is He;
 I can always count on Jesus,
 Can He always count on me?
@@ -12989,11 +12990,11 @@ Do then the best you can,
 Not for reward,
 Not for the praise of man,
 But for the Lord.
-Ev’ry work for Jesus will be blest,
-But He asks from ev’ry one His best.
-Our talents maybe few,
-These may be small,
-But unto Him is due our best, our all.
+  Ev’ry work for Jesus will be blest,
+  But He asks from ev’ry one His best.
+  Our talents may be few,
+  These may be small,
+  But unto Him is due our best, our all.
 ''',
     '''
 2. Wait not for men to laud,
@@ -13010,7 +13011,7 @@ Be it the best.
     '''
 1. Is your life a channel of blessing?
 Is the love of God flowing thro’ you?
-Are you telling the loss of the savior?
+Are you telling the loss of the Saviour?
 Are you ready His service to do?
 Make me a channel of blessing today
 Make me a channel of blessing, I pray;
@@ -13042,10 +13043,10 @@ To those we are trying to win.
 Ready to stand the test;
 Ready to stay at home and send
 Other, if He sees best.
-Ready to go, ready to say,
-Ready my place to fill;
-Ready for service, Lowly or great,
-Ready to do His will.
+  Ready to go, ready to say,
+  Ready my place to fill;
+  Ready for service, Lowly or great,
+  Ready to do His will.
 ''',
     '''
 2. Ready to go, ready to bear,
@@ -13070,7 +13071,7 @@ Ready for His return.
     '''
 1. Hark, the voice of Jesus Calling.
 Who will go and work today?
-Field are white, and harvests waiting,
+Fields are white, and harvests waiting,
 Who will bear the sheaves away?
 Loud and long the Master calleth,
 Rich reward He offers free;
@@ -13120,10 +13121,10 @@ And see, like Thee, our noblest work,
 Our Father’s work to do.
 ''',
     '''
-3. O thou who dost the vision send,
+3. O Thou who dost the vision send,
 And givest each his task,
 And with the task sufficient strength:
-Show us they will, we ask;
+Show us Thy will, we ask;
 Give us a conscience bold and good;
 Give us a purpose true.
 That it may be our highest joy
@@ -13134,7 +13135,7 @@ Our father’s work to do. Amen.
     '''
 1. The light of God is falling
 Upon life’s common way;
-The master’s voice still calling,
+The Master’s voice still calling,
 “Come, walk with Me today”
 No duty can seem lowly
 To him who lives with thee,
@@ -13142,19 +13143,20 @@ And all of life grows holy,
 O Christ of Galilee!
 ''',
     '''
-2. Who share his life’s pure pleasure,
-And walksthe honest road,
+2. Who shares his life’s pure pleasure,
+And walks the honest road,
 Who trades with heaping measures?
-And life’s his brother’s load,
+And lifts his brother’s load,
 Who turns the wrong down bluntly?
 And lends the right a hand,
-He dwells in the God’s own country,
+He dwells in God’s own country,
 He tills the holy land.
 ''',
     '''
 3. Where human live as thronging
 In toil and pain and sin,
-While cloistered heart are longing to bring the kingdom in,
+While cloistered heart are longing 
+To bring the kingdom in,
 O Christ, the elder Brother
 Of proud and beaten men,
 When they have found each other,
@@ -13173,10 +13175,10 @@ Our song of brotherhood. Amen.
   ]),
   HymnData(443, 'In Christ There Is No East or West', [
     '''
-1. In Christthere is no East or West,
+1. In Christ there is no East or West,
 In Him no South or North;
 But one great fellowship of love
-Thoughout the whole wide earth.
+Throughout the whole wide earth.
 ''',
     '''
 2. In Him shall true hearts everywhere
@@ -13205,7 +13207,7 @@ Let broad humanity have birth;
 Let there be deeds, instead of boasts.
 ''',
     '''
-2. Within our passioned hearts instill
+2. Within our passioned hearts instil
 The calm that endeth strain and strife;
 Make us Thy minister of life;
 Purge us from lusts that curse and kill.
@@ -13223,7 +13225,7 @@ Its home with love and laughter filled;
 God, give thy wayward children peace!
 '''
   ]),
-  HymnData(445, 'Rise Up, O Men f God', [
+  HymnData(445, 'Rise Up, O Men of God', [
     '''
 1. Rise up, O men of God!
 Have done with lesser things;
@@ -13237,7 +13239,7 @@ Bring in the day of brotherhood
 And end the night of wrong.
 ''',
     '''
-3. Rise up, O men God!
+3. Rise up, O men of God!
 The church for you doth wait,
 Her strength unequal to her task;
 Rise up, and make her great!
@@ -13245,7 +13247,7 @@ Rise up, and make her great!
     '''
 4. Lift high the cross of Christ!
 Tread where His feet have trod;
-As brother of son of man,
+As brothers of Son of man,
 Rise up, O men of God! Amen
 '''
   ]),
@@ -13253,19 +13255,19 @@ Rise up, O men of God! Amen
     '''
 1. Fling out the banner! Let it float
 Skyward and seaward, high and wide;
-The sun shall light its shinning folds,
+The sun shall light its shining folds,
 The cross on which the saviour died.
 ''',
     '''
 2. Fling out the banner! angels bend
 In anxious silence o’er the sign,
 And vainly seek to comprehend
-The won der of the love divine.
+The wonder of the love divine.
 ''',
     '''
 3. Fling out the banner! Heathen lands
 Shall see from far the glorious sight;
-And nations,gath’ring at the call,
+And nations, gath’ring at the call,
 Their spirits kindle in its light.
 ''',
     '''
@@ -13277,7 +13279,7 @@ Our only hope the Crucified. Amen.
   ]),
   HymnData(447, 'O Brother Man, Fold to Thy Heart', [
     '''
-1. O brother man, fold thy heart the brother!
+1. O brother man, fold to thy heart thy brother!
 Where pity dwells, the peace of God is there;
 To worship rightly is to love each other,
 Each smile a hymn, each kindly deed a prayer.
@@ -13289,17 +13291,17 @@ Restore the lost, and binds the spirits broken,
 And feed the widow and the fatherless.
 ''',
     '''
-3. Follow with rev’ent steps the great example Of Him whose holy work was doing good;
+3. Follow with rev’ent steps the great example 
+Of Him whose holy work was doing good;
 So shall the wide earth seem our Father’s temple,
-Each loving life a psalm of gratitude.
-Amen.
+Each loving life a psalm of gratitude.  Amen.
 '''
   ]),
   HymnData(448, 'The Morning Light Is Breaking', [
     '''
 1. The morning light is breaking;
 The darkness disappears;
-The son of earth are waking
+The sons of earth are waking
 To penitential tears;
 Each breeze that sweeps the ocean
 Brings tidings from afar
@@ -13308,9 +13310,9 @@ Prepar’d for Zion’s war.
 ''',
     '''
 2. Richdews of grace come o’er us
-In many gentle shower,
+In many a gentle shower,
 And brighter scenes before, us
-Are op’ningev’ry hour;
+Are op’ning ev’ry hour;
 Each cry, to heaven going,
 Abundant answers brings,
 And heav’nly gales are blowing,
@@ -13323,14 +13325,14 @@ And thousand hearts ascending
 In gratitude above;
 While sinners, now confessing,
 The gospel call obey,
-And seek the savior’s blessing,
+And seek the saviour’s blessing,
 A nation in a day. Amen.
 '''
   ]),
   HymnData(449, 'From Greenland’s lcy Mountains', [
     '''
 1. From Greenland’s icy mountains,
-From India’s coral stand,
+From India’s coral strand,
 Where Africa’s sunny fountains
 Roll down their golden sand,
 From manyan ancient river,
@@ -13341,7 +13343,7 @@ Their land from error’s chain.
     '''
 2. What though the spicy breezes
 Blow soft o’er Ceylon’s isle;
-Thoug every prospect peases.
+Though every prospect pleases.
 And only man is vile;
 In vain with lavish kindness
 The gifts of God are strown;
@@ -13351,7 +13353,7 @@ Bows down to wood and stone.
     '''
 3. Shall we whose souls are lighted
 With wisdom from on high,
-Shall we to men be knighted
+Shall we to men be nighted
 The lamp of life deny?
 Salvation! O Salvation!
 The joyful sound proclaim,
@@ -13360,7 +13362,7 @@ Has learned Massiah’s name.
 ''',
     '''
 4. Waft, waft, ye winds, His story,
-And you ye water, roll
+And you ye waters, roll
 Till like a sea of glory
 It spread from pole to pole;
 Till o’er our ransomed nature
@@ -13376,7 +13378,7 @@ Our land shall own Thee Lord,
 And, filled with true devotion,
 Obey Thy sov’reign word:
 Our prairies and our mountains,
-Forest and tertile field,
+Forest and fertile field,
 Our rivers, lakes and fountains,
 To thee shall tribute yield.
 ''',
@@ -13394,7 +13396,7 @@ The tempter’s pow’r withstands.
 3. Where error smites with blindness,
 Enslaves and leads astray,
 Do Thou in loving kindness
-Proclaim thy gospel day,
+Proclaim Thy gospel day,
 Till all the tribes and races
 That dwells in this fair land,
 Adored with Christian graces,
@@ -13408,22 +13410,23 @@ Thy love and light to show,
 Till, fired with true devotion,
 Enkindled by Thy word,
 From ocean unto ocean
-Our land shall own Thee Lord
+Our land shall own Thee Lord.
 '''
   ]),
   HymnData(451, 'O Zion, Haste', [
     '''
 1. O Zion haste, thy mission , high fulfilling,
-To tell to the world that God is light;
+To tell to all the world that God is light;
 That He who made all nations is not willing
 One soul should perish, lost in shades of night.
-Publish glad tiding, tiding of peace,
-Tiding of Jesus, redemption and release.
+  Publish glad tidings, tidings of peace,
+  Tidings of Jesus, redemption and release.
 ''',
     '''
-2. Behold how many thousand still are lying,
+2. Behold how many thousands still are lying,
 Bound in the dark-some prison house of sin,
-With none to tell them of the savior’s dying or of the life He died for them to win.
+With none to tell them of the saviour’s dying, 
+Or of the life He died for them to win.
 ''',
     '''
 3. Proclaim to ev’ry people, tongue, and nation
@@ -13432,7 +13435,7 @@ Tell how He stoop’d to save His lost creation,
 And died on earth that man might live above.
 ''',
     '''
-4. Give of thy sons to bear the massage glorious;
+4. Give of thy sons to bear the message glorious;
 Give of thy wealth to speed them on their way;
 Pour out thy soul for them in pray’r victorious;
 And all thou spendest Jesus will repay. Amen.
@@ -13443,7 +13446,7 @@ And all thou spendest Jesus will repay. Amen.
 1. Heralds of Christ, who bear the king’s commands
 Immortal tidings in your mortal hands,
 Pass on and carry swift the news ye bring,
-Make straight, make straight highway of the king.
+Make straight, make straight the highway of the king.
 ''',
     '''
 2. Thro’ desert ways, dark fen and deep morass,
@@ -13461,7 +13464,7 @@ Make straight, make straight the highway of the king.
 4. Lord, give us faith and strength the road to build,
 To see the promise of the day fulfilled,
 When war shall be no more and strife shall cease
-Upon the highway of the prince of peace. Amen.
+Upon the highway of the Prince of peace. Amen.
 '''
   ]),
   HymnData(453, 'Hail to the Brightness', [
@@ -13473,8 +13476,8 @@ Zion in triumph begins her mild reign.
 ''',
     '''
 2. Hail to the brightness of Zion’s morning,
-Long by the prophets of Israel foretoald!
-Hail to the million from bandage returning,
+Long by the prophets of Israel foretold!
+Hail to the millions from bandage returning,
 Gentiles and jews the blest vision behold.
 ''',
     '''
@@ -13484,13 +13487,13 @@ Loud from the mountains tops echoes are ringing,
 Wastes rise in verdure and mingle in song.
 ''',
     '''
-4. See, from all lands, from then isles of the ocean,
+4. See, from all lands, from the isles of the ocean,
 Praise to Jehovah ascending on high;
-Fall’nare the engines of war and commotion,
+Fall’n are the engines of war and commotion,
 Shouts of salvation are rending the sky. Amen.
 '''
   ]),
-  HymnData(454, 'Light of the World Hail Thee', [
+  HymnData(454, 'Light of the World We Hail Thee', [
     '''
 1. Light of the world, we hail Thee;
 Flushing the eastern skies;
@@ -13513,10 +13516,10 @@ Light back to Thee again.
 ''',
     '''
 3. Light of the world, Illumine
-This darkness earth of Thine,
+This darkened earth of Thine,
 Till everything that’s human
-Be filled with light divine
-Till every tonge and nation,
+Be filled with light divine;
+Till every tongue and nation,
 From sin’s dominion free,
 Rise in the new creation
 Which spring from love and Thee. Amen.
@@ -13529,10 +13532,10 @@ That shall turn their hearts to the right,
 A story of truth and mercy,
 A story of peace and light,
 A story of peace and light.
-For the darkness shall turn to dawning
-And the dawning to no-day bright,
-And Christ’s great kingdom shall come on earth,
-The kingdom of love and light
+  For the darkness shall turn to dawning
+  And the dawning to noon-day bright,
+  And Christ’s great kingdom shall come on earth,
+  The kingdom of love and light
 ''',
     '''
 2. We’ve a song to be sung to the nations,
@@ -13542,10 +13545,10 @@ And shatter the spear and sword,
 And shatter the spear and sword,
 ''',
     '''
-3. We’ve a massage to give to the nations,
+3. We’ve a message to give to the nations,
 That the Lord who reigneth above
 Hath sent us His Son to save us,
-And show us then God is love,
+And show us that God is love,
 And show us that God is love.
 ''',
     '''
@@ -13593,13 +13596,13 @@ The Christ of Calvary! Amen.
 “Send the light! Send the light!”
 There are souls to rescue, there are souls to save,
 Send the light! Send the light!
-Send the light! The blessed gospel light;
-Let it shine from, shore to shore!
-Send the light! The blessed gospel light:
-Let it shine forever more.
+  Send the light! The blessed gospel light;
+  Let it shine from shore to shore!
+  Send the light! The blessed gospel light:
+  Let it shine forever more.
 ''',
     '''
-2. We have heard the Macedonia call today,
+2. We have heard the Macedonian call today,
 “Send the light! Send the light!”
 And a golden off’ring at the cross we lay,
 Send the light! Send the light!
@@ -13607,14 +13610,14 @@ Send the light! Send the light!
     '''
 3. Let us pray that grace ev’ry may where abound,
 Send the Light! Send the light!
-And a Christ-like spirit ev’ry where be found
+And a Christ-like spirit ev’rywhere be found,
 Send the light! Send the light!
 ''',
     '''
 4. Let us not grow weary in the work of love,
 Send the light! Send the light!
 Let us gather jewels for a crown above,
-Send then light! Send the light!
+Send the light! Send the light!
 '''
   ]),
   HymnData(458, 'Christ for the World We Sing', [
@@ -13622,9 +13625,9 @@ Send then light! Send the light!
 1. Christ for the world we sing;
 The world to Christ we bring,
 With loving zeal;
-Then poor and them that mourn,
+The poor and them that mourn,
 The faint and overborne,
-Sin-sic and sorrow-worn,
+Sin-sick and sorrow-worn,
 Whom Christ doth heal.
 ''',
     '''
@@ -13648,7 +13651,7 @@ For Christ our Lord
     '''
 4. Christ for the world we sing;
 The world to Christ we bring,
-With joy song;
+With joyful song;
 The new born souls whose days,
 Reclaimed from error’s ways,
 Inspired with hope and praise,
@@ -13677,7 +13680,7 @@ And crown our Jesus Lord of all. Amen.
   ]),
   HymnData(460, 'Father in Heaven, Who Lovest All', [
     '''
-1. Father in hea’n who lovest all,
+1. Father in heav’n who lovest all,
 O help Thy children when they call,
 That they may build from age to age
 An undefiled heritage.
@@ -13704,7 +13707,7 @@ And love to all men ‘neath the sun. Amen.
   HymnData(461, 'Thou, whose Almighty Word', [
     '''
 1. Thou, whose Almighty word
-Chaos and darkness hearD,
+Chaos and darkness heard,
 And took their flight,
 Hear us, we humbly pray;
 And where the gospel’s day
@@ -13733,8 +13736,8 @@ Let there be light! Amen.
   HymnData(462, 'Watchman! Tell us of the Night', [
     '''
 1. Watchman! tell us of the night,
-What its sign of promise are;
-Trav’ler, o’er yon mountain ‘s height,
+What its signs of promise are;
+Trav’ler, o’er yon mountain‘s height,
 See that glory beaming star!
 Watchman, does its beauteous ray
 Aught of joy or hope foretell?
@@ -13758,11 +13761,11 @@ Trav’ler, darkness takes its flight,
 Doubt and terror are withdrawn;
 Watchman, let thy wand’rings cease,
 Hie thee to thy quiet home;
-Trav’ler, lo! The prince of peace,
+Trav’ler, lo! The Prince of peace,
 Lo, the son of God is come! Amen.
 '''
   ]),
-  HymnData(463, 'Forward through the Ages', [
+  HymnData(463, 'Forward Through the Ages', [
     '''
 1. Forward through the ages,
 In unbroken line,
@@ -13772,16 +13775,16 @@ Gifts in differing measure,
 Hearts of one accord
 Manifold the service,
 One the sure reward
-Forward through the ages,
-In unbroken line,
-Move the faithful spirits
-At the call divine.
+  Forward through the ages,
+  In unbroken line,
+  Move the faithful spirits
+  At the call divine.
 ''',
     '''
 2. Wider grows the kingdom,
 Reign of love and light;
 For it we must labor
-Till our faith is faith is sight;
+Till our faith is sight;
 Prophets have proclaimed it,
 Martyrs testified,
 Poets sung its glory, Heroes
@@ -13794,7 +13797,7 @@ In each loss or triumph
 Lose or triumph all;
 Bound by God’s far purpose
 In one living whole,
-Move together to the shinning goal.
+Move on together to the shinning goal.
 Amen.
 '''
   ]),
@@ -13809,12 +13812,12 @@ We hear Thy voice, O son of man!
 2. In haunts of wretchedness and need.
 On shadow’d thresholds dark with fears,
 From paths where hide the lures of greed,
-We catch the vision of thy tears.
+We catch the vision of Thy tears.
 ''',
     '''
 3. From tender childhood’s helplessness,
-From woman’s grief, man’s burden’dtoil
-From farmish’dsouls, from sorrow’s stress,
+From woman’s grief, man’s burden’d toil
+From farmish’d souls, from sorrow’s stress,
 Thy heart has never known recoil.
 ''',
     '''
@@ -13856,7 +13859,7 @@ Armored with all Christ-like graces
 In the fight to set men free.
 Grant us wisdom, grant us courage,
 That we fail not man or Thee!
-That we fail not man or Thee!Amen
+That we fail not man or Thee!  Amen
 '''
   ]),
   HymnData(466, 'O Jesus, Master, When Today', [
@@ -13881,7 +13884,7 @@ And love like that which
 Thou hast thought.
 ''',
     '''
-4. Then give our hands o a touch divine,
+4. Then give our hands a touch divine,
 And to our voices tones like Thine,
 As side by side we onward go,
 Nor need each other’s name to known. Amen.
@@ -13891,7 +13894,7 @@ Nor need each other’s name to known. Amen.
     '''
 1. Hear, hear, O ye Nations and hearing, obey
 The cry from the past and the call of today ;
-Earth wearies and waste with her fresh life outpoured,
+Earth wearies and wastes with her fresh life outpoured,
 The prey of the cannon, the spoil of the sword.
 ''',
     '''
@@ -13907,9 +13910,9 @@ Arise to the place thou art given to fill,
 And lead the world- triumph of peace and good will. Amen.
 '''
   ]),
-  HymnData(468, 'When I Can Read My Title clear', [
+  HymnData(468, 'When I Can Read My Title Clear', [
     '''
-1. When I can my little clear
+1. When I can read my little clear
 To mansions in the skies
 I’ll bid farewell to ev’ry fear,
 And wipe my weeping eyes;
@@ -13925,7 +13928,7 @@ Then I can smile at Satan’s rage,
 And face a frowning world;
 And face a frowning world,
 And face a frowning world,
-Then I ca n smile at Satan’s rage,
+Then I can smile at Satan’s rage,
 And face a frowning world.
 ''',
     '''
@@ -13947,27 +13950,28 @@ Across my peaceful breast,
 Across my peaceful breast,
 And not a wave of trouble roll
 Across my peaceful breast.
-469, Hark, Hark, my Soul!
-''',
-    '''
+'''
+  ]),
+  HymnData(469, 'Hark, Hark, my Soul!', [
+'''
 1. Hark, hark, my soul! angelic songs are swelling
-o’er earth’s green fields and ocean’s wave beatshore;
+O’er earth’s green fields and ocean’s wave beatshore;
 How sweet the truth those blessed strains are telling
 Of that new life when sin shall be no more!
-Angels of Jesus,
-Angels of light,
-Singing to welcome the pilgrims of the night! Amen.
+  Angels of Jesus,
+  Angels of light,
+  Singing to welcome the pilgrims of the night! Amen.
 ''',
     '''
 2. Onward we go, for still we heard the singing,
 “Come, weary souls, for Jesus bids you come”,
 And through the dark, its echoes sweetly ringing,
-The music of the gospel leads home.
+The music of the gospel leads us home.
 ''',
     '''
 3. Far, far away, like bells at evening pealing,
-The voice of Jesus sound o’er land and sea;
-And laden by thousands, meekly stealing,
+The voice of Jesus sounds o’er land and sea;
+And laden souls by thousands, meekly stealing,
 Kind shepherd, turn their weary steps to Thee.
 ''',
     '''
@@ -13983,10 +13987,11 @@ And life’s long shadow breaks in cloudless love.
 I shall reach when the sun goeth down;
 When thro’ wonderful grace by my Saviour I stand,
 Will there be any stars in my crown?
-Will there be any star, any star n my crown
-When at evening the sun goeth down?
-When I wake with the blest,
-Will there be any stars iny my crown?
+  Will there be any star, any star in my crown
+  When at evening the sun goeth down?
+  When I wake with the blest,
+  In the mansions of rest,
+  Will there be any stars in my crown?
 ''',
     '''
 2. In the strength of the Lord let my labor pray,
@@ -14007,14 +14012,14 @@ Should there be any stars in my crown.
 And by faith we can see it afar;
 For the father waits over the way
 To prepare us a dwelling place there.
-In the sweet by and by,
-We shall meet on that beautiful shore;
-In the sweet by and by,
-We shall meet on then beautiful shore
+  In the sweet by and by,
+  We shall meet on that beautiful shore;
+  In the sweet by and by,
+  We shall meet on that beautiful shore
 ''',
     '''
 2. We shall sing on that beautiful shore
-The melodious son g of the blest,
+The melodious songs of the blest,
 And our spirit shall sorrow no more,
 Not a sigh for the blessing of rest.
 ''',
@@ -14033,15 +14038,15 @@ When the bright and glorious morning
 I shall see; I shall know my Redeemer
 When I reach the other side,
 And His smile will be the first to welcome me,
-I shall know…. Him, I shall know…. Him
-And redeemed by His side I shall stand,
-I shall know Him,
-I shall know Him
-By the print of the nails in His hand.
+  I shall know ..... Him, I shall know…. Him,
+  And redeemed by His side I shall stand,
+  I shall know ..... Him,
+  I shall know .....Him
+  By the print of the nails in His hand.
 ''',
     '''
 2. I view His blessed face,
-And the luster of His kindly beaming eyes;
+And the luster of His kindly beaming eye;
 How my full heart will praise Him for the
 Mercy, love, and grace
 That prepared for me a mansion in the sky.
@@ -14052,13 +14057,13 @@ How they beckon me to come,
 And our parting at the river I recall;
 To the sweet vales of Eden they will
 sing my welcome home,
-But I long to meet my savior first of all.
+But I long to meet my Saviour first of all.
 ''',
     '''
 4. Thro’ the gates to the city in a robe of spotless white,
 He will lead me where no tear will ever fall;
 In the glad song of ages I shall mingle with delight,
-But I long to meet my savior first of all.
+But I long to meet my Saviour first of all.
 '''
   ]),
   HymnData(473, 'When the Morning comes', [
@@ -14070,11 +14075,11 @@ that blessed Promised Land;
 But he’ll guild us with His eye,
 And we’ll follow till we die;
 We will understand it better by and by
-By and by, when the `morning comes.
-When the saints of God are gathered home.
-We will tell the story
-How we’ve overcome;
-We will understand it better by and by.
+  By and by, when the morning comes.
+  When the saints of God are gathered home.
+  We will tell the story
+  How we’ve overcome;
+  We will understand it better by and by.
 ''',
     '''
 2. Oft our cherished plans have failed,
@@ -14082,7 +14087,7 @@ Disappointments have prevailed,
 And we’ve wandered in the darkness,
 Heavy hearted and alone;
 But we’er trusting in the Lord,
-And accord to His word,
+And according to His word,
 We will understand it better by and by.
 ''',
     '''
@@ -14099,18 +14104,18 @@ But we’ll understand it better by and by.
     '''
 1. Tho’ the way we journey may be often drear,
 We shall see the King someday (someday);
-On that blessed morning cloud will disappear,
-We shall see the King someday,
-We shall see the King someday,
-We will shout and sing someday;
-Gathered round the throne,
-When he shall call His own,
+On that blessed morning clouds will disappear,
 We shall see the King someday.
+  We shall see the King someday,
+  We will shout and sing someday;
+  Gathered round the throne,
+  When he shall call His own,
+  We shall see the King someday.
 ''',
     '''
-2. After pain and an anguish, after toil and care,
+2. After pain and and anguish, after toil and care,
 We shall see the King someday (someday);
-Thro’ the endless age’s joy and blessing share,
+Thro’ the endless ages joy and blessings share,
 We shall see the King someday.
 ''',
     '''
@@ -14120,7 +14125,7 @@ After strife is over, after set of sun,
 We shall see the King someday.
 ''',
     '''
-4. There with all the loved one who have gone before,
+4. There with all the loved ones who have gone before,
 We shall see the King someday (someday);
 Sorrow past forever on that peaceful shore,
 We shall see the king someday.
@@ -14128,14 +14133,14 @@ We shall see the king someday.
   ]),
   HymnData(475, 'Face to Face with Christ', [
     '''
-1. Face to face with Christ, my savior,
+1. Face to face with Christ, my Saviour,
 Face to face what will it be,
 When with rapture I behold Him,
 Jesus Christ who died for me.
-Face to face I shall behold Him,
-Far beyond the starry sky;
-Face to face in all His glory,
-I shall see him by and by!
+  Face to face I shall behold Him,
+  Far beyond the starry sky;
+  Face to face in all His glory,
+  I shall see him by and by!
 ''',
     '''
 2. Only faintly now I see Him,
@@ -14156,9 +14161,9 @@ Face to face with my Redeemer,
 Jesus Christ who loves me so
 '''
   ]),
-  HymnData(476, 'Ten Thousand Time Ten Thousand', [
+  HymnData(476, 'Ten Thousand Times Ten Thousand', [
     '''
-1. Ten thousand time ten thousands,
+1. Ten thousand times ten thousands,
 In sparkling raiment bright,
 The armies of the ransom’d saints
 Throng up the steps of light;
@@ -14178,12 +14183,12 @@ O joy, for all its former woes
 A thousand-fold repaid
 ''',
     '''
-3. O then what rapture meetings
+3. O then what rapture greetings
 On Canaan’s happy shore!
 What knitting serve’d friendship up,
 Where partings are no more!
 The eyes with joy shall sparkle,
-That brimm’d with tears late,
+That brimm’d with tears of late,
 Orphans no longer fatherless,
 Nor widows desolate.
 '''
@@ -14202,7 +14207,7 @@ What bliss beyond compare.
     '''
 2. They stand, those halls of Zion,
 All jubilant with song,
-And bright with many and angel,
+And bright with many an angel,
 And all the martyr throng;
 The Prince is ever in them,
 The daylight is serene;
@@ -14226,16 +14231,15 @@ Thou shalt be, and thou art! Amen.
 And cast a wishful eye
 To Canaan’s fair and happy land,
 Where my possessions lie.
-We will rest in the fair and happy land
-(by and by),
-Just across on the ever-green shore,
-Sing the song of Moses and the lamb (by and by),
-And dwell with Jesus ever more.
+  We will rest in the fair and happy land (by and by),
+  Just across on the ever-green shore,
+  Sing the song of Moses and the lamb (by and by),
+  And dwell with Jesus ever more.
 ''',
     '''
 2. All o’er those wide extended plains
 Shines one eternal day;
-There God the son forever reigns
+There God the Son forever reigns
 And scatters night away.
 ''',
     '''
@@ -14257,10 +14261,10 @@ And in His bosom rest?
 And cast a wishful eye
 To Canaan’s fair and happy land,
 Where my possessions lie.
-I am bound for the Promised Land….
-I am bound for the Promised Land;
-O who will come and go with me?
-I am bound for the Promised Land.
+  I am bound for the Promised Land….
+  I am bound for the Promised Land;
+  O who will come and go with me?
+  I am bound for the Promised Land.
 ''',
     '''
 2. All o’er those wide extended plains
@@ -14269,13 +14273,13 @@ There God the Son forever reigns
 And scatters night away.
 ''',
     '''
-3. No chilling wind s nor pois’nous breath
+3. No chilling winds nor pois’nous breath
 Can reach that beautiful shore;
 Sickness and sorrow, pain and death
 Are felt and feared no more.
 ''',
     '''
-4. When shall I reach that happy place,
+4. When shall I reach that happy place.
 And be forever blest?
 When shall I see my father’s face,
 And in His bosom rest?
@@ -14303,7 +14307,7 @@ Over there, over there,
 O think of the friends over there.
 ''',
     '''
-3. My savior is now over there.
+3. My Saviour is now over there.
 There my kindred and friends are at rest;
 Then away from my sorrow and care,
 Let my fly to the land of the blest.
@@ -14329,10 +14333,10 @@ I’ll soon be at home over there.
 Where bright angel feet have trod;
 With its crystal tide forever
 Flowing by the throne of God?
-Yes, we’ll gather at the river,
-The beautiful, the beautiful river;
-Gather with the saint at the river;
-That flows by the throne of God
+  Yes, we’ll gather at the river,
+  The beautiful, the beautiful river;
+  Gather with the saint at the river;
+  That flows by the throne of God
 ''',
     '''
 2. On the margin of the river,
@@ -14356,21 +14360,22 @@ With the melody of peace.
   HymnData(482, 'When the Roll Is Called Up Yonder', [
     '''
 1. When the trumpet of the Lord shall sound,
-and time ‘shall be no more,
+and time shall be no more,
 And the morning breaks, eternal, bright, and fair;
 When the saved of earth shall gather
 over on the other shore,
 And the roll is called up yonder, I’ll be there.
-When the roll…. Is called up yon…der,
-When the roll…… is called up yon…der,
-When the roll …… is called up yon…… der
-When the roll is called up yonder, I’ll be there.
+  When the roll…. is called up yon…der,
+  When the roll…… is called up yon…der,
+  When the roll …… is called up yon……der
+  When the roll is called up yonder, I’ll be there.
 ''',
     '''
 2. On that bright cloudless morning
 When the dead in Christ shall rise,
 And the glory of His resurrection share;
-When His chosen ones shall gather to their home beyond the skies,
+When His chosen ones shall gather to 
+their home beyond the skies,
 And the roll is called up yonder. I’ll be there.
 ''',
     '''
@@ -14385,13 +14390,13 @@ And the roll is called up yonder, I’ll be there.
   HymnData(483, 'When We All Get to Heaven', [
     '''
 1. Sing the wondrous love of Jesus,
-Sing His mercy His grace:
+Sing His mercy and His grace:
 In the mansion bright and blessed,
 He’ll prepare for us a place
-When we all get to heaven,
-What a day of rejoicing that will be!
-When we all see Jesus,
-We’ll sing and shout the victory……
+  When we all get to heaven,
+  What a day of rejoicing that will be!
+  When we all see Jesus,
+  We’ll sing and shout the victory……
 ''',
     '''
 2. While we walk the pilgrim pathway,
@@ -14408,7 +14413,7 @@ Will the toil of life repay.
     '''
 4. Onward to the prize before us!
 Soon His beauty we’ll behold;
-Soon the pearly gate will open;
+Soon the pearly gates will open;
 We shall tread the streets of gold.
 '''
   ]),
@@ -14420,11 +14425,11 @@ O they tell me of a home far away;
 O they tell me of a home
 Where no storm clouds rise,
 O they tell me of an unclouded day.
-O the land of cloudless day;
-O the land of an unclouded day;
-O they tell me of a home
-Where no storm cloud rise,
-O they tell me of an unclouded day.
+  O the land of cloudless day;
+  O the land of an unclouded day;
+  O they tell me of a home
+  Where no storm clouds rise,
+  O they tell me of an unclouded day.
 ''',
     '''
 2. O they tell me of a home
@@ -14447,10 +14452,10 @@ In that lovely land of unclouded day,
 And I am safe on that beautiful shore,
 Just to be near the dear Lord I adore,
 Will thro’ the ages be glory for me.
-O that will be glory for me,
-Glory for me glory for me,
-When by His grace I shall look on His face
-That will be glory,be glory for me.
+  O that will be glory for me,
+  Glory for me glory for me,
+  When by His grace I shall look on His face
+  That will be glory, be glory for me.
 ''',
     '''
 2. When by the gift of His infinite grace.
@@ -14459,9 +14464,9 @@ Just to be there and to look on His face.
 Will thro’ the age is glory for me.
 ''',
     '''
-3. Friends will be there I have loved long ago;
+3. Friends will be there, I have loved long ago;
 Joy like a river around me will flow;
-Yet just a smile from my Savior, I know.
+Yet just a smile from my Saviour, I know.
 Will thro’ the ages the glory for me.
 '''
   ]),
@@ -14471,10 +14476,10 @@ Will thro’ the ages the glory for me.
 Consider all, the works Thy hands have made
 I see the stars, I hear the rolling thunders,
 Thy power throughout, the universe displayed.
-Then sing my soul, My Saviour God to Thee,
-How great thou art,how great thou art?
-Then sing my soul, my Saviour God to Thee
-How great Thou art, how great thou art.
+  Then sing my soul, My Saviour God to Thee,
+  How great thou art,how great thou art?
+  Then sing my soul, my Saviour God to Thee
+  How great Thou art, how great Thou art.
 ''',
     '''
 2. When through the woods and forest glades I wander,
@@ -14534,10 +14539,10 @@ We will be true to thee till death. Amen.
 He is trampling out the vintage where the grapes of wrath are stored;
 He hath loosed the fateful lightning of His terrible swift sword;
 His truth is marching on.
-Glory! Glory, hallelujah!
-Glory! Glory, hallelujah!
-Glory! Glory, hallelujah!
-Our God is marching on
+  Glory! Glory, hallelujah!
+  Glory! Glory, hallelujah!
+  Glory! Glory, hallelujah!
+  Our God is marching on
 ''',
     '''
 2. I have seen him in the watch fires of a hundred circling camps;
@@ -14546,7 +14551,7 @@ I can read His righteous sentence by the dim and flaring lamps;
 His day is marching on.
 ''',
     '''
-3. He has sounding forth the trumpet that shall never sound retreat.
+3. He has sounded forth the trumpet that shall never sound retreat.
 He is sifting out the hearts of men before His judgment seat;
 O be swift, my soul, to answer Him! be jubilant, my feet!
 Our God is matching on.
@@ -14652,7 +14657,7 @@ And shall be ever more. Amen
 1. We gather together to ask the Lord's blessing,
 He chastens and hastens His will to make known;
 The wicked oppressing now cease from distressing,
-Sing praises to His name,He forgets not His own.
+Sing praises to His name, He forgets not His own.
 ''',
     '''
 2. Beside us to guide us, our God with us joining,
@@ -14664,7 +14669,7 @@ Thou, Lord, wast at our side: all glory be Thine!
 3. We all do extol Thee, Thou leader in battle,
 And pray that thou still our defender wilt be.
 Let Thy congregation escape tribulation;
-Thy name be ever praised: O Lord, make us free!Amen,
+Thy name be ever praised: O Lord, make us free! Amen,
 '''
   ]),
   HymnData(493, 'We Plow the Field', [
@@ -14693,9 +14698,9 @@ His children, He gives our daily bread.
 For all things bright and good,
 The seed-time and the harvest,
 Our life, our health, our food;
-Aceeept the gifts we offer
+Accept the gifts we offer
 For all Thy love imparts,
-And, that Thou mostdesirest,
+And, that Thou most desirest,
 Our humble, thankful hearts! Amen.
 '''
   ]),
@@ -14743,7 +14748,7 @@ We thank Thee, Lord.
 3. For love of Thine which never tires,
 Which all our better thought inspires
 And warms our lives with heav'nly fires,
-We thank Thee, Lord.Amen.
+We thank Thee, Lord. Amen.
 '''
   ]),
   HymnData(496, 'Ring Out the Old, Ring In the New', [
@@ -14791,7 +14796,7 @@ The glory of Thy face;
 Another year of leaning,
 Upon Thy loving breast.
 Another year of trusting,
-Of quite, happy rest.
+Of quiet, happy rest.
 ''',
     '''
 3. Another year of service,
@@ -14801,7 +14806,7 @@ For holier work above;
 Another year is dawning,
 Dear Father, let it be,
 On earth, or else in heaven,
-Another year for Thee.Amen.
+Another year for Thee.  Amen.
 '''
   ]),
   HymnData(498, 'Father, Let Me Dedicate', [
@@ -14820,7 +14825,7 @@ Glorify Thy name.
 Where or how to live?
 Can a father's love refuse
 All the best to give?
-More Thougivestev'ry day
+More Thou givest ev'ry day
 Than the best can claim,
 Nor withholdest aught that may
 Glorify Thy name.
@@ -14833,7 +14838,7 @@ Brighter rays may shine,
 Let my glad heart, while it sings,
 Thee in all proclaim,
 And, whate'er the future brings,
-Glorify Thyname.Amen.
+Glorify Thy name.Amen.
 '''
   ]),
   HymnData(499, 'Dedicatory Hymn', [
@@ -14844,7 +14849,7 @@ On joyful wing our songs of praise
 And gratitude ascend;
 This house we dedicate to Thee,
 O Lord, this holy day;
-And may its mission over be
+And may its mission ever be
 Thy glories to display.
 ''',
     '''
@@ -14870,28 +14875,28 @@ Shall praise Immanuel’s name.Amen.
   ]),
   HymnData(500, 'Anniversary Hymn', [
     '''
-1. God of our fathers,we praise and adore Thee
-For all Thy great merciesthrough years that are gone;
-Thy guidance and goodnessthrough many generations
-Have brought us now at lastto a new day’s bright dawn.
+1. God of our fathers, we praise and adore Thee
+For all Thy great mercies through years that are gone;
+Thy guidance and goodness through many generations
+Have brought us now at last to a new day’s bright dawn.
 ''',
     '''
-2. Help us to be faithfulto Thee and Thy kingdom,
-Thy church, and the workof our Christ in all lands;
-May loyalty, sacrifice,courage now attend us,
-And bring to fullest triumphThy work in our hands.
+2. Help us to be faithful to Thee and Thy kingdom,
+Thy church, and the work of our Christ in all lands;
+May loyalty, sacrifice, courage now attend us,
+And bring to fullest triumph Thy work in our hands.
 ''',
     '''
-3. Our task is no greaterthan that which our fathers
-Assumed with fidelity,courage, and pride;
-We know that all mountainswill vanish now before us
-If Thou wilt point the wayand remain at our side.
+3. Our task is no greater than that which our fathers
+Assumed with fidelity, courage, and pride;
+We know that all mountains will vanish now before us
+If Thou wilt point the way and remain at our side.
 ''',
     '''
-4. We now re-affirm ourundying devotion;
-We pray Thou wilt fill uswith all strength and grace;
-Crown all high endeavorswith victories forever,
-And may we run with faithfulnesslife’s fateful race.Amen.
+4. We now reaffirm our undying devotion;
+We pray Thou wilt fill us with all strength and grace;
+Crown all high endeavours with victories forever,
+And may we run with faithfulness life’s fateful race. Amen.
 '''
   ]),
   HymnData(501, 'O Perfect Love', [
@@ -14899,10 +14904,10 @@ And may we run with faithfulnesslife’s fateful race.Amen.
 1. O perfect Love, all human thought transcending,
 Lowly we kneel in prayer before Thy throne,
 That theirs may be the love which knows no ending,
-Whom Thou forevermore dost join in one.
+Whom Thou forever more dost join in one.
 ''',
     '''
-2. O perfect Life, bethou their full assurance,
+2. O perfect Life, be thou their full assurance,
 Of tender charity and steadfast faith,
 Of patient hope and quiet, brave endurance,
 With child-like trust that fears not pain nor death.
@@ -14926,7 +14931,7 @@ The Holy Three are with us,
 The three-fold grace is said.
 ''',
     '''
-2. Be present, O ourFather,
+2. Be present, O our Father,
 To give away this bride,
 As Eve thou gav’st to Adam
 A helpmate at his side.
@@ -14939,12 +14944,12 @@ In Thine eternal bands!
     '''
 3. Be present, Holy Spirit,
 To bless them as they kneel,
-As Thou, for Christthe Bridegroom,
+As Thou, for Christ the Bridegroom,
 The heavenly Bride dost seal!
 O spread Thy pure wing o’er them,
 Let no ill pow’r find place,
 When onward to Thine altar
-Their hallowed path they trace.Amen.
+Their hallowed path they trace.  Amen.
 '''
   ]),
   HymnData(503, 'Gracious Saviour, Who Didst Honour', [
