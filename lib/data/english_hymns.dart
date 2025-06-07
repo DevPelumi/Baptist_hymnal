@@ -15626,7 +15626,7 @@ This shall calm our trembling breath,
 When we pass its gloomy portal.
 ''',
     '''
-3. Jesus lives! for us He died;
+3. Jesus lives! for us, He died;
 Then, alone to Jesus living,
 Pure in heart may we abide,
 Glory to our Savior giving.
@@ -15641,7 +15641,7 @@ Tear us from His keeping eyes.
 5. Jesus lives! to Him the throne
 Over all the world is given:
 May we go where He is gone,
-Rest and reign with Him in heaven.Amen.
+Rest and reign with Him in heaven.  Amen.
 '''
   ]),
   HymnData(557, 'Thine For Ever!', [
@@ -15718,14 +15718,14 @@ Amen, so let it be!
 Beyond the reach of toil and care;
 A Home where changes never come:
 Who would not fain be resting there?
-Oh wait, meekly wait and murmur not!
-Oh wait, meekly wait and murmur not!
-Oh wait, Oh wait,
-Oh wait, meekly wait and murmur not!
+  Oh wait, meekly wait and murmur not!
+  Oh wait, meekly wait and murmur not!
+  Oh wait, Oh wait,
+  Oh wait, meekly wait and murmur not!
 ''',
     '''
 2. Yet when bow' down beneath the load
-By heav’nallow’d, thine earthly lot:
+By heav’n allow’d, thine earthly lot:
 Look up! Thou’lt reach that blest abode:
 Wait, meekly wait, and murmur not!
 ''',
@@ -15786,43 +15786,40 @@ Goodnight!Goodnight!Goodnight!
 But thou weep, wake no more to toil and?
 Thine is a perfect rest, secure and deep
 Goodnight!Goodnight!Goodnight!
-'''
-  ]),
-  HymnData(3, 'Until the shadows from this earth are cast;', [
-    '''
-4. Until He gathers in His sheaves at last;
+''', 
+  ...
+3. Until He gathers in His sheaves at last;
 Until the twilight gloom is over past
 Goodnight!Goodnight! Goodnight!
 ''',
     '''
-5. Until the Easter glory lights the skies;
+4. Until the Easter glory lights the skies;
 Until the dead in Jesus shall arise,
 And He shall come, but not in lowly guise
 Good-night! Good-night! Good-night!
 ''',
     '''
-6. Until made beautiful by Love divine
+5. Until made beautiful by Love divine
 Thou in the likeness of thy Lord shall shine
 And He shall bring that golden crown of thine
 Good-night! Good-night! Good-night!
 ''',
     '''
-7. Only “good-night.” beloved-not “farewell!”
+6. Only “good-night.” beloved-not “farewell!”
 A little while, and all His saints shall dwell
 In hallowed union, indivisible-
 Good-night! Good-night! Good-night!
-'''
-  ]),
-  HymnData(8, 'Until we meet again before His throne', [
-    '''
-9. Clothed in the spotless robe He gives Hisown
+''',
+  ...
+8. Until we meet again before His throne
+Clothed in the spotless robe He gives His own
 Until we know even as we are known
 Good-night! Good-night! Good-night!
 '''
   ]),
   HymnData(562, 'O Father, All Creating!', [
     '''
-1. 1 O Father, allcreating
+1. 1 O Father, all creating
 Whose wisdom, love, and power
 First bound two lives together
 In Eden's primal hour,
@@ -15834,7 +15831,8 @@ A love by Thee kept true.
     '''
 2. O Savior, guest most bounteous
 Of old in Galilee,
-Vouchsafe today Thy presence With those who call on Thee;
+Vouchsafe today Thy presence 
+With those who call on Thee;
 Their store of earthly gladness
 Transform to heavenly wine,
 And teach them in the testing
@@ -15877,7 +15875,7 @@ May they in Thee be one.
     '''
 3. When stormy winds fulfill Thy will,
 And all their good seems turned to ill,
-Then, trusting in Thee completely, still
+Then, trusting Thee completely, still
 May they in Thee be one.
 ''',
     '''
