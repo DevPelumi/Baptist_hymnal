@@ -15911,7 +15911,7 @@ That, through you grace, their present love
 Will never fade away.
 '''
   ]),
-  HymnData(565, 'Gracious Lord These Thy Servant', [
+  HymnData(565, 'Gracious Lord These Thy Servants', [
     '''
 1. Gracious Lord on these Thy servants
 Pour the fullness of thy love
@@ -15960,12 +15960,12 @@ The threefold grace is said.
 3. For dower of blessed children,
 For love and faith’s sweet sake,
 For high mysterious union
-Which noughton earth may breake.
+Which nought on earth may breake.
 ''',
     '''
 4. Be present, awful FATHER
 To give away this bride,
-As EVEThougav’st to ADAM
+As EVE Thou gav’st to ADAM
 Out of his own pierced side.
 ''',
     '''
@@ -16011,7 +16011,8 @@ Ours is such a full salvation,
 All, all is well.
 Happy, still in God confiding;
 Faithful, if in Christ abiding;
-Holy, through the Spirit’s guiding;all must be well.
+Holy, through the Spirit’s guiding;
+All must be well.
 ''',
     '''
 3. We expect a bright tomorrow;
@@ -16026,7 +16027,7 @@ All must be well.
   ]),
   HymnData(568, 'Lord of Life Who Once was Cradled', [
     '''
-4. Lord of life who once was cradled
+1. Lord of life who once was cradled
 On a human mother’s knee,
 fed and clothed, and taught and guided
 Through the years of infancy:
@@ -16034,15 +16035,15 @@ Help and bless us, as we gather
 With our cares and needs to thee.
 ''',
     '''
-5. Waking in the early morning
+2. Waking in the early morning
 To the round which each day brings;
 Sitting late into the evening,
 Making garments, mending things:
 Give us strength and cheerful patience
-For
+For these common happenings.
 ''',
     '''
-6. Lord, we thank Thee for our children
+3. Lord, we thank Thee for our children
 With their faces bright and fair,
 With their laughter and their temper,
 Waking gladness, bringing care:
@@ -16050,7 +16051,7 @@ Teach us how to keep them upright,
 True and gallant, everywhere.
 ''',
     '''
-7. Show us when to hold and curb them
+4. Show us when to hold and curb them
 When to set them finely free,
 How to keep their love and reverence
 Stanless through the years to be,
@@ -16058,7 +16059,7 @@ How to win their adoration
 And their loyalty to Thee.
 ''',
     '''
-8. And since we have often flatered,
+5. And since we have often flatered,
 Missed the road and lost our way,
 Known temptation, met with trouble,
 Hear us parents, as we pray:
@@ -16182,19 +16183,19 @@ And where among the guests there never cometh
 One who can hold such high and honoured place!
 ''',
     '''
-2. Happy home, where two in heart united
+2. O happy home, where two in heart united
 In holy faith and blessed hope are one,
 Whom death a little while alone divideth,
 And cannot end the union here begun!
 ''',
     '''
-3. Happy home, whose little ones are given
+3. O happy home, whose little ones are given
 Early to Thee, in humble faith and prayer,
 To thee, their friend, who from the heights of heaven
 Guides them, and guards with more than mother’s care!
 ''',
     '''
-4. Happy home, where Thou art not forgotten,
+4. O happy home, where Thou art not forgotten,
 When joy is overflowing, full and free,
 O happy home, where every wounded spirit
 Is brought, physician, comforter, to Thee.
