@@ -171,7 +171,7 @@ Son of God, who came to die!
 3. Holy Spirit, we adore Thee!
 Paraclete and heav’nly guest!
 Sent from God and from the Saviour,
-Thou hast led usinto rest.
+Thou hast led us into rest.
 We adore Thee! We adore Thee!
 By Thy grace forever blest;
 We adore Thee! We adore Thee!
