@@ -2961,11 +2961,9 @@ Saved by His precious blood.
 To pay the price of sin,
 He only could unlock the gate
 Of heaven and let us in. Amen
-''',
-    '''
-99 When I Survey the Wondrous
-Cross
-''',
+'''
+  ]),
+  HymnData(99, 'When I Survey the Wondrous Cross', [
     '''
 1. When I survey the wondrous cross,
 On which the prince of glory died,
