@@ -10553,7 +10553,7 @@ Give Him your heart’s adoration,
 Give Him the best that you have.
 '''
   ]),
-  HymnData(154, 'Thou, My Everlasting portion.', [
+  HymnData(354, 'Thou, My Everlasting portion.', [
     '''
 1. Thou, my everlasting portion,
 More than friend or life to me;
@@ -14193,7 +14193,7 @@ Orphans no longer fatherless,
 Nor widows desolate.
 '''
   ]),
-  HymnData(577, 'Jerusalem, the Golden', [
+  HymnData(477, 'Jerusalem, the Golden', [
     '''
 1. Jerusalem, the golden
 With milk and honey blest!
