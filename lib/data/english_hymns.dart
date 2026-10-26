@@ -2961,11 +2961,9 @@ Saved by His precious blood.
 To pay the price of sin,
 He only could unlock the gate
 Of heaven and let us in. Amen
-''',
-    '''
-99 When I Survey the Wondrous
-Cross
-''',
+'''
+  ]),
+  HymnData(99, 'When I Survey the Wondrous Cross', [
     '''
 1. When I survey the wondrous cross,
 On which the prince of glory died,
@@ -3179,7 +3177,7 @@ Thro’ years unnumbered on heaven’s shore.
 My tongue shall praise Him forever more.
 '''
   ]),
-  HymnData(107, 'The Strife Is O'er', [
+  HymnData(107, "The Strife Is O'er", [
     '''
 1. Alleluia! Alleluia! Alleluia!
 The strife is o'er, the battle done;
@@ -3453,7 +3451,7 @@ Ours the cross, the grave, the skies,
 Alleluia! Amen
 '''
   ]),
-  HymnData(116, 'Jesus Shall Reign Where'er the Sun', [
+  HymnData(116, "Jesus Shall Reign Where'er the Sun", [
     '''
 1. Jesus shall reign where'er the sun
 Does his successive journeys run;
@@ -10553,7 +10551,7 @@ Give Him your heart’s adoration,
 Give Him the best that you have.
 '''
   ]),
-  HymnData(154, 'Thou, My Everlasting portion.', [
+  HymnData(354, 'Thou, My Everlasting portion.', [
     '''
 1. Thou, my everlasting portion,
 More than friend or life to me;
@@ -11716,7 +11714,7 @@ And so anticipate by faith
 The heav’nly feast above. Amen.
 '''
   ]),
-  HymnData(394, 'Bread of the World in Mercy Broken' [
+  HymnData(394, 'Bread of the World in Mercy Broken', [
 '''
 1. Bread of the world, in mercy broken,
 Wine of the soul, in mercy shed,
@@ -14193,7 +14191,7 @@ Orphans no longer fatherless,
 Nor widows desolate.
 '''
   ]),
-  HymnData(577, 'Jerusalem, the Golden', [
+  HymnData(477, 'Jerusalem, the Golden', [
     '''
 1. Jerusalem, the golden
 With milk and honey blest!
@@ -15300,7 +15298,7 @@ Keep silence, keep silence before Him. Amen
 '''
   ]),
   HymnData(516, 'The Lord is in His Holy Temple', [
-  ...
+    '''
 1. The Lord is in His holy temple,
 The Lord is in His holy temple;
 Let all the earth keep silence before Him,
@@ -15310,9 +15308,9 @@ Keep silence, keep silence before Him. Amen
 '''
   ]),
   HymnData(517, 'O Father, Unto Thee', [
-  ...
-  1. O Father, unto Thee we pray. Amen.
-  ...
+    '''
+1. O Father, unto Thee we pray. Amen.
+'''
   ]),
   HymnData(518, 'Create in Me a Clean Heart', [
     '''
@@ -15389,10 +15387,10 @@ Thy gracious love impart;
 Hear us, O lord. Amen.
 '''
   ]),
-  Hymdata(528, 'In Jesus' Name We Pray', [
-  ...
-  1. In Jesus's name we pray.  A..........men.
-  ...
+  HymnData(528, "In Jesus' Name We Pray", [
+    '''
+1. In Jesus's name we pray.  A..........men.
+'''
   ]),
   HymnData(529, 'Almighty Father, Hear Our Prayer', [
     '''
@@ -15401,7 +15399,7 @@ and bless all souls that wait before Thee. Amen.
 '''
 ]),
 HymnData(530, 'Hear Our Prayer, O Lord',[
-...
+    '''
 1. Hear Our prayer, O Lord;
 Hear our prayer O Lord;
 Incline Thine ear to us,
@@ -15452,7 +15450,7 @@ Thine own before Thy feet we lay. Amen
 '''
     ]),
   HymnData(537, 'Grant Us, Lord, The Grace of Giving', [
-    ...
+    '''
 1. Grant us, lord the grace of giving,
 With a Spirit large and free,
 That ourselves and all our living
@@ -15505,75 +15503,56 @@ The Lord makes His face to shine upon you,
 And be gracious unto you, be gracious,
 The Lord be gracious unto you. Amen.
 ''',
-...
+    '''
 543 DRESDEN
- ...,
- ...
 1. A – men, A - men,
-...,
-'''
+''',
+    '''
 544 THREEFOLD
-...,
-...
 A – men, A - men.
 ''',
-...
+    '''
 545 THREEFOLD
-...,
-...
 1. A - - - - - men, A - men, A - - men.
 ''',
-  ...
+    '''
 546 FOURFOLD
-...,
- ...
 A – men, A – men, A - - men, A – men.
 ''',
-...
+    '''
 547 SEVENFOLD
- ...,
- ...
 A – men, A – men, A – men, A – - men,
 A – - - - - men, A - - - men, A – men.
 ''',
-...
-548, 'ST. PETER
-...,
-  ...
+    '''
+548 ST. PETER
 A – men, A - men, A - - men, A – men.
 ''',
-...
-549, 'CHOLMONDELY
- ...,
- ...
+    '''
+549 CHOLMONDELY
 A – men, A – men, A - - men A - - men.
 ''',
-  ...
+    '''
 550 GUNNER
-...,
-  ...
 A – men, A – men, A - - men, A - - men.
 ''',
-...
+    '''
 551 PACEM
-...
 A - - men, A – men, A . - - men.
 ''',
-...
- 552 RESTARE
-...
+    '''
+552 RESTARE
 A - - - - men, A - - men, A - - - - men.
 ''',
-...
+    '''
 553 THE BELL CADENCE
-  ...
 1. A – men, A – men, A – men, A – men,
 A - - men, A - - men, A - - - men, A - - men,
 A - - men, A - men, A - - - men,
 A – men, A - - men.
 ''',
-  ...
-554 FINIR'
+    '''
+554 FINIR
 A - - - - - men, A - - men.
 '''
   ]),
@@ -15787,7 +15766,7 @@ But thou weep, wake no more to toil and?
 Thine is a perfect rest, secure and deep
 Goodnight!Goodnight!Goodnight!
 ''', 
-  ...
+    '''
 3. Until He gathers in His sheaves at last;
 Until the twilight gloom is over past
 Goodnight!Goodnight! Goodnight!
@@ -15810,7 +15789,7 @@ A little while, and all His saints shall dwell
 In hallowed union, indivisible-
 Good-night! Good-night! Good-night!
 ''',
-  ...
+    '''
 8. Until we meet again before His throne
 Clothed in the spotless robe He gives His own
 Until we know even as we are known
