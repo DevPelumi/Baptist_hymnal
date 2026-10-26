@@ -2,7 +2,9 @@ import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
@@ -24,6 +26,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks(
+      ['Fluid R3 SoundFont (hymn tune piano)'],
+      await rootBundle.loadString('assets/soundfonts/FLUID_R3_LICENSE.txt'),
+    );
+  });
 
   runApp(const MyApp());
 }

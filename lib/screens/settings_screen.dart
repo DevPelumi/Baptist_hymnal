@@ -109,6 +109,16 @@ class SettingsScreen extends StatelessWidget {
                     subtitle: '2.0.1',
                     icon: CupertinoIcons.info_circle_fill,
                   ),
+                  _buildInfoTile(
+                    context,
+                    title: 'Licences',
+                    subtitle: 'Open-source software and sounds',
+                    icon: CupertinoIcons.doc_text_fill,
+                    onTap: () => showLicensePage(
+                      context: context,
+                      applicationName: 'Baptist Hymnal',
+                    ),
+                  ),
                 ],
               ),
             ],

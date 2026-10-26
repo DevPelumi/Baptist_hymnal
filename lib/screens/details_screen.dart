@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import "package:baptist_hymnal/ad_helper.dart";
+import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
 import '../widgets/banner_ad_widget.dart';
+import '../widgets/tune_controls.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
@@ -110,6 +112,10 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final midiAsset = widget.provider is EnglishHymnProvider
+        ? englishHymnAudioAsset(widget.hymn.id)
+        : null;
+
     // Fires for back button, system back and iOS swipe, but not when the
     // arrows replace this page with the next or previous hymn.
     return PopScope<Object?>(
@@ -254,7 +260,21 @@ class _DetailScreenState extends State<DetailScreen> {
             ],
           ),
         ),
-        bottomNavigationBar: const BannerAdWidget(),
+        bottomNavigationBar: SafeArea(
+          top: false,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (midiAsset != null)
+                TuneControls(
+                  hymnId: widget.hymn.id,
+                  midiAsset: midiAsset,
+                  verseCount: englishHymnVerseCount(widget.hymn.contents),
+                ),
+              const BannerAdWidget(),
+            ],
+          ),
+        ),
       ),
     );
   }
