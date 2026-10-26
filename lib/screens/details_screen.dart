@@ -272,9 +272,15 @@ class _DetailScreenState extends State<DetailScreen> {
           ),
         ),
         bottomNavigationBar: Container(
-          height: 50,
           color: Colors.green,
-          child: _buildAdWidget(),
+          // Keeps the banner above the gesture/navigation bar (edge-to-edge).
+          child: SafeArea(
+            top: false,
+            child: SizedBox(
+              height: 50,
+              child: _buildAdWidget(),
+            ),
+          ),
         ),
       ),
     );
