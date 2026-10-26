@@ -1,7 +1,7 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../models/hymn_data.dart';
@@ -18,209 +18,154 @@ class SearchScreen extends StatefulWidget {
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
-class _SearchScreenState extends State<SearchScreen>
-    with SingleTickerProviderStateMixin {
-  late List<HymnData> _displayedData;
-  late TabController _tabController;
-  late TextEditingController _textController;
+class _SearchScreenState extends State<SearchScreen> {
+  final TextEditingController _textController = TextEditingController();
+  late int _book = widget.initialTabIndex;
   IHymnProvider? _provider;
-
-  void _getData(BuildContext context) {
-    if (!mounted) return;
-
-    void update() {
-      if (mounted) setState(() {});
-    }
-
-    _provider?.removeListener(update);
-
-    switch (_tabController.index) {
-      case 1:
-        _provider = context.read<YorubaHymnProvider>();
-        break;
-      case 2:
-        _provider = context.read<ResponsiveReadingProvider>();
-        break;
-      default:
-        _provider = context.read<EnglishHymnProvider>();
-        break;
-    }
-
-    _provider?.addListener(update);
-    _displayedData = _filterHymns(_textController.text);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(
-        initialIndex: widget.initialTabIndex, length: 3, vsync: this);
-    _textController = TextEditingController();
-    _displayedData = [];
-  }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _getData(context);
-    _tabController.addListener(() {
-      if (mounted) _getData(context);
-    });
-    _textController.addListener(() {
-      if (mounted) {
-        setState(() {
-          _displayedData = _filterHymns(_textController.text);
-        });
-      }
-    });
+    _watchProvider();
   }
 
   @override
   void dispose() {
-    _tabController.dispose();
+    _provider?.removeListener(_onProviderChanged);
     _textController.dispose();
-    _provider?.removeListener(() {});
     super.dispose();
   }
 
-  List<HymnData> _filterHymns(String searchString) {
-    if (_provider == null) return [];
+  void _onProviderChanged() {
+    if (mounted) setState(() {});
+  }
 
-    final trimmed = searchString.trim();
-    if (trimmed.isEmpty) {
-      return List.from(_provider!.dataSource);
-    } else {
-      return _provider!.dataSource
-          .where((hymn) =>
+  void _watchProvider() {
+    final IHymnProvider next = switch (_book) {
+      1 => context.read<YorubaHymnProvider>(),
+      2 => context.read<ResponsiveReadingProvider>(),
+      _ => context.read<EnglishHymnProvider>(),
+    };
+    if (identical(next, _provider)) return;
+    _provider?.removeListener(_onProviderChanged);
+    _provider = next..addListener(_onProviderChanged);
+  }
+
+  List<HymnData> _filterHymns(String searchString) {
+    final provider = _provider;
+    if (provider == null) return [];
+
+    final trimmed = searchString.trim().toLowerCase();
+    if (trimmed.isEmpty) return provider.dataSource;
+    return provider.dataSource
+        .where(
+          (hymn) =>
               hymn.id.toString() == trimmed ||
-              hymn.title.toLowerCase().contains(trimmed.toLowerCase()) ||
-              trimmed.toLowerCase().contains(hymn.title.toLowerCase()))
-          .toList();
+              hymn.title.toLowerCase().contains(trimmed) ||
+              trimmed.contains(hymn.title.toLowerCase()),
+        )
+        .toList();
+  }
+
+  Widget _buildSearchField() {
+    void onChanged(String _) => setState(() {});
+    if (PlatformInfo.isIOS) {
+      return CupertinoSearchTextField(
+        controller: _textController,
+        placeholder: 'Number or title',
+        onChanged: onChanged,
+      );
     }
+    return SearchBar(
+      controller: _textController,
+      hintText: 'Number or title',
+      leading: const Icon(Icons.search),
+      elevation: const WidgetStatePropertyAll(0),
+      onChanged: onChanged,
+      trailing: [
+        if (_textController.text.isNotEmpty)
+          IconButton(
+            tooltip: 'Clear',
+            icon: const Icon(Icons.close),
+            onPressed: () => setState(_textController.clear),
+          ),
+      ],
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
+    final results = _filterHymns(_textController.text);
+    final secondary = CupertinoColors.secondaryLabel.resolveFrom(context);
 
-    return Scaffold(
-      backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: colorScheme.brightness == Brightness.dark
-              ? Brightness.light
-              : Brightness.dark,
-        ),
-        title: CupertinoSearchTextField(
-          controller: _textController,
-          placeholder: 'Search hymns...',
-          style: theme.textTheme.bodyLarge,
-          placeholderStyle: theme.textTheme.bodyLarge?.copyWith(
-            color: CupertinoColors.placeholderText.resolveFrom(context),
-          ),
-          prefixIcon: Icon(
-            CupertinoIcons.search,
-            color: CupertinoColors.systemGrey.resolveFrom(context),
-          ),
-          decoration: BoxDecoration(
-            color: CupertinoColors.systemGrey6.resolveFrom(context),
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(48),
-          child: Container(
-            decoration: BoxDecoration(
-              color: CupertinoColors.systemBackground.resolveFrom(context),
-              border: Border(
-                bottom: BorderSide(
-                  color: CupertinoColors.systemGrey5.resolveFrom(context),
-                  width: 0.5,
+    return AdaptiveScaffold(
+      appBar: AdaptiveAppBar(title: 'Search'),
+      body: Builder(
+        // The scaffold adds its bars to the padding inside its body.
+        builder: (context) {
+          final insets = MediaQuery.paddingOf(context);
+          return Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 0),
+                child: _buildSearchField(),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                child: AdaptiveSegmentedControl(
+                  labels: const ['English', 'Yoruba', 'Reading'],
+                  selectedIndex: _book,
+                  onValueChanged: (index) => setState(() {
+                    _book = index;
+                    _watchProvider();
+                  }),
                 ),
               ),
-            ),
-            child: TabBar(
-              controller: _tabController,
-              labelColor: CupertinoColors.activeGreen.resolveFrom(context),
-              unselectedLabelColor:
-                  CupertinoColors.systemGrey.resolveFrom(context),
-              indicatorColor: CupertinoColors.activeGreen.resolveFrom(context),
-              indicatorWeight: 2,
-              labelStyle: theme.textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-              unselectedLabelStyle: theme.textTheme.titleMedium,
-              tabs: const [
-                Tab(text: 'English'),
-                Tab(text: 'Yoruba'),
-                Tab(text: 'Reading'),
-              ],
-            ),
-          ),
-        ),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: _provider == null
-                ? Center(
-                    child: CupertinoActivityIndicator(
-                      radius: 14,
-                    ),
-                  )
-                : _displayedData.isEmpty
+              Expanded(
+                child: results.isEmpty
                     ? Center(
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
                               CupertinoIcons.search,
-                              size: 64,
-                              color: CupertinoColors.systemGrey
-                                  .resolveFrom(context),
+                              size: 56,
+                              color: secondary,
                             ),
                             const SizedBox(height: 16),
                             Text(
                               'No hymns found',
-                              style: theme.textTheme.titleLarge?.copyWith(
-                                color: CupertinoColors.systemGrey
-                                    .resolveFrom(context),
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: CupertinoColors.label.resolveFrom(
+                                  context,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 8),
                             Text(
-                              'Try different keywords',
-                              style: theme.textTheme.bodyMedium?.copyWith(
-                                color: CupertinoColors.systemGrey2
-                                    .resolveFrom(context),
-                              ),
+                              'Try a hymn number or other words',
+                              style: TextStyle(fontSize: 15, color: secondary),
                             ),
                           ],
                         ),
                       )
                     : ListView.builder(
-                        // Bottom inset: lets the last result scroll clear of
-                        // the navigation bar when pushed from a hymn list.
-                        padding: EdgeInsets.only(
-                          top: 8,
-                          bottom: MediaQuery.paddingOf(context).bottom,
+                        keyboardDismissBehavior:
+                            ScrollViewKeyboardDismissBehavior.onDrag,
+                        padding: EdgeInsets.only(bottom: insets.bottom + 16),
+                        itemCount: results.length,
+                        itemBuilder: (ctx, i) => HymnListItem(
+                          hymn: results[i],
+                          provider: _provider!,
+                          showFavorite: false,
                         ),
-                        itemCount: _displayedData.length,
-                        itemBuilder: (ctx, i) {
-                          final hymn = _displayedData[i];
-                          return HymnListItem(
-                            hymn: hymn,
-                            provider: _provider!,
-                            showFavorite: false,
-                          );
-                        },
                       ),
-          ),
-        ],
+              ),
+            ],
+          );
+        },
       ),
     );
   }

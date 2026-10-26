@@ -1,4 +1,6 @@
 PODS:
+  - adaptive_platform_ui (0.1.0):
+    - Flutter
   - app_tracking_transparency (0.0.1):
     - Flutter
   - Firebase/CoreOnly (12.19.0):
@@ -41,6 +43,8 @@ PODS:
     - PromisesObjC (~> 2.4)
   - Flutter (1.0.0)
   - flutter_midi_pro (0.0.1):
+    - Flutter
+  - foldable (1.0.5):
     - Flutter
   - Google-Mobile-Ads-SDK (13.11.0):
     - GoogleUserMessagingPlatform (>= 1.1)
@@ -119,11 +123,13 @@ PODS:
     - FlutterMacOS
 
 DEPENDENCIES:
+  - adaptive_platform_ui (from `.symlinks/plugins/adaptive_platform_ui/ios`)
   - app_tracking_transparency (from `.symlinks/plugins/app_tracking_transparency/ios`)
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
   - flutter_midi_pro (from `.symlinks/plugins/flutter_midi_pro/ios`)
+  - foldable (from `.symlinks/plugins/foldable/ios`)
   - google_mobile_ads (from `.symlinks/plugins/google_mobile_ads/ios`)
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
@@ -145,6 +151,8 @@ SPEC REPOS:
     - PromisesObjC
 
 EXTERNAL SOURCES:
+  adaptive_platform_ui:
+    :path: ".symlinks/plugins/adaptive_platform_ui/ios"
   app_tracking_transparency:
     :path: ".symlinks/plugins/app_tracking_transparency/ios"
   firebase_analytics:
@@ -155,6 +163,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_midi_pro:
     :path: ".symlinks/plugins/flutter_midi_pro/ios"
+  foldable:
+    :path: ".symlinks/plugins/foldable/ios"
   google_mobile_ads:
     :path: ".symlinks/plugins/google_mobile_ads/ios"
   share_plus:
@@ -165,6 +175,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/darwin"
 
 SPEC CHECKSUMS:
+  adaptive_platform_ui: df7a9b2e8063dd0e8eb0fa0bcc9467780f608f86
   app_tracking_transparency: 3d84f147f67ca82d3c15355c36b1fa6b66ca7c92
   Firebase: 7ca191e43724142f79fae653547b3382c45413cc
   firebase_analytics: 4860472db1635ca7c553869e3f34050fb6fad86a
@@ -175,6 +186,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: f70a49eed611f5602f373e40974b3b01556ac217
   Flutter: 71a624a5bc0c04062bf19101d501e466baf2fb47
   flutter_midi_pro: 3907e27a81681f2c9bdc28c3e771734ad41128d6
+  foldable: 1d5f77688e44e3754f129cecaa08403fcb75f612
   Google-Mobile-Ads-SDK: 09d0868abe43b9f851b7b340a245679f0eafc96c
   google_mobile_ads: 2d3c1fe797954fe6a4103b74eff2375c08eab20e
   GoogleAdsOnDeviceConversion: 41f168313b305040f4af27093d3c0af5ba46a9a3

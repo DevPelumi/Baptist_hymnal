@@ -1,30 +1,25 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import "package:baptist_hymnal/ad_helper.dart";
 import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
+import '../utils/platform_icons.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/tune_controls.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
-const textStyle =
-    TextStyle(fontFamily: 'Alata', fontSize: 14, fontWeight: FontWeight.w600);
-
 class DetailScreen extends StatefulWidget {
-  // Declare a field that holds the Todo.
   final HymnData hymn;
   final IHymnProvider provider;
-  // In the constructor, require a Todo.
-  const DetailScreen({
-    super.key,
-    required this.hymn,
-    required this.provider,
-  });
+
+  const DetailScreen({super.key, required this.hymn, required this.provider});
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -36,21 +31,25 @@ class _DetailScreenState extends State<DetailScreen> {
     if (widget.provider is ResponsiveReadingProvider) {
       int counter = 0;
       return Column(
-          children: widget.hymn.contents
-              .map(
-                (t) => Text('$t\n',
-                    style: TextStyle(
-                        fontSize: fontSize,
-                        fontFamily: 'Alata',
-                        color: textColor,
-                        fontStyle: counter % 2 == 0
-                            ? FontStyle.normal
-                            : FontStyle.italic,
-                        fontWeight: (counter++) % 2 == 0
-                            ? FontWeight.bold
-                            : FontWeight.normal)),
-              )
-              .toList());
+        children: widget.hymn.contents
+            .map(
+              (t) => Text(
+                '$t\n',
+                style: TextStyle(
+                  fontSize: fontSize,
+                  fontFamily: 'Alata',
+                  color: textColor,
+                  fontStyle: counter % 2 == 0
+                      ? FontStyle.normal
+                      : FontStyle.italic,
+                  fontWeight: (counter++) % 2 == 0
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
+              ),
+            )
+            .toList(),
+      );
     } else {
       return Text(
         widget.hymn.contents.join("\n"),
@@ -79,10 +78,8 @@ class _DetailScreenState extends State<DetailScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => DetailScreen(
-          hymn: hymn,
-          provider: widget.provider,
-        ),
+        builder: (context) =>
+            DetailScreen(hymn: hymn, provider: widget.provider),
       ),
     );
   }
@@ -105,6 +102,24 @@ class _DetailScreenState extends State<DetailScreen> {
     return null;
   }
 
+  void _share() {
+    final box = context.findRenderObject() as RenderBox?;
+    SharePlus.instance.share(
+      ShareParams(
+        text:
+            '${widget.hymn.title}\n'
+            '${widget.hymn.contents.join("\n")}\n\n'
+            '📱 Baptist Hymnal App\n'
+            'Download from Play Store',
+        subject: 'Share Hymn',
+        // Anchors the share popover on iPad.
+        sharePositionOrigin: box == null
+            ? null
+            : box.localToGlobal(Offset.zero) & box.size,
+      ),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -116,6 +131,7 @@ class _DetailScreenState extends State<DetailScreen> {
     final midiAsset = widget.provider is EnglishHymnProvider
         ? englishHymnAudioAsset(widget.hymn.id)
         : null;
+    final isFavorite = widget.provider.isFavorite(widget.hymn.id);
 
     // Fires for back button, system back and iOS swipe, but not when the
     // arrows replace this page with the next or previous hymn.
@@ -123,159 +139,131 @@ class _DetailScreenState extends State<DetailScreen> {
       onPopInvokedWithResult: (didPop, _) {
         if (didPop) AdHelper.onHymnClosed();
       },
-      child: Scaffold(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        floatingActionButton: FloatingActionButton(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
-          backgroundColor: Colors.green.shade500,
-          onPressed: () {
-            final RenderBox? box = context.findRenderObject() as RenderBox?;
-            if (box != null) {
-              SharePlus.instance.share(
-                ShareParams(
-                  text: '${widget.hymn.title}\n'
-                      '${widget.hymn.contents.join("\n")}\n\n'
-                      '📱 Baptist Hymnal App\n'
-                      'Download from Play Store',
-                  subject: 'Share Hymn',
-                  sharePositionOrigin:
-                      box.localToGlobal(Offset.zero) & box.size,
-                ),
-              );
-            }
-          },
-          child: const Icon(Icons.share, color: Colors.white),
-        ),
-        appBar: AppBar(
-          elevation: 13,
-          backgroundColor: Colors.green.shade400,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-            onPressed: () => Navigator.pop(context),
-          ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Flexible(
-                child: Text(
-                  _getHymnCategory(),
-                  style: const TextStyle(
-                    fontFamily: 'Alata',
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
+      child: AdaptiveScaffold(
+        // No title: four actions leave no room for one on a phone, and the
+        // page heading names the hymn.
+        appBar: AdaptiveAppBar(
+          actions: [
+            AdaptiveAppBarAction(
+              iosSymbol: 'chevron.left',
+              icon: platformIconData(
+                cupertino: CupertinoIcons.chevron_left,
+                material: Icons.chevron_left,
               ),
-              const SizedBox(width: 8),
-              CircleAvatar(
-                radius: 14,
-                backgroundColor: Colors.white,
-                child: Text(
-                  widget.hymn.id.toString(),
-                  style: textStyle.copyWith(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.black
-                        : Colors.black,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+              label: 'Previous hymn',
               onPressed: () {
                 final prevHymn = _getPreviousHymn();
-                if (prevHymn != null) {
-                  _navigateToHymn(prevHymn);
-                }
+                if (prevHymn != null) _navigateToHymn(prevHymn);
               },
             ),
-            IconButton(
-              icon: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+            AdaptiveAppBarAction(
+              iosSymbol: 'chevron.right',
+              icon: platformIconData(
+                cupertino: CupertinoIcons.chevron_right,
+                material: Icons.chevron_right,
+              ),
+              label: 'Next hymn',
+              spacerAfter: ToolbarSpacerType.fixed,
               onPressed: () {
                 final nextHymn = _getNextHymn();
-                if (nextHymn != null) {
-                  _navigateToHymn(nextHymn);
-                }
+                if (nextHymn != null) _navigateToHymn(nextHymn);
               },
             ),
-            IconButton(
-              onPressed: () {
-                widget.provider.toggleFavoriteForHymn(widget.hymn.id);
-                setState(() {});
-              },
-              icon: Center(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
-                  child: Icon(
-                      widget.provider.isFavorite(widget.hymn.id)
-                          ? Icons.favorite
-                          : Icons.favorite_border,
-                      color: Colors.white),
-                ),
+            AdaptiveAppBarAction(
+              iosSymbol: isFavorite ? 'heart.fill' : 'heart',
+              icon: platformIconData(
+                cupertino: isFavorite
+                    ? CupertinoIcons.heart_fill
+                    : CupertinoIcons.heart,
+                material: isFavorite ? Icons.favorite : Icons.favorite_border,
               ),
+              label: isFavorite
+                  ? 'Remove from favourites'
+                  : 'Add to favourites',
+              onPressed: () async {
+                await widget.provider.toggleFavoriteForHymn(widget.hymn.id);
+                if (mounted) setState(() {});
+              },
+            ),
+            AdaptiveAppBarAction(
+              iosSymbol: 'square.and.arrow.up',
+              icon: platformIconData(
+                cupertino: CupertinoIcons.share,
+                material: Icons.share,
+              ),
+              label: 'Share',
+              onPressed: _share,
             ),
           ],
         ),
-        body: SafeArea(
-          child: ListView(
-            children: <Widget>[
-              const SizedBox(
-                height: 15,
-              ),
-              Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                        child: Text(
-                      widget.hymn.title,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Alata',
-                        color: Theme.of(context).textTheme.bodyLarge?.color,
+        body: Builder(
+          // The scaffold adds its bars to the padding inside its body.
+          builder: (context) {
+            final insets = MediaQuery.paddingOf(context);
+            return Column(
+              children: [
+                Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.fromLTRB(16, insets.top + 16, 16, 32),
+                    children: <Widget>[
+                      Text(
+                        '${_getHymnCategory()} ${widget.hymn.id}'.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 1.2,
+                          color: PlatformInfo.isIOS
+                              ? CupertinoColors.systemGreen.resolveFrom(context)
+                              : brandGreen,
+                        ),
                       ),
-                    )),
+                      const SizedBox(height: 6),
+                      Text(
+                        widget.hymn.title,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Alata',
+                          color: Theme.of(context).textTheme.bodyLarge?.color,
+                        ),
+                      ),
+                      const Divider(
+                        height: 24,
+                        thickness: 1.5,
+                        indent: 70,
+                        endIndent: 70,
+                        color: brandGreen,
+                      ),
+                      Consumer<SettingsProvider>(
+                        builder: (ctx, provider, _) => _getContentWidget(
+                          provider.getFontSize().toDouble(),
+                        ),
+                      ),
+                    ],
                   ),
-                  Center(
-                      child: Divider(
-                    thickness: 1.5,
-                    indent: 70,
-                    endIndent: 70,
-                    color: Colors.green.shade300,
-                  )),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(14, 0, 14, 55),
-                child: Consumer<SettingsProvider>(
-                    builder: (ctx, provider, _) =>
-                        _getContentWidget(provider.getFontSize().toDouble())),
-              ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: SafeArea(
-          top: false,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (midiAsset != null)
-                TuneControls(
-                  hymnId: widget.hymn.id,
-                  midiAsset: midiAsset,
-                  verseCount: englishHymnVerseCount(widget.hymn.contents),
                 ),
-              const BannerAdWidget(),
-            ],
-          ),
+                SafeArea(
+                  top: false,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (midiAsset != null)
+                        TuneControls(
+                          hymnId: widget.hymn.id,
+                          midiAsset: midiAsset,
+                          verseCount: englishHymnVerseCount(
+                            widget.hymn.contents,
+                          ),
+                        ),
+                      const BannerAdWidget(),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

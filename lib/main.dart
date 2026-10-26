@@ -2,6 +2,8 @@ import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,9 +11,8 @@ import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
 import 'screens/search_screen.dart';
+import 'utils/platform_icons.dart';
 import 'package:provider/provider.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
@@ -63,39 +64,40 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<SettingsProvider>(
         builder: (context, settingsProvider, _) {
-          return MaterialApp(
-            title: 'Baptist Hymn',
-            theme: ThemeData(
-              primarySwatch: Colors.green,
+          final isDark = settingsProvider.isDarkMode(
+              MediaQuery.platformBrightnessOf(context) == Brightness.dark);
+          final lightTheme = ThemeData(
+            colorSchemeSeed: brandGreen,
+            brightness: Brightness.light,
+          );
+          final darkTheme = ThemeData(
+            colorSchemeSeed: brandGreen,
+            brightness: Brightness.dark,
+          );
+          // iOS gets a CupertinoApp with native bars; Material on Android.
+          return AdaptiveApp(
+            title: 'Baptist Hymnal',
+            themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+            materialLightTheme: lightTheme,
+            materialDarkTheme: darkTheme,
+            cupertinoLightTheme: const CupertinoThemeData(
               brightness: Brightness.light,
-              textTheme: TextTheme(
-                bodyLarge: TextStyle(color: Colors.black87),
-                bodyMedium: TextStyle(color: Colors.black87),
-                titleLarge: TextStyle(color: Colors.black87),
-                titleMedium: TextStyle(color: Colors.black87),
-              ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                backgroundColor: Colors.white,
-              ),
+              primaryColor: CupertinoColors.systemGreen,
             ),
-            darkTheme: ThemeData(
+            cupertinoDarkTheme: const CupertinoThemeData(
               brightness: Brightness.dark,
-              primarySwatch: Colors.green,
-              textTheme: TextTheme(
-                bodyLarge: TextStyle(color: Colors.white),
-                bodyMedium: TextStyle(color: Colors.white),
-                titleLarge: TextStyle(color: Colors.white),
-                titleMedium: TextStyle(color: Colors.white),
-              ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                backgroundColor: Color(0xFF1A1A1A),
-              ),
+              primaryColor: CupertinoColors.systemGreen,
             ),
-            themeMode: settingsProvider.isDarkMode(
-                    MediaQuery.of(context).platformBrightness ==
-                        Brightness.dark)
-                ? ThemeMode.dark
-                : ThemeMode.light,
+            // The CupertinoApp on iOS has no Material theme or localizations,
+            // which the hymn text, tune bar and licence page still use.
+            localizationsDelegates: const [
+              DefaultMaterialLocalizations.delegate,
+              DefaultCupertinoLocalizations.delegate,
+              DefaultWidgetsLocalizations.delegate,
+            ],
+            builder: (context, child) => PlatformInfo.isIOS
+                ? Theme(data: isDark ? darkTheme : lightTheme, child: child!)
+                : child!,
             navigatorObservers: [
               FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
             ],
@@ -188,52 +190,50 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AdaptiveScaffold(
       body: _pageOptions[_selectedPage],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Colors.green,
-              iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.green.withValues(alpha: 0.1),
-              color: Theme.of(context).textTheme.bodyLarge?.color,
-              tabs: [
-                GButton(
-                  icon: LineIcons.home,
-                  text: 'Home',
-                ),
-                GButton(
-                  icon: LineIcons.heart,
-                  text: 'Liked',
-                ),
-                GButton(
-                  icon: LineIcons.search,
-                  text: 'Search',
-                ),
-                GButton(
-                  icon: LineIcons.cog,
-                  text: 'Settings',
-                ),
-              ],
-              selectedIndex: _selectedPage,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedPage = index;
-                });
-              },
+      bottomNavigationBar: AdaptiveBottomNavigationBar(
+        selectedIndex: _selectedPage,
+        onTap: (index) => setState(() => _selectedPage = index),
+        selectedItemColor: PlatformInfo.isIOS ? null : brandGreen,
+        items: [
+          AdaptiveNavigationDestination(
+            icon: platformIcon(
+              sfSymbol: 'house.fill',
+              cupertino: CupertinoIcons.house_fill,
+              material: Icons.home_outlined,
             ),
+            selectedIcon: PlatformInfo.isIOS ? null : Icons.home,
+            label: 'Home',
           ),
-        ),
+          AdaptiveNavigationDestination(
+            icon: platformIcon(
+              sfSymbol: 'heart.fill',
+              cupertino: CupertinoIcons.heart_fill,
+              material: Icons.favorite_border,
+            ),
+            selectedIcon: PlatformInfo.isIOS ? null : Icons.favorite,
+            label: 'Favourites',
+          ),
+          AdaptiveNavigationDestination(
+            icon: platformIcon(
+              sfSymbol: 'magnifyingglass',
+              cupertino: CupertinoIcons.search,
+              material: Icons.search,
+            ),
+            label: 'Search',
+            isSearch: true,
+          ),
+          AdaptiveNavigationDestination(
+            icon: platformIcon(
+              sfSymbol: 'gearshape.fill',
+              cupertino: CupertinoIcons.gear_solid,
+              material: Icons.settings_outlined,
+            ),
+            selectedIcon: PlatformInfo.isIOS ? null : Icons.settings,
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }

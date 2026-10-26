@@ -1,8 +1,10 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/hymn_data.dart';
 import '../providers/hymn_provider.dart';
 import '../screens/details_screen.dart';
+import '../utils/platform_icons.dart';
 
 class HymnListItem extends StatelessWidget {
   final HymnData hymn;
@@ -18,72 +20,48 @@ class HymnListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final isFavorite = provider.isFavorite(hymn.id);
 
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 4,
-      ),
-      decoration: BoxDecoration(
-        color: CupertinoColors.systemBackground.resolveFrom(context),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: CupertinoColors.systemGrey5.resolveFrom(context),
-          width: 0.5,
+    return AdaptiveListTile(
+      leading: Container(
+        width: 36,
+        height: 36,
+        alignment: Alignment.center,
+        decoration: const BoxDecoration(
+          color: brandGreen,
+          shape: BoxShape.circle,
+        ),
+        child: Text(
+          hymn.id.toString(),
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
-      child: CupertinoButton(
-        padding: EdgeInsets.all(10),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DetailScreen(
-                hymn: hymn,
-                provider: provider,
+      title: Text(hymn.title),
+      trailing: showFavorite && isFavorite
+          ? Icon(
+              platformIconData(
+                cupertino: CupertinoIcons.heart_fill,
+                material: Icons.favorite,
               ),
+              color: CupertinoColors.systemPink.resolveFrom(context),
+              size: 20,
+            )
+          : null,
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(
+              hymn: hymn,
+              provider: provider,
             ),
-          );
-        },
-        child: Row(
-          children: [
-            Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: Colors.green.shade300,
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Center(
-                child: Text(
-                  hymn.id.toString(),
-                  style: theme.textTheme.titleMedium?.copyWith(
-                    color: CupertinoColors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                hymn.title,
-                style: theme.textTheme.titleMedium?.copyWith(
-                  color: CupertinoColors.label.resolveFrom(context),
-                ),
-              ),
-            ),
-            if (showFavorite && isFavorite)
-              Icon(
-                CupertinoIcons.bookmark_fill,
-                color: CupertinoColors.systemRed.resolveFrom(context),
-                size: 20,
-              ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
