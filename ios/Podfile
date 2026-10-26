@@ -1,6 +1,11 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '15.0'
 
+# firebase_analytics 13.0.1 asks for FirebaseAnalytics 12.19.3, which was never
+# published to CocoaPods (12.19.0 is the last). Pin the Firebase SDK the
+# FlutterFire plugins use to a version that exists for every pod.
+$FirebaseSDKVersion = '12.19.0'
+
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
