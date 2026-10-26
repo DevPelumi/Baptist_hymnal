@@ -205,7 +205,12 @@ class _SearchScreenState extends State<SearchScreen>
                         ),
                       )
                     : ListView.builder(
-                        padding: EdgeInsets.only(top: 8),
+                        // Bottom inset: lets the last result scroll clear of
+                        // the navigation bar when pushed from a hymn list.
+                        padding: EdgeInsets.only(
+                          top: 8,
+                          bottom: MediaQuery.paddingOf(context).bottom,
+                        ),
                         itemCount: _displayedData.length,
                         itemBuilder: (ctx, i) {
                           final hymn = _displayedData[i];

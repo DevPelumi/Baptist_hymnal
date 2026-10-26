@@ -25,74 +25,83 @@ class _EnglishHymnScreenState extends State<EnglishHymnScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Scrollbar(
-        controller: _scrollController,
-        child: CustomScrollView(
+      // Android 15+ draws edge-to-edge: keep rows from scrolling under the
+      // status bar, and let the last row scroll clear of the navigation bar.
+      body: SafeArea(
+        bottom: false,
+        child: Scrollbar(
           controller: _scrollController,
-          slivers: <Widget>[
-            SliverAppBar(
-              floating: true,
-              iconTheme: IconThemeData(color: Colors.white),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (ctx) => SearchScreen(
-                      initialTabIndex: 0,
+          child: CustomScrollView(
+            controller: _scrollController,
+            slivers: <Widget>[
+              SliverAppBar(
+                floating: true,
+                iconTheme: IconThemeData(color: Colors.white),
+                actions: <Widget>[
+                  IconButton(
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.white,
                     ),
-                  )),
-                )
-              ],
-              expandedHeight: 250.0,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: const Text(
-                  'English Hymns',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 23,
-                    fontFamily: 'Alata',
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                background: Stack(
-                  fit: StackFit.expand,
-                  children: [
-                    Image.asset(
-                      'assets/images/hymnal2.jpg',
-                      fit: BoxFit.cover,
+                    onPressed: () =>
+                        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (ctx) => SearchScreen(
+                        initialTabIndex: 0,
+                      ),
+                    )),
+                  )
+                ],
+                expandedHeight: 250.0,
+                flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: const Text(
+                    'English Hymns',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 23,
+                      fontFamily: 'Alata',
+                      fontWeight: FontWeight.w600,
                     ),
-                    const DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment(0.0, 0.5),
-                          end: Alignment(0.0, 0.0),
-                          colors: <Color>[
-                            Color(0x60000000),
-                            Color(0x00000000),
-                          ],
+                  ),
+                  background: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        'assets/images/hymnal2.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                      const DecoratedBox(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment(0.0, 0.5),
+                            end: Alignment(0.0, 0.0),
+                            colors: <Color>[
+                              Color(0x60000000),
+                              Color(0x00000000),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Consumer<EnglishHymnProvider>(
-              builder: (ctx, provider, _) => SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, int i) => HymnListItem(
-                    hymn: provider.dataSource[i],
-                    provider: provider,
+                    ],
                   ),
-                  childCount: provider.dataSource.length,
                 ),
               ),
-            )
-          ],
+              SliverSafeArea(
+                top: false,
+                sliver: Consumer<EnglishHymnProvider>(
+                  builder: (ctx, provider, _) => SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, int i) => HymnListItem(
+                        hymn: provider.dataSource[i],
+                        provider: provider,
+                      ),
+                      childCount: provider.dataSource.length,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
