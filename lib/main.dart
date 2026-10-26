@@ -10,10 +10,10 @@ import 'screens/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
+import 'ad_helper.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
@@ -25,11 +25,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  MobileAds.instance.initialize().then((initializationStatus) {
-    initializationStatus.adapterStatuses.forEach((key, value) {
-      debugPrint('Adapter status for $key: ${value.description}');
-    });
-  });
   runApp(const MyApp());
 }
 
@@ -136,6 +131,10 @@ class _FirstScreenState extends State<FirstScreen> {
     ]);
 
     FlutterNativeSplash.remove();
+
+    // Ads start only after consent (and iOS tracking permission), which needs
+    // the app on screen to show its prompts.
+    WidgetsBinding.instance.addPostFrameCallback((_) => AdHelper.initialize());
   }
 
   @override

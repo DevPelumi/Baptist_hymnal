@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import "package:baptist_hymnal/ad_helper.dart";
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../models/hymn_data.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
@@ -105,30 +105,16 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
     super.initState();
-    AdHelper.loadBannerAd();
-    AdHelper.loadInterstitialAd();
-  }
-
-  @override
-  void dispose() {
-    AdHelper.disposeBannerAd();
-    AdHelper.disposeInterstitialAd();
-    super.dispose();
-  }
-
-  Widget _buildAdWidget() {
-    if (AdHelper.myBanner == null) {
-      return const SizedBox.shrink();
-    }
-    return AdWidget(ad: AdHelper.myBanner!);
+    AdHelper.preloadInterstitialAd();
   }
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        AdHelper.incrementHymnViewCount();
-        return true;
+    // Fires for back button, system back and iOS swipe, but not when the
+    // arrows replace this page with the next or previous hymn.
+    return PopScope<Object?>(
+      onPopInvokedWithResult: (didPop, _) {
+        if (didPop) AdHelper.onHymnClosed();
       },
       child: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -159,10 +145,7 @@ class _DetailScreenState extends State<DetailScreen> {
           backgroundColor: Colors.green.shade400,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-            onPressed: () {
-              AdHelper.incrementHymnViewCount();
-              Navigator.pop(context);
-            },
+            onPressed: () => Navigator.pop(context),
           ),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -271,11 +254,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          height: 50,
-          color: Colors.green,
-          child: _buildAdWidget(),
-        ),
+        bottomNavigationBar: const BannerAdWidget(),
       ),
     );
   }

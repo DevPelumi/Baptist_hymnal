@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../ad_helper.dart';
 import '../models/settings.dart';
 import '../providers/settings_provider.dart';
 
@@ -78,6 +79,25 @@ class SettingsScreen extends StatelessWidget {
                     icon: CupertinoIcons.globe,
                   ),
                 ],
+              ),
+              FutureBuilder<bool>(
+                future: AdHelper.isPrivacyOptionsRequired(),
+                builder: (context, snapshot) {
+                  if (snapshot.data != true) return const SizedBox.shrink();
+                  return _buildSection(
+                    context,
+                    title: 'Privacy',
+                    children: [
+                      _buildInfoTile(
+                        context,
+                        title: 'Privacy Settings',
+                        subtitle: 'Change your ad consent choices',
+                        icon: CupertinoIcons.lock_shield_fill,
+                        onTap: AdHelper.showPrivacyOptionsForm,
+                      ),
+                    ],
+                  );
+                },
               ),
               _buildSection(
                 context,
@@ -326,6 +346,7 @@ class SettingsScreen extends StatelessWidget {
     required String title,
     required String subtitle,
     required IconData icon,
+    VoidCallback? onTap,
   }) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
@@ -354,6 +375,14 @@ class SettingsScreen extends StatelessWidget {
             color: CupertinoColors.systemGrey.resolveFrom(context),
           ),
         ),
+        trailing: onTap == null
+            ? null
+            : Icon(
+                CupertinoIcons.chevron_right,
+                color: CupertinoColors.systemGrey.resolveFrom(context),
+                size: 20,
+              ),
+        onTap: onTap,
       ),
     );
   }

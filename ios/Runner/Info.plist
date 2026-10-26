@@ -47,6 +47,8 @@
 		<true/>
 		<key>GADApplicationIdentifier</key>
 		<string>ca-app-pub-3742689910893242~4614956876</string>
+		<key>NSUserTrackingUsageDescription</key>
+		<string>Allowing tracking lets us show you more relevant ads, which keeps Baptist Hymnal free.</string>
 		<key>SKAdNetworkItems</key>
 		<array>
 			<dict>
