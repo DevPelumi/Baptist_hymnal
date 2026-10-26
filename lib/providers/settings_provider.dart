@@ -18,7 +18,7 @@ class SettingsProvider extends ChangeNotifier {
 
   bool isDarkMode(bool userDefault) => _settings?.darkMode ?? userDefault;
 
-  Language getLanguage({Language userDefault = Language.English}) =>
+  Language getLanguage({Language userDefault = Language.english}) =>
       _settings?.language ?? userDefault;
 
   int getFontSize({int defaultFontSize = 20}) =>

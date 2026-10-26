@@ -153,8 +153,8 @@ class _FirstScreenState extends State<FirstScreen> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            print("Error during initialization: ${snapshot.error}");
-            print("Stack trace: ${snapshot.stackTrace}");
+            debugPrint("Error during initialization: ${snapshot.error}");
+            debugPrint("Stack trace: ${snapshot.stackTrace}");
             return Scaffold(
               body: Center(
                 child: Text('Error initializing app. Please restart.'),
@@ -173,7 +173,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -205,7 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.green.withOpacity(0.1),
+              tabBackgroundColor: Colors.green.withValues(alpha: 0.1),
               color: Theme.of(context).textTheme.bodyLarge?.color,
               tabs: [
                 GButton(

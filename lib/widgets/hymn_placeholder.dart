@@ -17,7 +17,7 @@ class HymnPlaceholder extends StatelessWidget {
             child: Container(
               height: 200.0,
               width: 200.0,
-              decoration: new BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.pink.shade100,
               ),
@@ -26,7 +26,7 @@ class HymnPlaceholder extends StatelessWidget {
                 child: Icon(
                   Icons.auto_stories,
                   size: 70,
-                  color: const Color(0xFFF06292),
+                  color: Color(0xFFF06292),
                 ),
               ),
             ),

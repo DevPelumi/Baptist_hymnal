@@ -8,10 +8,10 @@ import 'yoruba_hymn_screen.dart';
 /// A screen that displays the main navigation options for the Baptist Hymnal app.
 /// It provides access to English Hymns, Yoruba Hymns, and Responsive Reading sections.
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -109,9 +109,8 @@ class _HymnCard extends StatelessWidget {
   final HymnCategory category;
 
   const _HymnCard({
-    Key? key,
     required this.category,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

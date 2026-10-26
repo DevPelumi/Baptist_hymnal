@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class FavoriteTab<T extends IHymnProvider> extends StatelessWidget {
+  const FavoriteTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<T>(

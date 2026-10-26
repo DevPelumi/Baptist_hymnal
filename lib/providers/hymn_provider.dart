@@ -26,10 +26,11 @@ abstract class IHymnProvider extends ChangeNotifier {
 
   /// add/remove from favorites list
   Future<void> toggleFavoriteForHymn(int hymnId) async {
-    if (isFavorite(hymnId))
+    if (isFavorite(hymnId)) {
       _favorites.remove(hymnId);
-    else
+    } else {
       _favorites.add(hymnId);
+    }
     notifyListeners();
     await updateHymnFavorites(favoritesKeys);
   }
@@ -38,9 +39,7 @@ abstract class IHymnProvider extends ChangeNotifier {
   /// from the local storage/ persistence solution
   Future<void> fetchFavorites() async {
     List<int> result = await repo.fetchFavoriteHymns();
-    if (result != null) {
-      _favorites.addAll(result);
-    }
+    _favorites.addAll(result);
     notifyListeners();
   }
 

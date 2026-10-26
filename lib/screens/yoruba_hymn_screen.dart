@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../data/yoruba_hymns.dart';
 import '../providers/yoruba_hymn_provider.dart';
 import '../widgets/hymn_list_item.dart';
 import 'search_screen.dart';
@@ -10,7 +9,7 @@ class YorubaHymnScreen extends StatefulWidget {
   const YorubaHymnScreen({super.key});
 
   @override
-  _YorubaHymnScreenState createState() => _YorubaHymnScreenState();
+  State<YorubaHymnScreen> createState() => _YorubaHymnScreenState();
 }
 
 class _YorubaHymnScreenState extends State<YorubaHymnScreen> {
@@ -100,7 +99,7 @@ class _YorubaHymnScreenState extends State<YorubaHymnScreen> {
                                 child: Container(
                                   height: 180.0,
                                   width: 180.0,
-                                  decoration: new BoxDecoration(
+                                  decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.green.shade100,
                                   ),
@@ -109,7 +108,7 @@ class _YorubaHymnScreenState extends State<YorubaHymnScreen> {
                                     child: Icon(
                                       Icons.auto_stories,
                                       size: 70,
-                                      color: const Color(0xFF81C784),
+                                      color: Color(0xFF81C784),
                                     ),
                                   ),
                                 ),

@@ -2,7 +2,7 @@ import 'package:baptist_hymnal/ad_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-/// A screen-wide anchored adaptive banner. Each instance owns its own ad, so
+/// A screen-wide large anchored adaptive banner. Each instance owns its own ad, so
 /// pages being replaced or popped never dispose another page's banner.
 class BannerAdWidget extends StatefulWidget {
   const BannerAdWidget({super.key});
@@ -37,8 +37,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
     if (width == _requestedWidth) return;
     _requestedWidth = width;
 
-    final size =
-        await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(width);
+    final size = await AdSize.getLargeAnchoredAdaptiveBannerAdSize(width);
     if (!mounted || size == null || width != _requestedWidth) return;
 
     _pendingAd?.dispose();

@@ -20,7 +20,7 @@ class DetailScreen extends StatefulWidget {
   final HymnData hymn;
   final IHymnProvider provider;
   // In the constructor, require a Todo.
-  DetailScreen({
+  const DetailScreen({
     super.key,
     required this.hymn,
     required this.provider,
@@ -38,7 +38,7 @@ class _DetailScreenState extends State<DetailScreen> {
       return Column(
           children: widget.hymn.contents
               .map(
-                (t) => Text(t + '\n',
+                (t) => Text('$t\n',
                     style: TextStyle(
                         fontSize: fontSize,
                         fontFamily: 'Alata',
@@ -51,7 +51,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             : FontWeight.normal)),
               )
               .toList());
-    } else
+    } else {
       return Text(
         widget.hymn.contents.join("\n"),
         textAlign: TextAlign.start,
@@ -61,6 +61,7 @@ class _DetailScreenState extends State<DetailScreen> {
           color: textColor,
         ),
       );
+    }
   }
 
   String _getHymnCategory() {
@@ -132,15 +133,16 @@ class _DetailScreenState extends State<DetailScreen> {
           onPressed: () {
             final RenderBox? box = context.findRenderObject() as RenderBox?;
             if (box != null) {
-              Share.share(
-                widget.hymn.title +
-                    '\n' +
-                    widget.hymn.contents.join("\n") +
-                    '\n\n' +
-                    "📱 Baptist Hymnal App\n" +
-                    "Download from Play Store",
-                subject: 'Share Hymn',
-                sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size,
+              SharePlus.instance.share(
+                ShareParams(
+                  text: '${widget.hymn.title}\n'
+                      '${widget.hymn.contents.join("\n")}\n\n'
+                      '📱 Baptist Hymnal App\n'
+                      'Download from Play Store',
+                  subject: 'Share Hymn',
+                  sharePositionOrigin:
+                      box.localToGlobal(Offset.zero) & box.size,
+                ),
               );
             }
           },

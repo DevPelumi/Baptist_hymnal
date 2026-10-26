@@ -7,13 +7,13 @@ class HymnTile<T extends IHymnProvider> extends StatelessWidget {
   final HymnData hymnData;
   final T provider;
   final bool showFavorites;
-  const HymnTile(this.hymnData, this.provider, {this.showFavorites = true});
+  const HymnTile(this.hymnData, this.provider, {super.key, this.showFavorites = true});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: new CircleAvatar(
+        leading: CircleAvatar(
           backgroundColor: Colors.green.shade300,
           foregroundColor: Colors.white,
           child: Text(
@@ -21,7 +21,7 @@ class HymnTile<T extends IHymnProvider> extends StatelessWidget {
             style: TextStyle(fontFamily: 'Alata', fontWeight: FontWeight.w600),
           ),
         ),
-        title: new Text(
+        title: Text(
           hymnData.title,
           style: TextStyle(
             fontFamily: 'Alata',
@@ -46,11 +46,6 @@ class HymnTile<T extends IHymnProvider> extends StatelessWidget {
                 hymn: hymnData,
               ),
             ),
-          );
-        },
-        onLongPress: () {
-          print(
-            Text("Long Pressed"),
           );
         },
       ),

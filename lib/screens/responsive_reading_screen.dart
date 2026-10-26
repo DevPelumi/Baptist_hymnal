@@ -7,6 +7,8 @@ import '../widgets/hymn_list_item.dart';
 import 'search_screen.dart';
 
 class ResponsiveReading extends StatelessWidget {
+  const ResponsiveReading({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

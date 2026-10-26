@@ -24,9 +24,9 @@ class SettingsRepository {
     await assertNotNullSharedPrefs();
     return Settings(
         language: _sharedPreferences.containsKey(_languageKey)
-            ? Language.English.languageFromString(
+            ? Language.english.languageFromString(
                 _sharedPreferences.getString(_languageKey) ?? '')
-            : Language.English,
+            : Language.english,
         darkMode: _sharedPreferences.getBool(_darkModeKey) ?? false,
         textSize: _sharedPreferences.getInt(_fontSizeKey) ?? 20);
   }

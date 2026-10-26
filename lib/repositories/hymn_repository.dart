@@ -6,7 +6,7 @@ class HymnRepository {
 
   /// This class must be instantiated with a KEY indicating
   /// the local storage location of the class data to be used
-  HymnRepository(String key) : this._key = key;
+  HymnRepository(String key) : _key = key;
 
   Future<List<int>> fetchFavoriteHymns() async {
     _preferences = await SharedPreferences.getInstance();

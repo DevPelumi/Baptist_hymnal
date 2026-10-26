@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../data/english_hymns.dart';
 import '../providers/english_hymn_provider.dart';
 import '../widgets/hymn_list_item.dart';
 import 'search_screen.dart';
@@ -10,7 +9,7 @@ class EnglishHymnScreen extends StatefulWidget {
   const EnglishHymnScreen({super.key});
 
   @override
-  _EnglishHymnScreenState createState() => _EnglishHymnScreenState();
+  State<EnglishHymnScreen> createState() => _EnglishHymnScreenState();
 }
 
 class _EnglishHymnScreenState extends State<EnglishHymnScreen> {

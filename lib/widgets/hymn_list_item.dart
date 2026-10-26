@@ -10,11 +10,11 @@ class HymnListItem extends StatelessWidget {
   final bool showFavorite;
 
   const HymnListItem({
-    Key? key,
+    super.key,
     required this.hymn,
     required this.provider,
     this.showFavorite = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -7,10 +7,11 @@ import '../models/settings.dart';
 import '../providers/settings_provider.dart';
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
       backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
@@ -75,7 +76,7 @@ class SettingsScreen extends StatelessWidget {
                   _buildInfoTile(
                     context,
                     title: 'App Language',
-                    subtitle: provider.getLanguage().name,
+                    subtitle: provider.getLanguage().label,
                     icon: CupertinoIcons.globe,
                   ),
                 ],
@@ -208,7 +209,7 @@ class SettingsScreen extends StatelessWidget {
         trailing: CupertinoSwitch(
           value: value,
           onChanged: onChanged,
-          activeColor: CupertinoColors.activeGreen.resolveFrom(context),
+          activeTrackColor: CupertinoColors.activeGreen.resolveFrom(context),
         ),
       ),
     );

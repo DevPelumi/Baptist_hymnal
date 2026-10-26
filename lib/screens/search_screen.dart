@@ -12,10 +12,10 @@ import '../widgets/hymn_list_item.dart';
 
 class SearchScreen extends StatefulWidget {
   final int initialTabIndex;
-  const SearchScreen({Key? key, this.initialTabIndex = 0}) : super(key: key);
+  const SearchScreen({super.key, this.initialTabIndex = 0});
 
   @override
-  _SearchScreenState createState() => _SearchScreenState();
+  State<SearchScreen> createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen>
@@ -24,17 +24,15 @@ class _SearchScreenState extends State<SearchScreen>
   late TabController _tabController;
   late TextEditingController _textController;
   IHymnProvider? _provider;
-  bool _ascending = true;
-  bool _favorites = true;
 
   void _getData(BuildContext context) {
     if (!mounted) return;
 
-    final _update = () {
+    void update() {
       if (mounted) setState(() {});
-    };
+    }
 
-    _provider?.removeListener(_update);
+    _provider?.removeListener(update);
 
     switch (_tabController.index) {
       case 1:
@@ -48,7 +46,7 @@ class _SearchScreenState extends State<SearchScreen>
         break;
     }
 
-    _provider?.addListener(_update);
+    _provider?.addListener(update);
     _displayedData = _filterHymns(_textController.text);
   }
 

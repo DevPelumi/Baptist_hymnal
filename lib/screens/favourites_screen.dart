@@ -1,5 +1,4 @@
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../providers/english_hymn_provider.dart';
@@ -15,6 +14,8 @@ const style = TextStyle(
 );
 
 class Favourites extends StatelessWidget {
+  const Favourites({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
