@@ -54,6 +54,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # google_mobile_ads only ships CocoaPods, which can't be mixed with
+  # Swift Package Manager plugins, so keep iOS on CocoaPods.
+  config:
+    enable-swift-package-manager: false
+
   assets:
     - assets/images/hymnal1.jpg
     - assets/images/hymnal2.jpg
