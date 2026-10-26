@@ -123,7 +123,8 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   void initState() {
     super.initState();
-    AdHelper.preloadInterstitialAd();
+    // Retries ad setup if it failed at launch (for example, opened offline).
+    AdHelper.initialize().whenComplete(AdHelper.preloadInterstitialAd);
   }
 
   @override

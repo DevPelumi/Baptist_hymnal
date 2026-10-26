@@ -49,22 +49,26 @@ class AdHelper {
   }
 
   /// Gathers GDPR consent (UMP), asks for iOS tracking permission, then starts
-  /// the Mobile Ads SDK. Safe to call more than once.
+  /// the Mobile Ads SDK. Safe to call more than once; if consent could not be
+  /// checked (usually no connection), the next call tries again.
   static Future<void> initialize() => _initialization ??= _initialize();
 
   static Future<void> _initialize() async {
-    await _gatherConsent();
+    final consentChecked = await _gatherConsent();
     if (Platform.isIOS) {
       await _requestTrackingAuthorization();
     }
     if (await ConsentInformation.instance.canRequestAds()) {
       await MobileAds.instance.initialize();
       canRequestAds.value = true;
+    } else if (!consentChecked) {
+      _initialization = null;
     }
   }
 
-  static Future<void> _gatherConsent() {
-    final completer = Completer<void>();
+  /// Completes with whether the consent status could be checked.
+  static Future<bool> _gatherConsent() {
+    final completer = Completer<bool>();
     ConsentInformation.instance.requestConsentInfoUpdate(
       ConsentRequestParameters(),
       () {
@@ -72,12 +76,12 @@ class AdHelper {
           if (error != null) {
             debugPrint('Consent form error: ${error.message}');
           }
-          completer.complete();
+          completer.complete(true);
         });
       },
       (FormError error) {
         debugPrint('Consent info update failed: ${error.message}');
-        completer.complete();
+        completer.complete(false);
       },
     );
     return completer.future;

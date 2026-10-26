@@ -52,6 +52,9 @@ class HymnListItem extends StatelessWidget {
             )
           : null,
       onTap: () {
+        // Otherwise the search field takes focus back, and the keyboard
+        // with it, when the user returns from the hymn.
+        FocusScope.of(context).unfocus();
         Navigator.push(
           context,
           MaterialPageRoute(

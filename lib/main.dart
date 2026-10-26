@@ -195,7 +195,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: AdaptiveBottomNavigationBar(
         selectedIndex: _selectedPage,
         onTap: (index) => setState(() => _selectedPage = index),
-        selectedItemColor: PlatformInfo.isIOS ? null : brandGreen,
         items: [
           AdaptiveNavigationDestination(
             icon: platformIcon(
