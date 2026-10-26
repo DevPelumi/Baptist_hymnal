@@ -57,7 +57,7 @@ android {
         // Keep Android 6 (API 23). Written as a method call because Flutter's
         // migrator rewrites a plain `minSdkVersion 23` to flutter.minSdkVersion (24).
         minSdkVersion(23)
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
