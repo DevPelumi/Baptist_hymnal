@@ -56,6 +56,36 @@ void main() {
     expect(reviewRequests(), 1);
   });
 
+  test('a new user is still asked after five hymns', () async {
+    await ReviewPrompt.initialize();
+    await readHymns(4);
+    expect(reviewRequests(), 0);
+
+    await readHymns(1);
+    expect(reviewRequests(), 1);
+  });
+
+  test('someone who used an older version is asked after one hymn', () async {
+    SharedPreferences.setMockInitialValues({'english': <String>['12']});
+    await ReviewPrompt.initialize();
+    await readHymns(1);
+    expect(reviewRequests(), 1);
+  });
+
+  test('later launches keep the count', () async {
+    await ReviewPrompt.initialize();
+    await readHymns(3);
+    // A setting saved since the first launch doesn't make this an older user.
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('settings/darkMode', true);
+    await ReviewPrompt.initialize();
+    await readHymns(1);
+    expect(reviewRequests(), 0);
+
+    await readHymns(1);
+    expect(reviewRequests(), 1);
+  });
+
   test('tries again later if reviews are unavailable', () async {
     available = false;
     await readHymns(6);

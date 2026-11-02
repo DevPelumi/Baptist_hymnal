@@ -19,6 +19,7 @@ import 'screens/search_screen.dart';
 import 'utils/analytics_tracker.dart';
 import 'utils/hymn_of_the_day.dart';
 import 'utils/platform_icons.dart';
+import 'utils/review_prompt.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -182,6 +183,7 @@ class _FirstScreenState extends State<FirstScreen> {
       englishHymn.fetchFavorites(),
       responsive.fetchFavorites(),
       yorubaHymn.fetchFavorites(),
+      ReviewPrompt.initialize(),
     ]);
 
     FlutterNativeSplash.remove();
