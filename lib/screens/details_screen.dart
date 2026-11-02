@@ -11,7 +11,8 @@ import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
 import '../utils/platform_icons.dart';
 import '../widgets/banner_ad_widget.dart';
-import '../widgets/tune_controls.dart';
+import '../widgets/tune_mini_player.dart';
+import '../widgets/tune_parts.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
 
@@ -132,6 +133,15 @@ class _DetailScreenState extends State<DetailScreen> {
     final midiAsset = widget.provider is EnglishHymnProvider
         ? englishHymnAudioAsset(widget.hymn.id)
         : null;
+    final tune = midiAsset == null
+        ? null
+        : HymnTune(
+            hymnId: widget.hymn.id,
+            title: widget.hymn.title,
+            midiAsset: midiAsset,
+            verseCount: englishHymnVerseCount(widget.hymn.contents),
+            includesRefrain: englishTuneIncludesRefrain(widget.hymn.id),
+          );
     final isFavorite = widget.provider.isFavorite(widget.hymn.id);
 
     // Fires for back button, system back and iOS swipe, but not when the
@@ -204,69 +214,75 @@ class _DetailScreenState extends State<DetailScreen> {
             return Column(
               children: [
                 Expanded(
-                  child: ListView(
-                    padding: EdgeInsets.fromLTRB(16, insets.top + 16, 16, 32),
-                    children: <Widget>[
-                      Text(
-                        '${_getHymnCategory()} ${widget.hymn.id}'.toUpperCase(),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1.2,
-                          color: PlatformInfo.isIOS
-                              ? CupertinoColors.systemGreen.resolveFrom(context)
-                              : brandGreen,
-                        ),
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        widget.hymn.title,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 23,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Alata',
-                          color: Theme.of(context).textTheme.bodyLarge?.color,
-                        ),
-                      ),
-                      const Divider(
-                        height: 24,
-                        thickness: 1.5,
-                        indent: 70,
-                        endIndent: 70,
-                        color: brandGreen,
-                      ),
-                      Consumer<SettingsProvider>(
-                        builder: (ctx, provider, _) => _getContentWidget(
-                          provider.getFontSize().toDouble(),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SafeArea(
-                  top: false,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                  child: Stack(
                     children: [
-                      if (midiAsset != null)
-                        TuneControls(
-                          hymnId: widget.hymn.id,
-                          midiAsset: midiAsset,
-                          verseCount: englishHymnVerseCount(
-                            widget.hymn.contents,
-                          ),
+                      Positioned.fill(
+                        child: _lyrics(context, insets.top, tune),
+                      ),
+                      // Floats over the lyrics, which scroll under its glass.
+                      if (tune != null)
+                        Positioned(
+                          left: 12,
+                          right: 12,
+                          bottom: 8,
+                          child: TuneMiniPlayer(tune: tune),
                         ),
-                      const BannerAdWidget(),
                     ],
                   ),
                 ),
+                SafeArea(top: false, child: const BannerAdWidget()),
               ],
             );
           },
         ),
       ),
+    );
+  }
+
+  Widget _lyrics(BuildContext context, double topInset, HymnTune? tune) {
+    return ListView(
+      padding: EdgeInsets.fromLTRB(
+        16,
+        topInset + 16,
+        16,
+        32 + (tune == null ? 0 : TuneMiniPlayer.height + 8),
+      ),
+      children: <Widget>[
+        Text(
+          '${_getHymnCategory()} ${widget.hymn.id}'.toUpperCase(),
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 1.2,
+            color: PlatformInfo.isIOS
+                ? CupertinoColors.systemGreen.resolveFrom(context)
+                : brandGreen,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          widget.hymn.title,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 23,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Alata',
+            color: Theme.of(context).textTheme.bodyLarge?.color,
+          ),
+        ),
+        const Divider(
+          height: 24,
+          thickness: 1.5,
+          indent: 70,
+          endIndent: 70,
+          color: brandGreen,
+        ),
+        Consumer<SettingsProvider>(
+          builder: (ctx, provider, _) =>
+              _getContentWidget(provider.getFontSize().toDouble()),
+        ),
+      ],
     );
   }
 }

@@ -33,6 +33,7 @@ dependencies:
   app_tracking_transparency: ^2.0.7
   flutter_midi_pro: ^4.0.4
   adaptive_platform_ui: ^1.0.2
+  liquid_glass_widgets: ^1.16.1
 
 dev_dependencies:
   flutter_lints: ^6.0.0

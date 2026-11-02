@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
@@ -7,6 +9,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
+    show LiquidGlassWidgets;
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
@@ -35,7 +39,17 @@ void main() async {
     );
   });
 
-  runApp(const MyApp());
+  // The tune player is liquid glass on iOS. Load its shaders now, without
+  // holding up launch: the player is never on the first screen.
+  if (PlatformInfo.isIOS) unawaited(LiquidGlassWidgets.initialize());
+
+  runApp(
+    LiquidGlassWidgets.wrap(
+      // The app's own light/dark setting can differ from the system's.
+      brightnessResolver: Theme.maybeBrightnessOf,
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

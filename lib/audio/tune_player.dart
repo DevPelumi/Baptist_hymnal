@@ -39,6 +39,8 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
   double _progress = 0;
   bool _betweenVerses = false;
   bool _restartOnResume = false;
+  // Where in the verse to start when [_restartOnResume] resumes.
+  double _resumeWithin = 0;
 
   TuneState get state => _state;
   int? get hymnId => _hymnId;
@@ -48,12 +50,27 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
   bool get repeat => _repeat;
   double get progress => _progress;
 
+  /// How far into the whole hymn playback is, and how long the whole hymn
+  /// takes, at the current speed.
+  Duration get position => _atSpeed(_progress * _verseCount * _passMicros);
+  Duration get duration => _atSpeed(_verseCount * _passMicros);
+
+  bool get _ready => _state == TuneState.playing || _state == TuneState.paused;
+
+  /// False on the last verse, unless repeat goes round to the first.
+  bool get hasNextVerse =>
+      _ready && (_verseIndex + 1 < _verseCount || _repeat);
+
   // Android: polls the native player for progress and the end of the tune.
   Timer? _statusPoll;
   Timer? _gapTimer;
 
-  // iOS: schedules notes from the parsed file.
+  // The tune being played: its length on both platforms, and on iOS the
+  // notes to schedule.
   MidiFile? _tune;
+  (String, MidiFile)? _lastLoaded;
+
+  // iOS: schedules notes from the parsed file.
   Timer? _ticker;
   final Stopwatch _clock = Stopwatch();
   int _tuneMicrosAtClockStart = 0;
@@ -64,21 +81,26 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
   bool isPlayingHymn(int hymnId) =>
       _hymnId == hymnId && _state != TuneState.stopped;
 
-  Future<void> play(int hymnId, String midiAsset, {int verses = 1}) async {
+  Future<void> play(
+    int hymnId,
+    String midiAsset, {
+    int verses = 1,
+    int startVerse = 0,
+  }) async {
     await stop();
     _hymnId = hymnId;
     _midiAsset = midiAsset;
     _verseCount = verses < 1 ? 1 : verses;
-    _verseIndex = 0;
+    _verseIndex = startVerse.clamp(0, _verseCount - 1);
     _setState(TuneState.loading);
     try {
       final sfId = await (_soundfont ??= _loadSoundfont());
+      final tune = await _load(midiAsset);
       if (_hymnId != hymnId) return; // stopped or replaced while loading
+      _tune = tune;
       if (Platform.isIOS) {
         // Ads can take over the audio session, so claim it on every play.
         await _midi.configureAudioSession(mixWithOthers: false);
-        final data = await rootBundle.load(midiAsset);
-        _tune = MidiFile.parse(data.buffer.asUint8List());
         _tuneMicrosAtClockStart = 0;
         _nextEvent = 0;
         _startTicker(sfId);
@@ -90,7 +112,7 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
         _startStatusPoll();
       }
       if (_hymnId != hymnId) return;
-      _progress = 0;
+      _progress = _verseIndex / _verseCount;
       _setState(TuneState.playing);
     } catch (e) {
       debugPrint('Tune playback failed: $e');
@@ -110,7 +132,9 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
     }
     if (Platform.isIOS) {
       _tuneMicrosAtClockStart = _tuneMicros;
-      _clock.stop();
+      _clock
+        ..stop()
+        ..reset();
       _ticker?.cancel();
       await _releaseSounding();
     } else {
@@ -125,7 +149,8 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
     if (_restartOnResume) {
       _restartOnResume = false;
       _setState(TuneState.playing);
-      await _restartTune();
+      await _restartTune(within: _resumeWithin);
+      _resumeWithin = 0;
       return;
     }
     final sfId = await _soundfont!;
@@ -148,6 +173,7 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
     _verseCount = 1;
     _betweenVerses = false;
     _restartOnResume = false;
+    _resumeWithin = 0;
     _gapTimer?.cancel();
     _ticker?.cancel();
     _statusPoll?.cancel();
@@ -187,6 +213,39 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
     notifyListeners();
   }
 
+  /// Moves to [fraction] of the way through the whole hymn.
+  Future<void> seekTo(double fraction) async {
+    if (!_ready) return;
+    final at = fraction.clamp(0.0, 1.0) * _verseCount;
+    final verse = at.floor().clamp(0, _verseCount - 1);
+    await _jumpTo(verse, at - verse);
+  }
+
+  /// Starts [verse] (counting from 0) from its beginning.
+  Future<void> playVerse(int verse) async {
+    if (!_ready) return;
+    await _jumpTo(verse.clamp(0, _verseCount - 1), 0);
+  }
+
+  Future<void> nextVerse() async {
+    if (!hasNextVerse) return;
+    await _jumpTo((_verseIndex + 1) % _verseCount, 0);
+  }
+
+  /// Back to the start of this verse, or to the verse before when already
+  /// within a few seconds of the start.
+  Future<void> previousVerse() async {
+    if (!_ready) return;
+    final intoVerse =
+        _atSpeed((_progress * _verseCount - _verseIndex) * _passMicros);
+    final back = intoVerse < const Duration(seconds: 3) && _verseIndex > 0;
+    await _jumpTo(back ? _verseIndex - 1 : _verseIndex, 0);
+  }
+
+  /// How long one pass of [midiAsset] takes at normal speed.
+  Future<Duration> passLength(String midiAsset) async =>
+      Duration(microseconds: (await _load(midiAsset)).durationMicros);
+
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     // Dart timers stop in the background, which would leave notes hanging.
@@ -209,6 +268,20 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
       rethrow;
     }
   }
+
+  Future<MidiFile> _load(String midiAsset) async {
+    final last = _lastLoaded;
+    if (last != null && last.$1 == midiAsset) return last.$2;
+    final data = await rootBundle.load(midiAsset);
+    final tune = MidiFile.parse(data.buffer.asUint8List());
+    _lastLoaded = (midiAsset, tune);
+    return tune;
+  }
+
+  int get _passMicros => _tune?.durationMicros ?? 0;
+
+  Duration _atSpeed(num micros) =>
+      Duration(microseconds: (micros / _speed).round());
 
   void _setState(TuneState state) {
     _state = state;
@@ -291,7 +364,8 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
     });
   }
 
-  Future<void> _restartTune() async {
+  /// Plays the current verse again from [within] (0 to 1) of the way in.
+  Future<void> _restartTune({double within = 0}) async {
     final asset = _midiAsset;
     final loaded = _soundfont;
     if (asset == null || loaded == null || _hymnId == null) return;
@@ -299,20 +373,77 @@ class TunePlayer extends ChangeNotifier with WidgetsBindingObserver {
       final sfId = await loaded;
       if (_state != TuneState.playing || _hymnId == null) return;
       if (Platform.isIOS) {
-        _tuneMicrosAtClockStart = 0;
-        _nextEvent = 0;
+        _moveTicker(within);
         _startTicker(sfId);
       } else {
         await _midi.stopMidi();
         await _midi.loadMidiAsset(assetPath: asset, sfId: sfId);
         await _midi.setMidiTempo(_speed);
         await _midi.playMidi();
+        // The player only knows the file's length once it is playing.
+        if (within > 0) await _seekAndroid(within);
         _startStatusPoll();
       }
     } catch (e) {
       debugPrint('Next verse failed: $e');
       await stop();
     }
+  }
+
+  /// Moves to [within] (0 to 1) of the way through [verse], playing on from
+  /// there if the tune was playing.
+  Future<void> _jumpTo(int verse, double within) async {
+    final hymnId = _hymnId;
+    final loaded = _soundfont;
+    if (hymnId == null || loaded == null || _tune == null) return;
+    final passEnded = _betweenVerses || _restartOnResume;
+    _gapTimer?.cancel();
+    _betweenVerses = false;
+    _restartOnResume = false;
+    _verseIndex = verse;
+    _progress = (verse + within) / _verseCount;
+    notifyListeners();
+    final playing = _state == TuneState.playing;
+    try {
+      final sfId = await loaded;
+      if (Platform.isIOS) {
+        _ticker?.cancel();
+        await _releaseSounding();
+        _moveTicker(within);
+        if (playing) _startTicker(sfId);
+      } else if (passEnded) {
+        // The player has finished the last pass, so it needs loading again.
+        if (playing) {
+          await _restartTune(within: within);
+        } else {
+          _restartOnResume = true;
+          _resumeWithin = within;
+        }
+      } else {
+        _statusPoll?.cancel();
+        await _seekAndroid(within);
+        if (playing) _startStatusPoll();
+      }
+    } catch (e) {
+      debugPrint('Moving in the tune failed: $e');
+      if (_hymnId == hymnId) await stop();
+    }
+  }
+
+  void _moveTicker(double within) {
+    final tune = _tune!;
+    _clock
+      ..stop()
+      ..reset();
+    _tuneMicrosAtClockStart = (within * tune.durationMicros).round();
+    final next =
+        tune.events.indexWhere((e) => e.timeMicros >= _tuneMicrosAtClockStart);
+    _nextEvent = next < 0 ? tune.events.length : next;
+  }
+
+  Future<void> _seekAndroid(double within) async {
+    final status = await _midi.getMidiPlayerState();
+    await _midi.seekMidi((within * status.totalTicks).round());
   }
 
   Future<void> _releaseSounding() async {
