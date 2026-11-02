@@ -68,10 +68,3 @@ flutter:
     - family: Alata
       fonts:
         - asset: assets/fonts/Alata-Regular.ttf
-
-flutter_native_splash:
-  color: "#4CAF50" # Placeholder: Replace with your desired color
-  image: assets/images/splash_logo.png # Placeholder: Uncomment and replace if you have an image
-  android_12:
-    color: "#4CAF50" # Placeholder: Replace with your desired color
-    # image: assets/images/splash_logo.png # Placeholder: Uncomment and replace if you have an image

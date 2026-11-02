@@ -1,9 +1,17 @@
+# The launch screen: the app's own background with the logo in the middle,
+# so launch flows straight into the first screen.
+# Regenerate with: dart run flutter_native_splash:create
 flutter_native_splash:
-  color: "#4CAF50"
-  color_dark: "#2E7D32"
+  color: "#F7FBF2"
+  color_dark: "#101510"
+  color_ios: "#FFFFFF"
+  color_dark_ios: "#000000"
+  image: assets/images/splash_logo.png
+  image_dark: assets/images/splash_logo.png
   android_12:
-    color: "#4CAF50"
-    color_dark: "#2E7D32"
-    icon_background_color: "#4CAF50"
-    icon_background_color_dark: "#2E7D32"
+    # Android 12+ crops the icon to a circle; this one is padded to fit it.
+    image: assets/images/splash_logo_android12.png
+    image_dark: assets/images/splash_logo_android12.png
+    color: "#F7FBF2"
+    color_dark: "#101510"
   web: false
