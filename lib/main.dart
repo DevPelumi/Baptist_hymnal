@@ -109,9 +109,14 @@ class MyApp extends StatelessWidget {
               DefaultCupertinoLocalizations.delegate,
               DefaultWidgetsLocalizations.delegate,
             ],
-            builder: (context, child) => PlatformInfo.isIOS
-                ? Theme(data: isDark ? darkTheme : lightTheme, child: child!)
-                : child!,
+            // On a half-folded foldable, the app keeps to one side of the
+            // fold rather than running the words through the crease. Flat
+            // and on ordinary phones, this changes nothing.
+            builder: (context, child) => DisplayFeatureSubScreen(
+              child: PlatformInfo.isIOS
+                  ? Theme(data: isDark ? darkTheme : lightTheme, child: child!)
+                  : child!,
+            ),
             navigatorObservers: [
               FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
             ],

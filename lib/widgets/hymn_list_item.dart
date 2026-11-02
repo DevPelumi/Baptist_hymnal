@@ -5,45 +5,49 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
     show
         GlassContextMenu,
         GlassContextMenuAction,
+        GlassMenu,
+        GlassMenuAlignment,
+        GlassMenuItem,
         GlassSwipeAction,
         GlassSwipeActions;
 
 import '../models/hymn_data.dart';
 import '../providers/hymn_provider.dart';
 import '../screens/details_screen.dart';
+import '../utils/hymn_helper_functions.dart';
 import '../utils/platform_icons.dart';
 import '../utils/share_hymn.dart';
 
-/// A hymn row: its number, its title, and a heart when it is a favourite.
+/// A hymn row, laid out like a song in Apple Music: the number in a circle
+/// where the artwork goes, the title over the hymn's opening words, and a
+/// "…" button for its actions.
 ///
-/// iOS: swipe right to favourite, left to share, or touch and hold for a
-/// preview of the first verse with the same actions. Android: touch and hold
-/// for a menu.
+/// iOS also takes a swipe right to favourite, left to share, and a touch and
+/// hold for a preview of the first verse. Android takes a touch and hold for
+/// the same menu as "…".
 class HymnListItem extends StatelessWidget {
   final HymnData hymn;
   final IHymnProvider provider;
   final bool showFavorite;
-
-  /// Extra space on the right, to clear the number index.
-  final double endInset;
 
   const HymnListItem({
     super.key,
     required this.hymn,
     required this.provider,
     this.showFavorite = true,
-    this.endInset = 0,
   });
 
-  /// Every row is this tall, so a list can jump straight to any hymn.
-  /// Titles stay on one line; the height grows with the text size.
-  static double extent(BuildContext context) {
-    final text = MediaQuery.textScalerOf(context).scale(17);
-    return (text + (PlatformInfo.isIOS ? 28 : 34)).clamp(48, 120);
-  }
+  static final double _badge = PlatformInfo.isIOS ? 44 : 40;
+  static const double _gap = 12;
 
-  static const double _numberWidth = 40;
-  static const double _gap = 14;
+  /// Every row is this tall, so the scrubber can land on any hymn. It grows
+  /// with the text size; the title and subtitle stay on one line each.
+  static double extent(BuildContext context) {
+    final scaler = MediaQuery.textScalerOf(context);
+    final text = (scaler.scale(17) + scaler.scale(15)) * 1.25 + 2;
+    final min = PlatformInfo.isIOS ? 64.0 : 72.0;
+    return (text + 20).clamp(min, 160);
+  }
 
   void _open(BuildContext context) {
     // Otherwise the search field takes focus back, and the keyboard with it,
@@ -59,51 +63,64 @@ class HymnListItem extends StatelessWidget {
 
   void _toggleFavorite() => provider.toggleFavoriteForHymn(hymn.id);
 
+  String _favouriteLabel(bool isFavorite) => PlatformInfo.isIOS
+      ? (isFavorite ? 'Remove from Favourites' : 'Add to Favourites')
+      : (isFavorite ? 'Remove from favourites' : 'Add to favourites');
+
   @override
   Widget build(BuildContext context) {
     final isFavorite = provider.isFavorite(hymn.id);
-    final row = _content(context, isFavorite);
     return PlatformInfo.isIOS
-        ? _ios(context, row, isFavorite)
-        : _android(context, row, isFavorite);
+        ? _ios(context, isFavorite)
+        : _android(context, isFavorite);
   }
 
-  Widget _content(BuildContext context, bool isFavorite) {
+  Widget _row(BuildContext context, bool isFavorite, Widget more) {
     final isIOS = PlatformInfo.isIOS;
+    final subtitle = HymnHelperFunctions.openingLine(hymn);
     return SizedBox(
       height: extent(context),
       child: Padding(
-        padding: EdgeInsets.only(left: 16, right: 16 + endInset),
+        padding: const EdgeInsets.only(left: 16, right: 4),
         child: Row(
           children: [
-            SizedBox(
-              width: _numberWidth,
-              child: Text(
-                '${hymn.id}',
-                textAlign: TextAlign.right,
-                maxLines: 1,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: accentColor(context),
-                  fontFeatures: const [FontFeature.tabularFigures()],
-                ),
-              ),
-            ),
+            _NumberBadge(id: hymn.id, size: _badge),
             const SizedBox(width: _gap),
             Expanded(
-              child: Text(
-                hymn.title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: isIOS
-                    ? TextStyle(fontSize: 17, color: labelColor(context))
-                    : Theme.of(context).textTheme.bodyLarge,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    hymn.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: isIOS
+                        ? TextStyle(fontSize: 17, color: labelColor(context))
+                        : Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  if (subtitle.isNotEmpty) ...[
+                    const SizedBox(height: 2),
+                    Text(
+                      subtitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: isIOS
+                          ? TextStyle(
+                              fontSize: 15,
+                              color: secondaryLabelColor(context),
+                            )
+                          : Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: secondaryLabelColor(context),
+                            ),
+                    ),
+                  ],
+                ],
               ),
             ),
             if (showFavorite && isFavorite)
               Padding(
-                padding: const EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 6),
                 child: Icon(
                   platformIconData(
                     cupertino: CupertinoIcons.heart_fill,
@@ -111,25 +128,52 @@ class HymnListItem extends StatelessWidget {
                   ),
                   semanticLabel: 'Favourite',
                   color: CupertinoColors.systemPink.resolveFrom(context),
-                  size: 16,
+                  size: 14,
                 ),
               ),
+            more,
           ],
         ),
       ),
     );
   }
 
-  Widget _ios(BuildContext context, Widget row, bool isFavorite) {
-    final favouriteLabel = isFavorite ? 'Unfavourite' : 'Favourite';
+  Widget _ios(BuildContext context, bool isFavorite) {
     final heart = isFavorite
         ? CupertinoIcons.heart_slash_fill
         : CupertinoIcons.heart_fill;
+    // The "…" pull-down: a glass menu that grows out of the button.
+    final more = GlassMenu(
+      menuAlignment: GlassMenuAlignment.topRight,
+      autoAdjustToScreen: true,
+      menuWidth: 250,
+      semanticLabel: 'More actions',
+      trigger: SizedBox.square(
+        dimension: 44,
+        child: Icon(
+          CupertinoIcons.ellipsis,
+          size: 20,
+          color: labelColor(context),
+        ),
+      ),
+      items: [
+        GlassMenuItem(
+          title: _favouriteLabel(isFavorite),
+          icon: Icon(heart),
+          onTap: _toggleFavorite,
+        ),
+        GlassMenuItem(
+          title: 'Share',
+          icon: const Icon(CupertinoIcons.share),
+          onTap: () => shareHymn(context, hymn),
+        ),
+      ],
+    );
     // Separators start at the title, as in iOS lists.
     final tile = _PressableRow(
       onTap: () => _open(context),
-      separatorIndent: 16 + _numberWidth + _gap,
-      child: row,
+      separatorIndent: 16 + _badge + _gap,
+      child: _row(context, isFavorite, more),
     );
     return GlassSwipeActions(
       leadingActions: [
@@ -137,7 +181,7 @@ class HymnListItem extends StatelessWidget {
           // Icon-only, as in iOS 26 Mail; a label under the button is too
           // faint to read over the list.
           icon: Icon(heart),
-          semanticLabel: favouriteLabel,
+          semanticLabel: isFavorite ? 'Unfavourite' : 'Favourite',
           backgroundColor: CupertinoColors.systemPink.resolveFrom(context),
           onTap: _toggleFavorite,
         ),
@@ -157,9 +201,7 @@ class HymnListItem extends StatelessWidget {
           GlassContextMenuAction(
             icon: Icon(heart),
             onPressed: _toggleFavorite,
-            child: Text(
-              isFavorite ? 'Remove from Favourites' : 'Add to Favourites',
-            ),
+            child: Text(_favouriteLabel(isFavorite)),
           ),
           GlassContextMenuAction(
             icon: const Icon(CupertinoIcons.share),
@@ -172,7 +214,37 @@ class HymnListItem extends StatelessWidget {
     );
   }
 
-  Widget _android(BuildContext context, Widget row, bool isFavorite) {
+  Widget _android(BuildContext context, bool isFavorite) {
+    List<PopupMenuEntry<String>> items() => [
+      PopupMenuItem(
+        value: 'favourite',
+        child: ListTile(
+          leading: Icon(
+            isFavorite ? Icons.heart_broken_outlined : Icons.favorite_border,
+          ),
+          title: Text(_favouriteLabel(isFavorite)),
+        ),
+      ),
+      const PopupMenuItem(
+        value: 'share',
+        child: ListTile(leading: Icon(Icons.share), title: Text('Share')),
+      ),
+    ];
+    void onSelected(String choice) {
+      switch (choice) {
+        case 'favourite':
+          _toggleFavorite();
+        case 'share':
+          shareHymn(context, hymn);
+      }
+    }
+
+    final more = PopupMenuButton<String>(
+      tooltip: 'More actions',
+      icon: const Icon(Icons.more_vert),
+      itemBuilder: (_) => items(),
+      onSelected: onSelected,
+    );
     Offset? pressedAt;
     return Material(
       type: MaterialType.transparency,
@@ -189,43 +261,48 @@ class HymnListItem extends StatelessWidget {
               at & Size.zero,
               Offset.zero & overlay.size,
             ),
-            items: [
-              PopupMenuItem(
-                value: 'favourite',
-                child: ListTile(
-                  leading: Icon(
-                    isFavorite ? Icons.heart_broken_outlined : Icons.favorite,
-                  ),
-                  title: Text(
-                    isFavorite ? 'Remove from favourites' : 'Add to favourites',
-                  ),
-                ),
-              ),
-              const PopupMenuItem(
-                value: 'share',
-                child: ListTile(
-                  leading: Icon(Icons.share),
-                  title: Text('Share'),
-                ),
-              ),
-            ],
+            items: items(),
           );
-          if (!context.mounted) return;
-          switch (choice) {
-            case 'favourite':
-              _toggleFavorite();
-            case 'share':
-              shareHymn(context, hymn);
-          }
+          if (choice != null && context.mounted) onSelected(choice);
         },
-        child: row,
+        child: _row(context, isFavorite, more),
       ),
     );
   }
 }
 
-/// iOS row press: the grey highlight a UITableView cell shows while touched,
-/// and a hairline separator from [separatorIndent] to the edge.
+/// The hymn number in a green circle, where Apple Music puts the artwork.
+class _NumberBadge extends StatelessWidget {
+  const _NumberBadge({required this.id, required this.size});
+
+  final int id;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size,
+      height: size,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: accentColor(context),
+        shape: BoxShape.circle,
+      ),
+      child: Text(
+        '$id',
+        maxLines: 1,
+        textScaler: TextScaler.noScaling,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: id >= 100 ? size * 0.33 : size * 0.38,
+          fontWeight: FontWeight.w600,
+          fontFeatures: const [FontFeature.tabularFigures()],
+        ),
+      ),
+    );
+  }
+}
+
 class _PressableRow extends StatefulWidget {
   const _PressableRow({
     required this.onTap,

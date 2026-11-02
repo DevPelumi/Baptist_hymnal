@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../providers/english_hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
+import '../utils/responsive.dart';
 import '../widgets/favorite_tab.dart';
 
 class Favourites extends StatefulWidget {
@@ -24,29 +25,35 @@ class _FavouritesState extends State<Favourites> {
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
           final insets = MediaQuery.paddingOf(context);
-          return Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 8),
-                child: AdaptiveSegmentedControl(
-                  labels: const ['English', 'Yoruba', 'Reading'],
-                  selectedIndex: _book,
-                  onValueChanged: (index) => setState(() => _book = index),
+          // A centred column on a tablet, not the full width.
+          return Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Responsive.inset(context),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 8),
+                  child: AdaptiveSegmentedControl(
+                    labels: const ['English', 'Yoruba', 'Reading'],
+                    selectedIndex: _book,
+                    onValueChanged: (index) => setState(() => _book = index),
+                  ),
                 ),
-              ),
-              Expanded(
-                // The segmented control already sits below the toolbar.
-                child: MediaQuery.removePadding(
-                  context: context,
-                  removeTop: true,
-                  child: switch (_book) {
-                    1 => const FavoriteTab<YorubaHymnProvider>(),
-                    2 => const FavoriteTab<ResponsiveReadingProvider>(),
-                    _ => const FavoriteTab<EnglishHymnProvider>(),
-                  },
+                Expanded(
+                  // The segmented control already sits below the toolbar.
+                  child: MediaQuery.removePadding(
+                    context: context,
+                    removeTop: true,
+                    child: switch (_book) {
+                      1 => const FavoriteTab<YorubaHymnProvider>(),
+                      2 => const FavoriteTab<ResponsiveReadingProvider>(),
+                      _ => const FavoriteTab<EnglishHymnProvider>(),
+                    },
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           );
         },
       ),

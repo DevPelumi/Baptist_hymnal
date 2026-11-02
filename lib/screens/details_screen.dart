@@ -9,6 +9,7 @@ import "package:baptist_hymnal/ad_helper.dart";
 import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
 import '../utils/platform_icons.dart';
+import '../utils/responsive.dart';
 import '../utils/review_prompt.dart';
 import '../utils/share_hymn.dart';
 import '../widgets/banner_ad_widget.dart';
@@ -208,8 +209,8 @@ class _DetailScreenState extends State<DetailScreen> {
                       // Floats over the lyrics, which scroll under its glass.
                       if (tune != null)
                         Positioned(
-                          left: 12,
-                          right: 12,
+                          left: 12 + Responsive.inset(context),
+                          right: 12 + Responsive.inset(context),
                           bottom: 8,
                           child: TuneMiniPlayer(tune: tune),
                         ),
@@ -226,11 +227,13 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Widget _lyrics(BuildContext context, double topInset, HymnTune? tune) {
+    // On a tablet the words are a centred column, not the full width.
+    final side = 16 + Responsive.inset(context);
     return ListView(
       padding: EdgeInsets.fromLTRB(
-        16,
+        side,
         topInset + 16,
-        16,
+        side,
         32 + (tune == null ? 0 : TuneMiniPlayer.height + 8),
       ),
       children: <Widget>[

@@ -9,12 +9,14 @@ import 'package:provider/provider.dart';
 import '../providers/hymn_provider.dart';
 import '../utils/hymn_helper_functions.dart';
 import '../utils/platform_icons.dart';
-import '../widgets/hymn_index_bar.dart';
+import '../utils/responsive.dart';
+import '../models/hymn_data.dart';
 import '../widgets/hymn_list_item.dart';
+import '../widgets/hymn_scrubber.dart';
 
 /// One book (English, Yoruba or Responsive Reading): a header photo and every
-/// hymn in it, with a search field at the top and a number index down the
-/// side for jumping through the book.
+/// hymn in it, with a search field at the top and a scrubber down the side
+/// for jumping through the book.
 class HymnListScreen<T extends IHymnProvider> extends StatefulWidget {
   const HymnListScreen({
     super.key,
@@ -42,6 +44,9 @@ class _HymnListScreenState<T extends IHymnProvider>
   final _searchFocus = FocusNode();
   final _listKey = GlobalKey();
 
+  // The hymns on show, for the scrubber's label.
+  List<HymnData> _hymns = const [];
+
   @override
   void initState() {
     super.initState();
@@ -64,14 +69,20 @@ class _HymnListScreenState<T extends IHymnProvider>
     setState(() {});
   }
 
-  /// Scrolls so the hymn at [index] sits just below the bars, which take
-  /// [barsHeight] off the top of the list.
-  void _jumpTo(int index, double barsHeight) {
+  /// The hymn at the top of the list, just below the bars, which take
+  /// [barsHeight] off the top.
+  (int, String)? _topHymn(double barsHeight) {
     final list = _listKey.currentContext?.findRenderObject();
-    if (list is! RenderSliver || !_scroll.hasClients) return;
-    final top = list.constraints.precedingScrollExtent - barsHeight;
-    final offset = top + index * HymnListItem.extent(context);
-    _scroll.jumpTo(offset.clamp(0.0, _scroll.position.maxScrollExtent));
+    if (list is! RenderSliver || !_scroll.hasClients || _hymns.isEmpty) {
+      return null;
+    }
+    final intoList =
+        _scroll.offset + barsHeight - list.constraints.precedingScrollExtent;
+    final i = (intoList / HymnListItem.extent(context)).floor().clamp(
+      0,
+      _hymns.length - 1,
+    );
+    return (_hymns[i].id, _hymns[i].title);
   }
 
   @override
@@ -82,13 +93,15 @@ class _HymnListScreenState<T extends IHymnProvider>
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
           final insets = MediaQuery.paddingOf(context);
+          // On a tablet the list is a centred column, not the full width.
+          final side = Responsive.inset(context);
           return Consumer<T>(
             builder: (context, provider, _) {
               final hymns = HymnHelperFunctions.search(
                 provider.dataSource,
                 _query.text,
               );
-              final showIndex = !_searching && hymns.length > 40;
+              _hymns = hymns;
               final list = GlassSwipeActionScope(
                 child: CustomScrollView(
                   controller: _scroll,
@@ -96,16 +109,20 @@ class _HymnListScreenState<T extends IHymnProvider>
                       ScrollViewKeyboardDismissBehavior.onDrag,
                   slivers: [
                     SliverPadding(
-                      padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 12),
+                      padding: EdgeInsets.fromLTRB(
+                        16 + side,
+                        insets.top + 8,
+                        16 + side,
+                        12,
+                      ),
                       sliver: SliverToBoxAdapter(child: _searchField()),
                     ),
                     if (!_searching)
                       SliverPadding(
-                        // Clear of the number index beside it.
                         padding: EdgeInsets.fromLTRB(
-                          16,
+                          16 + side,
                           0,
-                          showIndex ? 16 + HymnIndexBar.width : 16,
+                          16 + side,
                           8,
                         ),
                         sliver: SliverToBoxAdapter(child: _header()),
@@ -116,14 +133,14 @@ class _HymnListScreenState<T extends IHymnProvider>
                         child: _noResults(context),
                       )
                     else
-                      SliverFixedExtentList.builder(
-                        key: _listKey,
-                        itemExtent: HymnListItem.extent(context),
-                        itemCount: hymns.length,
-                        itemBuilder: (context, i) => HymnListItem(
-                          hymn: hymns[i],
-                          provider: provider,
-                          endInset: showIndex ? HymnIndexBar.width - 8 : 0,
+                      SliverPadding(
+                        padding: EdgeInsets.symmetric(horizontal: side),
+                        sliver: SliverFixedExtentList.builder(
+                          key: _listKey,
+                          itemExtent: HymnListItem.extent(context),
+                          itemCount: hymns.length,
+                          itemBuilder: (context, i) =>
+                              HymnListItem(hymn: hymns[i], provider: provider),
                         ),
                       ),
                     SliverToBoxAdapter(
@@ -134,7 +151,15 @@ class _HymnListScreenState<T extends IHymnProvider>
               );
               return Stack(
                 children: [
-                  list,
+                  HymnScrubber(
+                    controller: _scroll,
+                    labelAt: () => _topHymn(insets.top),
+                    padding: EdgeInsets.only(
+                      top: insets.top + 8,
+                      bottom: insets.bottom + 8,
+                    ),
+                    child: list,
+                  ),
                   // iOS 26 bars float over the list, which fades out
                   // beneath them instead of showing through the title.
                   if (PlatformInfo.isIOS)
@@ -150,18 +175,6 @@ class _HymnListScreenState<T extends IHymnProvider>
                           ),
                           solidUntil: (insets.top - 2) / (insets.top + 12),
                         ),
-                      ),
-                    ),
-                  if (showIndex)
-                    Positioned(
-                      right: 2,
-                      // Below the search field, which is taller on Android.
-                      top: insets.top + (PlatformInfo.isIOS ? 64 : 84),
-                      bottom: insets.bottom + 16,
-                      width: HymnIndexBar.width,
-                      child: HymnIndexBar(
-                        ids: [for (final h in hymns) h.id],
-                        onSelected: (i) => _jumpTo(i, insets.top),
                       ),
                     ),
                 ],

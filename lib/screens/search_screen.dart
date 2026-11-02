@@ -11,6 +11,7 @@ import '../providers/english_hymn_provider.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
 import '../utils/hymn_helper_functions.dart';
+import '../utils/responsive.dart';
 import '../widgets/hymn_list_item.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -97,69 +98,80 @@ class _SearchScreenState extends State<SearchScreen> {
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
           final insets = MediaQuery.paddingOf(context);
-          return Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 0),
-                child: _buildSearchField(),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                child: AdaptiveSegmentedControl(
-                  labels: const ['English', 'Yoruba', 'Reading'],
-                  selectedIndex: _book,
-                  onValueChanged: (index) => setState(() {
-                    _book = index;
-                    _watchProvider();
-                  }),
+          // A centred column on a tablet, not the full width.
+          return Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Responsive.inset(context),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 0),
+                  child: _buildSearchField(),
                 ),
-              ),
-              Expanded(
-                child: results.isEmpty
-                    ? Center(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              CupertinoIcons.search,
-                              size: 56,
-                              color: secondary,
-                            ),
-                            const SizedBox(height: 16),
-                            Text(
-                              'No hymns found',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                                color: CupertinoColors.label.resolveFrom(
-                                  context,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                  child: AdaptiveSegmentedControl(
+                    labels: const ['English', 'Yoruba', 'Reading'],
+                    selectedIndex: _book,
+                    onValueChanged: (index) => setState(() {
+                      _book = index;
+                      _watchProvider();
+                    }),
+                  ),
+                ),
+                Expanded(
+                  child: results.isEmpty
+                      ? Center(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                CupertinoIcons.search,
+                                size: 56,
+                                color: secondary,
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'No hymns found',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                  color: CupertinoColors.label.resolveFrom(
+                                    context,
+                                  ),
                                 ),
                               ),
+                              const SizedBox(height: 8),
+                              Text(
+                                'Try a hymn number or other words',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: secondary,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      // One swiped-open row at a time.
+                      : GlassSwipeActionScope(
+                          child: ListView.builder(
+                            keyboardDismissBehavior:
+                                ScrollViewKeyboardDismissBehavior.onDrag,
+                            padding: EdgeInsets.only(
+                              bottom: insets.bottom + 16,
                             ),
-                            const SizedBox(height: 8),
-                            Text(
-                              'Try a hymn number or other words',
-                              style: TextStyle(fontSize: 15, color: secondary),
+                            itemCount: results.length,
+                            itemBuilder: (ctx, i) => HymnListItem(
+                              hymn: results[i],
+                              provider: _provider!,
+                              showFavorite: false,
                             ),
-                          ],
-                        ),
-                      )
-                    // One swiped-open row at a time.
-                    : GlassSwipeActionScope(
-                        child: ListView.builder(
-                          keyboardDismissBehavior:
-                              ScrollViewKeyboardDismissBehavior.onDrag,
-                          padding: EdgeInsets.only(bottom: insets.bottom + 16),
-                          itemCount: results.length,
-                          itemBuilder: (ctx, i) => HymnListItem(
-                            hymn: results[i],
-                            provider: _provider!,
-                            showFavorite: false,
                           ),
                         ),
-                      ),
-              ),
-            ],
+                ),
+              ],
+            ),
           );
         },
       ),

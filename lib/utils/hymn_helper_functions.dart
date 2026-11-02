@@ -48,6 +48,34 @@ class HymnHelperFunctions {
     return [...inTitle, ...inWords];
   }
 
+  /// The words to show under a hymn's title: its first line, or the next
+  /// one when the first opens with the title.
+  static String openingLine(HymnData hymn) =>
+      _openingLineCache[hymn] ??= _openingLine(hymn);
+
+  static final Expando<String> _openingLineCache = Expando();
+
+  static String _openingLine(HymnData hymn) {
+    String letters(String s) =>
+        s.toLowerCase().replaceAll(RegExp('[^a-z]'), '');
+    final title = letters(hymn.title);
+    String? first;
+    for (final block in hymn.contents) {
+      for (final raw in block.split('\n')) {
+        // Drops the verse number, and the trailing comma most lines end on.
+        final line = raw
+            .trim()
+            .replaceFirst(RegExp(r'^\d+\.\s*'), '')
+            .replaceFirst(RegExp(r'[,;:]$'), '');
+        final words = letters(line);
+        if (words.isEmpty) continue;
+        if (!words.startsWith(title)) return line;
+        first ??= line;
+      }
+    }
+    return first ?? '';
+  }
+
   // Lower-cased once per hymn: searching re-reads them on every keystroke.
   static final Expando<String> _lyricsCache = Expando();
 

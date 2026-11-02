@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../providers/english_hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
 import '../providers/yoruba_hymn_provider.dart';
+import '../utils/responsive.dart';
 import 'hymn_list_screen.dart';
 
 /// A screen that displays the main navigation options for the Baptist Hymnal app.
@@ -50,6 +51,10 @@ class HomeScreen extends StatelessWidget {
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
           final insets = MediaQuery.paddingOf(context);
+          final columns = Responsive.columns(context);
+          final cards = [
+            for (final category in _categories) _HymnCard(category: category),
+          ];
           return ListView(
             // The bars float over the page on iOS 26, so pad by their insets.
             padding: EdgeInsets.fromLTRB(
@@ -58,19 +63,44 @@ class HomeScreen extends StatelessWidget {
               16,
               insets.bottom + 16,
             ),
-            children: [
-              for (final category in _categories)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: _HymnCard(category: category),
-                ),
-            ],
+            children: switch (columns) {
+              // A phone: one book per row.
+              1 => [for (final card in cards) _sized(card, 180)],
+              // A tablet in portrait or an unfolded phone: English, the most
+              // used, across the top, and the other two beside each other.
+              2 => [
+                _sized(cards.first, 220),
+                _row(cards.skip(1).toList(), 220),
+              ],
+              // A wide tablet: all three side by side.
+              _ => [_row(cards, 240)],
+            },
           );
         },
       ),
     );
   }
 }
+
+Widget _sized(Widget card, double height) => Padding(
+  padding: const EdgeInsets.only(bottom: 16),
+  child: SizedBox(height: height, child: card),
+);
+
+Widget _row(List<Widget> cards, double height) => Padding(
+  padding: const EdgeInsets.only(bottom: 16),
+  child: SizedBox(
+    height: height,
+    child: Row(
+      children: [
+        for (var i = 0; i < cards.length; i++) ...[
+          if (i > 0) const SizedBox(width: 16),
+          Expanded(child: cards[i]),
+        ],
+      ],
+    ),
+  ),
+);
 
 /// A model class representing a hymn category with its properties.
 class HymnCategory {
@@ -102,7 +132,6 @@ class _HymnCard extends StatelessWidget {
           MaterialPageRoute(builder: (context) => category.screen),
         ),
         child: Container(
-          height: 180,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(22),
             image: DecorationImage(
@@ -123,14 +152,20 @@ class _HymnCard extends StatelessWidget {
           ),
           alignment: Alignment.bottomLeft,
           padding: const EdgeInsets.fromLTRB(22, 0, 22, 18),
-          child: Text(
-            category.title,
-            style: const TextStyle(
-              fontFamily: 'Alata',
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-              letterSpacing: 1.2,
+          // Shrinks rather than wraps in a narrow card.
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              category.title,
+              maxLines: 1,
+              style: const TextStyle(
+                fontFamily: 'Alata',
+                fontSize: 25,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+                letterSpacing: 1.2,
+              ),
             ),
           ),
         ),

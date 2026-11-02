@@ -8,6 +8,7 @@ import '../ad_helper.dart';
 import '../models/settings.dart';
 import '../providers/settings_provider.dart';
 import '../utils/platform_icons.dart';
+import '../utils/responsive.dart';
 import '../utils/review_prompt.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -34,9 +35,12 @@ class SettingsScreen extends StatelessWidget {
             builder: (ctx, provider, _) {
               final fontSize = provider.getFontSize();
               return ListView(
+                // A centred column on a tablet, as in iPad Settings.
                 padding: EdgeInsets.only(
                   top: insets.top + 8,
                   bottom: insets.bottom + 16,
+                  left: Responsive.inset(context),
+                  right: Responsive.inset(context),
                 ),
                 children: [
                   AdaptiveFormSection.insetGrouped(
