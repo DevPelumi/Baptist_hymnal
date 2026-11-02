@@ -42,7 +42,11 @@ PODS:
     - GoogleUtilities/UserDefaults (~> 8.1)
     - PromisesObjC (~> 2.4)
   - Flutter (1.0.0)
+  - flutter_local_notifications (0.0.1):
+    - Flutter
   - flutter_midi_pro (0.0.1):
+    - Flutter
+  - flutter_timezone (0.0.1):
     - Flutter
   - foldable (1.0.5):
     - Flutter
@@ -136,7 +140,9 @@ DEPENDENCIES:
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
+  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_midi_pro (from `.symlinks/plugins/flutter_midi_pro/ios`)
+  - flutter_timezone (from `.symlinks/plugins/flutter_timezone/ios`)
   - foldable (from `.symlinks/plugins/foldable/ios`)
   - google_mobile_ads (from `.symlinks/plugins/google_mobile_ads/ios`)
   - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
@@ -173,8 +179,12 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: Flutter
+  flutter_local_notifications:
+    :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_midi_pro:
     :path: ".symlinks/plugins/flutter_midi_pro/ios"
+  flutter_timezone:
+    :path: ".symlinks/plugins/flutter_timezone/ios"
   foldable:
     :path: ".symlinks/plugins/foldable/ios"
   google_mobile_ads:
@@ -205,7 +215,9 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: 656b1c2fd5a1c5976183dc54b73deda78fb26ee3
   FirebaseInstallations: f70a49eed611f5602f373e40974b3b01556ac217
   Flutter: 71a624a5bc0c04062bf19101d501e466baf2fb47
+  flutter_local_notifications: 643a3eda1ce1c0599413ca31672536d423dee214
   flutter_midi_pro: 3907e27a81681f2c9bdc28c3e771734ad41128d6
+  flutter_timezone: 7c838e17ffd4645d261e87037e5bebf6d38fe544
   foldable: 1d5f77688e44e3754f129cecaa08403fcb75f612
   Google-Mobile-Ads-SDK: 09d0868abe43b9f851b7b340a245679f0eafc96c
   google_mobile_ads: 2d3c1fe797954fe6a4103b74eff2375c08eab20e

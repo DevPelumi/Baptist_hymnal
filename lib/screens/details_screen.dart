@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import "package:baptist_hymnal/ad_helper.dart";
 import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
+import '../utils/hymn_of_the_day.dart';
 import '../utils/platform_icons.dart';
 import '../utils/responsive.dart';
 import '../utils/review_prompt.dart';
@@ -134,8 +135,10 @@ class _DetailScreenState extends State<DetailScreen> {
     return PopScope<Object?>(
       onPopInvokedWithResult: (didPop, _) {
         if (!didPop) return;
-        // Never ask for a review over a full-screen ad; ask on a later close.
-        if (!AdHelper.onHymnClosed()) ReviewPrompt.onHymnClosed();
+        // Never ask anything over a full-screen ad; ask on a later close.
+        if (AdHelper.onHymnClosed()) return;
+        ReviewPrompt.onHymnClosed();
+        HymnOfTheDay.onHymnClosed(Navigator.of(context).context);
       },
       child: AdaptiveScaffold(
         // No title: four actions leave no room for one on a phone, and the

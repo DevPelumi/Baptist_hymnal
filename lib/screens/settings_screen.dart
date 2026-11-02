@@ -89,6 +89,55 @@ class SettingsScreen extends StatelessWidget {
                     ],
                   ),
                   AdaptiveFormSection.insetGrouped(
+                    header: const Text('Hymn of the Day'),
+                    footer: const Text(
+                      'A notification each day with a hymn you can sing '
+                      'along to its tune.',
+                    ),
+                    children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.bell_fill,
+                          Icons.notifications_outlined,
+                        ),
+                        title: const Text('Daily Hymn'),
+                        hideBottomDivider: !provider.hymnOfTheDay,
+                        trailing: AdaptiveSwitch(
+                          value: provider.hymnOfTheDay,
+                          activeColor: brandGreen,
+                          onChanged: (on) =>
+                              _setHymnOfTheDay(context, provider, on),
+                        ),
+                      ),
+                      if (provider.hymnOfTheDay)
+                        AdaptiveListTile(
+                          leading: _icon(
+                            context,
+                            CupertinoIcons.clock_fill,
+                            Icons.schedule,
+                          ),
+                          title: const Text('Time'),
+                          hideBottomDivider: true,
+                          trailing: _detail(
+                            context,
+                            provider.hymnOfTheDayTime.format(context),
+                          ),
+                          onTap: () async {
+                            final time = await AdaptiveTimePicker.show(
+                              context: context,
+                              initialTime: provider.hymnOfTheDayTime,
+                              use24HourFormat:
+                                  MediaQuery.alwaysUse24HourFormatOf(context),
+                            );
+                            if (time != null) {
+                              await provider.setHymnOfTheDayTime(time);
+                            }
+                          },
+                        ),
+                    ],
+                  ),
+                  AdaptiveFormSection.insetGrouped(
                     header: const Text('Language'),
                     children: [
                       AdaptiveListTile(
@@ -184,6 +233,25 @@ class SettingsScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  /// Turning it on asks to send notifications. If they're blocked, says
+  /// where to allow them.
+  static Future<void> _setHymnOfTheDay(
+    BuildContext context,
+    SettingsProvider provider,
+    bool on,
+  ) async {
+    final isOn = await provider.setHymnOfTheDay(on, source: 'settings');
+    if (!on || isOn || !context.mounted) return;
+    await AdaptiveAlertDialog.show(
+      context: context,
+      title: 'Notifications Are Off',
+      message:
+          'To get the hymn of the day, allow notifications for Baptist '
+          'Hymnal in your phone’s Settings.',
+      actions: [AlertAction(title: 'OK', onPressed: () {})],
     );
   }
 

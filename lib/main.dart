@@ -11,10 +11,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
     show LiquidGlassWidgets;
+import 'screens/details_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
 import 'screens/search_screen.dart';
+import 'utils/analytics_tracker.dart';
+import 'utils/hymn_of_the_day.dart';
 import 'utils/platform_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -49,6 +52,25 @@ void main() async {
       brightnessResolver: Theme.maybeBrightnessOf,
       child: const MyApp(),
     ),
+  );
+}
+
+final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
+
+/// Opens English hymn [hymnId] when someone taps the hymn of the day.
+void _openHymnOfTheDay(int hymnId) {
+  final navigator = _navigatorKey.currentState;
+  if (navigator == null) return;
+  final provider = navigator.context.read<EnglishHymnProvider>();
+  final hymn = provider.dataSource.where((h) => h.id == hymnId).firstOrNull;
+  if (hymn == null) return;
+  navigator.push(
+    MaterialPageRoute(
+      builder: (context) => DetailScreen(hymn: hymn, provider: provider),
+    ),
+  );
+  AnalyticsTracker.logHymnOfTheDayOpened(hymnId: hymnId).catchError(
+    (Object e) => debugPrint('Logging the hymn of the day failed: $e'),
   );
 }
 
@@ -91,6 +113,7 @@ class MyApp extends StatelessWidget {
           // iOS gets a CupertinoApp with native bars; Material on Android.
           return AdaptiveApp(
             title: 'Baptist Hymnal',
+            navigatorKey: _navigatorKey,
             themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
             materialLightTheme: lightTheme,
             materialDarkTheme: darkTheme,
@@ -152,6 +175,7 @@ class _FirstScreenState extends State<FirstScreen> {
     final responsive =
         Provider.of<ResponsiveReadingProvider>(context, listen: false);
     final yorubaHymn = Provider.of<YorubaHymnProvider>(context, listen: false);
+    final launchedForHymn = HymnOfTheDay.initialize(onOpen: _openHymnOfTheDay);
 
     await Future.wait([
       settingsProvider.fetchSettings(),
@@ -161,6 +185,12 @@ class _FirstScreenState extends State<FirstScreen> {
     ]);
 
     FlutterNativeSplash.remove();
+
+    // Keeps the next month of hymns of the day scheduled.
+    unawaited(settingsProvider.scheduleHymnOfTheDay());
+    // Tapping one opened the app: show it over the home page.
+    final hymnId = await launchedForHymn;
+    if (hymnId != null) _openHymnOfTheDay(hymnId);
 
     // Ads start only after consent (and iOS tracking permission), which needs
     // the app on screen to show its prompts.

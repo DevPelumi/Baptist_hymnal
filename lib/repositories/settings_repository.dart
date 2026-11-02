@@ -20,6 +20,16 @@ class SettingsRepository {
     await _sharedPreferences.setInt(_fontSizeKey, fontSize);
   }
 
+  Future<void> updateHymnOfTheDay(bool isOn) async {
+    await assertNotNullSharedPrefs();
+    await _sharedPreferences.setBool(_hymnOfTheDayKey, isOn);
+  }
+
+  Future<void> updateHymnOfTheDayMinute(int minute) async {
+    await assertNotNullSharedPrefs();
+    await _sharedPreferences.setInt(_hymnOfTheDayMinuteKey, minute);
+  }
+
   Future<Settings> fetchSettings() async {
     await assertNotNullSharedPrefs();
     return Settings(
@@ -28,7 +38,10 @@ class SettingsRepository {
                 _sharedPreferences.getString(_languageKey) ?? '')
             : Language.english,
         darkMode: _sharedPreferences.getBool(_darkModeKey) ?? false,
-        textSize: _sharedPreferences.getInt(_fontSizeKey) ?? 20);
+        textSize: _sharedPreferences.getInt(_fontSizeKey) ?? 20,
+        hymnOfTheDay: _sharedPreferences.getBool(_hymnOfTheDayKey) ?? true,
+        hymnOfTheDayMinute: _sharedPreferences.getInt(_hymnOfTheDayMinuteKey) ??
+            Settings.defaultHymnOfTheDayMinute);
   }
 
   Future<void> assertNotNullSharedPrefs() async {
@@ -38,4 +51,6 @@ class SettingsRepository {
   static const String _languageKey = 'settings/language';
   static const String _darkModeKey = 'settings/darkMode';
   static const String _fontSizeKey = 'settings/fontSize';
+  static const String _hymnOfTheDayKey = 'settings/hymnOfTheDay';
+  static const String _hymnOfTheDayMinuteKey = 'settings/hymnOfTheDayMinute';
 }

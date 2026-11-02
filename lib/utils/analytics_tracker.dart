@@ -111,6 +111,30 @@ class AnalyticsTracker {
     );
   }
 
+  // Hymn of the day events
+  static Future<void> logHymnOfTheDayChanged({
+    required bool enabled,
+    required String source, // 'prompt' or 'settings'
+  }) async {
+    await _analytics.logEvent(
+      name: 'hymn_of_the_day_changed',
+      parameters: {
+        // Analytics parameters can't be booleans.
+        'enabled': enabled ? 1 : 0,
+        'source': source,
+      },
+    );
+  }
+
+  static Future<void> logHymnOfTheDayOpened({required int hymnId}) async {
+    await _analytics.logEvent(
+      name: 'hymn_of_the_day_opened',
+      parameters: {
+        'hymn_id': hymnId,
+      },
+    );
+  }
+
   // Ad events
   static Future<void> logAdImpression({
     required String adType, // 'banner' or 'interstitial'
