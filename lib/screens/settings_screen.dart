@@ -1,6 +1,7 @@
 import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 
 import '../ad_helper.dart';
@@ -12,6 +13,9 @@ class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
   static const _fontSizes = [14, 16, 18, 20, 22];
+
+  // Read from the app bundle, so it always matches pubspec.yaml.
+  static final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +136,11 @@ class SettingsScreen extends StatelessWidget {
                           Icons.info_outline,
                         ),
                         title: const Text('Version'),
-                        trailing: _detail(context, '2.0.1'),
+                        trailing: FutureBuilder<PackageInfo>(
+                          future: _packageInfo,
+                          builder: (context, info) =>
+                              _detail(context, info.data?.version ?? ''),
+                        ),
                       ),
                       AdaptiveListTile(
                         leading: _icon(
