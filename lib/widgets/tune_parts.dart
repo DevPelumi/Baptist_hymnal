@@ -3,9 +3,21 @@ import 'dart:math' as math;
 import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
+    show LiquidGlassSettings;
 
 import '../audio/tune_player.dart';
 import '../utils/platform_icons.dart';
+
+/// The iOS player's frosted glass, for the mini player and the full sheet:
+/// blurred and tinted enough that the lyrics and ads underneath don't compete
+/// with its text, like the thick material of Apple Music's player.
+LiquidGlassSettings tuneGlass(BuildContext context) => LiquidGlassSettings(
+  blur: 24,
+  glassColor: Theme.of(context).brightness == Brightness.dark
+      ? const Color(0xE61C1C1E)
+      : const Color(0xE6F2F2F7),
+);
 
 /// A hymn's tune, as the player screens need it.
 class HymnTune {

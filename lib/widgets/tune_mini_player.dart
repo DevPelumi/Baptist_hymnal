@@ -54,6 +54,10 @@ class _TuneMiniPlayerState extends State<TuneMiniPlayer> {
       behavior: HitTestBehavior.opaque,
       onTap: () => showTuneSheet(context, widget.tune),
       child: GlassContainer(
+        // Its own layer, so it gets the player's frosted settings rather than
+        // the default clear glass, which let the lyrics show through its text.
+        useOwnLayer: true,
+        settings: tuneGlass(context),
         height: TuneMiniPlayer.height,
         shape: const LiquidRoundedSuperellipse(
           borderRadius: TuneMiniPlayer.height / 2,

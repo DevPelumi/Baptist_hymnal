@@ -8,8 +8,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
         GlassSegmentedControl,
         GlassSheetDetent,
         GlassSlider,
-        GlassSwitch,
-        LiquidGlassSettings;
+        GlassSwitch;
 
 import '../audio/tune_player.dart';
 import '../utils/platform_icons.dart';
@@ -39,12 +38,7 @@ Future<void> showTuneSheet(BuildContext context, HymnTune tune) {
     // default darkens light-mode glass to grey.
     barrierColor: const Color(0x33000000),
     // Frosted enough to read small text over the lyrics and the ad.
-    settings: LiquidGlassSettings(
-      blur: 20,
-      glassColor: Theme.of(context).brightness == Brightness.dark
-          ? const Color(0xC71C1C1E)
-          : const Color(0xC7F2F2F7),
-    ),
+    settings: tuneGlass(context),
     // Dragging the scrubber shouldn't light up or swell the whole sheet.
     enableInteractionGlow: false,
     enableSaturationGlow: false,
