@@ -12,6 +12,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
         LiquidGlassSettings;
 
 import '../audio/tune_player.dart';
+import '../utils/platform_icons.dart';
 import 'tune_parts.dart';
 
 /// Opens the full player for [tune]: a liquid glass sheet on iOS, a
@@ -99,7 +100,7 @@ class _TuneSheetState extends State<TuneSheet> {
         : passLength * (tune.verseCount / _player.speed);
     final progress = _scrubbing ?? (active ? _player.progress : 0.0);
     final elapsed = total * progress;
-    final secondary = tuneSecondaryLabel(context);
+    final secondary = secondaryLabelColor(context);
 
     // Most hymns have no refrain, so only say so when the tune plays one.
     final shape = tune.includesRefrain == true
@@ -134,7 +135,7 @@ class _TuneSheetState extends State<TuneSheet> {
                         fontSize: 19,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'Alata',
-                        color: tuneLabel(context),
+                        color: labelColor(context),
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -222,13 +223,13 @@ class _TuneSheetState extends State<TuneSheet> {
               Expanded(
                 child: Text(
                   'Repeat hymn',
-                  style: TextStyle(fontSize: 16, color: tuneLabel(context)),
+                  style: TextStyle(fontSize: 16, color: labelColor(context)),
                 ),
               ),
               if (isIOS)
                 GlassSwitch(
                   value: _player.repeat,
-                  activeColor: tuneAccent(context),
+                  activeColor: accentColor(context),
                   semanticLabel: 'Repeat hymn',
                   onChanged: _player.setRepeat,
                 )
@@ -255,7 +256,7 @@ class _TuneSheetState extends State<TuneSheet> {
     if (PlatformInfo.isIOS) {
       return GlassSlider(
         value: value,
-        activeColor: tuneAccent(context),
+        activeColor: accentColor(context),
         onChanged: enabled ? onChanged : null,
         onChangeEnd: enabled ? onChangeEnd : null,
       );
@@ -275,7 +276,7 @@ class _TuneSheetState extends State<TuneSheet> {
         fontSize: 12,
         fontWeight: FontWeight.w600,
         letterSpacing: 0.6,
-        color: tuneSecondaryLabel(context),
+        color: secondaryLabelColor(context),
       ),
     ),
   );

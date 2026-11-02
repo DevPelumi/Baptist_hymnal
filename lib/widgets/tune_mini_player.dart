@@ -5,6 +5,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
     show GlassContainer, LiquidRoundedSuperellipse;
 
 import '../audio/tune_player.dart';
+import '../utils/platform_icons.dart';
 import 'tune_parts.dart';
 import 'tune_sheet.dart';
 
@@ -82,7 +83,7 @@ class _TuneMiniPlayerState extends State<TuneMiniPlayer> {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
-                  color: tuneLabel(context),
+                  color: labelColor(context),
                 ),
               ),
               const SizedBox(height: 2),
@@ -92,7 +93,7 @@ class _TuneMiniPlayerState extends State<TuneMiniPlayer> {
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontSize: 13,
-                  color: tuneSecondaryLabel(context),
+                  color: secondaryLabelColor(context),
                 ),
               ),
             ],

@@ -2,12 +2,15 @@ import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
+    show GlassSwipeActionScope;
 import 'package:provider/provider.dart';
 
 import '../models/hymn_data.dart';
 import '../providers/english_hymn_provider.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
+import '../utils/hymn_helper_functions.dart';
 import '../widgets/hymn_list_item.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -54,17 +57,7 @@ class _SearchScreenState extends State<SearchScreen> {
   List<HymnData> _filterHymns(String searchString) {
     final provider = _provider;
     if (provider == null) return [];
-
-    final trimmed = searchString.trim().toLowerCase();
-    if (trimmed.isEmpty) return provider.dataSource;
-    return provider.dataSource
-        .where(
-          (hymn) =>
-              hymn.id.toString() == trimmed ||
-              hymn.title.toLowerCase().contains(trimmed) ||
-              trimmed.contains(hymn.title.toLowerCase()),
-        )
-        .toList();
+    return HymnHelperFunctions.search(provider.dataSource, searchString);
   }
 
   Widget _buildSearchField() {
@@ -151,15 +144,18 @@ class _SearchScreenState extends State<SearchScreen> {
                           ],
                         ),
                       )
-                    : ListView.builder(
-                        keyboardDismissBehavior:
-                            ScrollViewKeyboardDismissBehavior.onDrag,
-                        padding: EdgeInsets.only(bottom: insets.bottom + 16),
-                        itemCount: results.length,
-                        itemBuilder: (ctx, i) => HymnListItem(
-                          hymn: results[i],
-                          provider: _provider!,
-                          showFavorite: false,
+                    // One swiped-open row at a time.
+                    : GlassSwipeActionScope(
+                        child: ListView.builder(
+                          keyboardDismissBehavior:
+                              ScrollViewKeyboardDismissBehavior.onDrag,
+                          padding: EdgeInsets.only(bottom: insets.bottom + 16),
+                          itemCount: results.length,
+                          itemBuilder: (ctx, i) => HymnListItem(
+                            hymn: results[i],
+                            provider: _provider!,
+                            showFavorite: false,
+                          ),
                         ),
                       ),
               ),

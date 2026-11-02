@@ -70,18 +70,6 @@ String formatTime(Duration d) {
   return '${seconds ~/ 60}:${(seconds % 60).toString().padLeft(2, '0')}';
 }
 
-Color tuneAccent(BuildContext context) => PlatformInfo.isIOS
-    ? CupertinoColors.systemGreen.resolveFrom(context)
-    : brandGreen;
-
-Color tuneLabel(BuildContext context) => PlatformInfo.isIOS
-    ? CupertinoColors.label.resolveFrom(context)
-    : Theme.of(context).colorScheme.onSurface;
-
-Color tuneSecondaryLabel(BuildContext context) => PlatformInfo.isIOS
-    ? CupertinoColors.secondaryLabel.resolveFrom(context)
-    : Theme.of(context).colorScheme.onSurfaceVariant;
-
 /// The hymn's number on a green tile, in place of album art.
 class TuneArtwork extends StatelessWidget {
   const TuneArtwork({super.key, required this.hymnId, required this.size});
@@ -156,7 +144,7 @@ class TuneGlyphButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final enabled = onPressed != null;
-    final base = color ?? tuneLabel(context);
+    final base = color ?? labelColor(context);
     final glyph = Icon(
       icon,
       size: iconSize,
@@ -233,12 +221,12 @@ class TunePlayButton extends StatelessWidget {
       onPressed: () => toggleTune(tune),
     );
     if (!showProgress) return button;
-    final accent = tuneAccent(context);
+    final accent = accentColor(context);
     return CustomPaint(
       foregroundPainter: _RingPainter(
         progress: active ? player.progress : 0,
         color: accent,
-        track: tuneLabel(context).withValues(alpha: 0.12),
+        track: labelColor(context).withValues(alpha: 0.12),
       ),
       child: button,
     );

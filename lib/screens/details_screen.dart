@@ -5,11 +5,11 @@ import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:share_plus/share_plus.dart';
 import "package:baptist_hymnal/ad_helper.dart";
 import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
 import '../utils/platform_icons.dart';
+import '../utils/share_hymn.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/tune_mini_player.dart';
 import '../widgets/tune_parts.dart';
@@ -103,24 +103,6 @@ class _DetailScreenState extends State<DetailScreen> {
     return null;
   }
 
-  void _share() {
-    final box = context.findRenderObject() as RenderBox?;
-    SharePlus.instance.share(
-      ShareParams(
-        text:
-            '${widget.hymn.title}\n'
-            '${widget.hymn.contents.join("\n")}\n\n'
-            '📱 Baptist Hymnal App\n'
-            'Download from Play Store',
-        subject: 'Share Hymn',
-        // Anchors the share popover on iPad.
-        sharePositionOrigin: box == null
-            ? null
-            : box.localToGlobal(Offset.zero) & box.size,
-      ),
-    );
-  }
-
   @override
   void initState() {
     super.initState();
@@ -203,7 +185,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 material: Icons.share,
               ),
               label: 'Share',
-              onPressed: _share,
+              onPressed: () => shareHymn(context, widget.hymn),
             ),
           ],
         ),
