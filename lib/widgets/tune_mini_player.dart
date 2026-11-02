@@ -58,6 +58,10 @@ class _TuneMiniPlayerState extends State<TuneMiniPlayer> {
         // the default clear glass, which let the lyrics show through its text.
         useOwnLayer: true,
         settings: tuneGlass(context),
+        // The same frosted backdrop blur as the full player sheet, so the two
+        // look alike. It also draws properly next to the banner ad, a native
+        // view the glass shader can't see.
+        platformViewBackdrop: true,
         height: TuneMiniPlayer.height,
         shape: const LiquidRoundedSuperellipse(
           borderRadius: TuneMiniPlayer.height / 2,
