@@ -9,6 +9,7 @@ import "package:baptist_hymnal/ad_helper.dart";
 import '../data/hymn_audio.dart';
 import '../models/hymn_data.dart';
 import '../utils/platform_icons.dart';
+import '../utils/review_prompt.dart';
 import '../utils/share_hymn.dart';
 import '../widgets/banner_ad_widget.dart';
 import '../widgets/tune_mini_player.dart';
@@ -108,6 +109,7 @@ class _DetailScreenState extends State<DetailScreen> {
     super.initState();
     // Retries ad setup if it failed at launch (for example, opened offline).
     AdHelper.initialize().whenComplete(AdHelper.preloadInterstitialAd);
+    ReviewPrompt.onHymnOpened();
   }
 
   @override
@@ -130,7 +132,9 @@ class _DetailScreenState extends State<DetailScreen> {
     // arrows replace this page with the next or previous hymn.
     return PopScope<Object?>(
       onPopInvokedWithResult: (didPop, _) {
-        if (didPop) AdHelper.onHymnClosed();
+        if (!didPop) return;
+        // Never ask for a review over a full-screen ad; ask on a later close.
+        if (!AdHelper.onHymnClosed()) ReviewPrompt.onHymnClosed();
       },
       child: AdaptiveScaffold(
         // No title: four actions leave no room for one on a phone, and the

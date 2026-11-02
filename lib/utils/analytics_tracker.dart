@@ -99,6 +99,18 @@ class AnalyticsTracker {
     );
   }
 
+  // Review events
+  static Future<void> logReviewRequested({
+    required String source, // 'prompt' or 'settings'
+  }) async {
+    await _analytics.logEvent(
+      name: 'review_requested',
+      parameters: {
+        'source': source,
+      },
+    );
+  }
+
   // Ad events
   static Future<void> logAdImpression({
     required String adType, // 'banner' or 'interstitial'

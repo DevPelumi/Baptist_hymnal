@@ -8,6 +8,7 @@ import '../ad_helper.dart';
 import '../models/settings.dart';
 import '../providers/settings_provider.dart';
 import '../utils/platform_icons.dart';
+import '../utils/review_prompt.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -129,6 +130,21 @@ class SettingsScreen extends StatelessWidget {
                   AdaptiveFormSection.insetGrouped(
                     header: const Text('About'),
                     children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.star_fill,
+                          Icons.star_outline,
+                        ),
+                        title: const Text('Rate Baptist Hymnal'),
+                        subtitle: Text(
+                          PlatformInfo.isIOS
+                              ? 'Write a review on the App Store'
+                              : 'Write a review on Google Play',
+                        ),
+                        trailing: _chevron(context),
+                        onTap: ReviewPrompt.openStorePage,
+                      ),
                       AdaptiveListTile(
                         leading: _icon(
                           context,

@@ -160,26 +160,30 @@ class AdHelper {
 
   /// Call when the user leaves a hymn page. Shows the full-screen ad every
   /// [hymnsClosedPerInterstitial] closes, but no sooner than
-  /// [minTimeBetweenInterstitials] after the previous one.
-  static void onHymnClosed() {
-    if (!adsEnabled) return;
+  /// [minTimeBetweenInterstitials] after the previous one. Returns whether it
+  /// showed one.
+  static bool onHymnClosed() {
+    if (!adsEnabled) return false;
     _hymnsClosedSinceLastInterstitial++;
-    if (_hymnsClosedSinceLastInterstitial < hymnsClosedPerInterstitial) return;
+    if (_hymnsClosedSinceLastInterstitial < hymnsClosedPerInterstitial) {
+      return false;
+    }
 
     final lastShown = _lastInterstitialShownAt;
     if (lastShown != null &&
         DateTime.now().difference(lastShown) < minTimeBetweenInterstitials) {
-      return;
+      return false;
     }
 
     final ad = _interstitialAd;
-    if (ad == null || _isInterstitialExpired) return;
+    if (ad == null || _isInterstitialExpired) return false;
 
     _interstitialAd = null;
     _interstitialLoadedAt = null;
     _hymnsClosedSinceLastInterstitial = 0;
     _lastInterstitialShownAt = DateTime.now();
     ad.show();
+    return true;
   }
 
   static bool get _isInterstitialExpired {
