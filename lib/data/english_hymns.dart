@@ -15502,57 +15502,69 @@ And give you peace, and give you peace,
 The Lord makes His face to shine upon you,
 And be gracious unto you, be gracious,
 The Lord be gracious unto you. Amen.
-''',
+'''
+  ]),
+  HymnData(543, 'Dresden Amen', [
     '''
-543 DRESDEN
-1. A – men, A - men,
-''',
+A – men, A – men.
+'''
+  ]),
+  HymnData(544, 'Threefold Amen', [
     '''
-544 THREEFOLD
-A – men, A - men.
-''',
+A – men, A – men, A – men.
+'''
+  ]),
+  HymnData(545, 'Threefold Amen', [
     '''
-545 THREEFOLD
-1. A - - - - - men, A - men, A - - men.
-''',
+A - - - - - men, A – men, A - - men.
+'''
+  ]),
+  HymnData(546, 'Fourfold Amen', [
     '''
-546 FOURFOLD
 A – men, A – men, A - - men, A – men.
-''',
+'''
+  ]),
+  HymnData(547, 'Sevenfold Amen', [
     '''
-547 SEVENFOLD
-A – men, A – men, A – men, A – - men,
-A – - - - - men, A - - - men, A – men.
-''',
+A – men, A – men, A – men, A - - men,
+A - - - - - men, A - - - men, A – men.
+'''
+  ]),
+  HymnData(548, 'St. Peter Amen', [
     '''
-548 ST. PETER
-A – men, A - men, A - - men, A – men.
-''',
+A – men, A – men, A - - men, A – men.
+'''
+  ]),
+  HymnData(549, 'Cholmondely Amen', [
     '''
-549 CHOLMONDELY
-A – men, A – men, A - - men A - - men.
-''',
-    '''
-550 GUNNER
 A – men, A – men, A - - men, A - - men.
-''',
+'''
+  ]),
+  HymnData(550, 'Gunner Amen', [
     '''
-551 PACEM
-A - - men, A – men, A . - - men.
-''',
+A – men, A – men, A - - men, A - - men.
+'''
+  ]),
+  HymnData(551, 'Pacem Amen', [
     '''
-552 RESTARE
+A - - men, A – men, A - - men.
+'''
+  ]),
+  HymnData(552, 'Restare Amen', [
+    '''
 A - - - - men, A - - men, A - - - - men.
-''',
+'''
+  ]),
+  HymnData(553, 'The Bell Cadence Amen', [
     '''
-553 THE BELL CADENCE
-1. A – men, A – men, A – men, A – men,
+A – men, A – men, A – men, A – men,
 A - - men, A - - men, A - - - men, A - - men,
-A - - men, A - men, A - - - men,
+A - - men, A – men, A - - - men,
 A – men, A - - men.
-''',
+'''
+  ]),
+  HymnData(554, 'Finir Amen', [
     '''
-554 FINIR
 A - - - - - men, A - - men.
 '''
   ]),

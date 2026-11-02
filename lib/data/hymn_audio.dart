@@ -87,9 +87,6 @@ bool? englishTuneIncludesRefrain(int id) {
 }
 
 /// Stanzas a singer fits to one play of the tune.
-///
-/// Hymn 542 keeps several different Amen settings in later blocks. Those
-/// are not further stanzas of "The Lord Bless You and Keep You".
 int englishHymnVerseCount(List<String> contents) {
   var numbered = 0;
   for (final block in contents) {
