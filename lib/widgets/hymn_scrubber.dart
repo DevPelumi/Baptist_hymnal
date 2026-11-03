@@ -256,7 +256,8 @@ class _Bubble extends StatelessWidget {
     }
     return Material(
       color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      elevation: 3,
+      elevation: 1,
+      shadowColor: Colors.black.withValues(alpha: 0.35),
       borderRadius: BorderRadius.circular(16),
       child: content,
     );

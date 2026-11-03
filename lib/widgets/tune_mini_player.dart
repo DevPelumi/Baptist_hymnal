@@ -41,7 +41,9 @@ class _TuneMiniPlayerState extends State<TuneMiniPlayer> {
     if (!PlatformInfo.isIOS) {
       return Material(
         color: Theme.of(context).colorScheme.surfaceContainerHigh,
-        elevation: 3,
+        // Just enough shadow to lift it off the lyrics.
+        elevation: 1,
+        shadowColor: Colors.black.withValues(alpha: 0.35),
         shape: const StadiumBorder(),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
