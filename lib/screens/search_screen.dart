@@ -13,6 +13,7 @@ import '../providers/responsive_reading_provider.dart';
 import '../utils/hymn_helper_functions.dart';
 import '../utils/responsive.dart';
 import '../widgets/hymn_list_item.dart';
+import '../widgets/duo_tab_bar.dart';
 
 class SearchScreen extends StatefulWidget {
   final int initialTabIndex;
@@ -94,6 +95,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: 'Search'),
+      bottomNavigationBar: DuoTabBar.of(context),
       body: Builder(
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
@@ -106,7 +108,12 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 0),
+                  padding: EdgeInsets.fromLTRB(
+                    16,
+                    insets.top + 8 + DuoTabBar.titleFadeClearance(context),
+                    16,
+                    0,
+                  ),
                   child: _buildSearchField(),
                 ),
                 Padding(

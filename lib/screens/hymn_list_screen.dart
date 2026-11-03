@@ -13,6 +13,7 @@ import '../utils/responsive.dart';
 import '../models/hymn_data.dart';
 import '../widgets/hymn_list_item.dart';
 import '../widgets/hymn_scrubber.dart';
+import '../widgets/duo_tab_bar.dart';
 
 /// One book (English, Yoruba or Responsive Reading): a header photo and every
 /// hymn in it, with a search field at the top and a scrubber down the side
@@ -111,7 +112,7 @@ class _HymnListScreenState<T extends IHymnProvider>
                     SliverPadding(
                       padding: EdgeInsets.fromLTRB(
                         16 + side,
-                        insets.top + 8,
+                        insets.top + 8 + DuoTabBar.titleFadeClearance(context),
                         16 + side,
                         12,
                       ),

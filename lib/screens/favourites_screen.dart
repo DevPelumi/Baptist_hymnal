@@ -6,6 +6,7 @@ import '../providers/english_hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
 import '../utils/responsive.dart';
 import '../widgets/favorite_tab.dart';
+import '../widgets/duo_tab_bar.dart';
 
 class Favourites extends StatefulWidget {
   const Favourites({super.key});
@@ -21,6 +22,7 @@ class _FavouritesState extends State<Favourites> {
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: 'Favourites'),
+      bottomNavigationBar: DuoTabBar.of(context),
       body: Builder(
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
@@ -33,7 +35,12 @@ class _FavouritesState extends State<Favourites> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(16, insets.top + 8, 16, 8),
+                  padding: EdgeInsets.fromLTRB(
+                    16,
+                    insets.top + 8 + DuoTabBar.titleFadeClearance(context),
+                    16,
+                    8,
+                  ),
                   child: AdaptiveSegmentedControl(
                     labels: const ['English', 'Yoruba', 'Reading'],
                     selectedIndex: _book,

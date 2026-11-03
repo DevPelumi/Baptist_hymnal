@@ -20,6 +20,7 @@ import 'utils/analytics_tracker.dart';
 import 'utils/hymn_of_the_day.dart';
 import 'utils/platform_icons.dart';
 import 'utils/review_prompt.dart';
+import 'widgets/duo_tab_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -241,50 +242,55 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final tabBar = AdaptiveBottomNavigationBar(
+      selectedIndex: _selectedPage,
+      onTap: (index) => setState(() => _selectedPage = index),
+      items: [
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'house.fill',
+            cupertino: CupertinoIcons.house_fill,
+            material: Icons.home_outlined,
+          ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.home,
+          label: 'Home',
+        ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'heart.fill',
+            cupertino: CupertinoIcons.heart_fill,
+            material: Icons.favorite_border,
+          ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.favorite,
+          label: 'Favourites',
+        ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'magnifyingglass',
+            cupertino: CupertinoIcons.search,
+            material: Icons.search,
+          ),
+          label: 'Search',
+          isSearch: true,
+        ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'gearshape.fill',
+            cupertino: CupertinoIcons.gear_solid,
+            material: Icons.settings_outlined,
+          ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.settings,
+          label: 'Settings',
+        ),
+      ],
+    );
+    final inSideStrip = DuoTabBar.inSideStrip(context);
     return AdaptiveScaffold(
-      body: _pageOptions[_selectedPage],
-      bottomNavigationBar: AdaptiveBottomNavigationBar(
-        selectedIndex: _selectedPage,
-        onTap: (index) => setState(() => _selectedPage = index),
-        items: [
-          AdaptiveNavigationDestination(
-            icon: platformIcon(
-              sfSymbol: 'house.fill',
-              cupertino: CupertinoIcons.house_fill,
-              material: Icons.home_outlined,
-            ),
-            selectedIcon: PlatformInfo.isIOS ? null : Icons.home,
-            label: 'Home',
-          ),
-          AdaptiveNavigationDestination(
-            icon: platformIcon(
-              sfSymbol: 'heart.fill',
-              cupertino: CupertinoIcons.heart_fill,
-              material: Icons.favorite_border,
-            ),
-            selectedIcon: PlatformInfo.isIOS ? null : Icons.favorite,
-            label: 'Favourites',
-          ),
-          AdaptiveNavigationDestination(
-            icon: platformIcon(
-              sfSymbol: 'magnifyingglass',
-              cupertino: CupertinoIcons.search,
-              material: Icons.search,
-            ),
-            label: 'Search',
-            isSearch: true,
-          ),
-          AdaptiveNavigationDestination(
-            icon: platformIcon(
-              sfSymbol: 'gearshape.fill',
-              cupertino: CupertinoIcons.gear_solid,
-              material: Icons.settings_outlined,
-            ),
-            selectedIcon: PlatformInfo.isIOS ? null : Icons.settings,
-            label: 'Settings',
-          ),
-        ],
+      body: DuoTabBar(
+        tabBar: inSideStrip ? tabBar : null,
+        child: _pageOptions[_selectedPage],
       ),
+      bottomNavigationBar: inSideStrip ? null : tabBar,
     );
   }
 }

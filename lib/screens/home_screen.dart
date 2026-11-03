@@ -6,6 +6,7 @@ import '../providers/responsive_reading_provider.dart';
 import '../providers/yoruba_hymn_provider.dart';
 import '../utils/responsive.dart';
 import 'hymn_list_screen.dart';
+import '../widgets/duo_tab_bar.dart';
 
 /// A screen that displays the main navigation options for the Baptist Hymnal app.
 /// It provides access to English Hymns, Yoruba Hymns, and Responsive Reading sections.
@@ -47,6 +48,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: 'Baptist Hymnal'),
+      bottomNavigationBar: DuoTabBar.of(context),
       body: Builder(
         // The scaffold adds its bars to the padding inside its body.
         builder: (context) {
@@ -59,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             // The bars float over the page on iOS 26, so pad by their insets.
             padding: EdgeInsets.fromLTRB(
               16,
-              insets.top + 12,
+              insets.top + 12 + DuoTabBar.titleFadeClearance(context),
               16,
               insets.bottom + 16,
             ),

@@ -10,6 +10,7 @@ import '../providers/settings_provider.dart';
 import '../utils/platform_icons.dart';
 import '../utils/responsive.dart';
 import '../utils/review_prompt.dart';
+import '../widgets/duo_tab_bar.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -23,6 +24,7 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: 'Settings'),
+      bottomNavigationBar: DuoTabBar.of(context),
       // Grouped sections sit on the grey grouped background, as in iOS Settings.
       backgroundColor: PlatformInfo.isIOS
           ? CupertinoColors.systemGroupedBackground.resolveFrom(context)
@@ -37,7 +39,7 @@ class SettingsScreen extends StatelessWidget {
               return ListView(
                 // A centred column on a tablet, as in iPad Settings.
                 padding: EdgeInsets.only(
-                  top: insets.top + 8,
+                  top: insets.top + 8 + DuoTabBar.titleFadeClearance(context),
                   bottom: insets.bottom + 16,
                   left: Responsive.inset(context),
                   right: Responsive.inset(context),

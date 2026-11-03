@@ -12,6 +12,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
 
 import '../audio/tune_player.dart';
 import '../utils/platform_icons.dart';
+import 'duo_tab_bar.dart';
 import 'tune_parts.dart';
 
 /// Opens the full player for [tune]: a liquid glass sheet on iOS, a
@@ -103,11 +104,12 @@ class _TuneSheetState extends State<TuneSheet> {
         ? '${tune.verseCount} verses'
         : null;
 
+    final strip = DuoTabBar.stripInsets(context);
     return SingleChildScrollView(
       padding: EdgeInsets.fromLTRB(
-        24,
+        24 + strip.left,
         isIOS ? 28 : 0,
-        24,
+        24 + strip.right,
         isIOS ? 8 + MediaQuery.paddingOf(context).bottom : 24,
       ),
       child: Column(
