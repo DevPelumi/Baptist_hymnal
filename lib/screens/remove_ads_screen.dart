@@ -66,14 +66,34 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
   Package? _selected;
   bool _busy = false;
 
+  // Free trial lengths, such as "3 days", by package identifier: only the
+  // trials this person can still take.
+  Map<String, String> _trials = const {};
+
   Future<Offering?> _loadOffering() async {
     final load = widget.loadOffering;
     final offering = await (load ?? Premium.currentOffering)();
     if (offering != null) {
       _selected ??= offering.annual ?? offering.monthly ?? offering.lifetime;
       if (load == null) Premium.trackPaywallShown(offering);
+      _trials = await _eligibleTrials(offering);
     }
     return offering;
+  }
+
+  static Future<Map<String, String>> _eligibleTrials(Offering offering) async {
+    final withTrial = {
+      for (final plan in paywallPlans(offering)) plan: ?freeTrialLength(plan),
+    };
+    if (withTrial.isEmpty) return const {};
+    final eligible = await Premium.trialEligible([
+      for (final plan in withTrial.keys) plan.storeProduct.identifier,
+    ]);
+    return {
+      for (final MapEntry(key: plan, value: length) in withTrial.entries)
+        if (eligible.contains(plan.storeProduct.identifier))
+          plan.identifier: length,
+    };
   }
 
   Future<void> _buy(Package package) async {
@@ -161,6 +181,7 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
   ) {
     final plans = paywallPlans(offering);
     final selected = plans.contains(_selected) ? _selected! : plans.first;
+    final selectedTrial = _trials[selected.identifier];
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 480),
@@ -207,18 +228,24 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
                 badge: identical(plan, offering.annual)
                     ? yearlySavingsBadge(offering)
                     : null,
+                trial: _trials[plan.identifier],
                 selected: identical(plan, selected),
                 colors: colors,
                 onTap: _busy ? null : () => setState(() => _selected = plan),
               ),
             const SizedBox(height: 12),
             _ContinueButton(
+              label: selectedTrial == null ? 'Continue' : 'Start Free Trial',
               busy: _busy,
               onPressed: _busy ? null : () => _buy(selected),
             ),
             const SizedBox(height: 12),
             Text(
-              planTerms(selected, ios: PlatformInfo.isIOS),
+              planTerms(
+                selected,
+                ios: PlatformInfo.isIOS,
+                trial: selectedTrial,
+              ),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, color: colors.secondaryLabel),
             ),
@@ -275,9 +302,10 @@ String? yearlySavingsBadge(Offering offering) {
   return percent >= 5 ? 'Save $percent%' : null;
 }
 
-/// What the store will charge and when, as both stores require.
+/// What the store will charge and when, as both stores require. [trial] is
+/// the free trial's length, when this person can take one.
 @visibleForTesting
-String planTerms(Package package, {required bool ios}) {
+String planTerms(Package package, {required bool ios, String? trial}) {
   final price = package.storeProduct.priceString;
   final store = ios ? 'Apple ID' : 'Google Play';
   final period = switch (package.packageType) {
@@ -286,9 +314,48 @@ String planTerms(Package package, {required bool ios}) {
     _ => null,
   };
   if (period == null) return 'One payment of $price. No subscription.';
+  if (trial != null) {
+    return 'Free for $trial, then $price a $period, charged to your $store '
+        'account. It renews automatically unless you cancel at least 24 '
+        'hours before the trial or a $period ends. Cancel any time in your '
+        '$store subscriptions.';
+  }
   return '$price a $period, charged to your $store account. It renews '
       'automatically unless you cancel at least 24 hours before the end of '
       'the $period. Cancel any time in your $store subscriptions.';
+}
+
+/// How long [package]'s free trial lasts, such as "3 days", or null when it
+/// has none. Doesn't check whether this person can still take it.
+@visibleForTesting
+String? freeTrialLength(Package package) {
+  final product = package.storeProduct;
+  // Google Play: the default offer's free phase.
+  final free = product.defaultOption?.freePhase?.billingPeriod;
+  if (free != null) return _periodText(free.unit, free.value);
+  // App Store: a free introductory offer.
+  final intro = product.introductoryPrice;
+  if (intro != null && intro.price == 0) {
+    return _periodText(intro.periodUnit, intro.periodNumberOfUnits);
+  }
+  return null;
+}
+
+/// "3 days", "1 week", "2 months". Whole weeks of days read as weeks.
+String? _periodText(PeriodUnit unit, int count) {
+  if (unit == PeriodUnit.day && count % 7 == 0) {
+    unit = PeriodUnit.week;
+    count ~/= 7;
+  }
+  final noun = switch (unit) {
+    PeriodUnit.day => 'day',
+    PeriodUnit.week => 'week',
+    PeriodUnit.month => 'month',
+    PeriodUnit.year => 'year',
+    PeriodUnit.unknown => null,
+  };
+  if (noun == null || count <= 0) return null;
+  return '$count $noun${count == 1 ? '' : 's'}';
 }
 
 String _planName(Package package) => switch (package.packageType) {
@@ -430,6 +497,7 @@ class _PlanTile extends StatelessWidget {
   const _PlanTile({
     required this.package,
     required this.badge,
+    required this.trial,
     required this.selected,
     required this.colors,
     required this.onTap,
@@ -437,6 +505,9 @@ class _PlanTile extends StatelessWidget {
 
   final Package package;
   final String? badge;
+
+  /// The free trial's length, when this person can take it.
+  final String? trial;
   final bool selected;
   final _PaywallColors colors;
   final VoidCallback? onTap;
@@ -448,14 +519,16 @@ class _PlanTile extends StatelessWidget {
       PackageType.annual => (
         'Yearly',
         '${product.priceString} / year',
-        product.pricePerMonthString == null
-            ? null
-            : '${product.pricePerMonthString} a month',
+        [
+          if (trial != null) '$trial free',
+          if (product.pricePerMonthString case final perMonth?)
+            '$perMonth a month',
+        ].join(' · '),
       ),
       PackageType.monthly => (
         'Monthly',
         '${product.priceString} / month',
-        null,
+        trial == null ? null : '$trial free',
       ),
       PackageType.lifetime => (
         'Lifetime',
@@ -519,7 +592,7 @@ class _PlanTile extends StatelessWidget {
                             ],
                           ],
                         ),
-                        if (detail != null)
+                        if (detail != null && detail.isNotEmpty)
                           Text(
                             detail,
                             style: TextStyle(
@@ -578,8 +651,13 @@ class _Badge extends StatelessWidget {
 }
 
 class _ContinueButton extends StatelessWidget {
-  const _ContinueButton({required this.busy, required this.onPressed});
+  const _ContinueButton({
+    required this.label,
+    required this.busy,
+    required this.onPressed,
+  });
 
+  final String label;
   final bool busy;
   final VoidCallback? onPressed;
 
@@ -593,9 +671,9 @@ class _ContinueButton extends StatelessWidget {
               valueColor: AlwaysStoppedAnimation(Colors.white),
             ),
           )
-        : const Text(
-            'Continue',
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+        : Text(
+            label,
+            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
           );
     if (PlatformInfo.isIOS) {
       return SizedBox(

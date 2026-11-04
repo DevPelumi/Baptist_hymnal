@@ -123,6 +123,27 @@ class Premium {
     return offerings.current;
   }
 
+  /// Of [productIds], the ones whose free trial this person can still take.
+  /// Apple allows one trial per subscription group, so on iOS this asks the
+  /// App Store. Google Play only offers trials to people who can take them,
+  /// so on Android every trial counts.
+  static Future<Set<String>> trialEligible(List<String> productIds) async {
+    if (!_isConfigured || !Platform.isIOS) return productIds.toSet();
+    try {
+      final eligibility =
+          await Purchases.checkTrialOrIntroductoryPriceEligibility(productIds);
+      return {
+        for (final MapEntry(:key, :value) in eligibility.entries)
+          if (value.status ==
+              IntroEligibilityStatus.introEligibilityStatusEligible)
+            key,
+      };
+    } on PlatformException catch (e) {
+      debugPrint('Checking trial eligibility failed: ${e.message}');
+      return {};
+    }
+  }
+
   /// Tells RevenueCat the plans were shown, for its conversion charts.
   static void trackPaywallShown(Offering offering) {
     Purchases.trackCustomPaywallImpression(

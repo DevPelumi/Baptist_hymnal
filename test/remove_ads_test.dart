@@ -81,4 +81,99 @@ void main() {
       );
     });
   });
+
+  group('freeTrialLength', () {
+    Package withIntro(PeriodUnit unit, int count, {double price = 0}) =>
+        Package(
+          'monthly',
+          PackageType.monthly,
+          StoreProduct(
+            'bh_ad_free_monthly',
+            '',
+            '',
+            1000,
+            '₦1,000',
+            'NGN',
+            introductoryPrice: IntroductoryPrice(
+              price,
+              price == 0 ? 'Free' : '₦$price',
+              'P$count${unit.name[0].toUpperCase()}',
+              1,
+              unit,
+              count,
+            ),
+          ),
+          const PresentedOfferingContext('default', null, null),
+        );
+
+    test('reads an App Store free trial', () {
+      expect(freeTrialLength(withIntro(PeriodUnit.day, 3)), '3 days');
+      expect(freeTrialLength(withIntro(PeriodUnit.week, 1)), '1 week');
+      expect(freeTrialLength(withIntro(PeriodUnit.month, 2)), '2 months');
+    });
+
+    test('calls whole weeks of days weeks', () {
+      expect(freeTrialLength(withIntro(PeriodUnit.day, 7)), '1 week');
+      expect(freeTrialLength(withIntro(PeriodUnit.day, 14)), '2 weeks');
+    });
+
+    test('ignores a paid introductory price', () {
+      expect(freeTrialLength(withIntro(PeriodUnit.week, 1, price: 99)), isNull);
+    });
+
+    test('reads a Google Play free phase', () {
+      const week = Period(PeriodUnit.week, 1, 'P1W');
+      const phase = PricingPhase(
+        week,
+        RecurrenceMode.finiteRecurring,
+        1,
+        Price('Free', 0, 'NGN'),
+        OfferPaymentMode.freeTrial,
+      );
+      final package = Package(
+        'annual',
+        PackageType.annual,
+        StoreProduct(
+          'bh_ad_free:yearly',
+          '',
+          '',
+          3000,
+          '₦3,000',
+          'NGN',
+          defaultOption: const SubscriptionOption(
+            'yearly-trial',
+            'bh_ad_free:yearly',
+            'bh_ad_free',
+            [phase],
+            [],
+            false,
+            Period(PeriodUnit.year, 1, 'P1Y'),
+            false,
+            null,
+            phase,
+            null,
+            null,
+            null,
+          ),
+        ),
+        const PresentedOfferingContext('default', null, null),
+      );
+      expect(freeTrialLength(package), '1 week');
+    });
+
+    test('is null with no trial', () {
+      expect(freeTrialLength(monthly), isNull);
+      expect(freeTrialLength(lifetime), isNull);
+    });
+  });
+
+  test('planTerms states the trial, then the price', () {
+    final terms = planTerms(monthly, ios: true, trial: '3 days');
+    expect(terms, startsWith('Free for 3 days, then ₦1,000 a month'));
+    expect(terms, contains('before the trial or a month ends'));
+    expect(
+      planTerms(lifetime, ios: true, trial: '3 days'),
+      'One payment of ₦15,000. No subscription.',
+    );
+  });
 }
