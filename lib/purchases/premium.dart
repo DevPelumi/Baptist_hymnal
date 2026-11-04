@@ -22,14 +22,15 @@ enum PurchaseOutcome {
   nothingToRestore,
 }
 
-/// The paid "no ads" unlock, sold through RevenueCat as a monthly or yearly
-/// subscription or a one-time lifetime purchase. All three grant the same
-/// [entitlementId].
+/// Premium, sold through RevenueCat as a monthly or yearly subscription or a
+/// one-time lifetime purchase. All three grant the same [entitlementId]. For
+/// now it removes ads; anything added to Premium later goes behind the same
+/// entitlement, with no new products.
 class Premium {
   Premium._();
 
   /// The RevenueCat entitlement every plan grants.
-  static const String entitlementId = 'ad_free';
+  static const String entitlementId = 'premium';
 
   // Public SDK keys for the RevenueCat project "Baptist Hymnal"
   // (proj9d531b86): safe to ship in the app.
@@ -46,9 +47,9 @@ class Premium {
   );
 
   // The last answer, so someone who paid sees no ads at launch, even offline.
-  static const String _cacheKey = 'premium/adFree';
+  static const String _cacheKey = 'premium/active';
 
-  /// Whether ads are removed.
+  /// Whether this person has Premium, which removes ads.
   static final ValueNotifier<bool> isActive = ValueNotifier(false);
 
   /// The latest purchase details, once RevenueCat has answered.
