@@ -135,6 +135,31 @@ class AnalyticsTracker {
     );
   }
 
+  // Remove ads events
+  static Future<void> logRemoveAdsViewed({
+    required String source, // 'settings'
+  }) async {
+    await _analytics.logEvent(
+      name: 'remove_ads_viewed',
+      parameters: {
+        'source': source,
+      },
+    );
+  }
+
+  static Future<void> logRemoveAdsResult({
+    required String plan, // 'monthly', 'yearly', 'lifetime' or 'restore'
+    required String outcome, // a PurchaseOutcome name, or 'error'
+  }) async {
+    await _analytics.logEvent(
+      name: 'remove_ads_result',
+      parameters: {
+        'plan': plan,
+        'outcome': outcome,
+      },
+    );
+  }
+
   // Ad events
   static Future<void> logAdImpression({
     required String adType, // 'banner' or 'interstitial'

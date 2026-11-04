@@ -26,6 +26,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
 import 'ad_helper.dart';
+import 'purchases/premium.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
@@ -185,6 +186,8 @@ class _FirstScreenState extends State<FirstScreen> {
       responsive.fetchFavorites(),
       yorubaHymn.fetchFavorites(),
       ReviewPrompt.initialize(),
+      // Before ads start, so someone who removed them never sees one.
+      Premium.initialize(),
     ]);
 
     FlutterNativeSplash.remove();

@@ -3,10 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../ad_helper.dart';
 import '../models/settings.dart';
 import '../providers/settings_provider.dart';
+import '../purchases/premium.dart';
+import 'remove_ads_screen.dart';
 import '../utils/platform_icons.dart';
 import '../utils/responsive.dart';
 import '../utils/review_prompt.dart';
@@ -45,6 +48,7 @@ class SettingsScreen extends StatelessWidget {
                   right: Responsive.inset(context),
                 ),
                 children: [
+                  _removeAdsSection(context),
                   AdaptiveFormSection.insetGrouped(
                     header: const Text('Appearance'),
                     children: [
@@ -235,6 +239,97 @@ class SettingsScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  /// Remove Ads and Restore Purchases, or, once paid, the plan and where to
+  /// manage it.
+  static Widget _removeAdsSection(BuildContext context) {
+    // Tries again if the plans couldn't be fetched at launch.
+    Premium.checkPlans();
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        Premium.isActive,
+        Premium.customerInfo,
+        Premium.hasPlans,
+      ]),
+      builder: (context, _) {
+        if (!Premium.isActive.value && !Premium.hasPlans.value) {
+          return const SizedBox.shrink();
+        }
+        if (!Premium.isActive.value) {
+          return AdaptiveFormSection.insetGrouped(
+            header: const Text('Ads'),
+            children: [
+              AdaptiveListTile(
+                leading: _icon(context, CupertinoIcons.nosign, Icons.block),
+                title: const Text('Remove Ads'),
+                subtitle: const Text('Monthly, yearly or pay once'),
+                trailing: _chevron(context),
+                onTap: () => showRemoveAds(context, source: 'settings'),
+              ),
+              AdaptiveListTile(
+                leading: _icon(
+                  context,
+                  CupertinoIcons.arrow_clockwise,
+                  Icons.restore,
+                ),
+                title: const Text('Restore Purchases'),
+                hideBottomDivider: true,
+                onTap: () => restorePurchases(context),
+              ),
+            ],
+          );
+        }
+        final entitlement = Premium.activeEntitlement;
+        final expires = DateTime.tryParse(
+          entitlement?.expirationDate ?? '',
+        )?.toLocal();
+        final plan = Premium.activePlanName;
+        final String status;
+        if (entitlement == null || plan == null) {
+          status = 'Thank you for supporting Baptist Hymnal';
+        } else if (expires == null) {
+          status = 'Lifetime. Thank you for your support!';
+        } else {
+          final localizations = MaterialLocalizations.of(context);
+          final date =
+              '${localizations.formatShortMonthDay(expires)}, ${expires.year}';
+          status = entitlement.willRenew
+              ? '$plan, renews $date'
+              : '$plan, ends $date';
+        }
+        return AdaptiveFormSection.insetGrouped(
+          header: const Text('Ads'),
+          children: [
+            AdaptiveListTile(
+              leading: _icon(
+                context,
+                CupertinoIcons.checkmark_seal_fill,
+                Icons.verified_outlined,
+              ),
+              title: const Text('Ads Removed'),
+              subtitle: Text(status),
+              hideBottomDivider: expires == null,
+            ),
+            if (expires != null)
+              AdaptiveListTile(
+                leading: _icon(
+                  context,
+                  CupertinoIcons.creditcard_fill,
+                  Icons.credit_card,
+                ),
+                title: const Text('Manage Subscription'),
+                hideBottomDivider: true,
+                trailing: _chevron(context),
+                onTap: () => launchUrl(
+                  Premium.manageSubscriptionsUrl,
+                  mode: LaunchMode.externalApplication,
+                ),
+              ),
+          ],
+        );
+      },
     );
   }
 

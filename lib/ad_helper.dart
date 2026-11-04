@@ -5,8 +5,21 @@ import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'purchases/premium.dart';
+
 class AdHelper {
-  static bool adsEnabled = true;
+  /// False once someone has paid to remove ads, or [toggleAds] turned them
+  /// off.
+  static bool get adsEnabled => !_turnedOff && !Premium.isActive.value;
+
+  static bool _turnedOff = false;
+
+  /// Turns ads off for this run whatever was bought, as the store screenshot
+  /// tool does.
+  static void toggleAds(bool enabled) {
+    _turnedOff = !enabled;
+    if (!enabled) _disposeInterstitialAd();
+  }
 
   /// Becomes true once consent has been gathered and the Mobile Ads SDK is
   /// initialized. Banners listen to this so they can load as soon as allowed.
@@ -22,6 +35,7 @@ class AdHelper {
   static const Duration _interstitialMaxAge = Duration(minutes: 55);
 
   static Future<void>? _initialization;
+  static bool _listeningToPremium = false;
   static InterstitialAd? _interstitialAd;
   static DateTime? _interstitialLoadedAt;
   static bool _isLoadingInterstitial = false;
@@ -51,9 +65,21 @@ class AdHelper {
   /// Gathers GDPR consent (UMP), asks for iOS tracking permission, then starts
   /// the Mobile Ads SDK. Safe to call more than once; if consent could not be
   /// checked (usually no connection), the next call tries again.
-  static Future<void> initialize() => _initialization ??= _initialize();
+  /// Does nothing while ads are removed, so a paying user is never asked
+  /// about ad consent or tracking; if their purchase lapses, the next call
+  /// sets ads up.
+  static Future<void> initialize() {
+    if (!adsEnabled) return Future.value();
+    return _initialization ??= _initialize();
+  }
 
   static Future<void> _initialize() async {
+    if (!_listeningToPremium) {
+      _listeningToPremium = true;
+      Premium.isActive.addListener(() {
+        if (!adsEnabled) _disposeInterstitialAd();
+      });
+    }
     final consentChecked = await _gatherConsent();
     if (Platform.isIOS) {
       await _requestTrackingAuthorization();
@@ -112,13 +138,6 @@ class AdHelper {
         debugPrint('Privacy options form error: ${error.message}');
       }
     });
-  }
-
-  static void toggleAds(bool enabled) {
-    adsEnabled = enabled;
-    if (!enabled) {
-      _disposeInterstitialAd();
-    }
   }
 
   /// Loads a full-screen ad if one isn't already loaded or loading. The ad is
