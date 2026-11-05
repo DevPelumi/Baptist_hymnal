@@ -8,6 +8,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
 
 import '../audio/tune_player.dart';
 import '../utils/platform_icons.dart';
+import '../utils/app_font.dart';
 
 /// The iOS player's frosted glass, for the mini player and the full sheet:
 /// blurred and tinted enough that the lyrics and ads underneath don't compete
@@ -121,6 +122,7 @@ class TuneArtwork extends StatelessWidget {
           Text(
             '$hymnId',
             style: TextStyle(
+              fontFamily: numberFont,
               color: Colors.white,
               fontSize: size * (hymnId >= 100 ? 0.32 : 0.4),
               fontWeight: FontWeight.w700,

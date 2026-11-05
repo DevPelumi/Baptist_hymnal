@@ -41,6 +41,14 @@ class ReviewPrompt {
     );
   }
 
+  /// Whether the user has opened at least [count] hymns, up to
+  /// [hymnsOpenedBeforeAsking]; past that the count stops once they're asked.
+  static Future<bool> hasOpenedAtLeast(int count) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(_askedKey) ?? false) return true;
+    return (prefs.getInt(_hymnsOpenedKey) ?? 0) >= count;
+  }
+
   /// Call when the user leaves a hymn page and no full-screen ad is showing.
   /// Asks once, so the prompt never shows on top of the lyrics. iOS and
   /// Android decide whether the review sheet actually appears.

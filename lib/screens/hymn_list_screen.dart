@@ -14,6 +14,7 @@ import '../models/hymn_data.dart';
 import '../widgets/hymn_list_item.dart';
 import '../widgets/hymn_scrubber.dart';
 import '../widgets/duo_tab_bar.dart';
+import '../utils/app_font.dart';
 
 /// One book (English, Yoruba or Responsive Reading): a header photo and every
 /// hymn in it, with a search field at the top and a scrubber down the side
@@ -90,99 +91,105 @@ class _HymnListScreenState<T extends IHymnProvider>
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: widget.title),
-      body: Builder(
-        // The scaffold adds its bars to the padding inside its body.
-        builder: (context) {
-          final insets = MediaQuery.paddingOf(context);
-          // On a tablet the list is a centred column, not the full width.
-          final side = Responsive.inset(context);
-          return Consumer<T>(
-            builder: (context, provider, _) {
-              final hymns = HymnHelperFunctions.search(
-                provider.dataSource,
-                _query.text,
-              );
-              _hymns = hymns;
-              final list = GlassSwipeActionScope(
-                child: CustomScrollView(
-                  controller: _scroll,
-                  keyboardDismissBehavior:
-                      ScrollViewKeyboardDismissBehavior.onDrag,
-                  slivers: [
-                    SliverPadding(
-                      padding: EdgeInsets.fromLTRB(
-                        16 + side,
-                        insets.top + 8 + DuoTabBar.titleFadeClearance(context),
-                        16 + side,
-                        12,
-                      ),
-                      sliver: SliverToBoxAdapter(child: _searchField()),
-                    ),
-                    if (!_searching)
+      body: AppFont(
+        child: Builder(
+          // The scaffold adds its bars to the padding inside its body.
+          builder: (context) {
+            final insets = MediaQuery.paddingOf(context);
+            // On a tablet the list is a centred column, not the full width.
+            final side = Responsive.inset(context);
+            return Consumer<T>(
+              builder: (context, provider, _) {
+                final hymns = HymnHelperFunctions.search(
+                  provider.dataSource,
+                  _query.text,
+                );
+                _hymns = hymns;
+                final list = GlassSwipeActionScope(
+                  child: CustomScrollView(
+                    controller: _scroll,
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
+                    slivers: [
                       SliverPadding(
                         padding: EdgeInsets.fromLTRB(
                           16 + side,
-                          0,
+                          insets.top +
+                              8 +
+                              DuoTabBar.titleFadeClearance(context),
                           16 + side,
-                          8,
+                          12,
                         ),
-                        sliver: SliverToBoxAdapter(child: _header()),
+                        sliver: SliverToBoxAdapter(child: _searchField()),
                       ),
-                    if (hymns.isEmpty)
-                      SliverFillRemaining(
-                        hasScrollBody: false,
-                        child: _noResults(context),
-                      )
-                    else
-                      SliverPadding(
-                        padding: EdgeInsets.symmetric(horizontal: side),
-                        sliver: SliverFixedExtentList.builder(
-                          key: _listKey,
-                          itemExtent: HymnListItem.extent(context),
-                          itemCount: hymns.length,
-                          itemBuilder: (context, i) =>
-                              HymnListItem(hymn: hymns[i], provider: provider),
-                        ),
-                      ),
-                    SliverToBoxAdapter(
-                      child: SizedBox(height: insets.bottom + 16),
-                    ),
-                  ],
-                ),
-              );
-              return Stack(
-                children: [
-                  HymnScrubber(
-                    controller: _scroll,
-                    labelAt: () => _topHymn(insets.top),
-                    padding: EdgeInsets.only(
-                      top: insets.top + 8,
-                      bottom: insets.bottom + 8,
-                    ),
-                    child: list,
-                  ),
-                  // iOS 26 bars float over the list, which fades out
-                  // beneath them instead of showing through the title.
-                  if (PlatformInfo.isIOS)
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      height: insets.top + 12,
-                      child: IgnorePointer(
-                        child: _TopFade(
-                          color: CupertinoColors.systemBackground.resolveFrom(
-                            context,
+                      if (!_searching)
+                        SliverPadding(
+                          padding: EdgeInsets.fromLTRB(
+                            16 + side,
+                            0,
+                            16 + side,
+                            8,
                           ),
-                          solidUntil: (insets.top - 2) / (insets.top + 12),
+                          sliver: SliverToBoxAdapter(child: _header()),
+                        ),
+                      if (hymns.isEmpty)
+                        SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: _noResults(context),
+                        )
+                      else
+                        SliverPadding(
+                          padding: EdgeInsets.symmetric(horizontal: side),
+                          sliver: SliverFixedExtentList.builder(
+                            key: _listKey,
+                            itemExtent: HymnListItem.extent(context),
+                            itemCount: hymns.length,
+                            itemBuilder: (context, i) => HymnListItem(
+                              hymn: hymns[i],
+                              provider: provider,
+                            ),
+                          ),
+                        ),
+                      SliverToBoxAdapter(
+                        child: SizedBox(height: insets.bottom + 16),
+                      ),
+                    ],
+                  ),
+                );
+                return Stack(
+                  children: [
+                    HymnScrubber(
+                      controller: _scroll,
+                      labelAt: () => _topHymn(insets.top),
+                      padding: EdgeInsets.only(
+                        top: insets.top + 8,
+                        bottom: insets.bottom + 8,
+                      ),
+                      child: list,
+                    ),
+                    // iOS 26 bars float over the list, which fades out
+                    // beneath them instead of showing through the title.
+                    if (PlatformInfo.isIOS)
+                      Positioned(
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        height: insets.top + 12,
+                        child: IgnorePointer(
+                          child: _TopFade(
+                            color: CupertinoColors.systemBackground.resolveFrom(
+                              context,
+                            ),
+                            solidUntil: (insets.top - 2) / (insets.top + 12),
+                          ),
                         ),
                       ),
-                    ),
-                ],
-              );
-            },
-          );
-        },
+                  ],
+                );
+              },
+            );
+          },
+        ),
       ),
     );
   }

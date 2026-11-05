@@ -11,6 +11,7 @@ import '../models/hymn_data.dart';
 import '../utils/hymn_of_the_day.dart';
 import '../utils/platform_icons.dart';
 import '../utils/responsive.dart';
+import '../purchases/upgrade_prompt.dart';
 import '../utils/review_prompt.dart';
 import '../utils/share_hymn.dart';
 import '../widgets/banner_ad_widget.dart';
@@ -18,6 +19,7 @@ import '../widgets/tune_mini_player.dart';
 import '../widgets/tune_parts.dart';
 import '../providers/hymn_provider.dart';
 import '../providers/settings_provider.dart';
+import '../utils/app_font.dart';
 
 class DetailScreen extends StatefulWidget {
   final HymnData hymn;
@@ -138,6 +140,7 @@ class _DetailScreenState extends State<DetailScreen> {
         // Never ask anything over a full-screen ad; ask on a later close.
         if (AdHelper.onHymnClosed()) return;
         ReviewPrompt.onHymnClosed();
+        UpgradePrompt.refresh();
         HymnOfTheDay.onHymnClosed(Navigator.of(context).context);
       },
       child: AdaptiveScaffold(
@@ -197,33 +200,35 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ],
         ),
-        body: Builder(
-          // The scaffold adds its bars to the padding inside its body.
-          builder: (context) {
-            final insets = MediaQuery.paddingOf(context);
-            return Column(
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Positioned.fill(
-                        child: _lyrics(context, insets.top, tune),
-                      ),
-                      // Floats over the lyrics, which scroll under its glass.
-                      if (tune != null)
-                        Positioned(
-                          left: 12 + Responsive.inset(context),
-                          right: 12 + Responsive.inset(context),
-                          bottom: 8,
-                          child: TuneMiniPlayer(tune: tune),
+        body: AppFont(
+          child: Builder(
+            // The scaffold adds its bars to the padding inside its body.
+            builder: (context) {
+              final insets = MediaQuery.paddingOf(context);
+              return Column(
+                children: [
+                  Expanded(
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                          child: _lyrics(context, insets.top, tune),
                         ),
-                    ],
+                        // Floats over the lyrics, which scroll under its glass.
+                        if (tune != null)
+                          Positioned(
+                            left: 12 + Responsive.inset(context),
+                            right: 12 + Responsive.inset(context),
+                            bottom: 8,
+                            child: TuneMiniPlayer(tune: tune),
+                          ),
+                      ],
+                    ),
                   ),
-                ),
-                SafeArea(top: false, child: const BannerAdWidget()),
-              ],
-            );
-          },
+                  SafeArea(top: false, child: const BannerAdWidget()),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );
@@ -244,6 +249,7 @@ class _DetailScreenState extends State<DetailScreen> {
           '${_getHymnCategory()} ${widget.hymn.id}'.toUpperCase(),
           textAlign: TextAlign.center,
           style: TextStyle(
+            fontFamily: numberFont,
             fontSize: 13,
             fontWeight: FontWeight.w600,
             letterSpacing: 1.2,

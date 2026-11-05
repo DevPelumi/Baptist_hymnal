@@ -1,12 +1,18 @@
 import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../providers/english_hymn_provider.dart';
+import '../purchases/premium.dart';
+import '../purchases/upgrade_prompt.dart';
+import '../utils/platform_icons.dart';
+import 'remove_ads_screen.dart';
 import '../providers/responsive_reading_provider.dart';
 import '../providers/yoruba_hymn_provider.dart';
 import '../utils/responsive.dart';
 import 'hymn_list_screen.dart';
 import '../widgets/duo_tab_bar.dart';
+import '../utils/app_font.dart';
 
 /// A screen that displays the main navigation options for the Baptist Hymnal app.
 /// It provides access to English Hymns, Yoruba Hymns, and Responsive Reading sections.
@@ -49,36 +55,43 @@ class HomeScreen extends StatelessWidget {
     return AdaptiveScaffold(
       appBar: AdaptiveAppBar(title: 'Baptist Hymnal'),
       bottomNavigationBar: DuoTabBar.of(context),
-      body: Builder(
-        // The scaffold adds its bars to the padding inside its body.
-        builder: (context) {
-          final insets = MediaQuery.paddingOf(context);
-          final columns = Responsive.columns(context);
-          final cards = [
-            for (final category in _categories) _HymnCard(category: category),
-          ];
-          return ListView(
-            // The bars float over the page on iOS 26, so pad by their insets.
-            padding: EdgeInsets.fromLTRB(
-              16,
-              insets.top + 12 + DuoTabBar.titleFadeClearance(context),
-              16,
-              insets.bottom + 16,
-            ),
-            children: switch (columns) {
-              // A phone: one book per row.
-              1 => [for (final card in cards) _sized(card, 180)],
-              // A tablet in portrait or an unfolded phone: English, the most
-              // used, across the top, and the other two beside each other.
-              2 => [
-                _sized(cards.first, 220),
-                _row(cards.skip(1).toList(), 220),
+      body: AppFont(
+        child: Builder(
+          // The scaffold adds its bars to the padding inside its body.
+          builder: (context) {
+            final insets = MediaQuery.paddingOf(context);
+            final columns = Responsive.columns(context);
+            final cards = [
+              for (final category in _categories) _HymnCard(category: category),
+            ];
+            return ListView(
+              // The bars float over the page on iOS 26, so pad by their insets.
+              padding: EdgeInsets.fromLTRB(
+                16,
+                insets.top + 12 + DuoTabBar.titleFadeClearance(context),
+                16,
+                insets.bottom + 16,
+              ),
+              children: [
+                ...switch (columns) {
+                  // A phone: one book per row.
+                  1 => [for (final card in cards) _sized(card, 180)],
+                  // A tablet in portrait or an unfolded phone: English, the
+                  // most used, across the top, and the other two beside each
+                  // other.
+                  2 => [
+                    _sized(cards.first, 220),
+                    _row(cards.skip(1).toList(), 220),
+                  ],
+                  // A wide tablet: all three side by side.
+                  _ => [_row(cards, 240)],
+                },
+                // Below the books, so it never pushes them down.
+                const _UpgradeCard(),
               ],
-              // A wide tablet: all three side by side.
-              _ => [_row(cards, 240)],
-            },
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
@@ -172,6 +185,109 @@ class _HymnCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Offers Premium once the user knows the app, until they buy it or choose
+/// Not Now (see [UpgradePrompt]). Hidden while there's nothing to sell.
+class _UpgradeCard extends StatelessWidget {
+  const _UpgradeCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: Listenable.merge([
+        UpgradePrompt.isDue,
+        Premium.hasPlans,
+        Premium.isActive,
+      ]),
+      builder: (context, _) {
+        if (!UpgradePrompt.isDue.value ||
+            !Premium.hasPlans.value ||
+            Premium.isActive.value) {
+          return const SizedBox.shrink();
+        }
+        final ios = PlatformInfo.isIOS;
+        final scheme = Theme.of(context).colorScheme;
+        final accent = ios
+            ? CupertinoColors.systemGreen.resolveFrom(context)
+            : scheme.primary;
+        final label = ios
+            ? CupertinoColors.label.resolveFrom(context)
+            : scheme.onSurface;
+        final secondaryLabel = ios
+            ? CupertinoColors.secondaryLabel.resolveFrom(context)
+            : scheme.onSurfaceVariant;
+        final radius = BorderRadius.circular(22);
+        return Material(
+          color: ios
+              ? accent.withValues(alpha: 0.12)
+              : scheme.secondaryContainer,
+          borderRadius: radius,
+          child: InkWell(
+            borderRadius: radius,
+            onTap: () => showRemoveAds(context, source: 'home'),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 14, 4, 14),
+              child: Row(
+                children: [
+                  DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: accent,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(9),
+                      child: Icon(
+                        platformIconData(
+                          cupertino: CupertinoIcons.sparkles,
+                          material: Icons.auto_awesome,
+                        ),
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Enjoy an ad-free experience',
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                            color: label,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          'Monthly, yearly or pay once',
+                          style: TextStyle(fontSize: 14, color: secondaryLabel),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    tooltip: 'Not now',
+                    onPressed: UpgradePrompt.dismiss,
+                    icon: Icon(
+                      platformIconData(
+                        cupertino: CupertinoIcons.xmark,
+                        material: Icons.close,
+                      ),
+                      size: 18,
+                      color: secondaryLabel,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

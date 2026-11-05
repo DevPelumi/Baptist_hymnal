@@ -2,6 +2,8 @@ import 'package:baptist_hymnal/ad_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import '../purchases/premium.dart';
+
 /// A screen-wide large anchored adaptive banner. Each instance owns its own ad, so
 /// pages being replaced or popped never dispose another page's banner.
 class BannerAdWidget extends StatefulWidget {
@@ -20,6 +22,24 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   void initState() {
     super.initState();
     AdHelper.canRequestAds.addListener(_loadAd);
+    Premium.isActive.addListener(_onAdsRemovedChanged);
+  }
+
+  /// Takes the banner away as soon as ads are removed, and brings it back if
+  /// the purchase lapses.
+  void _onAdsRemovedChanged() {
+    if (AdHelper.adsEnabled) {
+      _loadAd();
+      return;
+    }
+    _pendingAd?.dispose();
+    _pendingAd = null;
+    _requestedWidth = null;
+    if (_bannerAd == null) return;
+    setState(() {
+      _bannerAd?.dispose();
+      _bannerAd = null;
+    });
   }
 
   @override
@@ -47,7 +67,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          if (!mounted || ad != _pendingAd) {
+          if (!mounted || ad != _pendingAd || !AdHelper.adsEnabled) {
             ad.dispose();
             return;
           }
@@ -69,6 +89,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void dispose() {
     AdHelper.canRequestAds.removeListener(_loadAd);
+    Premium.isActive.removeListener(_onAdsRemovedChanged);
     _pendingAd?.dispose();
     _bannerAd?.dispose();
     super.dispose();
