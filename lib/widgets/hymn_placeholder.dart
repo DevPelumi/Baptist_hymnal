@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/platform_icons.dart';
 
 class HymnPlaceholder extends StatelessWidget {
   final String? title;
@@ -9,38 +12,39 @@ class HymnPlaceholder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-      child: Column(
-        children: [
-          Center(
-            child: Container(
-              height: 200.0,
-              width: 200.0,
-              decoration: new BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.pink.shade100,
+    final secondary = CupertinoColors.secondaryLabel.resolveFrom(context);
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              platformIconData(
+                cupertino: CupertinoIcons.heart,
+                material: Icons.favorite_border,
               ),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Icon(
-                  Icons.auto_stories,
-                  size: 70,
-                  color: const Color(0xFFF06292),
-                ),
+              size: 56,
+              color: secondary,
+            ),
+            const SizedBox(height: 16),
+            Text(
+              title ?? 'No favourites yet',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: CupertinoColors.label.resolveFrom(context),
               ),
             ),
-          ),
-          SizedBox(height: 40),
-          Text(
-            title ?? 'Add hymn to favorite',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Alata',
-              fontSize: 22,
+            const SizedBox(height: 8),
+            Text(
+              'Tap the heart on a hymn to keep it here.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 15, color: secondary),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

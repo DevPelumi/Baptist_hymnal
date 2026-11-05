@@ -22,6 +22,8 @@
 		<string>????</string>
 		<key>CFBundleVersion</key>
 		<string>$(FLUTTER_BUILD_NUMBER)</string>
+		<key>ITSAppUsesNonExemptEncryption</key>
+		<false/>
 		<key>LSRequiresIPhoneOS</key>
 		<true/>
 		<key>UILaunchStoryboardName</key>
@@ -47,6 +49,8 @@
 		<true/>
 		<key>GADApplicationIdentifier</key>
 		<string>ca-app-pub-3742689910893242~4614956876</string>
+		<key>NSUserTrackingUsageDescription</key>
+		<string>Allowing tracking lets us show you more relevant ads, which keeps Baptist Hymnal free.</string>
 		<key>SKAdNetworkItems</key>
 		<array>
 			<dict>
@@ -250,5 +254,26 @@
 		<false/>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
+		<key>UIApplicationSceneManifest</key>
+		<dict>
+			<key>UIApplicationSupportsMultipleScenes</key>
+			<false/>
+			<key>UISceneConfigurations</key>
+			<dict>
+				<key>UIWindowSceneSessionRoleApplication</key>
+				<array>
+					<dict>
+						<key>UISceneClassName</key>
+						<string>UIWindowScene</string>
+						<key>UISceneConfigurationName</key>
+						<string>flutter</string>
+						<key>UISceneDelegateClassName</key>
+						<string>FlutterSceneDelegate</string>
+						<key>UISceneStoryboardFile</key>
+						<string>Main</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
 	</dict>
 </plist>

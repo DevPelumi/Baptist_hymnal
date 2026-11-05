@@ -1,50 +1,68 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../providers/english_hymn_provider.dart';
 import '../providers/responsive_reading_provider.dart';
+import '../utils/responsive.dart';
 import '../widgets/favorite_tab.dart';
+import '../widgets/duo_tab_bar.dart';
 
-const style = TextStyle(
-  fontFamily: 'Alata',
-  fontSize: 25,
-  fontWeight: FontWeight.w600,
-  color: Colors.white,
-  letterSpacing: 1.2,
-);
+class Favourites extends StatefulWidget {
+  const Favourites({super.key});
 
-class Favourites extends StatelessWidget {
+  @override
+  State<Favourites> createState() => _FavouritesState();
+}
+
+class _FavouritesState extends State<Favourites> {
+  int _book = 0;
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.pink.shade300,
-          bottom: TabBar(
-            indicatorColor: Colors.white,
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.white70,
-            labelStyle: TextStyle(fontFamily: 'Alata'),
-            tabs: [
-              Tab(text: 'English Hymns'),
-              Tab(text: 'Yoruba Hymns'),
-              Tab(text: 'Reading'),
-            ],
-          ),
-          title: Text(
-            'Favorites',
-            style: style,
-          ),
-        ),
-        body: TabBarView(
-          children: [
-            FavoriteTab<EnglishHymnProvider>(),
-            FavoriteTab<YorubaHymnProvider>(),
-            FavoriteTab<ResponsiveReadingProvider>(),
-          ],
-        ),
+    return AdaptiveScaffold(
+      appBar: AdaptiveAppBar(title: 'Favourites'),
+      bottomNavigationBar: DuoTabBar.of(context),
+      body: Builder(
+        // The scaffold adds its bars to the padding inside its body.
+        builder: (context) {
+          final insets = MediaQuery.paddingOf(context);
+          // A centred column on a tablet, not the full width.
+          return Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Responsive.inset(context),
+            ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(
+                    16,
+                    insets.top + 8 + DuoTabBar.titleFadeClearance(context),
+                    16,
+                    8,
+                  ),
+                  child: AdaptiveSegmentedControl(
+                    labels: const ['English', 'Yoruba', 'Reading'],
+                    selectedIndex: _book,
+                    onValueChanged: (index) => setState(() => _book = index),
+                  ),
+                ),
+                Expanded(
+                  // The segmented control already sits below the toolbar.
+                  child: MediaQuery.removePadding(
+                    context: context,
+                    removeTop: true,
+                    child: switch (_book) {
+                      1 => const FavoriteTab<YorubaHymnProvider>(),
+                      2 => const FavoriteTab<ResponsiveReadingProvider>(),
+                      _ => const FavoriteTab<EnglishHymnProvider>(),
+                    },
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

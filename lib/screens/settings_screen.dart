@@ -1,360 +1,287 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 
+import '../ad_helper.dart';
 import '../models/settings.dart';
 import '../providers/settings_provider.dart';
+import '../utils/platform_icons.dart';
+import '../utils/responsive.dart';
+import '../utils/review_prompt.dart';
+import '../widgets/duo_tab_bar.dart';
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
+  static const _fontSizes = [14, 16, 18, 20, 22];
+
+  // Read from the app bundle, so it always matches pubspec.yaml.
+  static final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
+
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
-
-    return Scaffold(
-      backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: CupertinoColors.systemBackground.resolveFrom(context),
-        title: Text(
-          'Settings',
-          style: theme.textTheme.titleLarge?.copyWith(
-            fontFamily: 'Alata',
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        centerTitle: true,
-      ),
-      body: Consumer<SettingsProvider>(
-        builder: (ctx, provider, _) {
-          return ListView(
-            children: [
-              _buildSection(
-                context,
-                title: 'Appearance',
+    return AdaptiveScaffold(
+      appBar: AdaptiveAppBar(title: 'Settings'),
+      bottomNavigationBar: DuoTabBar.of(context),
+      // Grouped sections sit on the grey grouped background, as in iOS Settings.
+      backgroundColor: PlatformInfo.isIOS
+          ? CupertinoColors.systemGroupedBackground.resolveFrom(context)
+          : null,
+      body: Builder(
+        // The scaffold adds its bars to the padding inside its body.
+        builder: (context) {
+          final insets = MediaQuery.paddingOf(context);
+          return Consumer<SettingsProvider>(
+            builder: (ctx, provider, _) {
+              final fontSize = provider.getFontSize();
+              return ListView(
+                // A centred column on a tablet, as in iPad Settings.
+                padding: EdgeInsets.only(
+                  top: insets.top + 8 + DuoTabBar.titleFadeClearance(context),
+                  bottom: insets.bottom + 16,
+                  left: Responsive.inset(context),
+                  right: Responsive.inset(context),
+                ),
                 children: [
-                  _buildSwitchTile(
-                    context,
-                    title: 'Dark Mode',
-                    subtitle: 'Use dark theme',
-                    icon: CupertinoIcons.moon_fill,
-                    value: provider.isDarkMode(
-                      MediaQuery.of(context).platformBrightness ==
-                          Brightness.dark,
+                  AdaptiveFormSection.insetGrouped(
+                    header: const Text('Appearance'),
+                    children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.moon_fill,
+                          Icons.dark_mode_outlined,
+                        ),
+                        title: const Text('Dark Mode'),
+                        trailing: AdaptiveSwitch(
+                          value: provider.isDarkMode(
+                            MediaQuery.platformBrightnessOf(context) ==
+                                Brightness.dark,
+                          ),
+                          activeColor: brandGreen,
+                          onChanged: provider.setDarkMode,
+                        ),
+                      ),
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.textformat_size,
+                          Icons.format_size,
+                        ),
+                        title: const Text('Hymn Text Size'),
+                        hideBottomDivider: true,
+                        trailing: AdaptivePopupMenuButton.text<int>(
+                          label: '$fontSize',
+                          items: [
+                            for (final size in _fontSizes)
+                              AdaptivePopupMenuItem<int>(
+                                label: '$size',
+                                value: size,
+                                selected: size == fontSize,
+                              ),
+                          ],
+                          onSelected: (_, item) {
+                            final size = item.value;
+                            if (size != null) provider.setFontSize(size);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  AdaptiveFormSection.insetGrouped(
+                    header: const Text('Hymn of the Day'),
+                    footer: const Text(
+                      'A notification each day with a hymn you can sing '
+                      'along to its tune.',
                     ),
-                    onChanged: (value) async {
-                      await provider.setDarkMode(value);
+                    children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.bell_fill,
+                          Icons.notifications_outlined,
+                        ),
+                        title: const Text('Daily Hymn'),
+                        hideBottomDivider: !provider.hymnOfTheDay,
+                        trailing: AdaptiveSwitch(
+                          value: provider.hymnOfTheDay,
+                          activeColor: brandGreen,
+                          onChanged: (on) =>
+                              _setHymnOfTheDay(context, provider, on),
+                        ),
+                      ),
+                      if (provider.hymnOfTheDay)
+                        AdaptiveListTile(
+                          leading: _icon(
+                            context,
+                            CupertinoIcons.clock_fill,
+                            Icons.schedule,
+                          ),
+                          title: const Text('Time'),
+                          hideBottomDivider: true,
+                          trailing: _detail(
+                            context,
+                            provider.hymnOfTheDayTime.format(context),
+                          ),
+                          onTap: () async {
+                            final time = await AdaptiveTimePicker.show(
+                              context: context,
+                              initialTime: provider.hymnOfTheDayTime,
+                              use24HourFormat:
+                                  MediaQuery.alwaysUse24HourFormatOf(context),
+                            );
+                            if (time != null) {
+                              await provider.setHymnOfTheDayTime(time);
+                            }
+                          },
+                        ),
+                    ],
+                  ),
+                  AdaptiveFormSection.insetGrouped(
+                    header: const Text('Language'),
+                    children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.globe,
+                          Icons.language,
+                        ),
+                        title: const Text('App Language'),
+                        hideBottomDivider: true,
+                        trailing: _detail(
+                          context,
+                          provider.getLanguage().label,
+                        ),
+                      ),
+                    ],
+                  ),
+                  FutureBuilder<bool>(
+                    future: AdHelper.isPrivacyOptionsRequired(),
+                    builder: (context, snapshot) {
+                      if (snapshot.data != true) return const SizedBox.shrink();
+                      return AdaptiveFormSection.insetGrouped(
+                        header: const Text('Privacy'),
+                        children: [
+                          AdaptiveListTile(
+                            leading: _icon(
+                              context,
+                              CupertinoIcons.lock_shield_fill,
+                              Icons.privacy_tip_outlined,
+                            ),
+                            title: const Text('Privacy Settings'),
+                            subtitle: const Text(
+                              'Change your ad consent choices',
+                            ),
+                            hideBottomDivider: true,
+                            trailing: _chevron(context),
+                            onTap: AdHelper.showPrivacyOptionsForm,
+                          ),
+                        ],
+                      );
                     },
                   ),
-                ],
-              ),
-              _buildSection(
-                context,
-                title: 'Text',
-                children: [
-                  _buildDropdownTile(
-                    context,
-                    title: 'Font Size',
-                    subtitle: 'Adjust hymn text size',
-                    icon: CupertinoIcons.textformat_size,
-                    value: provider.getFontSize(),
-                    items: [14, 16, 18, 20, 22],
-                    onChanged: (value) async {
-                      if (value != null) {
-                        await provider.setFontSize(value);
-                      }
-                    },
+                  AdaptiveFormSection.insetGrouped(
+                    header: const Text('About'),
+                    children: [
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.star_fill,
+                          Icons.star_outline,
+                        ),
+                        title: const Text('Rate Baptist Hymnal'),
+                        subtitle: Text(
+                          PlatformInfo.isIOS
+                              ? 'Write a review on the App Store'
+                              : 'Write a review on Google Play',
+                        ),
+                        trailing: _chevron(context),
+                        onTap: ReviewPrompt.openStorePage,
+                      ),
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.info_circle_fill,
+                          Icons.info_outline,
+                        ),
+                        title: const Text('Version'),
+                        trailing: FutureBuilder<PackageInfo>(
+                          future: _packageInfo,
+                          builder: (context, info) =>
+                              _detail(context, info.data?.version ?? ''),
+                        ),
+                      ),
+                      AdaptiveListTile(
+                        leading: _icon(
+                          context,
+                          CupertinoIcons.doc_text_fill,
+                          Icons.description_outlined,
+                        ),
+                        title: const Text('Licences'),
+                        hideBottomDivider: true,
+                        trailing: _chevron(context),
+                        onTap: () => showLicensePage(
+                          context: context,
+                          applicationName: 'Baptist Hymnal',
+                        ),
+                      ),
+                    ],
                   ),
                 ],
-              ),
-              _buildSection(
-                context,
-                title: 'Language',
-                children: [
-                  _buildInfoTile(
-                    context,
-                    title: 'App Language',
-                    subtitle: provider.getLanguage().name,
-                    icon: CupertinoIcons.globe,
-                  ),
-                ],
-              ),
-              _buildSection(
-                context,
-                title: 'About',
-                children: [
-                  _buildInfoTile(
-                    context,
-                    title: 'Version',
-                    subtitle: '2.0.1',
-                    icon: CupertinoIcons.info_circle_fill,
-                  ),
-                ],
-              ),
-            ],
+              );
+            },
           );
         },
       ),
     );
   }
 
-  Widget _buildSection(
-    BuildContext context, {
-    required String title,
-    required List<Widget> children,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-          child: Text(
-            title.toUpperCase(),
-            style: TextStyle(
-              color: CupertinoColors.systemGrey.resolveFrom(context),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 1.2,
-            ),
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            color: CupertinoColors.systemBackground.resolveFrom(context),
-            border: Border(
-              top: BorderSide(
-                color: CupertinoColors.systemGrey5.resolveFrom(context),
-                width: 0.5,
-              ),
-              bottom: BorderSide(
-                color: CupertinoColors.systemGrey5.resolveFrom(context),
-                width: 0.5,
-              ),
-            ),
-          ),
-          child: Column(
-            children: children,
-          ),
-        ),
-      ],
+  /// Turning it on asks to send notifications. If they're blocked, says
+  /// where to allow them.
+  static Future<void> _setHymnOfTheDay(
+    BuildContext context,
+    SettingsProvider provider,
+    bool on,
+  ) async {
+    final isOn = await provider.setHymnOfTheDay(on, source: 'settings');
+    if (!on || isOn || !context.mounted) return;
+    await AdaptiveAlertDialog.show(
+      context: context,
+      title: 'Notifications Are Off',
+      message:
+          'To get the hymn of the day, allow notifications for Baptist '
+          'Hymnal in your phone’s Settings.',
+      actions: [AlertAction(title: 'OK', onPressed: () {})],
     );
   }
 
-  Widget _buildSwitchTile(
-    BuildContext context, {
-    required String title,
-    required String subtitle,
-    required IconData icon,
-    required bool value,
-    required ValueChanged<bool> onChanged,
-  }) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: CupertinoColors.systemGrey5.resolveFrom(context),
-            width: 0.5,
-          ),
-        ),
-      ),
-      child: CupertinoListTile(
-        leading: Icon(
-          icon,
-          color: CupertinoColors.activeGreen.resolveFrom(context),
-        ),
-        title: Text(
-          title,
-          style: TextStyle(
-            color: isDark ? Colors.white : Colors.black87,
-          ),
-        ),
-        subtitle: Text(
-          subtitle,
-          style: TextStyle(
-            color: CupertinoColors.systemGrey.resolveFrom(context),
-          ),
-        ),
-        trailing: CupertinoSwitch(
-          value: value,
-          onChanged: onChanged,
-          activeColor: CupertinoColors.activeGreen.resolveFrom(context),
-        ),
-      ),
-    );
-  }
+  static Widget _icon(
+    BuildContext context,
+    IconData cupertino,
+    IconData material,
+  ) => Icon(
+    platformIconData(cupertino: cupertino, material: material),
+    color: PlatformInfo.isIOS
+        ? CupertinoColors.systemGreen.resolveFrom(context)
+        : brandGreen,
+  );
 
-  Widget _buildDropdownTile(
-    BuildContext context, {
-    required String title,
-    required String subtitle,
-    required IconData icon,
-    required int value,
-    required List<int> items,
-    required ValueChanged<int?> onChanged,
-  }) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: CupertinoColors.systemGrey5.resolveFrom(context),
-            width: 0.5,
-          ),
-        ),
-      ),
-      child: CupertinoListTile(
-        leading: Icon(
-          icon,
-          color: CupertinoColors.activeGreen.resolveFrom(context),
-        ),
-        title: Text(
-          title,
-          style: TextStyle(
-            color: isDark ? Colors.white : Colors.black87,
-          ),
-        ),
-        subtitle: Text(
-          subtitle,
-          style: TextStyle(
-            color: CupertinoColors.systemGrey.resolveFrom(context),
-          ),
-        ),
-        trailing: CupertinoButton(
-          padding: EdgeInsets.zero,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                value.toString(),
-                style: TextStyle(
-                  color: isDark
-                      ? Colors.white
-                      : CupertinoColors.systemGrey.resolveFrom(context),
-                ),
-              ),
-              Icon(
-                CupertinoIcons.chevron_right,
-                color: isDark
-                    ? Colors.white
-                    : CupertinoColors.systemGrey.resolveFrom(context),
-                size: 20,
-              ),
-            ],
-          ),
-          onPressed: () {
-            int selectedIndex = items.indexOf(value);
-            showCupertinoModalPopup(
-              context: context,
-              builder: (BuildContext context) => Container(
-                height: 216,
-                padding: const EdgeInsets.only(top: 6.0),
-                margin: EdgeInsets.only(
-                  bottom: MediaQuery.of(context).viewInsets.bottom,
-                ),
-                color: CupertinoColors.systemBackground.resolveFrom(context),
-                child: SafeArea(
-                  top: false,
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 40,
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        decoration: BoxDecoration(
-                          color: CupertinoColors.systemBackground
-                              .resolveFrom(context),
-                          border: Border(
-                            bottom: BorderSide(
-                              color: CupertinoColors.systemGrey5
-                                  .resolveFrom(context),
-                              width: 0.5,
-                            ),
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            CupertinoButton(
-                              padding: EdgeInsets.zero,
-                              child: Text('Cancel'),
-                              onPressed: () => Navigator.of(context).pop(),
-                            ),
-                            CupertinoButton(
-                              padding: EdgeInsets.zero,
-                              child: Text('Done'),
-                              onPressed: () => Navigator.of(context).pop(),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: CupertinoPicker(
-                          scrollController: FixedExtentScrollController(
-                            initialItem: selectedIndex,
-                          ),
-                          itemExtent: 32.0,
-                          onSelectedItemChanged: (index) {
-                            onChanged(items[index]);
-                          },
-                          children: items
-                              .map((size) => Center(
-                                    child: Text(
-                                      size.toString(),
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: CupertinoColors.label
-                                            .resolveFrom(context),
-                                      ),
-                                    ),
-                                  ))
-                              .toList(),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
+  static Widget _detail(BuildContext context, String text) => Text(
+    text,
+    style: TextStyle(
+      fontSize: 17,
+      color: CupertinoColors.secondaryLabel.resolveFrom(context),
+    ),
+  );
 
-  Widget _buildInfoTile(
-    BuildContext context, {
-    required String title,
-    required String subtitle,
-    required IconData icon,
-  }) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: CupertinoColors.systemGrey5.resolveFrom(context),
-            width: 0.5,
-          ),
-        ),
-      ),
-      child: CupertinoListTile(
-        leading: Icon(
-          icon,
-          color: CupertinoColors.activeGreen.resolveFrom(context),
-        ),
-        title: Text(
-          title,
-          style: TextStyle(
-            color: isDark ? Colors.white : Colors.black87,
-          ),
-        ),
-        subtitle: Text(
-          subtitle,
-          style: TextStyle(
-            color: CupertinoColors.systemGrey.resolveFrom(context),
-          ),
-        ),
-      ),
-    );
-  }
+  static Widget _chevron(BuildContext context) => Icon(
+    platformIconData(
+      cupertino: CupertinoIcons.chevron_right,
+      material: Icons.chevron_right,
+    ),
+    size: 18,
+    color: CupertinoColors.tertiaryLabel.resolveFrom(context),
+  );
 }

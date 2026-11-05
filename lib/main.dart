@@ -1,19 +1,31 @@
+import 'dart:async';
+
 import 'package:baptist_hymnal/providers/english_hymn_provider.dart';
 import 'package:baptist_hymnal/providers/responsive_reading_provider.dart';
 import 'package:baptist_hymnal/providers/settings_provider.dart';
 import 'package:baptist_hymnal/providers/yoruba_hymn_provider.dart';
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
+    show LiquidGlassWidgets;
+import 'screens/details_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
 import 'screens/search_screen.dart';
+import 'utils/analytics_tracker.dart';
+import 'utils/hymn_of_the_day.dart';
+import 'utils/platform_icons.dart';
+import 'utils/review_prompt.dart';
+import 'widgets/duo_tab_bar.dart';
 import 'package:provider/provider.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:line_icons/line_icons.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
+import 'ad_helper.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
@@ -25,12 +37,43 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  MobileAds.instance.initialize().then((initializationStatus) {
-    initializationStatus.adapterStatuses.forEach((key, value) {
-      debugPrint('Adapter status for $key: ${value.description}');
-    });
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks(
+      ['Fluid R3 SoundFont (hymn tune piano)'],
+      await rootBundle.loadString('assets/soundfonts/FLUID_R3_LICENSE.txt'),
+    );
   });
-  runApp(const MyApp());
+
+  // The tune player is liquid glass on iOS. Load its shaders now, without
+  // holding up launch: the player is never on the first screen.
+  if (PlatformInfo.isIOS) unawaited(LiquidGlassWidgets.initialize());
+
+  runApp(
+    LiquidGlassWidgets.wrap(
+      // The app's own light/dark setting can differ from the system's.
+      brightnessResolver: Theme.maybeBrightnessOf,
+      child: const MyApp(),
+    ),
+  );
+}
+
+final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
+
+/// Opens English hymn [hymnId] when someone taps the hymn of the day.
+void _openHymnOfTheDay(int hymnId) {
+  final navigator = _navigatorKey.currentState;
+  if (navigator == null) return;
+  final provider = navigator.context.read<EnglishHymnProvider>();
+  final hymn = provider.dataSource.where((h) => h.id == hymnId).firstOrNull;
+  if (hymn == null) return;
+  navigator.push(
+    MaterialPageRoute(
+      builder: (context) => DetailScreen(hymn: hymn, provider: provider),
+    ),
+  );
+  AnalyticsTracker.logHymnOfTheDayOpened(hymnId: hymnId).catchError(
+    (Object e) => debugPrint('Logging the hymn of the day failed: $e'),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -59,39 +102,46 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<SettingsProvider>(
         builder: (context, settingsProvider, _) {
-          return MaterialApp(
-            title: 'Baptist Hymn',
-            theme: ThemeData(
-              primarySwatch: Colors.green,
+          final isDark = settingsProvider.isDarkMode(
+              MediaQuery.platformBrightnessOf(context) == Brightness.dark);
+          final lightTheme = ThemeData(
+            colorSchemeSeed: brandGreen,
+            brightness: Brightness.light,
+          );
+          final darkTheme = ThemeData(
+            colorSchemeSeed: brandGreen,
+            brightness: Brightness.dark,
+          );
+          // iOS gets a CupertinoApp with native bars; Material on Android.
+          return AdaptiveApp(
+            title: 'Baptist Hymnal',
+            navigatorKey: _navigatorKey,
+            themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+            materialLightTheme: lightTheme,
+            materialDarkTheme: darkTheme,
+            cupertinoLightTheme: const CupertinoThemeData(
               brightness: Brightness.light,
-              textTheme: TextTheme(
-                bodyLarge: TextStyle(color: Colors.black87),
-                bodyMedium: TextStyle(color: Colors.black87),
-                titleLarge: TextStyle(color: Colors.black87),
-                titleMedium: TextStyle(color: Colors.black87),
-              ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                backgroundColor: Colors.white,
-              ),
+              primaryColor: CupertinoColors.systemGreen,
             ),
-            darkTheme: ThemeData(
+            cupertinoDarkTheme: const CupertinoThemeData(
               brightness: Brightness.dark,
-              primarySwatch: Colors.green,
-              textTheme: TextTheme(
-                bodyLarge: TextStyle(color: Colors.white),
-                bodyMedium: TextStyle(color: Colors.white),
-                titleLarge: TextStyle(color: Colors.white),
-                titleMedium: TextStyle(color: Colors.white),
-              ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
-                backgroundColor: Color(0xFF1A1A1A),
-              ),
+              primaryColor: CupertinoColors.systemGreen,
             ),
-            themeMode: settingsProvider.isDarkMode(
-                    MediaQuery.of(context).platformBrightness ==
-                        Brightness.dark)
-                ? ThemeMode.dark
-                : ThemeMode.light,
+            // The CupertinoApp on iOS has no Material theme or localizations,
+            // which the hymn text, tune bar and licence page still use.
+            localizationsDelegates: const [
+              DefaultMaterialLocalizations.delegate,
+              DefaultCupertinoLocalizations.delegate,
+              DefaultWidgetsLocalizations.delegate,
+            ],
+            // On a half-folded foldable, the app keeps to one side of the
+            // fold rather than running the words through the crease. Flat
+            // and on ordinary phones, this changes nothing.
+            builder: (context, child) => DisplayFeatureSubScreen(
+              child: PlatformInfo.isIOS
+                  ? Theme(data: isDark ? darkTheme : lightTheme, child: child!)
+                  : child!,
+            ),
             navigatorObservers: [
               FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
             ],
@@ -127,15 +177,27 @@ class _FirstScreenState extends State<FirstScreen> {
     final responsive =
         Provider.of<ResponsiveReadingProvider>(context, listen: false);
     final yorubaHymn = Provider.of<YorubaHymnProvider>(context, listen: false);
+    final launchedForHymn = HymnOfTheDay.initialize(onOpen: _openHymnOfTheDay);
 
     await Future.wait([
       settingsProvider.fetchSettings(),
       englishHymn.fetchFavorites(),
       responsive.fetchFavorites(),
       yorubaHymn.fetchFavorites(),
+      ReviewPrompt.initialize(),
     ]);
 
     FlutterNativeSplash.remove();
+
+    // Keeps the next month of hymns of the day scheduled.
+    unawaited(settingsProvider.scheduleHymnOfTheDay());
+    // Tapping one opened the app: show it over the home page.
+    final hymnId = await launchedForHymn;
+    if (hymnId != null) _openHymnOfTheDay(hymnId);
+
+    // Ads start only after consent (and iOS tracking permission), which needs
+    // the app on screen to show its prompts.
+    WidgetsBinding.instance.addPostFrameCallback((_) => AdHelper.initialize());
   }
 
   @override
@@ -145,8 +207,8 @@ class _FirstScreenState extends State<FirstScreen> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            print("Error during initialization: ${snapshot.error}");
-            print("Stack trace: ${snapshot.stackTrace}");
+            debugPrint("Error during initialization: ${snapshot.error}");
+            debugPrint("Stack trace: ${snapshot.stackTrace}");
             return Scaffold(
               body: Center(
                 child: Text('Error initializing app. Please restart.'),
@@ -165,7 +227,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -180,53 +242,55 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _pageOptions[_selectedPage],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Colors.green,
-              iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.green.withOpacity(0.1),
-              color: Theme.of(context).textTheme.bodyLarge?.color,
-              tabs: [
-                GButton(
-                  icon: LineIcons.home,
-                  text: 'Home',
-                ),
-                GButton(
-                  icon: LineIcons.heart,
-                  text: 'Liked',
-                ),
-                GButton(
-                  icon: LineIcons.search,
-                  text: 'Search',
-                ),
-                GButton(
-                  icon: LineIcons.cog,
-                  text: 'Settings',
-                ),
-              ],
-              selectedIndex: _selectedPage,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedPage = index;
-                });
-              },
-            ),
+    final tabBar = AdaptiveBottomNavigationBar(
+      selectedIndex: _selectedPage,
+      onTap: (index) => setState(() => _selectedPage = index),
+      items: [
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'house.fill',
+            cupertino: CupertinoIcons.house_fill,
+            material: Icons.home_outlined,
           ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.home,
+          label: 'Home',
         ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'heart.fill',
+            cupertino: CupertinoIcons.heart_fill,
+            material: Icons.favorite_border,
+          ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.favorite,
+          label: 'Favourites',
+        ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'magnifyingglass',
+            cupertino: CupertinoIcons.search,
+            material: Icons.search,
+          ),
+          label: 'Search',
+          isSearch: true,
+        ),
+        AdaptiveNavigationDestination(
+          icon: platformIcon(
+            sfSymbol: 'gearshape.fill',
+            cupertino: CupertinoIcons.gear_solid,
+            material: Icons.settings_outlined,
+          ),
+          selectedIcon: PlatformInfo.isIOS ? null : Icons.settings,
+          label: 'Settings',
+        ),
+      ],
+    );
+    final inSideStrip = DuoTabBar.inSideStrip(context);
+    return AdaptiveScaffold(
+      body: DuoTabBar(
+        tabBar: inSideStrip ? tabBar : null,
+        child: _pageOptions[_selectedPage],
       ),
+      bottomNavigationBar: inSideStrip ? null : tabBar,
     );
   }
 }

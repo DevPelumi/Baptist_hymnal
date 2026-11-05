@@ -5,12 +5,25 @@ allprojects {
     }
 }
 
-rootProject.buildDir = '../build'
+def newBuildDir = rootProject.layout.buildDirectory.dir('../../build').get()
+rootProject.layout.buildDirectory.value(newBuildDir)
 subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.layout.buildDirectory.value(newBuildDir.dir(project.name))
 }
 subprojects {
     project.evaluationDependsOn(':app')
+}
+
+// Built-in Kotlin is off (adaptive_platform_ui applies the Kotlin plugin
+// itself, which AGP 9 rejects otherwise). Apply the Kotlin plugin as soon as a
+// module applies the Android plugin, so build files that configure `kotlin {}`
+// without applying it (the app, flutter_midi_pro) still find it.
+subprojects {
+    ['com.android.application', 'com.android.library'].each { id ->
+        pluginManager.withPlugin(id) {
+            pluginManager.apply('org.jetbrains.kotlin.android')
+        }
+    }
 }
 
 tasks.register("clean", Delete) {

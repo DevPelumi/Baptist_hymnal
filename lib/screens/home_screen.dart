@@ -1,95 +1,108 @@
+import 'package:adaptive_platform_ui/adaptive_platform_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-import 'english_hymn_screen.dart';
-import 'responsive_reading_screen.dart';
-import 'yoruba_hymn_screen.dart';
+import '../providers/english_hymn_provider.dart';
+import '../providers/responsive_reading_provider.dart';
+import '../providers/yoruba_hymn_provider.dart';
+import '../utils/responsive.dart';
+import 'hymn_list_screen.dart';
+import '../widgets/duo_tab_bar.dart';
 
 /// A screen that displays the main navigation options for the Baptist Hymnal app.
 /// It provides access to English Hymns, Yoruba Hymns, and Responsive Reading sections.
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  static const _animationDuration = Duration(milliseconds: 500);
-  static const _horizontalOffset = 50.0;
-  static const _cardHeight = 200.0;
-  static const _borderRadius = 16.0;
-  static const _shadowOffset = Offset(8, 10);
-  static const _shadowBlur = 20.0;
-
-  final List<HymnCategory> _categories = [
+  static const _categories = [
     HymnCategory(
       title: 'English Hymns',
       imagePath: 'assets/images/hymnal2.jpg',
-      screen: EnglishHymnScreen(),
+      screen: HymnListScreen<EnglishHymnProvider>(
+        title: 'English Hymns',
+        imagePath: 'assets/images/hymnal2.jpg',
+        searchTabIndex: 0,
+      ),
     ),
     HymnCategory(
       title: 'Responsive Reading',
       imagePath: 'assets/images/hymnal1.jpg',
-      screen: ResponsiveReading(),
+      screen: HymnListScreen<ResponsiveReadingProvider>(
+        title: 'Responsive Reading',
+        imagePath: 'assets/images/hymnal1.jpg',
+        imageAlignment: Alignment.bottomCenter,
+        searchTabIndex: 2,
+      ),
     ),
     HymnCategory(
       title: 'Yoruba Hymns',
       imagePath: 'assets/images/hymnal3.jpg',
-      screen: YorubaHymnScreen(),
+      screen: HymnListScreen<YorubaHymnProvider>(
+        title: 'Yoruba Hymns',
+        imagePath: 'assets/images/hymnal3.jpg',
+        searchTabIndex: 1,
+      ),
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.green.shade300,
-      body: ListView(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: AnimationLimiter(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: AnimationConfiguration.toStaggeredList(
-                  duration: _animationDuration,
-                  childAnimationBuilder: (widget) => SlideAnimation(
-                    horizontalOffset: _horizontalOffset,
-                    child: FadeInAnimation(child: widget),
-                  ),
-                  children: [
-                    _buildHeader(),
-                    const SizedBox(height: 10),
-                    ..._categories.map((category) => Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: _HymnCard(category: category),
-                        )),
-                  ],
-                ),
-              ),
+    return AdaptiveScaffold(
+      appBar: AdaptiveAppBar(title: 'Baptist Hymnal'),
+      bottomNavigationBar: DuoTabBar.of(context),
+      body: Builder(
+        // The scaffold adds its bars to the padding inside its body.
+        builder: (context) {
+          final insets = MediaQuery.paddingOf(context);
+          final columns = Responsive.columns(context);
+          final cards = [
+            for (final category in _categories) _HymnCard(category: category),
+          ];
+          return ListView(
+            // The bars float over the page on iOS 26, so pad by their insets.
+            padding: EdgeInsets.fromLTRB(
+              16,
+              insets.top + 12 + DuoTabBar.titleFadeClearance(context),
+              16,
+              insets.bottom + 16,
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildHeader() {
-    return const Padding(
-      padding: EdgeInsets.all(15.0),
-      child: Text(
-        'BAPTIST HYMNAL',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 23,
-          fontFamily: 'Alata',
-          fontWeight: FontWeight.w600,
-        ),
+            children: switch (columns) {
+              // A phone: one book per row.
+              1 => [for (final card in cards) _sized(card, 180)],
+              // A tablet in portrait or an unfolded phone: English, the most
+              // used, across the top, and the other two beside each other.
+              2 => [
+                _sized(cards.first, 220),
+                _row(cards.skip(1).toList(), 220),
+              ],
+              // A wide tablet: all three side by side.
+              _ => [_row(cards, 240)],
+            },
+          );
+        },
       ),
     );
   }
 }
+
+Widget _sized(Widget card, double height) => Padding(
+  padding: const EdgeInsets.only(bottom: 16),
+  child: SizedBox(height: height, child: card),
+);
+
+Widget _row(List<Widget> cards, double height) => Padding(
+  padding: const EdgeInsets.only(bottom: 16),
+  child: SizedBox(
+    height: height,
+    child: Row(
+      children: [
+        for (var i = 0; i < cards.length; i++) ...[
+          if (i > 0) const SizedBox(width: 16),
+          Expanded(child: cards[i]),
+        ],
+      ],
+    ),
+  ),
+);
 
 /// A model class representing a hymn category with its properties.
 class HymnCategory {
@@ -108,48 +121,46 @@ class HymnCategory {
 class _HymnCard extends StatelessWidget {
   final HymnCategory category;
 
-  const _HymnCard({
-    Key? key,
-    required this.category,
-  }) : super(key: key);
+  const _HymnCard({required this.category});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => category.screen),
-      ),
-      child: Stack(
-        children: [
-          Container(
-            height: _HomeScreenState._cardHeight,
-            decoration: BoxDecoration(
-              borderRadius:
-                  BorderRadius.circular(_HomeScreenState._borderRadius),
-              color: Colors.blue,
-              image: DecorationImage(
-                colorFilter: const ColorFilter.mode(
-                  Colors.black26,
-                  BlendMode.darken,
-                ),
-                fit: BoxFit.cover,
-                image: AssetImage(category.imagePath),
+    return Semantics(
+      button: true,
+      label: category.title,
+      child: GestureDetector(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => category.screen),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(22),
+            image: DecorationImage(
+              colorFilter: const ColorFilter.mode(
+                Colors.black26,
+                BlendMode.darken,
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black54,
-                  offset: _HomeScreenState._shadowOffset,
-                  blurRadius: _HomeScreenState._shadowBlur,
-                ),
-              ],
+              fit: BoxFit.cover,
+              image: AssetImage(category.imagePath),
             ),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x33000000),
+                offset: Offset(0, 6),
+                blurRadius: 16,
+              ),
+            ],
           ),
-          Positioned(
-            left: 24,
-            bottom: 20,
+          alignment: Alignment.bottomLeft,
+          padding: const EdgeInsets.fromLTRB(22, 0, 22, 18),
+          // Shrinks rather than wraps in a narrow card.
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.bottomLeft,
             child: Text(
               category.title,
+              maxLines: 1,
               style: const TextStyle(
                 fontFamily: 'Alata',
                 fontSize: 25,
@@ -159,7 +170,7 @@ class _HymnCard extends StatelessWidget {
               ),
             ),
           ),
-        ],
+        ),
       ),
     );
   }
