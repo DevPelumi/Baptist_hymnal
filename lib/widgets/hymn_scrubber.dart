@@ -8,6 +8,7 @@ import 'package:liquid_glass_widgets/liquid_glass_widgets.dart'
     show GlassContainer, LiquidGlassSettings, LiquidRoundedSuperellipse;
 
 import '../utils/platform_icons.dart';
+import '../utils/app_font.dart';
 
 /// A scroll thumb on the right of [child] that can be grabbed to scrub
 /// through a long list, as with the iOS scroll indicator or an Android fast
@@ -225,6 +226,7 @@ class _Bubble extends StatelessWidget {
             Text(
               '$number',
               style: TextStyle(
+                fontFamily: numberFont,
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 color: accentColor(context),

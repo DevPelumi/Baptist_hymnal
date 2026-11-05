@@ -68,17 +68,17 @@ void main() {
   group('planTerms', () {
     test('says a subscription renews, and where to cancel', () {
       final terms = planTerms(yearly, ios: true);
-      expect(terms, startsWith('₦7,200 a year, charged to your Apple ID'));
+      expect(terms, startsWith('₦7,200 a year, renewing until you cancel.'));
       expect(terms, contains('Cancel any time in your Apple ID subscriptions'));
-      expect(planTerms(monthly, ios: false), contains('end of the month'));
+      expect(
+        planTerms(monthly, ios: false),
+        contains('a day before it renews'),
+      );
       expect(planTerms(monthly, ios: false), contains('Google Play'));
     });
 
-    test('says lifetime is a single payment', () {
-      expect(
-        planTerms(lifetime, ios: true),
-        'One payment of ₦15,000. No subscription.',
-      );
+    test('says nothing for lifetime, whose row says it all', () {
+      expect(planTerms(lifetime, ios: true), isEmpty);
     });
   });
 
@@ -108,12 +108,12 @@ void main() {
 
     test('reads an App Store free trial', () {
       expect(freeTrialLength(withIntro(PeriodUnit.day, 3)), '3 days');
-      expect(freeTrialLength(withIntro(PeriodUnit.week, 1)), '1 week');
+      expect(freeTrialLength(withIntro(PeriodUnit.week, 1)), 'a week');
       expect(freeTrialLength(withIntro(PeriodUnit.month, 2)), '2 months');
     });
 
     test('calls whole weeks of days weeks', () {
-      expect(freeTrialLength(withIntro(PeriodUnit.day, 7)), '1 week');
+      expect(freeTrialLength(withIntro(PeriodUnit.day, 7)), 'a week');
       expect(freeTrialLength(withIntro(PeriodUnit.day, 14)), '2 weeks');
     });
 
@@ -158,7 +158,7 @@ void main() {
         ),
         const PresentedOfferingContext('default', null, null),
       );
-      expect(freeTrialLength(package), '1 week');
+      expect(freeTrialLength(package), 'a week');
     });
 
     test('is null with no trial', () {
@@ -170,10 +170,7 @@ void main() {
   test('planTerms states the trial, then the price', () {
     final terms = planTerms(monthly, ios: true, trial: '3 days');
     expect(terms, startsWith('Free for 3 days, then ₦1,000 a month'));
-    expect(terms, contains('before the trial or a month ends'));
-    expect(
-      planTerms(lifetime, ios: true, trial: '3 days'),
-      'One payment of ₦15,000. No subscription.',
-    );
+    expect(terms, endsWith('at least a day before the trial ends.'));
+    expect(planTerms(lifetime, ios: true, trial: '3 days'), isEmpty);
   });
 }

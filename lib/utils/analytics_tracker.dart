@@ -51,10 +51,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'hymn_shared',
-      parameters: {
-        'hymn_id': hymnId,
-        'hymn_title': hymnTitle,
-      },
+      parameters: {'hymn_id': hymnId, 'hymn_title': hymnTitle},
     );
   }
 
@@ -81,10 +78,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'font_size_changed',
-      parameters: {
-        'old_size': oldSize,
-        'new_size': newSize,
-      },
+      parameters: {'old_size': oldSize, 'new_size': newSize},
     );
   }
 
@@ -93,9 +87,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'theme_changed',
-      parameters: {
-        'theme_mode': themeMode,
-      },
+      parameters: {'theme_mode': themeMode},
     );
   }
 
@@ -105,9 +97,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'review_requested',
-      parameters: {
-        'source': source,
-      },
+      parameters: {'source': source},
     );
   }
 
@@ -129,22 +119,22 @@ class AnalyticsTracker {
   static Future<void> logHymnOfTheDayOpened({required int hymnId}) async {
     await _analytics.logEvent(
       name: 'hymn_of_the_day_opened',
-      parameters: {
-        'hymn_id': hymnId,
-      },
+      parameters: {'hymn_id': hymnId},
     );
   }
 
   // Remove ads events
   static Future<void> logRemoveAdsViewed({
-    required String source, // 'settings'
+    required String source, // 'settings' or 'home'
   }) async {
     await _analytics.logEvent(
       name: 'remove_ads_viewed',
-      parameters: {
-        'source': source,
-      },
+      parameters: {'source': source},
     );
+  }
+
+  static Future<void> logUpgradePromptDismissed() async {
+    await _analytics.logEvent(name: 'upgrade_prompt_dismissed');
   }
 
   static Future<void> logRemoveAdsResult({
@@ -153,10 +143,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'remove_ads_result',
-      parameters: {
-        'plan': plan,
-        'outcome': outcome,
-      },
+      parameters: {'plan': plan, 'outcome': outcome},
     );
   }
 
@@ -167,10 +154,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'ad_impression',
-      parameters: {
-        'ad_type': adType,
-        'ad_unit_id': adUnitId,
-      },
+      parameters: {'ad_type': adType, 'ad_unit_id': adUnitId},
     );
   }
 
@@ -180,10 +164,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'ad_click',
-      parameters: {
-        'ad_type': adType,
-        'ad_unit_id': adUnitId,
-      },
+      parameters: {'ad_type': adType, 'ad_unit_id': adUnitId},
     );
   }
 
@@ -194,10 +175,7 @@ class AnalyticsTracker {
   }) async {
     await _analytics.logEvent(
       name: 'navigation',
-      parameters: {
-        'from_screen': fromScreen,
-        'to_screen': toScreen,
-      },
+      parameters: {'from_screen': fromScreen, 'to_screen': toScreen},
     );
   }
 }

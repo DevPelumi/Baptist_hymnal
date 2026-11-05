@@ -182,6 +182,11 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
     final plans = paywallPlans(offering);
     final selected = plans.contains(_selected) ? _selected! : plans.first;
     final selectedTrial = _trials[selected.identifier];
+    final terms = planTerms(
+      selected,
+      ios: PlatformInfo.isIOS,
+      trial: selectedTrial,
+    );
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 480),
@@ -200,28 +205,23 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
             ),
             const SizedBox(height: 16),
             Text(
-              'Remove Ads',
+              'Enjoy an ad-free experience',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
+                height: 1.2,
                 color: colors.label,
               ),
             ),
             const SizedBox(height: 8),
             Text(
-              'Sing without interruptions, and help keep Baptist Hymnal going.',
+              'Nothing between you and the hymns. Your support keeps Baptist '
+              'Hymnal going.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 17, color: colors.secondaryLabel),
             ),
-            const SizedBox(height: 24),
-            for (final benefit in const [
-              'No banner ads under the words',
-              'No full-screen ads between hymns',
-              'Everything else stays the same',
-            ])
-              _Benefit(text: benefit, colors: colors),
-            const SizedBox(height: 20),
+            const SizedBox(height: 28),
             for (final plan in plans)
               _PlanTile(
                 package: plan,
@@ -235,20 +235,18 @@ class _RemoveAdsScreenState extends State<RemoveAdsScreen> {
               ),
             const SizedBox(height: 12),
             _ContinueButton(
-              label: selectedTrial == null ? 'Continue' : 'Start Free Trial',
+              label: selectedTrial == null ? 'Go Ad-Free' : 'Start Free Trial',
               busy: _busy,
               onPressed: _busy ? null : () => _buy(selected),
             ),
-            const SizedBox(height: 12),
-            Text(
-              planTerms(
-                selected,
-                ios: PlatformInfo.isIOS,
-                trial: selectedTrial,
+            if (terms.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              Text(
+                terms,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12, color: colors.secondaryLabel),
               ),
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: colors.secondaryLabel),
-            ),
+            ],
             const SizedBox(height: 8),
             Wrap(
               alignment: WrapAlignment.center,
@@ -302,8 +300,9 @@ String? yearlySavingsBadge(Offering offering) {
   return percent >= 5 ? 'Save $percent%' : null;
 }
 
-/// What the store will charge and when, as both stores require. [trial] is
-/// the free trial's length, when this person can take one.
+/// What the store will charge and when, as both stores require for a
+/// subscription. [trial] is the free trial's length, when this person can take
+/// one. Empty for a one-time purchase, whose row already says so.
 @visibleForTesting
 String planTerms(Package package, {required bool ios, String? trial}) {
   final price = package.storeProduct.priceString;
@@ -313,16 +312,14 @@ String planTerms(Package package, {required bool ios, String? trial}) {
     PackageType.monthly => 'month',
     _ => null,
   };
-  if (period == null) return 'One payment of $price. No subscription.';
-  if (trial != null) {
-    return 'Free for $trial, then $price a $period, charged to your $store '
-        'account. It renews automatically unless you cancel at least 24 '
-        'hours before the trial or a $period ends. Cancel any time in your '
-        '$store subscriptions.';
-  }
-  return '$price a $period, charged to your $store account. It renews '
-      'automatically unless you cancel at least 24 hours before the end of '
-      'the $period. Cancel any time in your $store subscriptions.';
+  if (period == null) return '';
+  final cancel =
+      'Cancel any time in your $store subscriptions, at least a '
+      'day before ${trial == null ? 'it renews' : 'the trial ends'}.';
+  return trial == null
+      ? '$price a $period, renewing until you cancel. $cancel'
+      : 'Free for $trial, then $price a $period, renewing until you cancel. '
+            '$cancel';
 }
 
 /// How long [package]'s free trial lasts, such as "3 days", or null when it
@@ -341,7 +338,8 @@ String? freeTrialLength(Package package) {
   return null;
 }
 
-/// "3 days", "1 week", "2 months". Whole weeks of days read as weeks.
+/// "3 days", "a week", "2 months". Whole weeks of days read as weeks. One
+/// is written as a word, since the app's font draws 1 like a capital I.
 String? _periodText(PeriodUnit unit, int count) {
   if (unit == PeriodUnit.day && count % 7 == 0) {
     unit = PeriodUnit.week;
@@ -355,8 +353,11 @@ String? _periodText(PeriodUnit unit, int count) {
     PeriodUnit.unknown => null,
   };
   if (noun == null || count <= 0) return null;
-  return '$count $noun${count == 1 ? '' : 's'}';
+  return count == 1 ? 'a $noun' : '$count ${noun}s';
 }
+
+String _sentenceCase(String text) =>
+    text.isEmpty ? text : text[0].toUpperCase() + text.substring(1);
 
 String _planName(Package package) => switch (package.packageType) {
   PackageType.annual => 'yearly',
@@ -460,39 +461,6 @@ class _PaywallColors {
   }
 }
 
-class _Benefit extends StatelessWidget {
-  const _Benefit({required this.text, required this.colors});
-
-  final String text;
-  final _PaywallColors colors;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-      child: Row(
-        children: [
-          Icon(
-            platformIconData(
-              cupertino: CupertinoIcons.checkmark_circle_fill,
-              material: Icons.check_circle,
-            ),
-            color: colors.accent,
-            size: 22,
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(fontSize: 17, color: colors.label),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class _PlanTile extends StatelessWidget {
   const _PlanTile({
     required this.package,
@@ -520,7 +488,7 @@ class _PlanTile extends StatelessWidget {
         'Yearly',
         '${product.priceString} / year',
         [
-          if (trial != null) '$trial free',
+          if (trial != null) '${_sentenceCase(trial!)} free',
           if (product.pricePerMonthString case final perMonth?)
             '$perMonth a month',
         ].join(' · '),
@@ -528,7 +496,7 @@ class _PlanTile extends StatelessWidget {
       PackageType.monthly => (
         'Monthly',
         '${product.priceString} / month',
-        trial == null ? null : '$trial free',
+        trial == null ? null : '${_sentenceCase(trial!)} free',
       ),
       PackageType.lifetime => (
         'Lifetime',

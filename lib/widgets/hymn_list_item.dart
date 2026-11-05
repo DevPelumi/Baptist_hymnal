@@ -17,6 +17,7 @@ import '../screens/details_screen.dart';
 import '../utils/hymn_helper_functions.dart';
 import '../utils/platform_icons.dart';
 import '../utils/share_hymn.dart';
+import '../utils/app_font.dart';
 
 /// A hymn row, laid out like a song in Apple Music: the number in a circle
 /// where the artwork goes, the title over the hymn's opening words, and a
@@ -293,6 +294,7 @@ class _NumberBadge extends StatelessWidget {
         maxLines: 1,
         textScaler: TextScaler.noScaling,
         style: TextStyle(
+          fontFamily: numberFont,
           color: Colors.white,
           fontSize: id >= 100 ? size * 0.33 : size * 0.38,
           fontWeight: FontWeight.w600,
@@ -395,6 +397,7 @@ class _HymnPreview extends StatelessWidget {
             Text(
               'HYMN ${hymn.id}',
               style: TextStyle(
+                fontFamily: numberFont,
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 1,

@@ -14,6 +14,7 @@ import '../audio/tune_player.dart';
 import '../utils/platform_icons.dart';
 import 'duo_tab_bar.dart';
 import 'tune_parts.dart';
+import '../utils/app_font.dart';
 
 /// Opens the full player for [tune]: a liquid glass sheet on iOS, a
 /// Material bottom sheet on Android.
@@ -137,7 +138,11 @@ class _TuneSheetState extends State<TuneSheet> {
                     const SizedBox(height: 4),
                     Text(
                       ['Hymn ${tune.hymnId}', ?shape].join(' · '),
-                      style: TextStyle(fontSize: 14, color: secondary),
+                      style: TextStyle(
+                        fontFamily: numberFont,
+                        fontSize: 14,
+                        color: secondary,
+                      ),
                     ),
                   ],
                 ),
@@ -150,6 +155,7 @@ class _TuneSheetState extends State<TuneSheet> {
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: DefaultTextStyle(
               style: TextStyle(
+                fontFamily: numberFont,
                 fontSize: 12,
                 color: secondary,
                 fontFeatures: const [FontFeature.tabularFigures()],

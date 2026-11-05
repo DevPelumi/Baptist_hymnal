@@ -17,6 +17,7 @@ import 'screens/settings_screen.dart';
 import 'screens/favourites_screen.dart';
 import 'screens/search_screen.dart';
 import 'utils/analytics_tracker.dart';
+import 'utils/app_font.dart';
 import 'utils/hymn_of_the_day.dart';
 import 'utils/platform_icons.dart';
 import 'utils/review_prompt.dart';
@@ -27,6 +28,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
 import 'ad_helper.dart';
 import 'purchases/premium.dart';
+import 'purchases/upgrade_prompt.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
@@ -34,15 +36,12 @@ void main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Initialize Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   LicenseRegistry.addLicense(() async* {
-    yield LicenseEntryWithLineBreaks(
-      ['Fluid R3 SoundFont (hymn tune piano)'],
-      await rootBundle.loadString('assets/soundfonts/FLUID_R3_LICENSE.txt'),
-    );
+    yield LicenseEntryWithLineBreaks([
+      'Fluid R3 SoundFont (hymn tune piano)',
+    ], await rootBundle.loadString('assets/soundfonts/FLUID_R3_LICENSE.txt'));
   });
 
   // The tune player is liquid glass on iOS. Load its shaders now, without
@@ -77,6 +76,25 @@ void _openHymnOfTheDay(int hymnId) {
   );
 }
 
+/// iOS's text styles in [appFont]. Alata is wider than San Francisco, so
+/// San Francisco's tightened letter spacing is dropped.
+final CupertinoTextThemeData _cupertinoText = () {
+  const base = CupertinoTextThemeData();
+  TextStyle inAppFont(TextStyle style) =>
+      style.copyWith(fontFamily: appFont, letterSpacing: 0);
+  return CupertinoTextThemeData(
+    textStyle: inAppFont(base.textStyle),
+    actionTextStyle: inAppFont(base.actionTextStyle),
+    actionSmallTextStyle: inAppFont(base.actionSmallTextStyle),
+    tabLabelTextStyle: inAppFont(base.tabLabelTextStyle),
+    navTitleTextStyle: inAppFont(base.navTitleTextStyle),
+    navLargeTitleTextStyle: inAppFont(base.navLargeTitleTextStyle),
+    navActionTextStyle: inAppFont(base.navActionTextStyle),
+    pickerTextStyle: inAppFont(base.pickerTextStyle),
+    dateTimePickerTextStyle: inAppFont(base.dateTimePickerTextStyle),
+  );
+}();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -92,10 +110,7 @@ class MyApp extends StatelessWidget {
           create: (_) => EnglishHymnProvider(),
           lazy: true,
         ),
-        ChangeNotifierProvider(
-          create: (_) => YorubaHymnProvider(),
-          lazy: true,
-        ),
+        ChangeNotifierProvider(create: (_) => YorubaHymnProvider(), lazy: true),
         ChangeNotifierProvider(
           create: (_) => ResponsiveReadingProvider(),
           lazy: true,
@@ -104,14 +119,17 @@ class MyApp extends StatelessWidget {
       child: Consumer<SettingsProvider>(
         builder: (context, settingsProvider, _) {
           final isDark = settingsProvider.isDarkMode(
-              MediaQuery.platformBrightnessOf(context) == Brightness.dark);
+            MediaQuery.platformBrightnessOf(context) == Brightness.dark,
+          );
           final lightTheme = ThemeData(
             colorSchemeSeed: brandGreen,
             brightness: Brightness.light,
+            fontFamily: appFont,
           );
           final darkTheme = ThemeData(
             colorSchemeSeed: brandGreen,
             brightness: Brightness.dark,
+            fontFamily: appFont,
           );
           // iOS gets a CupertinoApp with native bars; Material on Android.
           return AdaptiveApp(
@@ -120,13 +138,15 @@ class MyApp extends StatelessWidget {
             themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
             materialLightTheme: lightTheme,
             materialDarkTheme: darkTheme,
-            cupertinoLightTheme: const CupertinoThemeData(
+            cupertinoLightTheme: CupertinoThemeData(
               brightness: Brightness.light,
               primaryColor: CupertinoColors.systemGreen,
+              textTheme: _cupertinoText,
             ),
-            cupertinoDarkTheme: const CupertinoThemeData(
+            cupertinoDarkTheme: CupertinoThemeData(
               brightness: Brightness.dark,
               primaryColor: CupertinoColors.systemGreen,
+              textTheme: _cupertinoText,
             ),
             // The CupertinoApp on iOS has no Material theme or localizations,
             // which the hymn text, tune bar and licence page still use.
@@ -171,12 +191,18 @@ class _FirstScreenState extends State<FirstScreen> {
   }
 
   Future<void> _initializeAppAndProviders() async {
-    final settingsProvider =
-        Provider.of<SettingsProvider>(context, listen: false);
-    final englishHymn =
-        Provider.of<EnglishHymnProvider>(context, listen: false);
-    final responsive =
-        Provider.of<ResponsiveReadingProvider>(context, listen: false);
+    final settingsProvider = Provider.of<SettingsProvider>(
+      context,
+      listen: false,
+    );
+    final englishHymn = Provider.of<EnglishHymnProvider>(
+      context,
+      listen: false,
+    );
+    final responsive = Provider.of<ResponsiveReadingProvider>(
+      context,
+      listen: false,
+    );
     final yorubaHymn = Provider.of<YorubaHymnProvider>(context, listen: false);
     final launchedForHymn = HymnOfTheDay.initialize(onOpen: _openHymnOfTheDay);
 
@@ -191,6 +217,9 @@ class _FirstScreenState extends State<FirstScreen> {
     ]);
 
     FlutterNativeSplash.remove();
+
+    // Needs the hymn count ReviewPrompt.initialize sets up.
+    unawaited(UpgradePrompt.refresh());
 
     // Keeps the next month of hymns of the day scheduled.
     unawaited(settingsProvider.scheduleHymnOfTheDay());
